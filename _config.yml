@@ -20,7 +20,7 @@ permalink_defaults:
 
 # Directory
 source_dir: source
-public_dir: yyfblog
+public_dir: public
 tag_dir: blog/tags
 archive_dir: blog/archives
 category_dir: blog/categories
