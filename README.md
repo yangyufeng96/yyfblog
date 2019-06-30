@@ -1,8 +1,18 @@
-# blog-example
-Example for hexo blog with the theme [Material X](https://xaoxuu.com/wiki/material-x/).
+# yyfblog
 
-博客源码：https://github.com/xaoxuu/blog-example/
+# create a new repository on the command line
 
-在线效果：https://mxclub.github.io/blog-example/
+```
+echo "# yyfblog" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/yangyufeng96/yyfblog.git
+git push -u origin master
+```
+# push an existing repository from the command line
+```
+git remote add origin https://github.com/yangyufeng96/yyfblog.git
+git push -u origin master
+```
 
-![](https://img.vim-cn.com/52/a54815c02ce232f11f54b2c547c1337828833c.png)
