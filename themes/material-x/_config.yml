@@ -49,9 +49,9 @@ backstretch:
   duration: 6000 # 持续时间（毫秒）
   fade: 2500     # 渐变（毫秒）
   images:
-    - /assets/backstretch/10.webp
-    - /assets/backstretch/11.webp
-    - /assets/backstretch/12.webp
+    - ./assets/backstretch/10.webp
+    - ./assets/backstretch/11.webp
+    - ./assets/backstretch/12.webp
 
 
 
@@ -139,7 +139,7 @@ sidebar:
   - widget: author
     title: Yangyufeng'S BLOG
     body: 每写一行代码，都是人类的一次进步
-    avatar: /assets/avatar/20740958.jpeg
+    avatar: ./assets/avatar/20740958.jpeg
     social: true
   - widget: toc
   - widget: grid
