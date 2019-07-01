@@ -1,4 +1,5 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.2/js/instantclick-1.2.2.js" type="module"></script>
 <% if (theme.search && theme.search.enable) { %>
   <script>
     var GOOGLE_CUSTOM_SEARCH_API_KEY = "<%- theme.search.google_api_key %>";
@@ -15,7 +16,6 @@
     if(!ROOT.endsWith('/'))ROOT += '/';
   </script>
 <% } %>
-<script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.2/js/instantclick-1.2.2.js" type="module"></script>
 <% if (theme.scrollreveal == true) { %>
   <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
   <script type="text/javascript">
