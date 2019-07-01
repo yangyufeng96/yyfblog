@@ -4,7 +4,7 @@
 
 # Site
 title: 漫道求索
-avatar: https://yangyufeng96.github.io/assets_source/blog//20740958.jpeg
+avatar: https://yangyufeng96.github.io/assets_source/blog/img/20740958.jpeg
 subtitle:
 description: 个人博客
 author: Yangyufeng
@@ -100,7 +100,7 @@ import:
   - "<meta name='msapplication-TileColor' content='#1BC3FB'>"
   - "<meta name='msapplication-config' content='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml'>"
   link:
-  - "<link rel='shortcut icon' type='image/x-icon' href='https://yangyufeng96.github.io/assets_source/blog/bitbug_favicon.ico'>"
+  - "<link rel='shortcut icon' type='image/x-icon' href='https://yangyufeng96.github.io/assets_source/blog/img/bitbug_favicon.ico'>"
   # - "<link rel='icon' type='image/x-icon' sizes='32x32' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/favicon-32x32.png'>"
   # - "<link rel='apple-touch-icon' type='image/png' sizes='180x180' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/apple-touch-icon.png'>"
   # - "<link rel='mask-icon' color='#1BC3FB' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/safari-pinned-tab.svg'>"
