@@ -5,6 +5,10 @@
   "hexo": {
     "version": "3.7.1"
   },
+  "scripts": {
+    "dev": "hexo s",
+    "build": "node ./deploy.js"
+  },
   "dependencies": {
     "hexo": "^3.3.0",
     "hexo-autoprefixer": "^1.0.0",
