@@ -8,6 +8,6 @@ process.exec('hexo clean && hexo d', function (error, stdout, stderr) {
   if (error !== null) {
     console.log('exec error: ' + error);
   } else {
-    console.log('部署完成.......')
+    console.log('恭喜你，部署完成')
   }
 })

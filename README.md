@@ -16,3 +16,21 @@ git remote add origin https://github.com/yangyufeng96/yyfblog.git
 git push -u origin master
 ```
 
+# 启动
+```
+npm run dev
+```
+# 部署
+
+## 配置项
+```
+deploy:
+- type: git
+  repo: https://github.com/yangyufeng96/yyfblog.git
+  branch: master
+  message: update
+```
+## 上线
+```
+npm run build
+```
