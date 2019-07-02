@@ -20,7 +20,11 @@ scrollreveal: true
 nodewaves: true
 busuanzi: true
 fastclick: true
-
+# Less渲染
+less:
+  compress: true
+# 文章字数
+word_count: true
 
 
 ############################### 默认值 ###############################
@@ -52,7 +56,7 @@ backstretch:
     - https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/images/background/013.webp
     - https://img.vim-cn.com/6d/a0c9e6f9efad8b731cb7376504bd10d79d2053.jpg
 
-
+rss: ./atom.xml
 ############################### 自定义 ###############################
 # page的封面
 cover:
@@ -200,7 +204,8 @@ social:
   - icon: fas fa-headphones-alt
     # music 163
     url: https://music.163.com/#/user/home?id=629541737
-
+  - icon: fas fa-rss
+    url: /
 
 # 分享按钮
 # 当id为qrcode时需要安装插件  npm i -S hexo-helper-qrcode
@@ -275,7 +280,3 @@ search:
   azure_query_key:
   # baidu
   baidu_api_id:
-
-# Less渲染
-less:
-  compress: true

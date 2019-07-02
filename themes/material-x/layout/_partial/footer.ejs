@@ -9,28 +9,51 @@
     <div class="social-wrapper">
       <% (theme.social||[]).forEach(function(value){ %>
         <% if (value.url && value.icon) { %>
-          <a href="<%= url_for(value.url) %>"
-            class="social <%- value.icon %> flat-btn"
-            target="_blank"
+          <a href="<%= url_for(value.url) %>" class="social <%- value.icon %> flat-btn" target="_blank"
             rel="external nofollow noopener noreferrer">
           </a>
         <%}%>
       <%})%>
     </div>
   <%}%>
-  <br>
-  <div><%- markdown(__('footer.license')) %></div>
-  <div>
-    <%- __('footer.use') %>
-    <a href="<%- theme.info.docs %>" target="_blank" class="codename"><%- theme.info.name %></a>
-    <%- __('footer.theme') %>
+  <!-- 统计 -->
+  <div class="total">
+    <!-- 访问量 -->
     <% if (theme.busuanzi == true) { %>
-      <%- __('symbol.comma') %>
-      <%- __('footer.total_views') %>
-      <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
-      <%- __('footer.times') %>
+      <span style="margin-right: 5px;">
+        <b>[总访问量]：</b>
+        <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>次
+      </span>
     <% } %>
-    <%- __('symbol.period') %>
+    <!-- 文章字体个数 -->
+    <% if (theme.busuanzi == true) { %>
+      <span style="margin-right: 5px;">
+        <b>[本文字数]：</b>
+        <span class="post-count"><%= totalcount(site) %></span>
+      </span>
+    <% } %>
+    <!-- 网站运行时间 -->
+    <span style="margin-right: 5px;">
+      <b>[网站运行时间]：</b>
+      <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    </span>
   </div>
 </footer>
 <script>setLoadingBarProgress(80);</script>
+<script>
+  var now = new Date();
+  function createtime() {
+    //在此处修改你的建站时间
+    var grt = new Date("07/01/2019 00:00:00");
+    now.setTime(now.getTime() + 250);
+    days = (now - grt) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+    hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+    if (String(hnum).length == 1) { hnum = "0" + hnum; } minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+    mnum = Math.floor(minutes); if (String(mnum).length == 1) { mnum = "0" + mnum; }
+    seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    snum = Math.round(seconds); if (String(snum).length == 1) { snum = "0" + snum; }
+    document.getElementById("timeDate").innerHTML = dnum + " 天 ";
+    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+  }
+  setInterval("createtime()", 250);
+</script>
