@@ -1,17 +1,23 @@
 ---
-layout:     post
-type:       projects
-title:      Material X
-author:     xaoxuu
-avatar:     https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png
-author_url: https://xaoxuu.com
-date:       2017-10-24
-updated:    2019-04-06
-categories: [Dev, Hexo]
+layout: post
+type: projects
+title: Material X
+author: xaoxuu
+avatar: 'https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png'
+author_url: 'https://xaoxuu.com'
+categories:
+  - Dev
+  - Hexo
 tags:
-    - Hexo
-sidebar: [author, grid, toc]
-permalink: https://xaoxuu.com/wiki/material-x/
+  - Hexo
+sidebar:
+  - author
+  - grid
+  - toc
+permalink: 'https://xaoxuu.com/wiki/material-x/'
+abbrlink: d2e96b19
+date: 2017-10-24 00:00:00
+updated: 2019-04-06 00:00:00
 ---
 
 **一个简约的卡片式Hexo博客主题。**

@@ -1,4 +1,6 @@
+---
 title: Elements
+abbrlink: bd3c650b
 date: 2013-12-24 23:29:08
 tags:
 ---

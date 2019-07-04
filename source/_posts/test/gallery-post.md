@@ -1,10 +1,12 @@
+---
 title: Gallery Post
-date: 2013-12-25 00:16:18
 photos:
-- /assets/wallpaper-2572384.jpg
-- /assets/wallpaper-2311325.jpg
-- /assets/wallpaper-878514.jpg
-- http://placehold.it/350x150.jpg
+  - /assets/wallpaper-2572384.jpg
+  - /assets/wallpaper-2311325.jpg
+  - /assets/wallpaper-878514.jpg
+  - 'http://placehold.it/350x150.jpg'
+abbrlink: a1447d9
+date: 2013-12-25 00:16:18
 ---
 
 This post contains 4 photos:

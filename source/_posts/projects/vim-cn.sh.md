@@ -1,17 +1,23 @@
 ---
-layout:     post
-type:       projects
-title:      vim-cn.sh
-author:     xaoxuu
-avatar:     https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png
-author_url: https://xaoxuu.com
-date:       2018-09-22
-updated:    2019-01-09
-categories: [Dev, Shell Scripts]
+layout: post
+type: projects
+title: vim-cn.sh
+author: xaoxuu
+avatar: 'https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png'
+author_url: 'https://xaoxuu.com'
+categories:
+  - Dev
+  - Shell Scripts
 tags:
-    - shell
-sidebar: [author, grid, toc]
-permalink: https://xaoxuu.com/wiki/vim-cn.sh/
+  - shell
+sidebar:
+  - author
+  - grid
+  - toc
+permalink: 'https://xaoxuu.com/wiki/vim-cn.sh/'
+abbrlink: 8b840bb4
+date: 2018-09-22 00:00:00
+updated: 2019-01-09 00:00:00
 ---
 
 

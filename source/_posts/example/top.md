@@ -1,7 +1,6 @@
 ---
 type: blog
 title: 置顶
-date: 2018-12-30
 categories: 教程
 top: true
 cover: false
@@ -9,6 +8,8 @@ meta:
   date: false
 valine:
   path: /top/
+abbrlink: cc4d5834
+date: 2018-12-30 00:00:00
 ---
 
 文章的Front-matter填写`top: true`就置顶了。
