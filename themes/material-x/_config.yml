@@ -68,7 +68,7 @@ cover:
   # 主页封面菜单
   features:
     - name: 博文
-      icon: fas fa-rss
+      icon: fas fa-book
       url: /
     - name: 项目
       icon: fas fa-code-branch

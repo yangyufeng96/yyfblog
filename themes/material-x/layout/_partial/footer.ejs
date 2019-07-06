@@ -21,21 +21,21 @@
     <!-- 访问量 -->
     <% if (theme.busuanzi == true) { %>
       <span style="margin-right: 5px;">
-        <b class="fas fa-monument"></b>
-        <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>次
+        <b class="fas fa-chart-line"></b>
+        总计访问：<span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>次
       </span>
     <% } %>
     <!-- 文章字体个数 -->
     <% if (theme.busuanzi == true) { %>
       <span style="margin-right: 5px;">
-        <b class="fas fa-calendar-alt"></b>
-        <span class="post-count"><%= totalcount(site) %></span>
+        <b class="fas fa-database"></b>
+        本站字数：<span class="post-count"><%= totalcount(site) %></span>
       </span>
     <% } %>
     <!-- 网站运行时间 -->
     <span style="margin-right: 5px;">
-      <b class="fas fa-user-clock"></b>
-      <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+      <b class="fas fa-calendar-day"></b>
+      网站运行时间：<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
     </span>
   </div>
 </footer>

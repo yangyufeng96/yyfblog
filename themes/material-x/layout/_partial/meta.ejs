@@ -43,7 +43,7 @@ if (post.meta && (post.meta.footer !== undefined && post.meta.footer !== null)) 
           <% } %>
         <% }) %>
         <!-- 文章字体个数 -->
-        <% if (theme.busuanzi == true) { %>
+        <% if ((topMetas).length > 0 && theme.busuanzi == true) { %>
           <div class="new-meta-item size">
             <a class="notlink">
               <i class="fas fa-file-code" aria-hidden="true"></i>
