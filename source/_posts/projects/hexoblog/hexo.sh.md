@@ -11,6 +11,8 @@ categories:
 tags:
   - shell
   - Hexo
+projects:
+  - hexoblog
 sidebar:
   - author
   - grid

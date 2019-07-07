@@ -4,7 +4,7 @@ info:
   docs: https://xaoxuu.com/wiki/material-x/
   cdn: # 把对应的那一行注释掉就使用本地的文件
     css:
-      style: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source/blog/css/style.css
+      # style: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source/blog/css/style.css
     js:
       app: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source/blog/js/app.js
       search: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source/blog/js/search.js
@@ -67,17 +67,17 @@ cover:
   # search_placeholder: '搜索'
   # 主页封面菜单
   features:
-    - name: 博文
+    - name: 博客文章
       icon: fas fa-book
       url: /
-    - name: 项目
+    - name: 开源项目
       icon: fas fa-code-branch
       url: projects/
-    - name: 友链
+    - name: 友情链接
       icon: fas fa-link
       url: friends/
       rel: nofollow
-    - name: 关于
+    - name: 关于我的
       icon: fas fa-info-circle
       url: about/
       rel: nofollow
@@ -85,20 +85,20 @@ cover:
 
 # 桌面端导航栏菜单
 menu_desktop:
-  - name: 示例
-    icon: fas fa-grin
+  - name: 文章
+    icon: fas fa-book
     url: /
   - name: 分类
     icon: fas fa-folder-open
-    url: blog/categories/
+    url: blogpost/categories/
     rel: nofollow
   - name: 标签
     icon: fas fa-hashtag
-    url: blog/tags/
+    url: blogpost/tags/
     rel: nofollow
   - name: 归档
     icon: fas fa-archive
-    url: blog/archives/
+    url: blogpost/archives/
     rel: nofollow
 
 # 手机端导航菜单（从右上角的按钮点击展开）
@@ -108,7 +108,7 @@ menu_mobile:
     url: /
   - name: 文章归档
     icon: fas fa-archive
-    url: blog/archives/
+    url: blogpost/archives/
     rel: nofollow
   - name: 开源项目
     icon: fas fa-code-branch
@@ -153,7 +153,7 @@ sidebar:
         url: /
       - name: 文章归档
         icon: fas fa-archive
-        url: blog/archives/
+        url: blogpost/archives/
         rel: nofollow
       - name: 开源项目
         icon: fas fa-code-branch
@@ -173,13 +173,13 @@ sidebar:
   - widget: category
     more:
       icon: fas fa-expand-arrows-alt
-      url: blog/categories/
+      url: blogpost/categories/
       rel: nofollow
   - widget: tagcloud
     icon: fas fa-fire
     more:
       icon: fas fa-expand-arrows-alt
-      url: blog/tags/
+      url: blogpost/tags/
       rel: nofollow
   - widget: related_posts # 需要安装插件  npm i -S hexo-related-popular-posts
   - widget: music

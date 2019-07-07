@@ -10,13 +10,13 @@ valine:
 sidebar: false
 ---
 
-{% raw %}<div class="style-example example">{% endraw %}
+{% raw %}<div class="aboutme">{% endraw %}
 <ul class="pure circle center about">
   <li>
     <img  src="https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source/blog/img/20740958.jpeg">
   </li>
 </ul>
-<center style="display: flex;align-items: center;justify-content: space-around;">
+<center class="group">
   [<i class="fab fa-github"></i>](https://github.com/yangyufeng96)
   [<i class="fas fa-book"></i>](/)
   [<i class="fas fa-headphones"></i>](https://music.163.com/#/user/home?id=629541737)
