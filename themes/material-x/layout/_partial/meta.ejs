@@ -42,12 +42,19 @@ if (post.meta && (post.meta.footer !== undefined && post.meta.footer !== null)) 
             <%- partial('../_meta/' + meta, {post: post, isPostList: isPostList}) %>
           <% } %>
         <% }) %>
-        <!-- 文章字体个数 -->
-        <% if ((topMetas).length > 0 && theme.busuanzi == true) { %>
+        <% if (topMetas.length > 0 && theme.word_count == true) { %>
+          <!-- 文章字体个数 -->
           <div class="new-meta-item size">
             <a class="notlink">
               <i class="fas fa-edit" aria-hidden="true"></i>
               <p><%= wordcount(post.content) %>字</p>
+            </a>
+          </div>
+          <!-- 阅读时间 -->
+          <div class="new-meta-item read-time">
+            <a class="notlink">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <p><%= min2read(post.content) %>分</p>
             </a>
           </div>
         <% } %>

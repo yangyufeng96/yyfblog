@@ -3,41 +3,66 @@
 <%- partial('_partial/head') %>
 <body>
   <%
-  var showCover = false;
-  if (theme.cover) {
-    // 如果页面的Front-matter声明了cover，就取页面的值
-    if (page.cover != undefined && page.cover != undefined) {
-      showCover = page.cover;
-    } else {
-      // 否则，如果是首页，只有首页的第一页显示
-      if (is_home()) {
-        if (page.prev) {
-          showCover = false;
+    var showCover = false;
+    if (theme.cover) {
+      // 如果页面的Front-matter声明了cover，就取页面的值
+      if (page.cover != undefined && page.cover != undefined) {
+        showCover = page.cover;
+      } else {
+        // 否则，如果是首页，只有首页的第一页显示
+        if (is_home()) {
+          if (page.prev) {
+            showCover = false;
+          } else {
+            showCover = true;
+          }
         } else {
           showCover = true;
         }
-      } else {
-        showCover = true;
       }
     }
-  }
   %>
   <%- partial('_partial/cover', {showCover: showCover}) %>
   <div class="l_body<%- showCover ? '' : ' nocover' %>">
     <div class='body-wrapper'>
       <%- body %>
+      <!-- 会动的小人 -->
+      <div id="spig" class="spig">
+        <div id="message">加载中……</div>
+        <div id="mumu" class="mumu"></div>
+      </div>
       <script>setLoadingBarProgress(60);</script>
     </div>
     <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
   </div>
   <%- partial('_partial/scripts') %>
   <script>setLoadingBarProgress(100);</script>
+  <!-- 浮动小人 -->
+  <script type="text/javascript" id="spig" src="https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source/blog/js/sipng.js"></script>
   <!-- 页面点击小红心 -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source/blog/js/love.js"></script>
   <!--动态线条背景-->
   <script type="text/javascript" color="111,111,111" opacity='0.6' zIndex="-10" count="500" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
   <!-- 人体时钟背景透明 -->
   <script type="text/javascript" charset="Shift_JIS" src="https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source/blog/js/clock.js"></script>
-</script>
+  <script type="text/javascript" id="bowerTitle">
+    // 浏览器搞笑标题
+    var OriginTitle = document.title;
+    var titleTime;
+    var url = 'https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source/blog/img/'
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        $('[rel="shortcut icon"]').attr('href', url + "notfound.jpeg");
+        document.title = '你的页面走丢了...';
+        clearTimeout(titleTime);
+      } else {
+        $('[rel="shortcut icon"]').attr('href', url + "bitbug_favicon.ico");
+        document.title = '欢迎回来!'
+        titleTime = setTimeout(function () {
+          document.title = OriginTitle;
+        }, 1000)
+      }
+    });
+  </script>
 </body>
 </html>
