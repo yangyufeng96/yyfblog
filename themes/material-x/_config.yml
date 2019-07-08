@@ -4,11 +4,11 @@ info:
   docs: https://xaoxuu.com/wiki/material-x/
   cdn: # 把对应的那一行注释掉就使用本地的文件
     css:
-      style: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source/blog/css/style.css
+      style: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/css/style.css
     js:
-      app: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source/blog/js/app.js
-      search: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source/blog/js/search.js
-      volantis: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source/blog/js/volantis.min.js
+      app: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/js/app.js
+      search: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/js/search.js
+      volantis: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/js/volantis.min.js
 
 ############################### 主题风格 ###############################
 # style: material    # material: 导航栏和标题栏背景是主题色
@@ -141,7 +141,7 @@ sidebar:
   - widget: author
     title: Yangyufeng'S BLOG
     body: 每写一行代码，都是人类的一次进步
-    avatar: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source/blog/img/20740958.jpeg
+    avatar: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/img/20740958.jpeg
     social: true
   - widget: toc
   - widget: grid

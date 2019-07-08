@@ -13,7 +13,7 @@ sidebar: false
 {% raw %}<div class="aboutme">{% endraw %}
 <ul class="pure circle center about">
   <li>
-    <img  src="https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source/blog/img/20740958.jpeg">
+    <img  src="https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/img/20740958.jpeg">
   </li>
 </ul>
 <center class="group">
