@@ -31,7 +31,7 @@
     "hexo-generator-tag": "^0.1.1",
     "hexo-helper-live2d": "^3.1.1",
     "hexo-helper-qrcode": "^1.0.2",
-    "hexo-lazyload-image": "^1.0.3",
+    "hexo-lazyload-image": "^1.0.4",
     "hexo-related-popular-posts": "^3.0.6",
     "hexo-renderer-ejs": "^0.3.0",
     "hexo-renderer-less": "^0.2.0",

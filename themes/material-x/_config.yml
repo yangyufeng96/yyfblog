@@ -50,11 +50,10 @@ updated_date_format: 'll' # 文章更新日期的格式
 # 幻灯片
 backstretch:
   position: cover  # cover: 封面背景   full: 整个网页背景
-  duration: 6000 # 持续时间（毫秒）
-  fade: 2500     # 渐变（毫秒）
+  duration: 0 # 持续时间（毫秒）
+  fade: 0     # 渐变（毫秒）
   images:
-    - https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.4/images/background/013.webp
-    - https://img.vim-cn.com/6d/a0c9e6f9efad8b731cb7376504bd10d79d2053.jpg
+    - https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/img/backstretch.jpg
 
 rss: ./atom.xml
 ############################### 自定义 ###############################
@@ -67,17 +66,17 @@ cover:
   # search_placeholder: '搜索'
   # 主页封面菜单
   features:
-    - name: 博客文章
+    - name: 文章
       icon: fas fa-book
       url: /
-    - name: 开源项目
+    - name: 项目
       icon: fas fa-code-branch
       url: projects/
-    - name: 友情链接
+    - name: 朋友
       icon: fas fa-link
       url: friends/
       rel: nofollow
-    - name: 关于我的
+    - name: 关于
       icon: fas fa-info-circle
       url: about/
       rel: nofollow
