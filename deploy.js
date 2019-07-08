@@ -5,7 +5,8 @@ const spinner = ora({
   text: '正在部署......'
 })
 spinner.start()
-process.exec('hexo clean && hexo d', function (error, stdout, stderr) {
+// hexo cl && hexo g && gulp && hexo d
+process.exec('hexo clean && hexo g && gulp && hexo d', function (error, stdout, stderr) {
   spinner.stop()
   if (error !== null) {
     console.log(chalk.red('部署失败，请重试！ \n'))
