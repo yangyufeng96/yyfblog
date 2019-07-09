@@ -139,7 +139,7 @@ body: [article, comments]
 sidebar:
   - widget: author
     title: Yangyufeng'S BLOG
-    body: 每写一行代码，都是人类的一次进步
+    body: '<span data-chakhsu data-chakhsu-text="每写一行代码，都是人类的一次进步">每写一行代码，都是人类的一次进步</span>'
     avatar: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/img/20740958.jpeg
     social: true
   - widget: toc
@@ -279,3 +279,16 @@ search:
   azure_query_key:
   # baidu
   baidu_api_id:
+
+#gitalk settings
+# Client ID
+# 6e1fa87b45685deb78f8
+# Client Secret
+# 22020636e01a1b5e83918d16c2fcf67dea713f70
+gitalk:
+  enable: true #用来做启用判断可以不用
+  owner: yangyufeng96  #Github 用户名,
+  repo:  yyfblog #储存评论issue的github仓库名
+  admin: yangyufeng96  #Github 用户名,
+  clientID: 6e1fa87b45685deb78f8 #`Github Application clientID`
+  clientSecret: 22020636e01a1b5e83918d16c2fcf67dea713f70 #`Github Application clientSecret`
