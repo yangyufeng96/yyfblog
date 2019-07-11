@@ -19,8 +19,9 @@ a:hover {
   background-color: #6496ED;
   border-radius: 5px;
   margin-right: 5px;
+  margin-bottom: 5px;
 }
-.spig {
+#spig {
   display: block;
   width: 130px;
   height: 130px;
@@ -59,4 +60,9 @@ a:hover {
   top: 0;
   display: block;
   opacity: 0.85;
+}
+@media screen and (max-width: 640px) {
+  #spig {
+    display: none !important;
+  }
 }

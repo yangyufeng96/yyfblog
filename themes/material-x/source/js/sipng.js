@@ -5,6 +5,7 @@ var visitor = '朋友';
 var spig_top = 50;
 var t;
 var stat_click = 0;
+
 function showMessage(a, b) {
   if (b == null) {
     b = 10000
@@ -45,7 +46,29 @@ function helloMessage() {
   }
 
 }
+
+function isPC() {
+  var userAgentInfo = navigator.userAgent;
+  var Agents = ["Android", "iPhone",
+    "SymbianOS", "Windows Phone",
+    "iPad", "iPod"
+  ];
+  var flag = true;
+  for (var v = 0; v < Agents.length; v++) {
+    if (userAgentInfo.indexOf(Agents[v]) > 0) {
+      flag = false;
+      break;
+    }
+  }
+  return flag;
+}
 jQuery(document).ready(function ($) {
+  //先获取窗口宽度
+  var w = document.documentElement ? document.documentElement.clientWidth : document.body.clientWidth;
+  if (!isPC() && w <= 640) {
+    $("#spig").remove()
+    return
+  }
   helloMessage()
   // 右键
   $("#spig").bind("contextmenu", function (e) {
