@@ -4,7 +4,7 @@ info:
   docs: https://xaoxuu.com/wiki/material-x/
   cdn: # 把对应的那一行注释掉就使用本地的文件
     css:
-      style: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/css/style.css
+      style: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source/blog/css/style.css
     js:
       app: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/js/app.js
       search: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/js/search.js
