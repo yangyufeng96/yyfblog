@@ -4,7 +4,7 @@
 
 # Site
 title: Yangyufeng's Blog
-avatar: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/img/20740958.jpeg
+avatar: https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg
 subtitle:
 description: 个人博客
 author: Yangyufeng
@@ -28,7 +28,7 @@ abbrlink:
 lazyload:
   enable: true 
   onlypost: false
-  loadingImg: https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0/img/tieba/what.png
+  loadingImg: https://s2.ax1x.com/2019/07/12/ZhmhgP.jpg
 
 # Directory
 source_dir: source
@@ -118,7 +118,6 @@ import:
   meta:
   - "<meta name='theme-color' content='#FFFFFF'>"
   - "<meta name='msapplication-TileColor' content='#1BC3FB'>"
-  # - "<meta name='msapplication-config' content='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml'>"
   link:
   - "<link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/img/bitbug_favicon.ico'>"
   # script:

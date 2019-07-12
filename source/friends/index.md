@@ -91,8 +91,8 @@ links:
 各位大佬想交换友链的话可以在下方留言，必须要有名称、头像链接、和至少一个标签哦～
 
 > 名称： 漫道求索
-头像： https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/img/20740958.jpeg
+头像： https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg
 网址： https://yangyufeng96.github.io/yyfblog/
 标签： 前端开发、大数据可视化
 
-<img src="https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/img/friends.gif">
+<img src="https://s2.ax1x.com/2019/07/12/ZhmoDS.gif">

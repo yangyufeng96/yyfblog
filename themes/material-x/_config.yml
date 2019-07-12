@@ -41,7 +41,7 @@ music:
   autoplay: false   # 自动播放
 
 # 友链页头像占位图
-avatar_placeholder: http://p1.music.126.net/khjR9C1XORvP6w2_2mrvJw==/109951163192217723.jpg?param=180y180
+avatar_placeholder: https://s2.ax1x.com/2019/07/12/ZhnHsK.jpg
 
 # 日期格式 http://momentjs.com/docs/
 date_format: 'YYYY-MM-DD' # 文章发布日期的格式
@@ -54,7 +54,6 @@ backstretch:
   fade: 0     # 渐变（毫秒）
   images:
     - https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/img/backstretch.jpg
-
 rss: ./atom.xml
 ############################### 自定义 ###############################
 # page的封面
@@ -140,7 +139,7 @@ sidebar:
   - widget: author
     title: Yangyufeng'S BLOG
     body: '<span data-chakhsu data-chakhsu-text="每写一行代码，都是人类的一次进步">每写一行代码，都是人类的一次进步</span>'
-    avatar: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/img/20740958.jpeg
+    avatar: https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg
     social: true
   - widget: toc
   - widget: grid

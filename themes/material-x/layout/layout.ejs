@@ -57,14 +57,13 @@
   <script type="text/javascript" id="bowerTitle">
     var OriginTitle = document.title;
     var titleTime;
-    var url = 'https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/img/'
     document.addEventListener('visibilitychange', function () {
       if (document.hidden) {
-        $('[rel="shortcut icon"]').attr('href', url + "notfound.jpeg");
+        $('[rel="shortcut icon"]').attr('href', "https://s2.ax1x.com/2019/07/12/ZhmhgP.jpg");
         document.title = '你的页面走丢了...';
         clearTimeout(titleTime);
       } else {
-        $('[rel="shortcut icon"]').attr('href', url + "bitbug_favicon.ico");
+        $('[rel="shortcut icon"]').attr('href', "https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/img/bitbug_favicon.ico");
         document.title = '欢迎回来!'
         titleTime = setTimeout(function () {
           document.title = OriginTitle;
