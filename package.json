@@ -3,15 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.7.1"
+    "version": "3.9.0"
   },
   "scripts": {
     "dev": "hexo s",
-    "build": "node ./deploy.js",
+    "build": "hexo clean && hexo g && gulp && hexo d && node createissue",
     "start": "npm run dev"
   },
   "dependencies": {
     "chalk": "^2.4.2",
+    "cheerio": "^1.0.0-rc.3",
     "gulp": "^4.0.2",
     "gulp-htmlclean": "^2.7.22",
     "gulp-htmlmin": "^5.0.1",
@@ -23,12 +24,14 @@
     "hexo-browsersync": "^0.3.0",
     "hexo-deployer-git": "^0.3.1",
     "hexo-generator-archive": "^0.1.2",
+    "hexo-generator-baidu-sitemap": "^0.1.6",
     "hexo-generator-category": "^0.1.2",
     "hexo-generator-feed": "^1.2.2",
     "hexo-generator-index": "^0.1.2",
     "hexo-generator-json-content": "^3.0.1",
     "hexo-generator-search": "^2.4.0",
     "hexo-generator-seo-friendly-sitemap": "0.0.22",
+    "hexo-generator-sitemap": "^1.2.0",
     "hexo-generator-tag": "^0.1.1",
     "hexo-helper-live2d": "^3.1.1",
     "hexo-helper-qrcode": "^1.0.2",
@@ -41,6 +44,8 @@
     "hexo-server": "^0.2.0",
     "hexo-wordcount": "^6.0.1",
     "live2d-widget-model-shizuku": "^1.0.5",
-    "ora": "^3.4.0"
+    "request": "^2.88.0",
+    "xml-parser": "^1.2.1",
+    "yamljs": "^0.3.0"
   }
 }

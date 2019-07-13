@@ -126,3 +126,9 @@ import:
 leancloud:
   app_id: 1rN07DpQRE12WD9Au1SuWCww-gzGzoHsz
   app_key: EAyPrjSfiYnuRDiIpwczBeJ4
+
+# hexo sitemap网站地图
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
