@@ -17,7 +17,7 @@ const config = {
 let issuesUrl = `https://api.github.com/repos/${config.username}/${config.repo}/issues?access_token=${config.token}`;
 
 let requestGetOpt = {
-  url: `${issuesUrl}&page=1&per_page=1000`,
+  url: `${issuesUrl}&page=1&per_page=100000`,
   json: true,
   headers: {
     "User-Agent": "github-user"
@@ -43,8 +43,11 @@ console.log("开始初始化评论...");
 
     console.log("开始获取已经初始化的issues:");
     let issues = await send(requestGetOpt);
-    console.log(`已经存在${issues.length}个issues`);
-
+    if (issues.length) {
+      console.log(`已经存在${issues.length}个issues`)
+    } else {
+      console.log('issues个数未知')
+    }
     let notInitIssueLinks = urls.filter((link) => {
       return !issues.find((item) => {
         link = removeProtocol(link);
@@ -84,12 +87,7 @@ console.log("开始初始化评论...");
     } else {
       console.log("本次发布无新增页面，无需初始化issue!!");
     }
-  } catch (e) {
-    console.log(`初始化issue出错，错误如下：`);
-    console.log(e);
-  } finally {
-
-  }
+  } catch (e) {}
 })();
 
 function sitemapXmlReader(file) {
