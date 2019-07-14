@@ -1,9 +1,9 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
+  "name": "hexo-yyfblog-site",
+  "version": "1.0.0",
   "private": true,
   "hexo": {
-    "version": "3.9.0"
+    "version": "3.7.1"
   },
   "scripts": {
     "dev": "hexo s",

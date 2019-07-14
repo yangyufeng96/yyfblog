@@ -1,4 +1,5 @@
 ---
+type: blog
 layout: post
 title: vue3.0 vue.config.js配置
 abbrlink: 2b017b59
@@ -20,6 +21,8 @@ meta:
 ## 在项目根目录下创建vue.config.js文件：
 
 ### **详细代码如下：**
+
+<!-- more -->
 
 ```
 const webpack = require('webpack')

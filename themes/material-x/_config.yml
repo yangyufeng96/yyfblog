@@ -60,31 +60,13 @@ rss: ./atom.xml
 cover:
   scheme: search    # 后期将会提供多种封面方案
   # height: half      # full（默认值）: 首页封面占据整个第一屏幕，其他页面占半个屏幕高度， half: 所有页面都封面都只占半个屏幕高度
-  title: ""
+  # title: ""
   # logo: assets/logo.png    # logo和title只显示一个，若同时设置，则只显示logo
-  # search_placeholder: '搜索'
+  search_placeholder: '搜索'
   # 主页封面菜单
   features:
-    - name: 文章
-      icon: fas fa-book
-      url: /
-    - name: 项目
-      icon: fas fa-code-branch
-      url: projects/
-    - name: 朋友
-      icon: fas fa-link
-      url: friends/
-      rel: nofollow
-    - name: 关于
-      icon: fas fa-info-circle
-      url: about/
-      rel: nofollow
-
-
-# 桌面端导航栏菜单
-menu_desktop:
-  - name: 文章
-    icon: fas fa-book
+  - name: 主页
+    icon: fas fa-home
     url: /
   - name: 分类
     icon: fas fa-folder-open
@@ -98,28 +80,68 @@ menu_desktop:
     icon: fas fa-archive
     url: blogpost/archives/
     rel: nofollow
+  - name: 朋友
+    icon: fas fa-user-friends
+    url: friends/
+    rel: nofollow
+  - name: 关于
+    icon: fas fa-info-circle
+    url: about/
+    rel: nofollow
+
+# 桌面端导航栏菜单
+menu_desktop:
+  - name: 主页
+    icon: fas fa-home
+    url: /
+  - name: 分类
+    icon: fas fa-folder-open
+    url: blogpost/categories/
+    rel: nofollow
+  - name: 标签
+    icon: fas fa-hashtag
+    url: blogpost/tags/
+    rel: nofollow
+  - name: 归档
+    icon: fas fa-archive
+    url: blogpost/archives/
+    rel: nofollow
+  - name: 朋友
+    icon: fas fa-user-friends
+    url: friends/
+    rel: nofollow
+  - name: 关于
+    icon: fas fa-info-circle
+    url: about/
+    rel: nofollow
+  - name: segmentfault
+    icon: fas fa-link
+    url: https://segmentfault.com/u/yangyufeng
+    rel: nofollow
+    target: _blank
 
 # 手机端导航菜单（从右上角的按钮点击展开）
 menu_mobile:
-  - name: 近期文章
+  - name: 所有文章
     icon: fas fa-clock
     url: /
   - name: 文章归档
     icon: fas fa-archive
     url: blogpost/archives/
     rel: nofollow
-  - name: 开源项目
-    icon: fas fa-code-branch
-    url: projects/
+  - name: 所有标签
+    icon: fas fa-hashtag
+    url: blogpost/tags/
+    rel: nofollow
   - name: 我的友链
     icon: fas fa-link
     url: friends/
     rel: nofollow
-  - name: 主题文档
-    icon: fas fa-book
-    url: https://xaoxuu.com/wiki/material-x/
+  - name: RSS订阅
+    icon: fas fa-rss
+    url: ./atom.xml
     rel: nofollow
-  - name: 关于小站
+  - name: 关于博主
     icon: fas fa-info-circle
     url: about/
     rel: nofollow
@@ -146,25 +168,26 @@ sidebar:
     icon: fas fa-map-signs
     title: 站内导航
     rows:
-      - name: 近期文章
+      - name: 所有文章
         icon: fas fa-clock
         url: /
       - name: 文章归档
         icon: fas fa-archive
         url: blogpost/archives/
         rel: nofollow
-      - name: 开源项目
-        icon: fas fa-code-branch
-        url: projects/
+      - name: 所有标签
+        icon: fas fa-hashtag
+        url: blogpost/tags/
+        rel: nofollow
       - name: 我的友链
         icon: fas fa-link
         url: friends/
         rel: nofollow
-      - name: 主题文档
-        icon: fas fa-book
-        url: https://xaoxuu.com/wiki/material-x/
+      - name: RSS订阅
+        icon: fas fa-rss
+        url: ./atom.xml
         rel: nofollow
-      - name: 关于小站
+      - name: 关于博主
         icon: fas fa-info-circle
         url: about/
         rel: nofollow
@@ -182,10 +205,11 @@ sidebar:
   - widget: related_posts # 需要安装插件  npm i -S hexo-related-popular-posts
   - widget: music
     icon: fas fa-compact-disc
-    title: "最近在听"
+    title: 最近在听
     more:
       icon: far fa-heart
       rel: external nofollow noopener noreferrer
+      url: https://music.163.com/#/user/home?id=629541737
       target: _blank
     server: netease   # netease（网易云音乐）tencent（QQ音乐） xiami（虾米） kugou（酷狗）
     type: playlist    # song （单曲） album （专辑） playlist （歌单） search （搜索）
@@ -193,17 +217,18 @@ sidebar:
 
 # 社交信息
 social:
+  # 邮箱
   - icon: fas fa-envelope
-    # 邮箱
     url: mailto:yangyufeng.web@foxmail.com
-  - icon: fab fa-github
-    # github
-    url: https://github.com/yangyufeng96
-  - icon: fas fa-headphones-alt
-    # music 163
-    url: https://music.163.com/#/user/home?id=629541737
-  - icon: fas fa-rss
-    url: /
+  # qq
+  - icon: fab fa-qq
+    url: http://wpa.qq.com/msgrd?v=3&uin=1539558157&site=qq&menu=yes
+  # zhihu
+  - icon: fab fa-zhihu
+    url: https://www.zhihu.com/people/man-dao-qiu-suo-11/activities
+  # weibo
+  - icon: fab fa-weibo
+    url: https://weibo.com/yangyufeng66
 
 # 分享按钮
 # 当id为qrcode时需要安装插件  npm i -S hexo-helper-qrcode
@@ -214,15 +239,15 @@ share:
   - id: qzone
     name: QQ空间
     img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png
-  # - id: qrcode
-  #   name: 微信
-  #   img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png
   - id: weibo
     name: 微博
     img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png
-  # - id: qrcode
-  #   name: QRcode
-  #   img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png
+  - id: qrcode
+    name: 微信
+    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png
+  - id: qrcode
+    name: QRcode
+    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png
 
 
 

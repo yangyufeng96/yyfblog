@@ -1,8 +1,11 @@
 ---
+type: blog
 layout: post
 title: Vue插件总汇
 tags: vue
 categories: 教程
+abbrlink: b7497cb5
+date: 2019-07-13 13:26:53
 meta:
   header:
     - title
@@ -13,8 +16,6 @@ meta:
     - categories
     - tags
     - share
-abbrlink: b7497cb5
-date: 2019-07-13 13:26:53
 ---
 
 [Vue轮子工厂](http://www.wheelsfactory.cn/#/)

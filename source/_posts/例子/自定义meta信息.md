@@ -2,7 +2,7 @@
 type: blog
 title: 自定义meta信息
 categories: 教程
-tags: ss
+tags: Hexo
 meta:
   header:
     - title
@@ -13,8 +13,6 @@ meta:
     - categories
     - tags
     - share
-valine:
-  path: /top/
 abbrlink: 57a653f8
 date: 2019-04-06 00:00:00
 ---
