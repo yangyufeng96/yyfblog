@@ -6,16 +6,6 @@ abbrlink: 2b017b59
 date: 2019-07-13 13:41:06
 categories: 教程
 tags: vue
-meta:
-  header:
-    - title
-    - author
-    - updated
-    - counter
-  footer:
-    - categories
-    - tags
-    - share
 ---
 
 ## 在项目根目录下创建vue.config.js文件：

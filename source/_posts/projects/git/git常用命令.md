@@ -6,16 +6,6 @@ date: 2019-07-13 13:48:01
 layout: post
 tags: git
 categories: 教程
-meta:
-  header:
-    - title
-    - author
-    - updated
-    - counter
-  footer:
-    - categories
-    - tags
-    - share
 ---
 
 **推送到远程仓库**：[http://blog.csdn.net/u011043843/article/details/33336625](http://blog.csdn.net/u011043843/article/details/33336625)

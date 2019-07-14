@@ -6,16 +6,6 @@ tags: vue
 categories: 教程
 abbrlink: b7497cb5
 date: 2019-07-13 13:26:53
-meta:
-  header:
-    - title
-    - author
-    - updated
-    - counter
-  footer:
-    - categories
-    - tags
-    - share
 ---
 
 [Vue轮子工厂](http://www.wheelsfactory.cn/#/)
