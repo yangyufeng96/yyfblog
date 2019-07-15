@@ -114,9 +114,14 @@ menu_desktop:
     icon: fas fa-info-circle
     url: about/
     rel: nofollow
-  - name: segmentfault
+  - name: 思否
     icon: fas fa-link
     url: https://segmentfault.com/u/yangyufeng
+    rel: nofollow
+    target: _blank
+  - name: 工具箱
+    icon: fas fa-toolbox
+    url: https://tool.lu/
     rel: nofollow
     target: _blank
 
