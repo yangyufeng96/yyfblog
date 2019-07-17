@@ -84,6 +84,11 @@ cover:
     icon: fas fa-user-friends
     url: friends/
     rel: nofollow
+  - name: 笔记
+    icon: fas fa-link
+    url: https://note.youdao.com/ynoteshare1/index.html?id=3679d5e99fea00c7f5fc2b66c0b94064&type=notebook
+    rel: nofollow
+    target: _blank
   - name: 关于
     icon: fas fa-info-circle
     url: about/
