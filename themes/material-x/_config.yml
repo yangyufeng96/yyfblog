@@ -93,6 +93,11 @@ cover:
     icon: fas fa-info-circle
     url: about/
     rel: nofollow
+  - name: 工具箱
+    icon: fas fa-toolbox
+    url: http://www.bejson.com/
+    rel: nofollow
+    target: _blank
 
 # 桌面端导航栏菜单
 menu_desktop:
