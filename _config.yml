@@ -108,7 +108,8 @@ theme: material-x
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
 - type: git
-  repo: https://github.com/yf-feng/yangyufeng_blog.git
+  repo: https://yf-feng:yyf1539558157@github.com/yf-feng/yangyufeng_blog.git
+  #  https://github.com/yf-feng/yangyufeng_blog.git
   branch: master
   message: update
 # >> 主题配置 ---------------------------------------------------------------------
