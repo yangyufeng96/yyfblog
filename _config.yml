@@ -119,7 +119,7 @@ import:
   - "<meta name='theme-color' content='#FFFFFF'>"
   - "<meta name='msapplication-TileColor' content='#1BC3FB'>"
   link:
-  - "<link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/img/bitbug_favicon.ico'>"
+  - "<link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/yf-feng/assets_source@master/blog/img/bitbug_favicon.ico'>"
   # script:
 
 # valine

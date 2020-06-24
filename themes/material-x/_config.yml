@@ -4,11 +4,11 @@ info:
   docs: https://xaoxuu.com/wiki/material-x/
   cdn: # 把对应的那一行注释掉就使用本地的文件
     css:
-      style: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source/blog/css/style.css
+      style: https://cdn.jsdelivr.net/gh/yf-feng/assets_source/blog/css/style.css
     js:
-      app: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/js/app.js
-      search: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/js/search.js
-      volantis: https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/js/volantis.min.js
+      app: https://cdn.jsdelivr.net/gh/yf-feng/assets_source@master/blog/js/app.js
+      search: https://cdn.jsdelivr.net/gh/yf-feng/assets_source@master/blog/js/search.js
+      volantis: https://cdn.jsdelivr.net/gh/yf-feng/assets_source@master/blog/js/volantis.min.js
 
 ############################### 主题风格 ###############################
 # style: material    # material: 导航栏和标题栏背景是主题色
@@ -53,7 +53,7 @@ backstretch:
   duration: 0 # 持续时间（毫秒）
   fade: 0     # 渐变（毫秒）
   images:
-    - https://cdn.jsdelivr.net/gh/yangyufeng96/assets_source@master/blog/img/backstretch.jpg
+    - https://cdn.jsdelivr.net/gh/yf-feng/assets_source@master/blog/img/backstretch.jpg
 rss: ./atom.xml
 ############################### 自定义 ###############################
 # page的封面
