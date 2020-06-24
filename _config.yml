@@ -13,8 +13,8 @@ language:
 - zh-CN
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://yangyufeng96.github.io/yyfblog/
-root: /yyfblog/
+url: https://yf-feng.github.io/yangyufeng_blog/
+root: /yangyufeng_blog/
 # permalink: :title/
 permalink_defaults:
 
@@ -42,7 +42,7 @@ skip_render:
 
 # 动画人物
 live2d:
-  enable: true
+  enable: false
   scriptFrom: local
   pluginRootPath: live2dw/
   pluginJsPath: lib/
@@ -108,7 +108,7 @@ theme: material-x
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
 - type: git
-  repo: https://github.com/yangyufeng96/yyfblog.git
+  repo: https://github.com/yf-feng/yangyufeng_blog.git
   branch: master
   message: update
 # >> 主题配置 ---------------------------------------------------------------------
