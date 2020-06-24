@@ -7,9 +7,10 @@ const YAML = require("yamljs");
 const cheerio = require("cheerio");
 // 根据自己的情况进行配置
 const config = {
-  username: "yangyufeng96", // GitHub 用户名
-  token: "15df2127e73e1bdb68d7a9716653f069d229c7d5", // GitHub Token
-  repo: "yyfblog", // 存放 issues的git仓库
+  username: "yf-feng", // GitHub 用户名
+  // token: "15df2127e73e1bdb68d7a9716653f069d229c7d5", // GitHub Token
+  token: "25d4ae911f05252dab57a9779b1348ef7601670a",
+  repo: "yangyufeng_blog", // 存放 issues的git仓库
   // sitemap.xml的路径，commit.js放置在根目录下，无需修改，其他情况自行处理
   sitemapUrl: path.resolve(__dirname, "./public/sitemap.xml"),
   kind: "Gitalk", // "Gitalk" or "Gitment"
