@@ -6,12 +6,12 @@
 git init
 git add README.md
 git commit -m "first commit"
-git remote add origin https://github.com/yf-feng/yangyufeng_blog.git
+git remote add origin https://github.com/yangyfweb/yangyfweb.github.io.git
 git push -u origin master
 ```
 # 从命令行推送现有存储库
 ```
-git remote add origin https://github.com/yf-feng/yangyufeng_blog.git
+git remote add origin https://github.com/yangyfweb/yangyfweb.github.io.git
 git push -u origin master
 ```
 
@@ -25,7 +25,7 @@ npm run dev
 ```
 deploy:
 - type: git
-  repo: https://github.com/yf-feng/yangyufeng_blog.git
+  repo: https://github.com/yangyfweb/yangyfweb.github.io.git
   branch: master
   message: update
 ```
@@ -49,7 +49,7 @@ https://github.com/mygitname/mywebsite/tree/master/static/css/style.css
 
 ### 静态文件托管git地址
 
-<a href="https://github.com/yf-feng/assets_source">静态文件托管git地址</a>
+<a href="https://github.com/yangyfweb/assets_source">静态文件托管git地址</a>
 
 ### 图床使用地址
 

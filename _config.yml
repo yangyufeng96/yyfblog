@@ -13,8 +13,8 @@ language:
 - zh-CN
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://yf-feng.github.io/yangyufeng_blog/
-root: /yangyufeng_blog/
+url: https://yangyfweb.github.io/yangyfweb.github.io/
+root: /yangyfweb.github.io/
 # permalink: :title/
 permalink_defaults:
 
@@ -108,8 +108,8 @@ theme: material-x
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
 - type: git
-  repo: https://yf-feng:yyf1539558157@github.com/yf-feng/yangyufeng_blog.git
-  #  https://github.com/yf-feng/yangyufeng_blog.git
+  repo: https://yangyfweb:yyf1539558157@github.com/yangyfweb/yangyfweb.github.io.git
+  #  https://github.com/yangyfweb/yangyfweb.github.io.git
   branch: master
   message: update
 # >> 主题配置 ---------------------------------------------------------------------
@@ -120,7 +120,7 @@ import:
   - "<meta name='theme-color' content='#FFFFFF'>"
   - "<meta name='msapplication-TileColor' content='#1BC3FB'>"
   link:
-  - "<link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/yf-feng/assets_source@master/blog/img/bitbug_favicon.ico'>"
+  - "<link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/yangyfweb/assets_source@master/blog/img/bitbug_favicon.ico'>"
   # script:
 
 # valine
