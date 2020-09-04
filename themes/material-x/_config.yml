@@ -329,5 +329,5 @@ gitalk:
   owner: yangyfweb  #Github 用户名,
   repo:  yangyfweb.github.io #储存评论issue的github仓库名
   admin: yangyfweb  #Github 用户名,
-  clientID: 6e1fa87b45685deb78f8 #`Github Application clientID`
-  clientSecret: 22020636e01a1b5e83918d16c2fcf67dea713f70 #`Github Application clientSecret`
+  clientID: c9d3bfe9137dc2038a1a #`Github Application clientID`
+  clientSecret: 1ecb6999a152dad80e08c672ac5a779b92eb6ec0 #`Github Application clientSecret`
