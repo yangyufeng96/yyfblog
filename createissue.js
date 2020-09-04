@@ -9,7 +9,7 @@ const cheerio = require("cheerio");
 const config = {
   username: "yangyfweb", // GitHub 用户名
   // token: "15df2127e73e1bdb68d7a9716653f069d229c7d5", // GitHub Token
-  token: "25d4ae911f05252dab57a9779b1348ef7601670a",
+  token: "66b7d311b8540d17114ca3a20a79a10b131a3c03",
   repo: "yangyfweb.github.io", // 存放 issues的git仓库
   // sitemap.xml的路径，commit.js放置在根目录下，无需修改，其他情况自行处理
   sitemapUrl: path.resolve(__dirname, "./public/sitemap.xml"),
