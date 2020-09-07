@@ -1,11 +1,11 @@
 ---
 type: blog
 layout: post
-title: vue3.0 vue.config.js配置
-abbrlink: 2b017b59
-date: 2019-07-13 13:41:06
-categories: 教程
+title: vue.config.js配置
+categories: Vue
 tags: vue
+abbrlink: 4de2b0c3
+date: 2019-07-13 13:41:06
 ---
 
 ## 在项目根目录下创建vue.config.js文件：

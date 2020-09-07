@@ -1,10 +1,10 @@
 ---
 type: blog
 layout: post
-title: Vue插件总汇
+title: vue轮子工厂
 tags: vue
-categories: 教程
-abbrlink: b7497cb5
+categories: Vue
+abbrlink: da177769
 date: 2019-07-13 13:26:53
 ---
 

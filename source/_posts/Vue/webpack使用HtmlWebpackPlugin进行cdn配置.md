@@ -1,13 +1,13 @@
 ---
 title: vue项目中webpack使用HtmlWebpackPlugin进行cdn配置
-abbrlink: b1dab6e9
-date: 2019-07-16 13:27:58
 type: blog
 layout: post
-tags: 
+tags:
   - vue
   - webpack
-categories: 教程
+categories: Vue
+abbrlink: f8a3109a
+date: 2019-07-16 13:27:58
 ---
 
 # CDN服务商的选择

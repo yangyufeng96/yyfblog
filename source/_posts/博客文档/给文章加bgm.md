@@ -1,7 +1,7 @@
 ---
 type: blog
-title: 文章专属BGM
-categories: 教程
+title: 给文章加bgm
+categories: 博客文档
 music:
   type: song
   id: 26664345
@@ -12,7 +12,7 @@ date: 2018-12-30 00:00:00
 
 ```yml
 ---
-title: 文章专属BGM
+title: 给文章加bgm
 date: 2018-12-30
 music:
   type: song        # song （单曲） album （专辑） playlist （歌单） search （搜索）

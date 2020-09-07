@@ -1,11 +1,11 @@
 ---
 type: blog
 title: git常用命令
-abbrlink: 423abe9e
-date: 2019-07-13 13:48:01
 layout: post
 tags: git
-categories: 教程
+categories: Git
+abbrlink: 423abe9e
+date: 2019-07-13 13:48:01
 ---
 
 **推送到远程仓库**：[http://blog.csdn.net/u011043843/article/details/33336625](http://blog.csdn.net/u011043843/article/details/33336625)

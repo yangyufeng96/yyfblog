@@ -1,10 +1,10 @@
 ---
 type: blog
 title: git子目录创建分支
-abbrlink: b69a89b
-date: 2019-07-13 14:01:41
 tags: git
-categories: 教程
+categories: Git
+abbrlink: 2bdc4097
+date: 2019-07-13 14:01:41
 ---
 
 **使用场景**

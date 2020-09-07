@@ -6,9 +6,10 @@
     "version": "3.9.0"
   },
   "scripts": {
-    "dev": "hexo s",
+    "dev": "hexo clean && hexo s",
     "build": "hexo clean && hexo g && gulp && hexo d && node createissue",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "clean": "hexo clean"
   },
   "dependencies": {
     "chalk": "^2.4.2",
