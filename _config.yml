@@ -108,7 +108,8 @@ theme: material-x
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
 - type: git
-  repo: https://yangyfweb:yyf1539558157@github.com/yangyfweb/yangyfweb.github.io.git
+  # repo: https://yangyfweb:yyf1539558157@github.com/yangyfweb/yangyfweb.github.io.git
+  repo: https://github.com/yangyfweb/yangyfweb.github.io.git
   #  https://github.com/yangyfweb/yangyfweb.github.io.git
   branch: master
   message: update
