@@ -109,10 +109,11 @@ theme: material-x
 deploy:
 - type: git
   # repo: https://yangyfweb:yyf1539558157@github.com/yangyfweb/yangyfweb.github.io.git
-  repo: https://github.com/yangyfweb/yangyfweb.github.io.git
+  # repo: https://github.com/yangyfweb/yangyfweb.github.io.git
+  repo: git@github.com:yangyfweb/yangyfweb.github.io.git
   #  https://github.com/yangyfweb/yangyfweb.github.io.git
   branch: master
-  message: update
+  # message: update
 # >> 主题配置 ---------------------------------------------------------------------
 
 # 全局导入
