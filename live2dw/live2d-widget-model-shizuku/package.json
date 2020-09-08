@@ -36,8 +36,5 @@
     "type": "git",
     "url": "git+https://github.com/xiazeyu/live2d-widget-models.git"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "version": "1.0.5"
 }

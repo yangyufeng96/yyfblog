@@ -3,9 +3,8 @@ type: blog
 title: go语言的安装
 categories: Less
 tags:
-  - less
-  - vue
+  - golang
 abbrlink: 7b1282c0
-date: 2018-12-30 00:00:00
+date: 2020-9-8 00:00:00
 ---
 go语言的安装
