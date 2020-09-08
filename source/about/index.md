@@ -17,6 +17,6 @@ sidebar: false
 - 喜欢古风音乐
 - 现在做大数据可视化展示
 - 每写一行代码，都是人类的一次进步
-- [写作文档](https://xaoxuu.com/wiki/material-x/)
+- [博客主题文档](https://github.com/Dazmk/hexo-theme-material-x)
 - 欢迎留言～
 {% raw %}</div>{% endraw %}

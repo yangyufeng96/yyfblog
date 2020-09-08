@@ -19,4 +19,3 @@ music:
   id: 26664345      # 歌曲/专辑/歌单 ID
 ---
 ```
-详情见文档：[https://xaoxuu.com/wiki/material-x/third-party-services/](https://xaoxuu.com/wiki/material-x/third-party-services/)

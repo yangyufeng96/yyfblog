@@ -1,10 +1,10 @@
 ############################### 基本信息 ###############################
 info:
   name: Material X
-  docs: https://xaoxuu.com/wiki/material-x/
+  docs: https://github.com/Dazmk/hexo-theme-material-x
   cdn: # 把对应的那一行注释掉就使用本地的文件
     css:
-      style: https://cdn.jsdelivr.net/gh/yangyfweb/assets_source/blog/css/style.css
+      style: https://cdn.jsdelivr.net/gh/yangyfweb/yangyfweb.github.io@assets_src/css/style.css
     js:
       app: https://cdn.jsdelivr.net/gh/yangyfweb/yangyfweb.github.io@assets_src/js/app.js
       search: https://cdn.jsdelivr.net/gh/yangyfweb/yangyfweb.github.io@assets_src/js/search.js
