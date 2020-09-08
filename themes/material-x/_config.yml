@@ -4,11 +4,11 @@ info:
   docs: https://github.com/Dazmk/hexo-theme-material-x
   cdn: # 把对应的那一行注释掉就使用本地的文件
     css:
-      style: https://cdn.jsdelivr.net/gh/yangyfweb/yangyfweb.github.io@assets_src/css/style.css
+      style: https://cdn.jsdelivr.net/gh/yangyfweb/yangyfweb.github.io@gh-pages/assets_blog/css/style.css
     js:
-      app: https://cdn.jsdelivr.net/gh/yangyfweb/yangyfweb.github.io@assets_src/js/app.js
-      search: https://cdn.jsdelivr.net/gh/yangyfweb/yangyfweb.github.io@assets_src/js/search.js
-      volantis: https://cdn.jsdelivr.net/gh/yangyfweb/yangyfweb.github.io@assets_src/js/volantis.min.js
+      app: https://cdn.jsdelivr.net/gh/yangyfweb/yangyfweb.github.io@gh-pages/assets_blog/js/app.js
+      search: https://cdn.jsdelivr.net/gh/yangyfweb/yangyfweb.github.io@gh-pages/assets_blog/js/search.js
+      volantis: https://cdn.jsdelivr.net/gh/yangyfweb/yangyfweb.github.io@gh-pages/assets_blog/js/volantis.min.js
 
 ############################### 主题风格 ###############################
 # style: material    # material: 导航栏和标题栏背景是主题色
@@ -53,7 +53,7 @@ backstretch:
   duration: 0 # 持续时间（毫秒）
   fade: 0     # 渐变（毫秒）
   images:
-    - https://cdn.jsdelivr.net/gh/yangyfweb/yangyfweb.github.io@assets_src/img/backstretch.jpg
+    - https://cdn.jsdelivr.net/gh/yangyfweb/yangyfweb.github.io@gh-pages/assets_blog/img/backstretch.jpg
 rss: ./atom.xml
 ############################### 自定义 ###############################
 # page的封面
