@@ -174,7 +174,7 @@ body: [article, comments]
 # 侧边栏小部件，默认按下面给定的顺序全部显示，文章中还可以自定义显示一部分以及顺序
 sidebar:
   - widget: author
-    title: Yangyufeng'S BLOG
+    title: 漫道求索
     body: '<span data-chakhsu data-chakhsu-text="每写一行代码，都是人类的一次进步">每写一行代码，都是人类的一次进步</span>'
     avatar: https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg
     social: true
