@@ -4,11 +4,11 @@ info:
   docs: https://github.com/Dazmk/hexo-theme-material-x
   cdn: # 把对应的那一行注释掉就使用本地的文件
     css:
-      style: https://cdn.jsdelivr.net/gh/yangyfweb/yangyfweb.github.io@gh-pages/assets_blog/css/style.css
+      style: https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/css/style.css
     js:
-      app: https://cdn.jsdelivr.net/gh/yangyfweb/yangyfweb.github.io@gh-pages/assets_blog/js/app.js
-      search: https://cdn.jsdelivr.net/gh/yangyfweb/yangyfweb.github.io@gh-pages/assets_blog/js/search.js
-      volantis: https://cdn.jsdelivr.net/gh/yangyfweb/yangyfweb.github.io@gh-pages/assets_blog/js/volantis.min.js
+      app: https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/js/app.js
+      search: https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/js/search.js
+      volantis: https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/js/volantis.min.js
 
 ############################### 主题风格 ###############################
 # style: material    # material: 导航栏和标题栏背景是主题色
@@ -53,7 +53,7 @@ backstretch:
   duration: 0 # 持续时间（毫秒）
   fade: 0     # 渐变（毫秒）
   images:
-    - https://cdn.jsdelivr.net/gh/yangyfweb/yangyfweb.github.io@gh-pages/assets_blog/img/backstretch.jpg
+    - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/backstretch.jpg
 rss: ./atom.xml
 ############################### 自定义 ###############################
 # page的封面
@@ -285,9 +285,9 @@ share:
 #gitalk settings
 gitalk:
   enable: true #用来做启用判断可以不用
-  owner: yangyfweb  #Github 用户名,
-  repo:  yangyfweb.github.io #储存评论issue的github仓库名
-  admin: yangyfweb  #Github 用户名,
+  owner: yangyfeng  #Github 用户名,
+  repo:  yangyfeng.github.io #储存评论issue的github仓库名
+  admin: yangyfeng  #Github 用户名,
   clientID: c9d3bfe9137dc2038a1a #`Github Application clientID`
   clientSecret: 1ecb6999a152dad80e08c672ac5a779b92eb6ec0 #`Github Application clientSecret`
 

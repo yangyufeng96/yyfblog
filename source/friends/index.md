@@ -227,7 +227,7 @@ links:
 
 > 名称： 漫道求索
 头像： https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg
-网址： https://yangyfweb.github.io/yangyfweb.github.io/
+网址： https://yangyfeng.github.io/yangyfeng.github.io/
 标签： 前端开发、大数据可视化
 
 <img src="https://s2.ax1x.com/2019/07/12/ZhmoDS.gif">

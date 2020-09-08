@@ -1,4 +1,4 @@
-## yangyfweb.github.io
+## yangyfeng.github.io
 
 ### 1、在命令行上创建一个新的存储库
 
@@ -6,13 +6,13 @@
 git init
 git add README.md
 git commit -m "first commit"
-git remote add origin https://github.com/yangyfweb/yangyfweb.github.io.git
+git remote add origin https://github.com/yangyfeng/yangyfeng.github.io.git
 git push -u origin master
 ```
 ### 2、从命令行推送现有存储库
 
 ```
-git remote add origin https://github.com/yangyfweb/yangyfweb.github.io.git
+git remote add origin https://github.com/yangyfeng/yangyfeng.github.io.git
 git push -u origin master
 ```
 
@@ -28,7 +28,7 @@ npm run dev
 ```
 deploy:
 - type: git
-  repo: https://github.com/yangyfweb/yangyfweb.github.io.git
+  repo: https://github.com/yangyfeng/yangyfeng.github.io.git
   branch: master
   message: update
 ```
