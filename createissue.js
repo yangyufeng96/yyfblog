@@ -111,7 +111,7 @@ console.log("开始初始化评论...");
       console.log("本次发布无新增页面，无需初始化issue!!");
     }
   } catch (e) {
-    console.log('检索失败', e)
+    console.log('检索失败')
   }
 })();
 
