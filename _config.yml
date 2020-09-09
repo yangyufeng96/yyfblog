@@ -36,7 +36,7 @@ url: https://yangyfeng.github.io/
 root: /
 # 文章的永久链接格式
 # 默认为 :year/:month/:day/:title/
-permalink: /_posts/:abbrlink.html
+permalink: /posts/:abbrlink.html
 # 永久链接中各部分的默认值
 permalink_defaults:
 # 改写 permalink 的值来美化 URL
