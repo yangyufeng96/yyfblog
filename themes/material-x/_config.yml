@@ -11,8 +11,8 @@ info:
       volantis: https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/js/volantis.min.js
 
 ############################### 主题风格 ###############################
-# style: material    # material: 导航栏和标题栏背景是主题色
-style: pure        # pure: 导航栏和标题栏背景是白色
+style: material    # material: 导航栏和标题栏背景是主题色
+# style: pure        # pure: 导航栏和标题栏背景是白色
 
 
 ############################### 服务开关 ###############################
@@ -41,7 +41,7 @@ music:
   autoplay: false   # 自动播放
 
 # 友链页头像占位图
-avatar_placeholder: https://s2.ax1x.com/2019/07/12/ZhnHsK.jpg
+avatar_placeholder: https://s1.ax1x.com/2020/09/10/w8ffsK.jpg
 
 # 日期格式 http://momentjs.com/docs/
 date_format: 'YYYY-MM-DD' # 文章发布日期的格式
@@ -53,51 +53,61 @@ backstretch:
   duration: 0 # 持续时间（毫秒）
   fade: 0     # 渐变（毫秒）
   images:
-    - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/backstretch.jpg
+    - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gb3.jpg
+    - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/jxjy.jpg
+    - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gd.jpg
+    - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/stzz.jpg
+    - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gd2.jpg
+    - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/jxjy2.jpg
+
 rss: ./atom.xml
 ############################### 自定义 ###############################
 # page的封面
 cover:
-  scheme: search    # 后期将会提供多种封面方案
-  # height: half      # full（默认值）: 首页封面占据整个第一屏幕，其他页面占半个屏幕高度， half: 所有页面都封面都只占半个屏幕高度
-  # title: ""
-  # logo: assets/logo.png    # logo和title只显示一个，若同时设置，则只显示logo
-  search_placeholder: '搜索'
+  # 后期将会提供多种封面方案
+  scheme: search    
+  # full（默认值）: 首页封面占据整个第一屏幕，其他页面占半个屏幕高度， half: 所有页面都封面都只占半个屏幕高度
+  # height: full    
+  # logo和title只显示一个，若同时设置，则只显示logo 
+  title: 路漫漫而上下求索
+  # logo: assets/logo.png    
+  search_placeholder: 这里有你知道的一切
+
   # 主页封面菜单
   features:
-  - name: 主页
-    icon: fas fa-home
-    url: /
-  - name: 分类
-    icon: fas fa-folder-open
-    url: blogpost/categories/
-    rel: nofollow
-  - name: 标签
-    icon: fas fa-hashtag
-    url: blogpost/tags/
-    rel: nofollow
-  - name: 归档
-    icon: fas fa-archive
-    url: blogpost/archives/
-    rel: nofollow
-  - name: 朋友
-    icon: fas fa-user-friends
-    url: friends/
-    rel: nofollow
-  - name: 笔记
-    icon: fas fa-link
-    url: https://note.youdao.com/ynoteshare1/index.html?id=a111fc4fcb20c27492d48562cad8fb54&type=notebook
-    rel: nofollow
-    target: _blank
-  - name: 关于
-    icon: fas fa-info-circle
-    url: about/
-    rel: nofollow
-  - name: 工具箱
-    icon: fas fa-toolbox
-    url: http://www.bejson.com/
-    rel: nofollow
-    target: _blank
+    - name: 主页
+      icon: fas fa-home
+      url: /
+    - name: 分类
+      icon: fas fa-folder-open
+      url: blogpost/categories/
+      rel: nofollow
+    - name: 标签
+      icon: fas fa-hashtag
+      url: blogpost/tags/
+      rel: nofollow
+    - name: 归档
+      icon: fas fa-archive
+      url: blogpost/archives/
+      rel: nofollow
+    - name: 朋友
+      icon: fas fa-user-friends
+      url: friends/
+      rel: nofollow
+    - name: 笔记
+      icon: fas fa-link
+      url: https://note.youdao.com/ynoteshare1/index.html?id=a111fc4fcb20c27492d48562cad8fb54&type=notebook
+      rel: nofollow
+      target: _blank
+    - name: 关于
+      icon: fas fa-info-circle
+      url: about/
+      rel: nofollow
+    - name: 工具箱
+      icon: fas fa-toolbox
+      url: http://www.bejson.com/
+      rel: nofollow
+      target: _blank
 
 # 桌面端导航栏菜单
 menu_desktop:

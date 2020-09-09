@@ -59,11 +59,11 @@
     var titleTime;
     document.addEventListener('visibilitychange', function () {
       if (document.hidden) {
-        $('[rel="shortcut icon"]').attr('href', "https://s2.ax1x.com/2019/07/12/ZhmhgP.jpg");
+        $('[rel="shortcut icon"]').attr('href', "https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/error_favicon.ico");
         document.title = '你的页面走丢了...';
         clearTimeout(titleTime);
       } else {
-        $('[rel="shortcut icon"]').attr('href', "https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/bitbug_favicon.ico");
+        $('[rel="shortcut icon"]').attr('href', "https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/favicon.ico");
         document.title = '欢迎回来!'
         titleTime = setTimeout(function () {
           document.title = OriginTitle;
