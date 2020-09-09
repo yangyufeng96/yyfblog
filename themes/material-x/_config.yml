@@ -50,8 +50,8 @@ updated_date_format: 'll' # 文章更新日期的格式
 # 幻灯片
 backstretch:
   position: cover  # cover: 封面背景   full: 整个网页背景
-  duration: 0 # 持续时间（毫秒）
-  fade: 0     # 渐变（毫秒）
+  duration: 60000 # 持续时间（毫秒）
+  fade: 1000     # 渐变（毫秒）
   images:
     - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gb3.jpg
     - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/jxjy.jpg
