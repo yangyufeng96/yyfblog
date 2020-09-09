@@ -57,7 +57,7 @@ abbrlink:
 # npm install hexo-lazyload-image --save
 lazyload:
   enable: true 
-  onlypost: false
+  onlypost: true
   loadingImg: https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif
 
 # 目录
