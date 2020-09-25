@@ -210,10 +210,14 @@ theme: material-x
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  # repo: https://github.com/yangyfeng/yangyfeng.github.io.git
-  repo: git@github.com:yangyfeng/yangyfeng.github.io.git
+  repo: https://github.com/yangyfeng/yangyfeng.github.io.git
+  # repo: git@49.233.103.177:/home/git/repos/blog.git
   branch: master
-  message:
+
+# 部署到个人的服务器
+# deploy:
+#   type: git
+#   repo: git@49.233.103.177:/home/git/repos/blog.git
 
 # >> 主题配置 ---------------------------------------------------------------------
 # 全局导入
