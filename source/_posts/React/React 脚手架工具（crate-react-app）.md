@@ -1,10 +1,10 @@
 ---
 type: blog
-title: React 脚手架工具（crate-react-app）
+title: React 脚手架工具（create-react-app）
 categories:
   - react
 tags:
-  - crate-react-app
+  - create-react-app
   - react
 abbrlink: a2043eea
 date: 2020-9-9 17:55:00
