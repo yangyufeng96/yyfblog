@@ -64,7 +64,7 @@ lazyload:
 # 资源文件夹，这个文件夹用来存放内容。默认source
 source_dir: source
 # 公共文件夹，这个文件夹用于存放生成的站点文件 默认public
-public_dir: public
+public_dir: blog
 # 标签文件夹 tags
 tag_dir: blogpost/tags
 # 归档文件夹 archives
