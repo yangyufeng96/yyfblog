@@ -54,11 +54,11 @@ backstretch:
   fade: 1000     # 渐变（毫秒）
   images:
     - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gb3.jpg
-    - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/jxjy.jpg
-    - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gd.jpg
-    - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/stzz.jpg
-    - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gd2.jpg
-    - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/jxjy2.jpg
+    # - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/jxjy.jpg
+    # - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gd.jpg
+    # - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/stzz.jpg
+    # - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gd2.jpg
+    # - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/jxjy2.jpg
 
 rss: ./atom.xml
 ############################### 自定义 ###############################
