@@ -1,7 +1,8 @@
 ---
 type: blog
 title: 给文章加bgm
-categories: 博客文档
+categories: 
+  - 博客文档
 music:
   type: song
   id: 26664345

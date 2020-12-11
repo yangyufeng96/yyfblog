@@ -1,7 +1,8 @@
 ---
 type: blog
 title: microsoft vs code常用主题收集
-categories: 开发工具
+categories: 
+  - 开发工具
 tags:
   - 开发工具
 abbrlink: 230490ec

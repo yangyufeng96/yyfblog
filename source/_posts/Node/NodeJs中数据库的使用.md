@@ -2,9 +2,7 @@
 type: blog
 title: NodeJs中数据库的使用
 categories:
-  - node
-tags:
-  - node
+  - Node
 abbrlink: e4aa7462
 date: 2020-09-09 18:29:00
 ---

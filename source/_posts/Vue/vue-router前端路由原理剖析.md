@@ -2,7 +2,8 @@
 type: blog
 layout: post
 title: vue-router前端路由原理剖析
-categories: Vue
+categories:
+  - 前端
 tags:
   - vue
   - vue-router

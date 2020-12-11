@@ -2,10 +2,7 @@
 type: blog
 title: TCP3次握手
 categories:
-  - http
-tags:
-  - tcp
-  - http
+  - Http
 abbrlink: 6a5e2f06
 date: 2020-9-9 18:17:00
 ---

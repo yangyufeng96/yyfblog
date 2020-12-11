@@ -2,8 +2,10 @@
 type: blog
 layout: post
 title: vue轮子工厂
-tags: vue
-categories: Vue
+tags: 
+  - vue
+categories: 
+  - 前端
 abbrlink: da177769
 date: 2019-07-13 13:26:53
 ---

@@ -2,8 +2,10 @@
 type: blog
 title: 如何使用JavaScript实现纯前端读取和导出excel文件
 tags:
-  - excel
-categories: 插件
+	- excel
+	- 插件
+categories: 
+	- 前端
 abbrlink: ce0a6a78
 date: 2020-12-08
 ---

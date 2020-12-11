@@ -1,7 +1,10 @@
 ---
 type: blog
 title: microsoft vs code换主题
-categories: 开发工具
+categories: 
+  - 开发工具
+tags:
+  - vscode
 abbrlink: e8b3e153
 date: 2020-09-07 19:47:00
 ---

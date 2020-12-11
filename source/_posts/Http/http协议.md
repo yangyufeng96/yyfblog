@@ -2,9 +2,7 @@
 type: blog
 title: http协议
 categories:
-  - http
-tags:
-  - http
+  - Http
 abbrlink: 6a5e2f06
 date: 2020-9-9 18:20:00
 ---

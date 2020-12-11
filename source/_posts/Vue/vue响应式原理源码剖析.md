@@ -2,8 +2,10 @@
 type: blog
 layout: post
 title: vue响应式原理源码剖析
-categories: Vue
-tags: vue
+categories:
+  - 前端
+tags: 
+  - vue
 abbrlink: b0d42301
 date: 2020-11-26 10:37:00
 ---

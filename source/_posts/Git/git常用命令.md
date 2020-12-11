@@ -3,7 +3,8 @@ type: blog
 title: git常用命令
 layout: post
 tags: git
-categories: Git
+categories: 
+  - Git
 abbrlink: 423abe9e
 date: 2019-07-13 13:48:01
 ---

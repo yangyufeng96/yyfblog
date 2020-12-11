@@ -1,7 +1,8 @@
 ---
 type: blog
 title: less在vue中的使用
-categories: Less Vue
+categories: 
+  - 前端
 tags:
   - less
   - vue

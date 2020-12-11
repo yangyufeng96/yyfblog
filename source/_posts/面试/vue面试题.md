@@ -3,7 +3,6 @@ type: blog
 title: vue面试题
 categories:
   - 面试
-  - vue
 tags:
   - 面试题
   - vue

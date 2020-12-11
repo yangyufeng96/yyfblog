@@ -2,7 +2,7 @@
 type: blog
 title: create-react-app(注意事项)
 categories:
-  - react
+  - 前端
 tags:
   - create-react-app
   - react

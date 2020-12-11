@@ -3,7 +3,7 @@ type: blog
 top: true
 title: vue性能优化
 categories:
-  - vue
+  - 前端
 tags:
   - vue
   - 性能优化

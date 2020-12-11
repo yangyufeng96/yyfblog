@@ -2,8 +2,10 @@
 type: blog
 layout: post
 title: vue3的新特性
-categories: Vue
-tags: vue
+categories: 
+  - 前端
+tags: 
+  - vue
 abbrlink: 86248f8a
 date: 2020-12-08 00:00:00
 ---

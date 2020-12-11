@@ -2,7 +2,7 @@
 type: blog
 title: React 脚手架工具（create-react-app）
 categories:
-  - react
+  - 前端
 tags:
   - create-react-app
   - react

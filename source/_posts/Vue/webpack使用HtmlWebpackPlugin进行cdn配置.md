@@ -5,7 +5,8 @@ layout: post
 tags:
   - vue
   - webpack
-categories: Vue
+categories:
+  - 前端
 abbrlink: f8a3109a
 date: 2019-07-16 13:27:58
 ---
