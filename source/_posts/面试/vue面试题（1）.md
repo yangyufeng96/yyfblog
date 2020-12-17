@@ -1,6 +1,6 @@
 ---
 type: blog
-title: vue面试题
+title: vue面试题（1）
 categories:
   - 面试
 tags:
@@ -455,3 +455,65 @@ AST(abstract syntax tree 抽象语法树), 是源代码的抽象语法结构的�
 
  代码理解 
 
+```js
+this.name = 'JS每日一题' // 如这个绑定在某一个DOM元素上
+console.log(this.$el.textContent) 
+// 这时DOM还没有更新,所以不会得到文字JS每日一题
+this.$nextTick(() = >console.log(this.$el.textContent)) 
+// nextTick 是在DOM更新后执行，这里打印JS每日一题
+```
+
+**nextTick什么情况下会触发**
+
+ 在同一事件循环中的数据变化后，DOM更新完成, 执行nextTick(callback)内的回调 
+
+ 对事件循环不理解的可以点[这里](https://mp.weixin.qq.com/s?__biz=MzU1OTgxNDQ1Nw==&mid=2247483672&idx=1&sn=d7cf78506c258e6992f9637a107d35b9&scene=21#wechat_redirect) 
+
+**vue中nextTick的实现**
+
+> 源码地址 https://github.com/vuejs/vue/blob/dev/src/core/util/next-tick.js 
+
+```js
+function flushCallbacks() {
+  pending = false 
+  
+  // 复制一份callbacks  
+  const copies = callbacks.slice(0) 
+  // 清空callbacks
+  callbacks.length = 0
+  for (let i = 0; i < copies.length; i++) {
+    // 顺序执行nexttick传入的回调
+    copies[i]()
+  }
+}
+export
+function nextTick(cb ? :Function, ctx ? :Object) {
+  let _resolve 
+  // 将回调压入callbacks
+  callbacks.push(() = >{
+    if (cb) {
+      try {
+        cb.call(ctx)
+      } catch(e) {
+        handleError(e, ctx, 'nextTick')
+      }
+    } else if (_resolve) {
+      _resolve(ctx)
+    }
+  }) if (!pending) {
+    pending = true 
+    // timerFunc的源码较多，大致意思就是根据 useMacroTask 条件执行 macroTimerFunc 或者是 microTimerFunc，而它们都会在下一个 tick 执行 flushCallbacks，flushCallbacks 的逻辑非常简单，对 callbacks 遍历，然后执行相应的回调函数 (见上面的flushCallbacks方法)
+    timerFunc()
+  }
+	// 如果nextTick不传cb,就为nextTick提供一个promise调用 如: nextTick().then(()=> {})
+  if (!cb && typeof Promise !== 'undefined') {
+    return new Promise(resolve = >{
+      _resolve = resolve
+    })
+  }
+}
+```
+
+**总结**
+
+ 数据的变化到 DOM 的重新渲染是一个异步过程, 我们必须在 nextTick 后执行DOM相关的操作 
