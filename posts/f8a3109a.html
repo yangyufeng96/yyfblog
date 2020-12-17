@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>vue项目中webpack使用HtmlWebpackPlugin进行cdn配置 | 峰享会</title>
+  
+  <meta name="keywords" content="前端开发,科技,数据可视化,移动开发,小程序,客户端">
+  
+  
+  <meta name="description" content="集合了开发技能，生活趣事，未来科技，情感互动于一体。">
+  
+
+  
+  <link rel="alternate" href="/./atom.xml" title="峰享会">
+  
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+  
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="msapplication-TileColor" content="#1BC3FB">
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
+  
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/favicon.ico">
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/css/style.css">
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  
+  <div class="cover-wrapper">
+    <cover class='cover post half'>
+      
+        
+  <h1 class='title'>路漫漫而上下求索</h1>
+
+
+  <div class="m_search">
+    <form name="searchform" class="form u-search-form">
+      <input type="text" class="input u-search-input" placeholder="这里有你知道的一切" />
+      <i class="icon fas fa-search fa-fw"></i>
+    </form>
+  </div>
+
+<div class='menu navgation'>
+  <ul class='h-list'>
+    
+      
+        <li>
+          <a class="nav home" href="/"
+            
+            
+            id="home">
+            <i class='fas fa-home fa-fw'></i>&nbsp;主页
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/blogpost/categories/"
+            
+              rel="nofollow"
+            
+            
+            id="blogpostcategories">
+            <i class='fas fa-folder-open fa-fw'></i>&nbsp;分类
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/blogpost/tags/"
+            
+              rel="nofollow"
+            
+            
+            id="blogposttags">
+            <i class='fas fa-hashtag fa-fw'></i>&nbsp;标签
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/blogpost/archives/"
+            
+              rel="nofollow"
+            
+            
+            id="blogpostarchives">
+            <i class='fas fa-archive fa-fw'></i>&nbsp;归档
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/friends/"
+            
+              rel="nofollow"
+            
+            
+            id="friends">
+            <i class='fas fa-user-friends fa-fw'></i>&nbsp;朋友
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/about/"
+            
+              rel="nofollow"
+            
+            
+            id="about">
+            <i class='fas fa-info-circle fa-fw'></i>&nbsp;关于
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="http://www.bejson.com/"
+            
+              rel="nofollow"
+            
+            
+              target="_blank"
+            
+            id="http:www.bejson.com">
+            <i class='fas fa-toolbox fa-fw'></i>&nbsp;工具箱
+          </a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+      
+    </cover>
+    <header class="l_header material">
+  <div id="loading-bar-wrapper">
+    <div id="loading-bar" class="material"></div>
+  </div>
+
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href='/' >
+        
+          峰享会
+        
+      </a>
+			<div class='menu navgation'>
+				<ul class='h-list'>
+          
+  					
+  						<li>
+								<a class="nav flat-box" href="/"
+                  
+                  
+                  id="home">
+									<i class='fas fa-home fa-fw'></i>&nbsp;主页
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/blogpost/categories/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="blogpostcategories">
+									<i class='fas fa-folder-open fa-fw'></i>&nbsp;分类
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/blogpost/tags/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="blogposttags">
+									<i class='fas fa-hashtag fa-fw'></i>&nbsp;标签
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/blogpost/archives/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="blogpostarchives">
+									<i class='fas fa-archive fa-fw'></i>&nbsp;归档
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/friends/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="friends">
+									<i class='fas fa-user-friends fa-fw'></i>&nbsp;朋友
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/about/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="about">
+									<i class='fas fa-info-circle fa-fw'></i>&nbsp;关于
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="https://segmentfault.com/u/yangyufeng"
+                  
+                    rel="nofollow"
+                  
+                  
+                    target="_blank"
+                  
+                  id="https:segmentfault.comuyangyufeng">
+									<i class='fas fa-link fa-fw'></i>&nbsp;思否
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="https://tool.lu/"
+                  
+                    rel="nofollow"
+                  
+                  
+                    target="_blank"
+                  
+                  id="https:tool.lu">
+									<i class='fas fa-toolbox fa-fw'></i>&nbsp;工具箱
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<i class="icon fas fa-search fa-fw"></i>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fas fa-search fa-fw" href='javascript:void(0)'></a></li>
+				
+				<li class='s-menu'><a class="fas fa-bars fa-fw" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo flat-box"></a>
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="flat-btn fas fa-comments fa-fw" href='javascript:void(0)'></a></li>
+        
+          <li class='s-toc'><a class="flat-btn fas fa-list fa-fw" href='javascript:void(0)'></a></li>
+        
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu navgation">
+      <ul>
+        
+          
+            <li>
+							<a class="nav flat-box" href="/"
+                
+                
+                id="home">
+								<i class='fas fa-clock fa-fw'></i>&nbsp;所有文章
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/blogpost/archives/"
+                
+                  rel="nofollow"
+                
+                
+                id="blogpostarchives">
+								<i class='fas fa-archive fa-fw'></i>&nbsp;文章归档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/blogpost/tags/"
+                
+                  rel="nofollow"
+                
+                
+                id="blogposttags">
+								<i class='fas fa-hashtag fa-fw'></i>&nbsp;所有标签
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/friends/"
+                
+                  rel="nofollow"
+                
+                
+                id="friends">
+								<i class='fas fa-link fa-fw'></i>&nbsp;我的友链
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/./atom.xml"
+                
+                  rel="nofollow"
+                
+                
+                id=".atom.xml">
+								<i class='fas fa-rss fa-fw'></i>&nbsp;RSS订阅
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/about/"
+                
+                  rel="nofollow"
+                
+                
+                id="about">
+								<i class='fas fa-info-circle fa-fw'></i>&nbsp;关于博主
+							</a>
+            </li>
+          
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+<script>setLoadingBarProgress(40);</script>
+
+  </div>
+
+  <div class="l_body">
+    <div class='body-wrapper'>
+      <div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/posts/f8a3109a.html">
+        vue项目中webpack使用HtmlWebpackPlugin进行cdn配置
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://yangyfeng.github.io" rel="nofollow">
+      
+        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
+      
+      <p>漫道求索</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-07-16</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/blogpost/categories/前端/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>前端</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
+
+
+          
+        
+          
+            
+
+          
+        
+        
+          <!-- 文章字体个数 -->
+          <div class="new-meta-item size">
+            <a class="notlink">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+              <p>2.3k字</p>
+            </a>
+          </div>
+          <!-- 阅读时间 -->
+          <div class="new-meta-item read-time">
+            <a class="notlink">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <p>9分</p>
+            </a>
+          </div>
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          <h1 id="CDN服务商的选择"><a href="#CDN服务商的选择" class="headerlink" title="CDN服务商的选择"></a>CDN服务商的选择</h1><p>要使用cdn功能，就需要cdn服务商，我们可以自己搭建，也可以使用一些比较知名的服务商，庆幸的是市面上有不少的免费cdn服务商，如：</p>
+<ul>
+<li><a href="https://links.jianshu.com/go?to=https%3A%2F%2Fwww.bootcdn.cn%2F" target="_blank" rel="noopener">BootCDN</a></li>
+<li><a href="https://links.jianshu.com/go?to=https%3A%2F%2Funpkg.com%2F" target="_blank" rel="noopener">unpkg</a></li>
+</ul>
+<p>其中BootCDN 是 Bootstrap 中文网支持并维护的前端开源项目免费 CDN 服务，项目资源同步于 cdnjs 仓库。界面相对比较好看，且支持搜索功能，可以在线测试cdn是否正常，所以下面以Bootcdn为例说明。</p>
+<h1 id="webpack的作用"><a href="#webpack的作用" class="headerlink" title="webpack的作用"></a>webpack的作用</h1><p>在前段项目开发中，我们经常使用webpack进行项目搭建， 主要作用有两个，分别是</p>
+<p>1.启动服务器环境，用于调试代码</p>
+<p>2.构建项目，生成静态资源</p>
+<p>在webpack中使用cdn是在打包生成静态资源的时候做处理，主要原理是使用<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fhtml-webpack-plugin" target="_blank" rel="noopener">html-webpack-plugin</a>动态插入cdn链接。</p>
+<p><em>关于webpack的使用这里不做过多的介绍，将以vue–cli 2.x生成的默认项目为例做介绍</em></p>
+<a id="more"></a>
+<h1 id="html-webpack-plugin的使用"><a href="#html-webpack-plugin的使用" class="headerlink" title="html-webpack-plugin的使用"></a>html-webpack-plugin的使用</h1><p><code>html-webpack-plugin</code>是webpack的一个插件，可以动态的创建和编辑html内容，在html中使用<code>esj语法</code>可以读取到配置中的参数，简化了html文件的构建。</p>
+<p>我们这次主要是使用它来动态插入cdn链接，如link标签和script标签。</p>
+<h1 id="创建Vue项目"><a href="#创建Vue项目" class="headerlink" title="创建Vue项目"></a>创建Vue项目</h1><h2 id="vue-cli-2-x"><a href="#vue-cli-2-x" class="headerlink" title="vue-cli 2.x"></a><em>vue-cli 2.x</em></h2><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">vue init webpack webpack-cdn-demo</span></span><br></pre></td></tr></table></figure>
+<p>创建名为<code>webpack-cdn-demo</code>，类型为webpack的<code>vue</code>项目，如果安装的vue-cli是3.x版本，命令不太一样，详细可看<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fcli.vuejs.org%2Fzh%2Fguide%2Fcreating-a-project.html%23vue-create" target="_blank" rel="noopener">vue-cli 3</a>。</p>
+<h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span>  webpack-cdn-demo</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> npm  install</span></span><br></pre></td></tr></table></figure>
+<h2 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h2><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">run</span><span class="bash"> dev</span></span><br></pre></td></tr></table></figure>
+<p><strong>目录结构</strong></p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">+<span class="comment">-- build</span></span><br><span class="line">|  +<span class="comment">-- utils.js js 工具类</span></span><br><span class="line">|  +<span class="comment">-- webpack.base.conf.js  webpack基础配置</span></span><br><span class="line">|  +<span class="comment">-- webpack.dev.conf.js  webpack开发配置</span></span><br><span class="line">|  +<span class="comment">-- webpack.prod.conf.js  webpack构建配置</span></span><br><span class="line">+<span class="comment">-- config</span></span><br><span class="line">+<span class="comment">-- src</span></span><br><span class="line">|  +<span class="comment">-- App.vue  vue文件组件</span></span><br><span class="line">|   +<span class="comment">-- main.js  入口文件</span></span><br><span class="line">+<span class="comment">-- index.html  页面</span></span><br><span class="line">+<span class="comment">-- package.json  项目文件</span></span><br></pre></td></tr></table></figure>
+<p>其中build文件夹中的<code>webpack.prod.conf.js</code>是我们主要注意的文件,我们在该文件中动态设置不需要被打包的模块并构建出合适的链接。</p>
+<h1 id="确定需要使用CDN的模块"><a href="#确定需要使用CDN的模块" class="headerlink" title="确定需要使用CDN的模块"></a>确定需要使用CDN的模块</h1><p>在webpack项目中，所引入的第三方资源会被统一打包进vender文件中，我们通过webpack的<code>externals</code>属性可以设置打包时排除该模块，详情说明见<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fwebpack.docschina.org%2Fconfiguration%2Fexternals%2F" target="_blank" rel="noopener">外部扩展(externals)</a>。</p>
+<p>在前面的步骤中，我们创建的项目包括vue、vue-router，在正式开发在还会有ui库，如element-ui，为了方便演示，我们再安装element-ui和axios两个模块，并实现在构建是把这是个模块以cdn的形式引入。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">所需模块</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">vue</td>
+</tr>
+<tr>
+<td style="text-align:center">vue-router</td>
+</tr>
+<tr>
+<td style="text-align:center">element-ui</td>
+</tr>
+<tr>
+<td style="text-align:center">axios</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> <span class="keyword">element</span>-ui axios  -S</span><br></pre></td></tr></table></figure>
+<p><em>注意安装时记得 -S，它的作用是安装完后在package.json项目文件中插入记录，后续操作需要读取已安装模块</em></p>
+<h1 id="确定CDN资源URI"><a href="#确定CDN资源URI" class="headerlink" title="确定CDN资源URI"></a>确定CDN资源URI</h1><p>对于cdn，我们可以自己搭建，也可以使用专业的cdn服务商，这里使用免费的cdn <a href="https://links.jianshu.com/go?to=https%3A%2F%2Fwww.bootcdn.cn%2F" target="_blank" rel="noopener">bootcdn</a>。选用免费cdn有很多好处，但毕竟有隐患，那就是服务有可能会奔溃。</p>
+<p>bootcdn <a href="https://links.jianshu.com/go?to=https%3A%2F%2Fwww.bootcdn.cn" target="_blank" rel="noopener">https://www.bootcdn.cn</a></p>
+<p>依次搜索出前面模块，结果如下:</p>
+<table>
+<thead>
+<tr>
+<th><strong>模块</strong></th>
+<th>版本</th>
+<th><strong>js</strong></th>
+<th><strong>css</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vue</td>
+<td>2.5.2</td>
+<td><a href="https://links.jianshu.com/go?to=https%3A%2F%2Fcdn.bootcss.com%2Fvue%2F2.5.2%2Fvue.min.js" target="_blank" rel="noopener">https://cdn.bootcss.com/vue/2.5.2/vue.min.js</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td>vue-router</td>
+<td>3.0.1</td>
+<td><a href="https://links.jianshu.com/go?to=https%3A%2F%2Fcdn.bootcss.com%2Fvue-router%2F3.0.1%2Fvue-router.min.js" target="_blank" rel="noopener">https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td>element-ui</td>
+<td>2.6.3</td>
+<td><a href="https://links.jianshu.com/go?to=https%3A%2F%2Fcdn.bootcss.com%2Felement-ui%2F2.6.1%2Findex.js" target="_blank" rel="noopener">https://cdn.bootcss.com/element-ui/2.6.1/index.js</a></td>
+<td><a href="https://links.jianshu.com/go?to=https%3A%2F%2Fcdn.bootcss.com%2Felement-ui%2F2.6.1%2Ftheme-chalk%2Findex.css" target="_blank" rel="noopener">https://cdn.bootcss.com/element-ui/2.6.1/theme-chalk/index.css</a></td>
+</tr>
+<tr>
+<td>axios</td>
+<td>0.18.0</td>
+<td><a href="https://links.jianshu.com/go?to=https%3A%2F%2Fcdn.bootcss.com%2Faxios%2F0.18.0%2Faxios.min.js" target="_blank" rel="noopener">https://cdn.bootcss.com/axios/0.18.0/axios.min.js</a></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>按照规律，得出cdn资源路径规则为</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">https:</span><span class="comment">//cdn.bootcss.com + 模块名 + 版本号 + 具体路径</span></span><br></pre></td></tr></table></figure>
+<p>其他cdn服务商同理</p>
+<h1 id="打包前的处理"><a href="#打包前的处理" class="headerlink" title="打包前的处理"></a>打包前的处理</h1><h2 id="build-utils-js添加读取事件"><a href="#build-utils-js添加读取事件" class="headerlink" title="build/utils.js添加读取事件"></a>build/utils.js添加读取事件</h2><p><code>使用cdn其实也就是在webpack热启动和打包项目的时候动态插入script和style链接</code>，为了方便维护，我们通过在<code>build/utils.js</code>文件上添加几个方法，将来在<code>webpack.dev.conf.js</code>和<code>webpack.prod.conf.js</code>上可以使用。</p>
+<p><em>如果没有build/utils.js，可以在其他文件上添加，只要在后续步骤中能操作到就行</em></p>
+<p>添加cdn根地址</p>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// build/utils.js 国内免费cdn镜像源</span></span><br><span class="line"><span class="keyword">exports</span>.cdnBaseHttp = <span class="string">'https://cdn.bootcss.com'</span>;</span><br></pre></td></tr></table></figure>
+<p>添加cdn模块 <code>按照需要删改</code> </p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  build/utils.js external配置</span></span><br><span class="line">exports.externalConfig = [</span><br><span class="line">  &#123; <span class="string">name:</span> <span class="string">'vue'</span>, <span class="string">scope:</span> <span class="string">'Vue'</span>, <span class="string">js:</span> <span class="string">'vue.min.js'</span> &#125;,</span><br><span class="line">  &#123; <span class="string">name:</span> <span class="string">'vue-router'</span>, <span class="string">scope:</span> <span class="string">'VueRouter'</span>, <span class="string">js:</span> <span class="string">'vue-router.min.js'</span> &#125;,</span><br><span class="line">  &#123; <span class="string">name:</span> <span class="string">'axios'</span>, <span class="string">scope:</span> <span class="string">'axios'</span>, <span class="string">js:</span> <span class="string">'axios.min.js'</span> &#125;,</span><br><span class="line">  &#123; <span class="string">name:</span> <span class="string">'element-ui'</span>, <span class="string">scope:</span> <span class="string">'ELEMENT'</span>, <span class="string">js:</span> <span class="string">'index.js'</span>, <span class="string">css:</span> <span class="string">'theme-chalk/index.css'</span> &#125;,</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+<p><code>name</code> 模块名称，与package.json同名<br> <code>scope</code> 模块作用域命名<br> <code>js</code> js地址<br> <code>css</code> css地址</p>
+<p>这里特别注意scope，它是webpack配置的external参数下的信息，比如vue的作用域命名是Vue，vue-router的作用域命名是VueRouter，element-ui的作用域命名是ELEMENT，同理，jq的作用域命名是JQuery，<code>具体做法是先引入该资源，然后在控制台依次输入近似的值，一个个匹配</code>(目前没找到更好的做法)。</p>
+<p>添加获取版本号方法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// build/utils.js 获取模块版本号</span></span><br><span class="line">exports.getModulesVersion = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> mvs = &#123;&#125;;</span><br><span class="line">  <span class="keyword">let</span> regexp = <span class="regexp">/^npm_package_.&#123;0,3&#125;dependencies_/gi</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> m <span class="keyword">in</span> process.env) &#123; <span class="comment">// 从node内置参数中读取，也可直接import 项目文件进来</span></span><br><span class="line">    <span class="keyword">if</span> (regexp.test(m)) &#123; <span class="comment">// 匹配模块</span></span><br><span class="line">       <span class="comment">// 获取到模块版本号</span></span><br><span class="line">      mvs[m.replace(regexp, <span class="string">''</span>).replace(<span class="regexp">/_/g</span>, <span class="string">'-'</span>)] = process.env[m].replace(<span class="regexp">/(~|\^)/g</span>, <span class="string">''</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> mvs;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>导出不需要被打包的cdn模块配置<code>重点</code> </p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// build/utils.js</span><br><span class="line">exports.getExternalModules = config =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> externals = &#123;&#125;; // 结果</span><br><span class="line">  <span class="keyword">let</span> dependencieModules = this.getModulesVersion(); // 获取全部的模块和版本号</span><br><span class="line">  config = config || this.externalConfig; // 默认使用utils下的配置</span><br><span class="line">  config.forEach(<span class="type">item</span> =&gt; &#123; // 遍历配置</span><br><span class="line">    <span class="keyword">if</span> (<span class="type">item</span><span class="built_in">.name</span> <span class="keyword">in</span> dependencieModules) &#123;</span><br><span class="line">      <span class="keyword">let</span> version = dependencieModules[<span class="type">item</span><span class="built_in">.name</span>];</span><br><span class="line">      // 拼接css 和 js 完整链接</span><br><span class="line">      <span class="type">item</span>.css = <span class="type">item</span>.css &amp;&amp; [this.cdnBaseHttp, <span class="type">item</span><span class="built_in">.name</span>, version, <span class="type">item</span>.css].join(<span class="string">'/'</span>);</span><br><span class="line">      <span class="type">item</span>.js = <span class="type">item</span>.js &amp;&amp; [this.cdnBaseHttp, <span class="type">item</span><span class="built_in">.name</span>, version, <span class="type">item</span>.js].join(<span class="string">'/'</span>);</span><br><span class="line">      externals[<span class="type">item</span><span class="built_in">.name</span>] = <span class="type">item</span>.scope; // 为打包时准备</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      throw new Error(<span class="string">'相关依赖未安装，请先执行npm install '</span> + <span class="type">item</span><span class="built_in">.name</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> externals;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="webpack-dev-conf-js添加cdn配置"><a href="#webpack-dev-conf-js添加cdn配置" class="headerlink" title="webpack.dev.conf.js添加cdn配置"></a>webpack.dev.conf.js添加cdn配置</h2><p>在webpack热启动本地调试的时候，我们可以使用cdn。</p>
+<p>获取cdn配置</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// build/webpack.dev.conf.js 大概在15行</span></span><br><span class="line"><span class="keyword">const</span> externalConfig = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(utils.externalConfig));  <span class="comment">// 读取配置</span></span><br><span class="line">utils.getExternalModules(externalConfig); <span class="comment">// 获取到合适的路径（引用类型，自动改变）</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// const devWebpackConfig = merge .......</span></span><br></pre></td></tr></table></figure>
+<p>在<code>build/webpack.dev.conf.js</code>中，默认已经引入了<code>utils.js</code>，所以可以直接调用相关方法，如果是自定义的文件，记得引入。</p>
+<p>HtmlWebpackPlugin插件中导出cdn<br> 紧接着我们在该文件下找到<code>devWebpackConfig</code>下的<code>plugins</code>下的<code>HtmlWebpackPlugin</code>插件，它的作用是动态构建html页面，原始配置如下：</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> HtmlWebpackPlugin(&#123;</span><br><span class="line">  filename: <span class="string">'index.html'</span>,</span><br><span class="line">  template: <span class="string">'index.html'</span>,</span><br><span class="line">  <span class="keyword">inject</span>: <span class="keyword">true</span></span><br><span class="line">&#125;),</span><br><span class="line"><span class="comment">// 代表处理根目录下的index.html文件</span></span><br></pre></td></tr></table></figure>
+<p><code>我们可以往里面添加点自定义属性，方便在index.html中调用。</code>，修改如下：</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">new</span> <span class="selector-tag">HtmlWebpackPlugin</span>(&#123;</span><br><span class="line"> <span class="attribute">filename</span>: <span class="string">'index.html'</span>,</span><br><span class="line"> <span class="attribute">template</span>: <span class="string">'index.html'</span>,</span><br><span class="line"> <span class="attribute">inject</span>: true,</span><br><span class="line"> <span class="attribute">cdnConfig</span>: externalConfig, <span class="comment">// cdn配置</span></span><br><span class="line"> <span class="attribute">onlyCss</span>: true, <span class="comment">//dev下只加载css</span></span><br><span class="line">&#125;),</span><br></pre></td></tr></table></figure>
+<p>其中<code>cdnConfig</code>和<code>onlyCss</code>自定义属性，在html上通过<code>htmlWebpackPlugin.options</code>可以读取到。</p>
+<p>更多html-webpack-plugin配置情况官网，这里暂时不需要更多。</p>
+<h2 id="webpack-prod-conf-js添加cdn配置和忽略模块"><a href="#webpack-prod-conf-js添加cdn配置和忽略模块" class="headerlink" title="webpack.prod.conf.js添加cdn配置和忽略模块"></a>webpack.prod.conf.js添加cdn配置和忽略模块</h2><p>在打包的时候，我们使用cdn，配置和前面dev的差不多，只不过需要做多一步。</p>
+<p>获取cdn配置</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// build/webpack.prod.conf.js 大概在15行</span></span><br><span class="line"><span class="keyword">const</span> externalConfig = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(utils.externalConfig)); <span class="comment">// 读取配置</span></span><br><span class="line"><span class="keyword">const</span> externalModules = utils.getExternalModules(externalConfig); <span class="comment">// 获取到合适路径和忽略模块</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// const webpackConfig = merge(baseWebpackConfig....</span></span><br></pre></td></tr></table></figure>
+<p>注意此处的<code>externalModules</code>，后面用到，也就是比dev多的步骤。</p>
+<p>webpck配置加多个属性externals<br> <code>externals</code>代表构建时不需要被处理的模块，也就是前面说的<code>scope</code>需要注意的地方。</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// build/webpack.prod.conf.js</span></span><br><span class="line"><span class="keyword">const</span> webpackConfig = <span class="keyword">merge</span>(baseWebpackConfig, &#123;</span><br><span class="line">  externals: externalModules, <span class="comment">// 构建时忽略的资源</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 其他属性</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>HtmlWebpackPlugin插件中导出cdn<br> 和dev一样，我们修改<code>webpackConfig</code>下的<code>plugins</code>下的<code>HtmlWebpackPlugin</code>插件配置 (这里的默认配置比dev的多，主要是css压缩和js压缩相关)</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> HtmlWebpackPlugin(&#123;</span><br><span class="line">   <span class="comment">// 其他默认配置</span></span><br><span class="line">  cdnConfig: externalConfig, <span class="comment">// cdn配置</span></span><br><span class="line">  onlyCss: <span class="literal">false</span>, <span class="comment">//加载css</span></span><br><span class="line">&#125;),</span><br></pre></td></tr></table></figure>
+<p>加入和dev一样的两个配置，不过需要把onlyCss改为<code>true</code>，因为我们希望打包时不单单使用css。</p>
+<h2 id="index-html插入相关链接"><a href="#index-html插入相关链接" class="headerlink" title="index.html插入相关链接"></a>index.html插入相关链接</h2><p>webpack配置已经完成，在html-webpack-plugin中已经添加了相关参数，我们再在页面上可以直接使用，使用语法是<code>ejs</code>，和asp.net，jsp，php类似。</p>
+<figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="meta">&lt;!DOCTYPE html&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="xml">   <span class="comment">&lt;!-- 其他标签 --&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">%</span></span></span><span class="ruby"> htmlWebpackPlugin.options.cdnConfig.forEach(function(item)&#123; <span class="keyword">if</span>(item.css)&#123; </span><span class="xml"><span class="tag">%&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"&lt;%=</span></span></span><span class="ruby"> item.css </span><span class="xml"><span class="tag"><span class="string">%&gt;"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> /&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">%</span></span></span><span class="ruby"> &#125;&#125;) </span><span class="xml"><span class="tag">%&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml">   <span class="comment">&lt;!-- 其他标签 --&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">%</span></span></span><span class="ruby"> htmlWebpackPlugin.options.cdnConfig.forEach(function(item)&#123; <span class="keyword">if</span>(item.js &amp;&amp; !htmlWebpackPlugin.options.onlyCss)&#123; </span><span class="xml"><span class="tag">%&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"&lt;%=</span></span></span><span class="ruby"> item.js </span><span class="xml"><span class="tag"><span class="string">%&gt;"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">%</span></span></span><span class="ruby"> &#125;&#125;) </span><span class="xml"><span class="tag">%&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="comment">&lt;!-- built files will be auto injected --&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>通过<code>&lt;% %&gt;</code> 和 <code>htmlWebpackPlugin.options</code> 用js遍历<code>插入</code>link标签和script标签。</p>
+<p><em>ps: 修改了webpack配置，需要重启项目才会生效</em></p>
+<h3 id="愉快的开发"><a href="#愉快的开发" class="headerlink" title="愉快的开发"></a>愉快的开发</h3><p>此时启动项目，查看控制台或者查看源代码，可以清楚的相关资源来源</p>
+<p><strong>有一个更好的插件</strong><a href="https://github.com/shirotech/webpack-cdn-plugin" target="_blank" rel="noopener">webpack-cdn-plugin</a></p>
+<p><strong><a href="https://www.jianshu.com/p/9248db0349fb" target="_blank" rel="noopener">原文链接</a></strong></p>
+
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <hr>
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-11T17:14:19+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>最后更新于 2020年12月11日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/vue/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>vue</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/webpack/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>webpack</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://yangyfeng.github.io/posts/f8a3109a.html&title=vue项目中webpack使用HtmlWebpackPlugin进行cdn配置 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=CDN服务商的选择要使用cdn功能，就需要cdn服务商，我们可以自己搭建，也可以使用一些比较知名的服务商，庆幸的是市面上有不少的免费cdn服务商，如：
+
+BootCDN
+unpkg
+
+其中BootCDN 是 Bootstrap 中文网支持并维护的前端开源项目免费 CDN 服务，项目资源同步于 cdnjs 仓库。界面相对比较好看，且支持搜索功能，可以在线测试cdn是否正常，所以下面以Bootcdn为例说明。
+webpack的作用在前段项目开发中，我们经常使用webpack进行项目搭建， 主要作用有两个，分别是
+1.启动服务器环境，用于调试代码
+2.构建项目，生成静态资源
+在webpack中使用cdn是在打包生成静态资源的时候做处理，主要原理是使用html-webpack-plugin动态插入cdn链接。
+关于webpack的使用这里不做过多的介绍，将以vue–cli 2.x生成的默认项目为例做介绍"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yangyfeng.github.io/posts/f8a3109a.html&title=vue项目中webpack使用HtmlWebpackPlugin进行cdn配置 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=CDN服务商的选择要使用cdn功能，就需要cdn服务商，我们可以自己搭建，也可以使用一些比较知名的服务商，庆幸的是市面上有不少的免费cdn服务商，如：
+
+BootCDN
+unpkg
+
+其中BootCDN 是 Bootstrap 中文网支持并维护的前端开源项目免费 CDN 服务，项目资源同步于 cdnjs 仓库。界面相对比较好看，且支持搜索功能，可以在线测试cdn是否正常，所以下面以Bootcdn为例说明。
+webpack的作用在前段项目开发中，我们经常使用webpack进行项目搭建， 主要作用有两个，分别是
+1.启动服务器环境，用于调试代码
+2.构建项目，生成静态资源
+在webpack中使用cdn是在打包生成静态资源的时候做处理，主要原理是使用html-webpack-plugin动态插入cdn链接。
+关于webpack的使用这里不做过多的介绍，将以vue–cli 2.x生成的默认项目为例做介绍"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://yangyfeng.github.io/posts/f8a3109a.html&title=vue项目中webpack使用HtmlWebpackPlugin进行cdn配置 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=CDN服务商的选择要使用cdn功能，就需要cdn服务商，我们可以自己搭建，也可以使用一些比较知名的服务商，庆幸的是市面上有不少的免费cdn服务商，如：
+
+BootCDN
+unpkg
+
+其中BootCDN 是 Bootstrap 中文网支持并维护的前端开源项目免费 CDN 服务，项目资源同步于 cdnjs 仓库。界面相对比较好看，且支持搜索功能，可以在线测试cdn是否正常，所以下面以Bootcdn为例说明。
+webpack的作用在前段项目开发中，我们经常使用webpack进行项目搭建， 主要作用有两个，分别是
+1.启动服务器环境，用于调试代码
+2.构建项目，生成静态资源
+在webpack中使用cdn是在打包生成静态资源的时候做处理，主要原理是使用html-webpack-plugin动态插入cdn链接。
+关于webpack的使用这里不做过多的介绍，将以vue–cli 2.x生成的默认项目为例做介绍"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACGUlEQVR42u3a3U7DMAwG0L7/S4/bSYjts50iNTm9QowmOSCZ+Oe64ufVet7f/bzy712uOx4MDIzHMvKj5D+Tf+ev9fN9MTAwzmEkoTCJdckv6PO7yb4YGBgYyXL5gT4H0JyEgYGBkTOqaWoSlDEwMDASRl4y+5JMjgPr7bk4BgbGAxl51f3/v76lv4GBgfEoRq8lmaS1k1Jd+VQYGBhbM3op6ByZF+wKKTEGBsYBjMmgw6pDT9bHwMDYmzE5Si/TrAb0pIWAgYFxDqO6XGGD+NPqNREDA+MExrzFWB3OqLYto+YoBgbGAYzkhTzRzdPU6hDYl/QVAwNjO0Y5RRxfB5ODlhulGBgYWzN6Q2CTS95aDAYGxpmM3kLV8lk1oOc7YmBg7MrIByl66W7eJKgGYgwMjJMZebBbVfNbMByGgYGxNSOJYHnA7RXjqnfYwigGBgbGFozeFe1VfPK9qldVDAyMExjVBPUqPjmpWnobTY5gYGA8itEbm+gV75JLZ3XsDAMD4xxG75mU+6sDHFH3FQMD4wDG2kLYKuqCuy0GBsZjGZPwOk938+tg4e+AgYGxHWNSMquOcPVWSFoIGBgYJzDy1uNk5OL2VgQGBsYBjDzw9d5NSJOGKAYGBka13ZgkuvlVMgrEGBgYGHG47DUDevhl/zcwMDAewkiS2GpyG23fagZgYGCcxujVsqpXw9542eKmJgYGxvMYPyDXslCcfnIOAAAAAElFTkSuQmCC'>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+        
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACGUlEQVR42u3a3U7DMAwG0L7/S4/bSYjts50iNTm9QowmOSCZ+Oe64ufVet7f/bzy712uOx4MDIzHMvKj5D+Tf+ev9fN9MTAwzmEkoTCJdckv6PO7yb4YGBgYyXL5gT4H0JyEgYGBkTOqaWoSlDEwMDASRl4y+5JMjgPr7bk4BgbGAxl51f3/v76lv4GBgfEoRq8lmaS1k1Jd+VQYGBhbM3op6ByZF+wKKTEGBsYBjMmgw6pDT9bHwMDYmzE5Si/TrAb0pIWAgYFxDqO6XGGD+NPqNREDA+MExrzFWB3OqLYto+YoBgbGAYzkhTzRzdPU6hDYl/QVAwNjO0Y5RRxfB5ODlhulGBgYWzN6Q2CTS95aDAYGxpmM3kLV8lk1oOc7YmBg7MrIByl66W7eJKgGYgwMjJMZebBbVfNbMByGgYGxNSOJYHnA7RXjqnfYwigGBgbGFozeFe1VfPK9qldVDAyMExjVBPUqPjmpWnobTY5gYGA8itEbm+gV75JLZ3XsDAMD4xxG75mU+6sDHFH3FQMD4wDG2kLYKuqCuy0GBsZjGZPwOk938+tg4e+AgYGxHWNSMquOcPVWSFoIGBgYJzDy1uNk5OL2VgQGBsYBjDzw9d5NSJOGKAYGBka13ZgkuvlVMgrEGBgYGHG47DUDevhl/zcwMDAewkiS2GpyG23fagZgYGCcxujVsqpXw9542eKmJgYGxvMYPyDXslCcfnIOAAAAAElFTkSuQmCC'>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
+        
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+            <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                            <h4>
+                                <a href="/posts/b4383892.html" rel="prev" title="什么是前端工程化">
+                                  
+                                      什么是前端工程化
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/blogpost/tags/前端工程化/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>前端工程化</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/posts/2bdc4097.html" rel="prev" title="git子目录创建分支">
+                                    
+                                        git子目录创建分支
+                                    
+                                </a>
+                            </h4>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'vue项目中webpack使用HtmlWebpackPlugin进行cdn配置',
+      tools: true
+    }
+  </script>
+
+<!-- gittalk -->
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<div id="gitalk-container" style="margin: 0 5px;"></div>
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: 'c9d3bfe9137dc2038a1a',
+    clientSecret: '1ecb6999a152dad80e08c672ac5a779b92eb6ec0',
+    id: window.location.pathname,
+    repo: 'yangyfeng.github.io',
+    owner: 'yangyfeng',
+    admin: 'yangyfeng'
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+</div>
+<aside class='l_side'>
+  
+    
+    
+      
+        
+          
+          
+            <section class='widget author'>
+  <div class='content material'>
+    
+      <div class='avatar' style="position: relative;">
+        <a style="position: absolute;right: 0;top: 0;z-index: 2" href="https://github.com/yangyfeng" target="_blank" class="github-corner" aria-label="View source on Github">
+          <svg width="92" height="92" viewBox="0 0 250 250" style="fill:#151513;color:#fff;position:absolute;top:0;border:0;right:0" aria-hidden="true"><path d="M0 0 115 115 130 115 142 142 250 250 250 0Z"></path><path d="M128.3 109C113.8 99.7 119 89.6 119 89.6 122 82.7 120.5 78.6 120.5 78.6 119.2 72 123.4 76.3 123.4 76.3 127.3 80.9 125.5 87.3 125.5 87.3 122.9 97.6 130.6 101.9 134.4 103.2" fill="currentColor" style="transform-origin:130px 106px" class="octo-arm"></path><path d="M115 115C114.9 115.1 118.7 116.5 119.8 115.4L133.7 101.6C136.9 99.2 139.9 98.4 142.2 98.6 133.8 88 127.5 74.4 143.8 58 148.5 53.4 154 51.2 159.7 51 160.3 49.4 163.2 43.6 171.4 40.1 171.4 40.1 176.1 42.5 178.8 56.2 183.1 58.6 187.2 61.8 190.9 65.4 194.5 69 197.7 73.2 200.1 77.6 213.8 80.2 216.3 84.9 216.3 84.9 212.7 93.1 206.9 96 205.4 96.6 205.1 102.4 203 107.8 198.3 112.5 181.9 128.9 168.3 122.5 157.7 114.1 157.9 116.9 156.7 120.9 152.7 124.9L141 136.5C139.8 137.7 141.6 141.9 141.8 141.8Z" fill="currentColor" class="octo-body"></path></svg>
+        </a>
+        <img class='avatar' src='https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg'/>
+      </div>
+    
+    
+      <div class='text'>
+        
+          <h2>漫道求索</h2>
+        
+        
+          <p><span data-chakhsu data-chakhsu-text="每写一行代码，都是人类的一次进步">每写一行代码，都是人类的一次进步</span></p>
+
+        
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="mailto:yangyufeng.web@foxmail.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=1539558157&site=qq&menu=yes"
+              class="social fab fa-qq flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://www.zhihu.com/people/man-dao-qiu-suo-11/activities"
+              class="social fab fa-zhihu flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://weibo.com/yangyufeng66"
+              class="social fab fa-weibo flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget toc-wrapper'>
+    
+<header class='material'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  
+    <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class='content material'>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CDN服务商的选择"><span class="toc-text">CDN服务商的选择</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#webpack的作用"><span class="toc-text">webpack的作用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#html-webpack-plugin的使用"><span class="toc-text">html-webpack-plugin的使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#创建Vue项目"><span class="toc-text">创建Vue项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#vue-cli-2-x"><span class="toc-text">vue-cli 2.x</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装依赖"><span class="toc-text">安装依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#启动项目"><span class="toc-text">启动项目</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#确定需要使用CDN的模块"><span class="toc-text">确定需要使用CDN的模块</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#确定CDN资源URI"><span class="toc-text">确定CDN资源URI</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#打包前的处理"><span class="toc-text">打包前的处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#build-utils-js添加读取事件"><span class="toc-text">build/utils.js添加读取事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#webpack-dev-conf-js添加cdn配置"><span class="toc-text">webpack.dev.conf.js添加cdn配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#webpack-prod-conf-js添加cdn配置和忽略模块"><span class="toc-text">webpack.prod.conf.js添加cdn配置和忽略模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#index-html插入相关链接"><span class="toc-text">index.html插入相关链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#愉快的开发"><span class="toc-text">愉快的开发</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            <section class='widget grid'>
+  
+<header class='material'>
+  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;站内导航</div>
+  
+</header>
+
+  <div class='content material'>
+    <ul class="grid navgation">
+      
+        <li><a class="flat-box" title="/" href="/"
+          
+          
+          id="home">
+          
+            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
+          
+          所有文章
+        </a></li>
+      
+        <li><a class="flat-box" title="/blogpost/archives/" href="/blogpost/archives/"
+          
+            rel="nofollow"
+          
+          
+          id="blogpostarchives">
+          
+            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
+          
+          文章归档
+        </a></li>
+      
+        <li><a class="flat-box" title="/blogpost/tags/" href="/blogpost/tags/"
+          
+            rel="nofollow"
+          
+          
+          id="blogposttags">
+          
+            <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>
+          
+          所有标签
+        </a></li>
+      
+        <li><a class="flat-box" title="/friends/" href="/friends/"
+          
+            rel="nofollow"
+          
+          
+          id="friends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          我的友链
+        </a></li>
+      
+        <li><a class="flat-box" title="/./atom.xml" href="/./atom.xml"
+          
+            rel="nofollow"
+          
+          
+          id=".atom.xml">
+          
+            <i class="fas fa-rss fa-fw" aria-hidden="true"></i>
+          
+          RSS订阅
+        </a></li>
+      
+        <li><a class="flat-box" title="/about/" href="/about/"
+          
+            rel="nofollow"
+          
+          
+          id="about">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          关于博主
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget category'>
+    
+<header class='material'>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章分类</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/blogpost/categories/"
+    title="blogpost/categories/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content material'>
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/blogpost/categories/Git/" href="/blogpost/categories/Git/"><div class='name'>Git</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/blogpost/categories/GoLang/" href="/blogpost/categories/GoLang/"><div class='name'>GoLang</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/blogpost/categories/Http/" href="/blogpost/categories/Http/"><div class='name'>Http</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/blogpost/categories/Node/" href="/blogpost/categories/Node/"><div class='name'>Node</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/blogpost/categories/前端/" href="/blogpost/categories/前端/"><div class='name'>前端</div><div class='badge'>(19)</div></a></li>
+        
+          <li><a class="flat-box" title="/blogpost/categories/博客文档/" href="/blogpost/categories/博客文档/"><div class='name'>博客文档</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/blogpost/categories/开发工具/" href="/blogpost/categories/开发工具/"><div class='name'>开发工具</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box" title="/blogpost/categories/面试/" href="/blogpost/categories/面试/"><div class='name'>面试</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget tagcloud'>
+    
+<header class='material'>
+  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/blogpost/tags/"
+    title="blogpost/tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content material'>
+      <a href="/blogpost/tags/create-react-app/" style="font-size: 17.33px; color: #828282">create-react-app</a> <a href="/blogpost/tags/devops/" style="font-size: 14px; color: #999">devops</a> <a href="/blogpost/tags/excel/" style="font-size: 14px; color: #999">excel</a> <a href="/blogpost/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/blogpost/tags/less/" style="font-size: 14px; color: #999">less</a> <a href="/blogpost/tags/react/" style="font-size: 17.33px; color: #828282">react</a> <a href="/blogpost/tags/vscode/" style="font-size: 17.33px; color: #828282">vscode</a> <a href="/blogpost/tags/vue/" style="font-size: 24px; color: #555">vue</a> <a href="/blogpost/tags/vue-router/" style="font-size: 14px; color: #999">vue-router</a> <a href="/blogpost/tags/webpack/" style="font-size: 17.33px; color: #828282">webpack</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 20.67px; color: #6c6c6c">前端工程化</a> <a href="/blogpost/tags/原理解析/" style="font-size: 14px; color: #999">原理解析</a> <a href="/blogpost/tags/开发工具/" style="font-size: 17.33px; color: #828282">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/面试题/" style="font-size: 20.67px; color: #6c6c6c">面试题</a>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget related_posts'>
+    
+<header class='material'>
+  <div><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;相关文章</div>
+  
+</header>
+
+    <div class="content material">
+      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\8136685c.html" title="less在vue中的使用" rel="bookmark">less在vue中的使用</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\4de2b0c3.html" title="vue.config.js配置" rel="bookmark">vue.config.js配置</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\86248f8a.html" title="vue3的新特性" rel="bookmark">vue3的新特性</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\93532fe.html" title="vue性能优化" rel="bookmark">vue性能优化</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\d3643a0f.html" title="手写简易版vue，minivue的实现" rel="bookmark">手写简易版vue，minivue的实现</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\da177769.html" title="vue轮子工厂" rel="bookmark">vue轮子工厂</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\bc152925.html" title="vue面试题（1）" rel="bookmark">vue面试题（1）</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\b0d42301.html" title="vue响应式原理源码剖析" rel="bookmark">vue响应式原理源码剖析</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\6a5e2f06.html" title="create-react-app(注意事项)" rel="bookmark">create-react-app(注意事项)</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\a2043eea.html" title="React 脚手架工具（create-react-app）" rel="bookmark">React 脚手架工具（create-react-app）</a></h3></div></li></ul>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            
+
+
+  <section class='widget music'>
+    
+<header class='material'>
+  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
+  
+    <a class="rightBtn"
+    
+      rel="external nofollow noopener noreferrer"
+    
+    
+      target="_blank"
+    
+    href="https://music.163.com/#/user/home?id=629541737"
+    title="https://music.163.com/#/user/home?id=629541737">
+    <i class="far fa-heart fa-fw"></i></a>
+  
+</header>
+
+    <div class='content material'>
+      
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+  <div class="aplayer"
+    data-theme="#242424"
+    
+    
+    data-mode="circulation"
+    data-server="netease"
+    data-type="playlist"
+    data-id="2868600326"
+    data-volume="0.7">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+
+    </div>
+  </section>
+
+
+          
+        
+      
+    
+
+  
+</aside>
+
+<footer id="footer" class="clearfix">
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="mailto:yangyufeng.web@foxmail.com" class="social fas fa-envelope flat-btn" target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1539558157&amp;site=qq&amp;menu=yes" class="social fab fa-qq flat-btn" target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://www.zhihu.com/people/man-dao-qiu-suo-11/activities" class="social fab fa-zhihu flat-btn" target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://weibo.com/yangyufeng66" class="social fab fa-weibo flat-btn" target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+    </div>
+  
+  <!-- 统计 -->
+  <div class="total-count">
+    <!-- 访问量 -->
+    
+      <span>
+        <b class="fas fa-chart-line"></b>
+        总计访问：<span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>次
+      </span>
+    
+    <!-- 文章字体个数 -->
+    
+      <span>
+        <b class="fas fa-database"></b>
+        本站字数：<span class="post-count">40.8k</span>
+      </span>
+    
+    <!-- 网站运行时间 -->
+    <span>
+      <b class="fas fa-calendar-day"></b>
+      网站运行时间：<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    </span>
+  </div>
+</footer>
+<script>setLoadingBarProgress(80);</script>
+<script>
+  var now = new Date();
+  function createtime() {
+    //在此处修改你的建站时间
+    var grt = new Date("07/01/2019 00:00:00");
+    now.setTime(now.getTime() + 250);
+    days = (now - grt) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+    hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+    if (String(hnum).length == 1) { hnum = "0" + hnum; } minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+    mnum = Math.floor(minutes); if (String(mnum).length == 1) { mnum = "0" + mnum; }
+    seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    snum = Math.round(seconds); if (String(snum).length == 1) { snum = "0" + snum; }
+    document.getElementById("timeDate").innerHTML = dnum + " 天 ";
+    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+  }
+  setInterval("createtime()", 250);
+</script>
+
+      <!-- 会动的小人 -->
+      <!-- <div id="spig" class="spig">
+        <div id="message">加载中……</div>
+        <div id="mumu" class="mumu"></div>
+      </div> -->
+      <!-- 樱花资源 -->
+      <canvas id="sakura"></canvas>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.2/js/instantclick-1.2.2.js" type="module"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+  <!-- fastclick -->
+  <script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body)
+    }, false)
+  </script>
+
+
+
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        if ('.cover') {
+          $('.cover').backstretch(
+          ["https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gb3.jpg"],
+          {
+            duration: "60000",
+            fade: "1000"
+          });
+        } else {
+          $.backstretch(
+          ["https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gb3.jpg"],
+          {
+            duration: "60000",
+            fade: "1000"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/js/app.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/js/search.js"></script>
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>复制</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "[object Object]";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+  <!-- 浮动小人 -->
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/js/sipng.js"></script> -->
+  <!-- 页面点击小红心 -->
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/js/love.js"></script> -->
+  <!--动态线条背景-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/js/canvas-nest.min.js" color="111,111,111" opacity='0.65' zIndex="-10" count="120" ></script>
+  <!-- 飘动丝带 -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/js/piao.js" ></script>
+  <!-- 跳动的字 -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/js/chakhsu.js" ></script>
+  <!-- 樱花飘落 -->
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/js/sakura.js" ></script> -->
+  <!-- 人体时钟背景透明 -->
+  <!-- <script type="text/javascript" charset="Shift_JIS" src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/js/clock.js"></script> -->
+  <!-- 浏览器搞笑标题 -->
+  <script type="text/javascript" id="bowerTitle">
+    var OriginTitle = document.title;
+    var titleTime;
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        $('[rel="shortcut icon"]').attr('href', "https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/error_favicon.ico");
+        document.title = '你的页面走丢了...';
+        clearTimeout(titleTime);
+      } else {
+        $('[rel="shortcut icon"]').attr('href', "https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/favicon.ico");
+        document.title = '欢迎回来!'
+        titleTime = setTimeout(function () {
+          document.title = OriginTitle;
+        }, 1000)
+      }
+    });
+  </script>
+  <!-- 樱花资源 -->
+  <script id="sakura_point_vsh" type="x-shader/x_vertex">
+    uniform mat4 uProjection;
+    uniform mat4 uModelview;
+    uniform vec3 uResolution;
+    uniform vec3 uOffset;
+    uniform vec3 uDOF;  //x:focus distance, y:focus radius, z:max radius
+    uniform vec3 uFade; //x:start distance, y:half distance, z:near fade start
+    
+    attribute vec3 aPosition;
+    attribute vec3 aEuler;
+    attribute vec2 aMisc; //x:size, y:fade
+    
+    varying vec3 pposition;
+    varying float psize;
+    varying float palpha;
+    varying float pdist;
+    
+    //varying mat3 rotMat;
+    varying vec3 normX;
+    varying vec3 normY;
+    varying vec3 normZ;
+    varying vec3 normal;
+    
+    varying float diffuse;
+    varying float specular;
+    varying float rstop;
+    varying float distancefade;
+    
+    void main(void) {
+    // Projection is based on vertical angle
+    vec4 pos = uModelview * vec4(aPosition + uOffset, 1.0);
+    gl_Position = uProjection * pos;
+    gl_PointSize = aMisc.x * uProjection[1][1] / -pos.z * uResolution.y * 0.5;
+    
+    pposition = pos.xyz;
+    psize = aMisc.x;
+    pdist = length(pos.xyz);
+    palpha = smoothstep(0.0, 1.0, (pdist - 0.1) / uFade.z);
+    
+    vec3 elrsn = sin(aEuler);
+    vec3 elrcs = cos(aEuler);
+    mat3 rotx = mat3(
+    1.0, 0.0, 0.0,
+    0.0, elrcs.x, elrsn.x,
+    0.0, -elrsn.x, elrcs.x
+    );
+    mat3 roty = mat3(
+    elrcs.y, 0.0, -elrsn.y,
+    0.0, 1.0, 0.0,
+    elrsn.y, 0.0, elrcs.y
+    );
+    mat3 rotz = mat3(
+    elrcs.z, elrsn.z, 0.0, 
+    -elrsn.z, elrcs.z, 0.0,
+    0.0, 0.0, 1.0
+    );
+    mat3 rotmat = rotx * roty * rotz;
+    normal = rotmat[2];
+    
+    mat3 trrotm = mat3(
+    rotmat[0][0], rotmat[1][0], rotmat[2][0],
+    rotmat[0][1], rotmat[1][1], rotmat[2][1],
+    rotmat[0][2], rotmat[1][2], rotmat[2][2]
+    );
+    normX = trrotm[0];
+    normY = trrotm[1];
+    normZ = trrotm[2];
+    
+    const vec3 lit = vec3(0.6917144638660746, 0.6917144638660746, -0.20751433915982237);
+    
+    float tmpdfs = dot(lit, normal);
+    if(tmpdfs < 0.0) {
+    normal = -normal;
+    tmpdfs = dot(lit, normal);
+    }
+    diffuse = 0.4 + tmpdfs;
+    
+    vec3 eyev = normalize(-pos.xyz);
+    if(dot(eyev, normal) > 0.0) {
+    vec3 hv = normalize(eyev + lit);
+    specular = pow(max(dot(hv, normal), 0.0), 20.0);
+    }
+    else {
+    specular = 0.0;
+    }
+    
+    rstop = clamp((abs(pdist - uDOF.x) - uDOF.y) / uDOF.z, 0.0, 1.0);
+    rstop = pow(rstop, 0.5);
+    //-0.69315 = ln(0.5)
+    distancefade = min(1.0, exp((uFade.x - pdist) * 0.69315 / uFade.y));
+    }
+  </script>
+  <script id="sakura_point_fsh" type="x-shader/x_fragment">
+    #ifdef GL_ES
+    //precision mediump float;
+    precision highp float;
+    #endif
+    
+    uniform vec3 uDOF;  //x:focus distance, y:focus radius, z:max radius
+    uniform vec3 uFade; //x:start distance, y:half distance, z:near fade start
+    
+    const vec3 fadeCol = vec3(0.08, 0.03, 0.06);
+    
+    varying vec3 pposition;
+    varying float psize;
+    varying float palpha;
+    varying float pdist;
+    
+    //varying mat3 rotMat;
+    varying vec3 normX;
+    varying vec3 normY;
+    varying vec3 normZ;
+    varying vec3 normal;
+    
+    varying float diffuse;
+    varying float specular;
+    varying float rstop;
+    varying float distancefade;
+    
+    float ellipse(vec2 p, vec2 o, vec2 r) {
+    vec2 lp = (p - o) / r;
+    return length(lp) - 1.0;
+    }
+    
+    void main(void) {
+    vec3 p = vec3(gl_PointCoord - vec2(0.5, 0.5), 0.0) * 2.0;
+    vec3 d = vec3(0.0, 0.0, -1.0);
+    float nd = normZ.z; //dot(-normZ, d);
+    if(abs(nd) < 0.0001) discard;
+    
+    float np = dot(normZ, p);
+    vec3 tp = p + d * np / nd;
+    vec2 coord = vec2(dot(normX, tp), dot(normY, tp));
+    
+    //angle = 15 degree
+    const float flwrsn = 0.258819045102521;
+    const float flwrcs = 0.965925826289068;
+    mat2 flwrm = mat2(flwrcs, -flwrsn, flwrsn, flwrcs);
+    vec2 flwrp = vec2(abs(coord.x), coord.y) * flwrm;
+    
+    float r;
+    if(flwrp.x < 0.0) {
+    r = ellipse(flwrp, vec2(0.065, 0.024) * 0.5, vec2(0.36, 0.96) * 0.5);
+    }
+    else {
+    r = ellipse(flwrp, vec2(0.065, 0.024) * 0.5, vec2(0.58, 0.96) * 0.5);
+    }
+    
+    if(r > rstop) discard;
+    
+    vec3 col = mix(vec3(1.0, 0.8, 0.75), vec3(1.0, 0.9, 0.87), r);
+    float grady = mix(0.0, 1.0, pow(coord.y * 0.5 + 0.5, 0.35));
+    col *= vec3(1.0, grady, grady);
+    col *= mix(0.8, 1.0, pow(abs(coord.x), 0.3));
+    col = col * diffuse + specular;
+    
+    col = mix(fadeCol, col, distancefade);
+    
+    float alpha = (rstop > 0.001)? (0.5 - r / (rstop * 2.0)) : 1.0;
+    alpha = smoothstep(0.0, 1.0, alpha) * palpha;
+    
+    gl_FragColor = vec4(col * 0.5, alpha);
+    }
+  </script>
+  <!-- effects -->
+  <script id="fx_common_vsh" type="x-shader/x_vertex">
+    uniform vec3 uResolution;
+    attribute vec2 aPosition;
+    
+    varying vec2 texCoord;
+    varying vec2 screenCoord;
+    
+    void main(void) {
+    gl_Position = vec4(aPosition, 0.0, 1.0);
+    texCoord = aPosition.xy * 0.5 + vec2(0.5, 0.5);
+    screenCoord = aPosition.xy * vec2(uResolution.z, 1.0);
+    }
+  </script>
+  <script id="bg_fsh" type="x-shader/x_fragment">
+    #ifdef GL_ES
+    //precision mediump float;
+    precision highp float;
+    #endif
+    
+    uniform vec2 uTimes;
+    
+    varying vec2 texCoord;
+    varying vec2 screenCoord;
+    
+    void main(void) {
+    vec3 col;
+    float c;
+    vec2 tmpv = texCoord * vec2(0.8, 1.0) - vec2(0.95, 1.0);
+    c = exp(-pow(length(tmpv) * 1.8, 2.0));
+    col = mix(vec3(0.02, 0.0, 0.03), vec3(0.96, 0.98, 1.0) * 1.5, c);
+    gl_FragColor = vec4(col * 0.5, 1.0);
+    }
+  </script>
+  <script id="fx_brightbuf_fsh" type="x-shader/x_fragment">
+    #ifdef GL_ES
+    //precision mediump float;
+    precision highp float;
+    #endif
+    uniform sampler2D uSrc;
+    uniform vec2 uDelta;
+    
+    varying vec2 texCoord;
+    varying vec2 screenCoord;
+    
+    void main(void) {
+    vec4 col = texture2D(uSrc, texCoord);
+    gl_FragColor = vec4(col.rgb * 2.0 - vec3(0.5), 1.0);
+    }
+  </script>
+  <script id="fx_dirblur_r4_fsh" type="x-shader/x_fragment">
+    #ifdef GL_ES
+    //precision mediump float;
+    precision highp float;
+    #endif
+    uniform sampler2D uSrc;
+    uniform vec2 uDelta;
+    uniform vec4 uBlurDir; //dir(x, y), stride(z, w)
+    
+    varying vec2 texCoord;
+    varying vec2 screenCoord;
+    
+    void main(void) {
+    vec4 col = texture2D(uSrc, texCoord);
+    col = col + texture2D(uSrc, texCoord + uBlurDir.xy * uDelta);
+    col = col + texture2D(uSrc, texCoord - uBlurDir.xy * uDelta);
+    col = col + texture2D(uSrc, texCoord + (uBlurDir.xy + uBlurDir.zw) * uDelta);
+    col = col + texture2D(uSrc, texCoord - (uBlurDir.xy + uBlurDir.zw) * uDelta);
+    gl_FragColor = col / 5.0;
+    }
+  </script>
+  <!-- effect fragment shader template -->
+  <script id="fx_common_fsh" type="x-shader/x_fragment">
+    #ifdef GL_ES
+    //precision mediump float;
+    precision highp float;
+    #endif
+    uniform sampler2D uSrc;
+    uniform vec2 uDelta;
+    
+    varying vec2 texCoord;
+    varying vec2 screenCoord;
+    
+    void main(void) {
+    gl_FragColor = texture2D(uSrc, texCoord);
+    }
+  </script>
+  <!-- post processing -->
+  <script id="pp_final_vsh" type="x-shader/x_vertex">
+    uniform vec3 uResolution;
+    attribute vec2 aPosition;
+    varying vec2 texCoord;
+    varying vec2 screenCoord;
+    void main(void) {
+    gl_Position = vec4(aPosition, 0.0, 1.0);
+    texCoord = aPosition.xy * 0.5 + vec2(0.5, 0.5);
+    screenCoord = aPosition.xy * vec2(uResolution.z, 1.0);
+    }
+  </script>
+  <script id="pp_final_fsh" type="x-shader/x_fragment">
+    #ifdef GL_ES
+    //precision mediump float;
+    precision highp float;
+    #endif
+    uniform sampler2D uSrc;
+    uniform sampler2D uBloom;
+    uniform vec2 uDelta;
+    varying vec2 texCoord;
+    varying vec2 screenCoord;
+    void main(void) {
+    vec4 srccol = texture2D(uSrc, texCoord) * 2.0;
+    vec4 bloomcol = texture2D(uBloom, texCoord);
+    vec4 col;
+    col = srccol + bloomcol * (vec4(1.0) + srccol);
+    col *= smoothstep(1.0, 0.0, pow(length((texCoord - vec2(0.5)) * 2.0), 1.2) * 0.5);
+    col = pow(col, vec4(0.45454545454545)); //(1.0 / 2.2)
+    
+    gl_FragColor = vec4(col.rgb, 1.0);
+    gl_FragColor.a = 1.0;
+    }
+  </script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":false,"scale":0.5},"log":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

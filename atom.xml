@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>峰享会</title>
+  
+  <subtitle>路漫漫其修远兮，吾将上下而求索！</subtitle>
+  <link href="/./atom.xml" rel="self"/>
+  
+  <link href="https://yangyfeng.github.io/"/>
+  <updated>2020-12-17T02:22:57.339Z</updated>
+  <id>https://yangyfeng.github.io/</id>
+  
+  <author>
+    <name>漫道求索</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>面试题集锦（2）</title>
+    <link href="https://yangyfeng.github.io//posts/63fad71d.html"/>
+    <id>https://yangyfeng.github.io//posts/63fad71d.html</id>
+    <published>2020-12-16T16:00:00.000Z</published>
+    <updated>2020-12-17T02:22:57.339Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;web安全攻击手段有哪些？以及如何防范&quot;&gt;&lt;a href=&quot;#web安全攻击手段有哪些？以及如何防范&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="面试题" scheme="https://yangyfeng.github.io/blogpost/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深入webpack</title>
+    <link href="https://yangyfeng.github.io//posts/b4383892.html"/>
+    <id>https://yangyfeng.github.io//posts/b4383892.html</id>
+    <published>2020-12-15T16:00:00.000Z</published>
+    <updated>2020-12-16T07:49:13.428Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="webpack" scheme="https://yangyfeng.github.io/blogpost/tags/webpack/"/>
+    
+      <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深入前端模块化</title>
+    <link href="https://yangyfeng.github.io//posts/c00659d0.html"/>
+    <id>https://yangyfeng.github.io//posts/c00659d0.html</id>
+    <published>2020-12-15T16:00:00.000Z</published>
+    <updated>2020-12-16T08:32:14.915Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;什么是前端的模块化？理解的不太透彻。&lt;/p&gt;
+&lt;p&gt;平常一直用的也只有ES6模块化，对于其他几种模块化规范用的也少，理解不够深，但是经常会见到一些面试题是问这几种模块化规范的区别，所以这次做一个整理总结&lt;/p&gt;
+&lt;h1 id=&quot;一、对于模块化的理解&quot;&gt;&lt;a href=&quot;#一、对于模块化的理解&quot; class=&quot;headerlink&quot; title=&quot;一、对于模块化的理解&quot;&gt;&lt;/a&gt;一、对于模块化的理解&lt;/h1&gt;&lt;h2 id=&quot;1、什么是模块化？&quot;&gt;&lt;a href=&quot;#1、什么是模块化？&quot; class=&quot;headerlink&quot; title=&quot;1、什么是模块化？&quot;&gt;&lt;/a&gt;1、什么是模块化？&lt;/h2&gt;&lt;p&gt;模块化开发是一种管理方式，是一种生产方式，一种解决问题的方案，一个模块就是实现特定功能的文件，有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块，但是模块开发需要遵循一定的规范，否则就都乱套了，因此，才有了后来大家熟悉的AMD规范，CMD规范，以及ES6自带的模块化规范&lt;/p&gt;
+&lt;h2 id=&quot;2、模块化带来的好处？&quot;&gt;&lt;a href=&quot;#2、模块化带来的好处？&quot; class=&quot;headerlink&quot; title=&quot;2、模块化带来的好处？&quot;&gt;&lt;/a&gt;2、模块化带来的好处？&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;解决命名冲突&lt;/li&gt;
+&lt;li&gt;提供复用性&lt;/li&gt;
+&lt;li&gt;提高代码可维护性&lt;/li&gt;
+&lt;li&gt;灵活架构，焦点分离，方便模块间组合、分解&lt;/li&gt;
+&lt;li&gt;多人协作互不干扰&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;3、模块化规范的发展进程&quot;&gt;&lt;a href=&quot;#3、模块化规范的发展进程&quot; class=&quot;headerlink&quot; title=&quot;3、模块化规范的发展进程&quot;&gt;&lt;/a&gt;3、模块化规范的发展进程&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;原始写法（全局function）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;模块就是实现特定**功能的一组方法，只要把不同的函数（以及记录状态的变量）简单的放在一起，就算是一个模块。&lt;/p&gt;
+&lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;m1&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// ...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;m2&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// ...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;这样写上面的函数 m1() 和 m2() ，组成了一个模块，在使用的时候直接调用就可以了。
+但是带来的问题也很明显：&amp;quot;污染&amp;quot;了全局变量 ，无法保证不与其他模块发生变量名冲突，而且模块成员之间看不出直接关系&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;namespace写法（简单对象）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;为了解决上面写法带来的缺点，可以吧模块写成一个对象，所有的模块成员都放到这个对象里面，这样减少了全局变量，减少命名冲突&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; myModule = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  count: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  m1: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&#39;m1:&#39;&lt;/span&gt; + &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.count);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  m2: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&#39;m2:&#39;&lt;/span&gt; + &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.count)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 调用&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;myModule.m1() &lt;span class=&quot;comment&quot;&gt;// m1:0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 改变模块内部状态&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;myModule.count = &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;myModule.m1() &lt;span class=&quot;comment&quot;&gt;// m1:5&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;上面的函数 m1 和 m2 ，都封装在myModule对象里。使用的时候，就是调用这个对象的属性。但是，这样的写法会暴露所有模块成员，内部状态可以被外部改写。比如，外部代码可以直接改变内部计数器的值。&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;立即执行函数写法（匿名函数自执行 ，闭包）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; myModule = (&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; count = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; m1 = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&#39;m1:&#39;&lt;/span&gt; + count)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; m2 = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&#39;m2:&#39;&lt;/span&gt; + count)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &amp;#123; m1, m2 &amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 这样写在外面就无法读取内部的 count 变量&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(myModule.count); &lt;span class=&quot;comment&quot;&gt;// undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;立即执行函数增强(引入依赖)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; myModule = (&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;($)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// 这里面就可以使用JQuery&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)(JQuery)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 这样做除了保证模块的独立性，还使得模块之间的依赖关系变得明显&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+      <category term="模块化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为什么前端需要学习node</title>
+    <link href="https://yangyfeng.github.io//posts/fbba48cc.html"/>
+    <id>https://yangyfeng.github.io//posts/fbba48cc.html</id>
+    <published>2020-12-14T16:00:00.000Z</published>
+    <updated>2020-12-15T08:33:17.940Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;理解解决跨域、token鉴权、Rsetful风格、XSS、CSRF等问题，学习后端的思维。（与后端有效沟通）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;如何只用js语言如何开发一个全栈的应用（快速开发全栈应用）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;学习全栈和架构思维
+        
+      
+    
+    </summary>
+    
+      <category term="Node" scheme="https://yangyfeng.github.io/blogpost/categories/Node/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vue性能优化</title>
+    <link href="https://yangyfeng.github.io//posts/93532fe.html"/>
+    <id>https://yangyfeng.github.io//posts/93532fe.html</id>
+    <published>2020-12-10T16:00:00.000Z</published>
+    <updated>2020-12-11T09:14:10.312Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1、使用单文件组件&quot;&gt;&lt;a href=&quot;#1、使用单文件组件&quot; class=&quot;headerlink&quot; title=&quot;1、使用单文件组件&quot;&gt;&lt;/a&gt;1、使用单文件组件&lt;/h2&gt;&lt;p&gt;我们写的tmplate配置，实际上需要编译为render函数在执行的&lt;/p&gt;
+&lt;p&gt;当使用DOM内模板或者JS内的字符串模板时，模板会在运行时被编译为render函数，通常情况这个过程已经足够快乐，但是对性能敏感的应用还是有影响的。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rAis9f&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/11/rAis9f.png&quot; alt=&quot;rAis9f.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;预编译模板最简单的方式就是使用&lt;strong&gt;单文件组件&lt;/strong&gt;，单文件组件将相关的构建设置自动预编译好了，所以构建的代码已经包含了编译出来的render函数了，而不是原始的模板字符串了，减少了重新编译的过程了。（单文件组件导入使用直接使用vue-loader来处理，没有vue-tmplate的出来，使用起来会足够快速的。）&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
+    
+      <category term="性能优化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue面试题（1）</title>
+    <link href="https://yangyfeng.github.io//posts/bc152925.html"/>
+    <id>https://yangyfeng.github.io//posts/bc152925.html</id>
+    <published>2020-12-10T16:00:00.000Z</published>
+    <updated>2020-12-17T03:43:48.727Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Vue双向绑定实现原理？&quot;&gt;&lt;a href=&quot;#Vue双向绑定实现原理？&quot; class=&quot;headerlink&quot; title=&quot;Vue双向绑定实现原理？&quot;&gt;&lt;/a&gt;Vue双向绑定实现原理？&lt;/h2&gt;&lt;p&gt;vue实现数据双向绑定主要是：采用数据劫持结合发布者-订阅者模式的方式，通过 Object.defineProperty() 来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应监听回调。当把一个普通 Javascript 对象传给 Vue 实例来作为它的 data 选项时，Vue 将遍历它的属性，用 Object.defineProperty() 将它们转为 getter/setter。用户看不到 getter/setter，但是在内部它们让 Vue 追踪依赖，在属性被访问和修改时通知变化。&lt;/p&gt;
+&lt;p&gt;vue的数据双向绑定 将MVVM作为数据绑定的入口，整合Observer，Compile和Watcher三者，通过Observer来监听自己的model的数据变化，通过Compile来解析编译模板指令（vue中是用来解析 双花括弧），最终利用watcher搭起observer和Compile之间的通信桥梁，达到数据变化 —&amp;gt;视图更新；视图交互变化（input）—&amp;gt;数据model变更双向绑定效果。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Observer 对所有数据的属性进行监听&lt;/li&gt;
+&lt;li&gt;Compile 对每个元素节点的指令进行扫描跟解析,根据指令模板替换数据,以及绑定相应的更新函数&lt;/li&gt;
+&lt;li&gt;Watcher 作为连接Observer 跟 Compile 之间的桥梁, 能够订阅接收到每个属性变动的通知,执行相应的回调函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;代码理解: &lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;72&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;73&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;74&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;75&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;76&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;77&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;78&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;79&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;80&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;81&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;82&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;83&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;84&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;85&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;86&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;87&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;88&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;89&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;90&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;91&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;92&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;93&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;94&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;95&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;96&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;97&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; Dep = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.subs = []&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Dep.prototype = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  addSub: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;sub&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.subs.push(sub)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  notify: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.subs.forEach(sub = &amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      sub.update()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; Watcher = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;vm, node, name&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Dep.target = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.name = name;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.node = node;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.vm = vm;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.update();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Dep.target = &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Watcher.prototype = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  update: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.get();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.node.nodeValue = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.value&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;get&lt;/span&gt;: function() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.value = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.vm[&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.name]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; compile = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;node, vm&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (node.nodeType === &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; attr = node.attributes;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; attr.length; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (attr[i].nodeName === &lt;span class=&quot;string&quot;&gt;&#39;v-model&#39;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; name = attr[i].nodeValue;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        node.addEventListener(&lt;span class=&quot;string&quot;&gt;&#39;input&#39;&lt;/span&gt;, e = &amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          vm[name] = node.value&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        node.value = vm[name];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        node.removeAttribute(&lt;span class=&quot;string&quot;&gt;&#39;v-model&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (node.nodeType === &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;regexp&quot;&gt;/\&amp;#123;\&amp;#123;(.*)\&amp;#125;\&amp;#125;/&lt;/span&gt;.test(node.nodeValue)) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; name = &lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;.$&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      name = name.trim();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      node.nodeValue = vm[name];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Watcher(vm, node, name)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; observe = data = &amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!data || &lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; data !== &lt;span class=&quot;string&quot;&gt;&#39;object&#39;&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;3344&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.keys(data).forEach(key = &amp;gt; defineReactive(data, key, data[key]))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; defineReactive = (data, key, value) = &amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; dep = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Dep();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  observe(value);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.defineProperty(data, key, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;get&lt;/span&gt;: () = &amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (Dep.target) dep.addSub(Dep.target);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; value&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;set&lt;/span&gt;: function(newValue) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;`数据已发生变化，新的值为$ &amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;				newValue&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;			&amp;#125;`&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      value = newValue;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      dep.notify()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;nodeToFragment&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;node, vm&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; flag = &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.createDocumentFragment();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; child;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; ((child = node.firstChild)) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    compile(child, vm);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    flag.appendChild(child)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; flag&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Vue&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;options&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; data = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.data = options.data;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  observe(data, &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; id = options.el;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; dom = nodeToFragment(&lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.getElementById(id), data);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.getElementById(id).appendChild(dom)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; vm = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Vue(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  el: &lt;span class=&quot;string&quot;&gt;&#39;app&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  data: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    text: &lt;span class=&quot;string&quot;&gt;&#39;example text&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="面试" scheme="https://yangyfeng.github.io/blogpost/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
+    
+      <category term="面试题" scheme="https://yangyfeng.github.io/blogpost/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue-router前端路由原理剖析</title>
+    <link href="https://yangyfeng.github.io//posts/3923ce69.html"/>
+    <id>https://yangyfeng.github.io//posts/3923ce69.html</id>
+    <published>2020-12-10T16:00:00.000Z</published>
+    <updated>2020-12-15T07:40:26.652Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
+    
+      <category term="vue-router" scheme="https://yangyfeng.github.io/blogpost/tags/vue-router/"/>
+    
+      <category term="原理解析" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%8E%9F%E7%90%86%E8%A7%A3%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue3的新特性</title>
+    <link href="https://yangyfeng.github.io//posts/86248f8a.html"/>
+    <id>https://yangyfeng.github.io//posts/86248f8a.html</id>
+    <published>2020-12-07T16:00:00.000Z</published>
+    <updated>2020-12-11T09:17:52.241Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;六大亮点&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://vue3js.cn/docs/zh/api/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;vue3官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rSCl4A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/08/rSCl4A.jpg&quot; alt=&quot;rSCl4A.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Performance&lt;/code&gt;：性能更比&lt;code&gt;Vue 2.0&lt;/code&gt;强。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Tree shaking support&lt;/code&gt;：可以将无用模块“剪辑”，仅打包需要的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Composition API&lt;/code&gt;：组合&lt;code&gt;API&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Fragment, Teleport, Suspense&lt;/code&gt;：“碎片”，&lt;code&gt;Teleport&lt;/code&gt;即&lt;code&gt;Protal传送门&lt;/code&gt;，“悬念”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Better TypeScript support&lt;/code&gt;：更优秀的 Ts 支持&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Custom Renderer API&lt;/code&gt;：暴露了自定义渲染&lt;code&gt;API&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>手写简易版vue，minivue的实现</title>
+    <link href="https://yangyfeng.github.io//posts/d3643a0f.html"/>
+    <id>https://yangyfeng.github.io//posts/d3643a0f.html</id>
+    <published>2020-12-07T16:00:00.000Z</published>
+    <updated>2020-12-11T09:17:53.446Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;基于vue2.*&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;vue采取数据劫持，配合观察者模式，通过Object.defineProperty() 来劫持各个属性的setter和getter，在数据变动时，发布消息给依赖收集器dep，去通知观察者，做出对应的回调函数，去更新视图。（也就是在getter中收集依赖，在setter中通知依赖更新。&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实vue主要就是整合Observer，compile和watcher三者，通过Observer来监听 model数据变化表，通过compile来解析编译模板指令，最终利用Watcher搭起observer 和compile的通信桥梁，达到数据变化=&amp;gt;视图变化，视图变化=&amp;gt;数据变化的双向绑定效果。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; 下面来一张图↓ &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rSsjT1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/08/rSsjT1.png&quot; alt=&quot;rSsjT1.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; 这个流程图已经非常形象深刻的表达了vue的运行模式，当你理解了这个流程，再去看vue源码时就会容易很多了 &lt;/p&gt;
+&lt;p&gt; 声明一下，下面的代码只简单实现了vue里的 &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;v-model（数据的双向绑定）&lt;/li&gt;
+&lt;li&gt;v-bind/v-on&lt;/li&gt;
+&lt;li&gt;v-text/v-html&lt;/li&gt;
+&lt;li&gt;没有实现虚拟dom，采用文档碎片（createDocumentFragment）代替&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;数据只劫持了Object，数组Array没有做处理&lt;/p&gt;
+&lt;p&gt;代码大致结构如下，初步定义了6个类 &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rSyiOH&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/08/rSyiOH.png&quot; alt=&quot;rSyiOH.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何使用JavaScript实现纯前端读取和导出excel文件</title>
+    <link href="https://yangyfeng.github.io//posts/ce0a6a78.html"/>
+    <id>https://yangyfeng.github.io//posts/ce0a6a78.html</id>
+    <published>2020-12-07T16:00:00.000Z</published>
+    <updated>2020-12-11T09:17:50.214Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;1、js-xlsx-介绍&quot;&gt;&lt;a href=&quot;#1、js-xlsx-介绍&quot; class=&quot;headerlink&quot; title=&quot;1、js-xlsx 介绍&quot;&gt;&lt;/a&gt;1、js-xlsx 介绍&lt;/h1&gt;&lt;p&gt;&lt;code&gt;由SheetJS出品的js-xlsx是一款非常方便的只需要纯JS即可读取和导出excel的工具库，功能强大，支持格式众多，支持xls、xlsx、ods(一种OpenOffice专有表格文件格式)等十几种格式。本文全部都是以xlsx格式为例。&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;官方github：&lt;a href=&quot;https://github.com/SheetJS/js-xlsx&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/SheetJS/js-xlsx&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;本文配套demo在线演示地址：&lt;a href=&quot;http://demo.haoji.me/2017/02/08-js-xlsx/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://demo.haoji.me/2017/02/08-js-xlsx/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="excel" scheme="https://yangyfeng.github.io/blogpost/tags/excel/"/>
+    
+      <category term="插件" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue响应式原理源码剖析</title>
+    <link href="https://yangyfeng.github.io//posts/b0d42301.html"/>
+    <id>https://yangyfeng.github.io//posts/b0d42301.html</id>
+    <published>2020-11-26T02:37:00.000Z</published>
+    <updated>2020-12-11T09:14:04.788Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;vue2更新到vue3对数据的响应式，做了重大的调整。&lt;/p&gt;
+&lt;h2 id=&quot;先回顾下vue2的响应式怎么做的&quot;&gt;&lt;a href=&quot;#先回顾下vue2的响应式怎么做的&quot; class=&quot;headerlink&quot; title=&quot;先回顾下vue2的响应式怎么做的&quot;&gt;&lt;/a&gt;先回顾下vue2的响应式怎么做的&lt;/h2&gt;&lt;p&gt;vue2对象响应式原理：Object.defineProperty()&lt;/p&gt;
+&lt;p&gt;vue2数组响应式原理：覆盖可以修改数组7个方法，从数组原型中获取这7个方法，并覆盖为可以发送更新通知的函数实现&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么是PWA</title>
+    <link href="https://yangyfeng.github.io//posts/138dbef8.html"/>
+    <id>https://yangyfeng.github.io//posts/138dbef8.html</id>
+    <published>2020-11-18T01:40:00.000Z</published>
+    <updated>2020-12-11T09:15:27.422Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、背景&quot;&gt;&lt;a href=&quot;#一、背景&quot; class=&quot;headerlink&quot; title=&quot;一、背景&quot;&gt;&lt;/a&gt;一、背景&lt;/h1&gt;&lt;p&gt;大家都知道Native app体验确实很好，下载到手机上之后入口也方便。它也有一些缺点:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开发成本高(ios和安卓)&lt;/li&gt;
+&lt;li&gt;软件上线需要审核&lt;/li&gt;
+&lt;li&gt;版本更新需要将新版本上传到不同的应用商店&lt;/li&gt;
+&lt;li&gt;想使用一个app就必须去下载才能使用，即使是偶尔需要使用一下下&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;而web网页开发成本低，网站更新时上传最新的资源到服务器即可，用手机带的浏览器打开就可以使用。但是除了体验上比Native app还是差一些，还有一些明显的缺点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;手机桌面入口不够便捷，想要进入一个页面必须要记住它的url或者加入书签&lt;/li&gt;
+&lt;li&gt;没网络就没响应，不具备离线能力&lt;/li&gt;
+&lt;li&gt;不像APP一样能进行消息推送&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;那么什么是PWA呢？&lt;/p&gt;
+&lt;h1 id=&quot;二、What’s-PWA&quot;&gt;&lt;a href=&quot;#二、What’s-PWA&quot; class=&quot;headerlink&quot; title=&quot;二、What’s PWA?&quot;&gt;&lt;/a&gt;二、What’s PWA?&lt;/h1&gt;&lt;p&gt;PWA全称Progressive Web App，即渐进式WEB应用。&lt;/p&gt;
+&lt;p&gt;一个 PWA 应用首先是一个网页, 可以通过 Web 技术编写出一个网页应用. 随后添加上 App Manifest 和 Service Worker 来实现 PWA 的安装和离线等功能&lt;/p&gt;
+&lt;p&gt;解决了哪些问题？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以添加至主屏幕，点击主屏幕图标可以实现启动动画以及隐藏地址栏&lt;/li&gt;
+&lt;li&gt;实现离线缓存功能，即使用户手机没有网络，依然可以使用一些离线功能&lt;/li&gt;
+&lt;li&gt;实现了消息推送&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;它解决了上述提到的问题，这些特性将使得 Web 应用渐进式接近原生 App。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>⼤⼚⾯试章法</title>
+    <link href="https://yangyfeng.github.io//posts/fe27deba.html"/>
+    <id>https://yangyfeng.github.io//posts/fe27deba.html</id>
+    <published>2020-11-16T01:22:00.000Z</published>
+    <updated>2020-12-17T02:05:36.105Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;简历&quot;&gt;&lt;a href=&quot;#简历&quot; class=&quot;headerlink&quot; title=&quot;简历&quot;&gt;&lt;/a&gt;简历&lt;/h2&gt;&lt;p&gt;2⻚以内，简历有点类似相亲的介绍，⼩时候拿过三好学&lt;/p&gt;
+&lt;p&gt;⽣就别说了，就像别写你会html+css，别写你⽤vue做 &lt;/p&gt;
+&lt;p&gt;过todolist⼀样&lt;/p&gt;
+&lt;p&gt;突出⾃⼰的技术亮点&lt;/p&gt;
+&lt;p&gt;别瞎写精通&lt;/p&gt;
+&lt;p&gt;markdown就好，别⽤word&lt;/p&gt;
+&lt;p&gt;突出亮点！&lt;/p&gt;
+&lt;h2 id=&quot;⽬标公司&quot;&gt;&lt;a href=&quot;#⽬标公司&quot; class=&quot;headerlink&quot; title=&quot;⽬标公司&quot;&gt;&lt;/a&gt;⽬标公司&lt;/h2&gt;&lt;p&gt;天眼查，脉脉，知乎&lt;/p&gt;
+&lt;h2 id=&quot;如何描述做过的项⽬&quot;&gt;&lt;a href=&quot;#如何描述做过的项⽬&quot; class=&quot;headerlink&quot; title=&quot;如何描述做过的项⽬&quot;&gt;&lt;/a&gt;如何描述做过的项⽬&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;做过的明星项⽬&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;项⽬技术栈和细节&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;源码深度&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;优化，性能，体验，极客&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;填坑&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;成⻓&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;⾯试技巧合计&quot;&gt;&lt;a href=&quot;#⾯试技巧合计&quot; class=&quot;headerlink&quot; title=&quot;⾯试技巧合计&quot;&gt;&lt;/a&gt;⾯试技巧合计&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;认识⾃⼰（市场）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;阐述优势&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;谈判得来的 都是纯利润&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;hr细节(考勤，补贴，996，五险⼀⾦，补贴&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;⼀个⾯试题的精讲&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;精讲面试题之前端⽂件上传&quot;&gt;&lt;a href=&quot;#精讲面试题之前端⽂件上传&quot; class=&quot;headerlink&quot; title=&quot;精讲面试题之前端⽂件上传&quot;&gt;&lt;/a&gt;精讲面试题之前端⽂件上传&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;1、原理概述&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;考察全栈思维，http协议 ，node⽂件处理&lt;/p&gt;
+&lt;p&gt;我⽤vue+element+nodejs来演示&lt;/p&gt;
+&lt;p&gt;基本答案 （&lt;strong&gt;10K&lt;/strong&gt;）&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="面试题" scheme="https://yangyfeng.github.io/blogpost/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NodeJs中数据库的使用</title>
+    <link href="https://yangyfeng.github.io//posts/e4aa7462.html"/>
+    <id>https://yangyfeng.github.io//posts/e4aa7462.html</id>
+    <published>2020-09-09T10:29:00.000Z</published>
+    <updated>2020-12-11T09:11:38.878Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-Node-js-连接-MySQL&quot;&gt;&lt;a href=&quot;#1-Node-js-连接-MySQL&quot; class=&quot;headerlink&quot; title=&quot;1.Node.js 连接 MySQL&quot;&gt;&lt;/a&gt;1.Node.js 连接 MySQL&lt;/h2&gt;&lt;p&gt;cnpm install mysql&lt;/p&gt;
+&lt;p&gt;连接mysql:&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; mysql      = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;mysql&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; connection = mysql.createConnection(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  host     : &lt;span class=&quot;string&quot;&gt;&#39;localhost&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  user     : &lt;span class=&quot;string&quot;&gt;&#39;root&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  password : &lt;span class=&quot;string&quot;&gt;&#39;123456&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  database : &lt;span class=&quot;string&quot;&gt;&#39;test&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;connection.connect();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;connection.query(&lt;span class=&quot;string&quot;&gt;&#39;SELECT 1 + 1 AS solution&#39;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;error, results, fields&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (error) &lt;span class=&quot;keyword&quot;&gt;throw&lt;/span&gt; error;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&#39;The solution is: &#39;&lt;/span&gt;, results[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;].solution);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;数据库连接参数说明&lt;/p&gt;
+&lt;figure class=&quot;highlight lasso&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;参数 描述&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;host 主机地址 （默认：localhost）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;user 用户名&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;password 密码&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;port 端口号 （默认：&lt;span class=&quot;number&quot;&gt;3306&lt;/span&gt;）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;database  数据库名&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;charset  连接字符集（默认：&lt;span class=&quot;string&quot;&gt;&#39;UTF8_GENERAL_CI&#39;&lt;/span&gt;，注意字符集的字母都要大写）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;localAddress  此IP用于TCP连接（可选）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;socketPath  连接到unix域路径，当使用 host 和 port 时会被忽略&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;timezone  时区（默认：&lt;span class=&quot;string&quot;&gt;&#39;local&#39;&lt;/span&gt;）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;connectTimeout 连接超时（默认：不限制；单位：毫秒）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;stringifyObjects 是否序列化对象&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;typeCast  是否将列值转化为本地JavaScript类型值 （默认：&lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;queryFormat  自定义query语句格式化方法&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;supportBigNumbers  数据库支持bigint或&lt;span class=&quot;built_in&quot;&gt;decimal&lt;/span&gt;类型列时，需要设此option为&lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt; （默认：&lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;）bigNumberStrings supportBigNumbers和bigNumberStrings启用 强制bigint或&lt;span class=&quot;built_in&quot;&gt;decimal&lt;/span&gt;列以JavaScript字符串类型返回（默认：&lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dateStrings  强制timestamp,datetime,&lt;span class=&quot;built_in&quot;&gt;data&lt;/span&gt;类型以字符串类型返回，而不是JavaScript &lt;span class=&quot;built_in&quot;&gt;Date&lt;/span&gt;类型（默认：&lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;debug  开启调试（默认：&lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;multipleStatements 是否许一个query中有多个MySQL语句 （默认：&lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;flags 用于修改连接标志&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ssl  使用ssl参数（与crypto.createCredenitals参数格式一至）或一个包含ssl配置文件名称的字符串，目前只捆绑Amazon RDS的配置文件&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Node" scheme="https://yangyfeng.github.io/blogpost/categories/Node/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>http协议</title>
+    <link href="https://yangyfeng.github.io//posts/6a5e2f06.html"/>
+    <id>https://yangyfeng.github.io//posts/6a5e2f06.html</id>
+    <published>2020-09-09T10:20:00.000Z</published>
+    <updated>2020-12-11T09:10:53.881Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;HTTP 简介：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;HTTP是Hyper Text Transfer
+        
+      
+    
+    </summary>
+    
+      <category term="Http" scheme="https://yangyfeng.github.io/blogpost/categories/Http/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>TCP3次握手</title>
+    <link href="https://yangyfeng.github.io//posts/6a5e2f06.html"/>
+    <id>https://yangyfeng.github.io//posts/6a5e2f06.html</id>
+    <published>2020-09-09T10:17:00.000Z</published>
+    <updated>2020-12-11T09:11:21.708Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;什么是http&quot;&gt;&lt;a href=&quot;#什么是http&quot; class=&quot;headerlink&quot; title=&quot;什么是http?&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Http" scheme="https://yangyfeng.github.io/blogpost/categories/Http/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>create-react-app(注意事项)</title>
+    <link href="https://yangyfeng.github.io//posts/6a5e2f06.html"/>
+    <id>https://yangyfeng.github.io//posts/6a5e2f06.html</id>
+    <published>2020-09-09T10:01:00.000Z</published>
+    <updated>2020-12-11T09:11:46.131Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;React-createClass-is-not-a-function&quot;&gt;&lt;a href=&quot;#React-createClass-is-not-a-function&quot; class=&quot;headerlink&quot; title=&quot;React.createClass is not a function&quot;&gt;&lt;/a&gt;React.createClass is not a function&lt;/h2&gt;&lt;p&gt;在React16以上，已经摒弃React.createClass()这个方法&lt;/p&gt;
+&lt;p&gt;取而代之的是&lt;br&gt;&lt;figure class=&quot;highlight scala&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Welcome&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;React&lt;/span&gt;.&lt;span class=&quot;title&quot;&gt;Component&lt;/span&gt;&lt;/span&gt;&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;配置webpack&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;前置条件(precondition)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://link.jianshu.com/?t=https://reactjs.org/docs/installation.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Creating a New Application&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装yarn&lt;/p&gt;
+&lt;figure class=&quot;highlight cmake&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm &lt;span class=&quot;keyword&quot;&gt;install&lt;/span&gt; yarn -g&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装依赖&lt;/p&gt;
+&lt;figure class=&quot;highlight cmake&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yarn &lt;span class=&quot;keyword&quot;&gt;install&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;显示webpack配置&lt;/p&gt;
+&lt;figure class=&quot;highlight dockerfile&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm &lt;span class=&quot;keyword&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;bash&quot;&gt; eject&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;添加alias&lt;/p&gt;
+&lt;p&gt;可以根据项目自行配置&lt;/p&gt;
+&lt;figure class=&quot;highlight sqf&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;alias: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;&#39;react-native&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;react-native-web&#39;&lt;/span&gt;, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;&#39;src&#39;&lt;/span&gt;:path.&lt;span class=&quot;built_in&quot;&gt;join&lt;/span&gt;(&lt;span class=&quot;variable&quot;&gt;__dirname&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;..&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;src&#39;&lt;/span&gt;), &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;&#39;language&#39;&lt;/span&gt;:path.&lt;span class=&quot;built_in&quot;&gt;join&lt;/span&gt;(&lt;span class=&quot;variable&quot;&gt;__dirname&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;..&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;src/language&#39;&lt;/span&gt;), &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;&#39;router&#39;&lt;/span&gt;:path.&lt;span class=&quot;built_in&quot;&gt;join&lt;/span&gt;(&lt;span class=&quot;variable&quot;&gt;__dirname&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;..&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;src/router&#39;&lt;/span&gt;), &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;&#39;Modebase&#39;&lt;/span&gt;:path.&lt;span class=&quot;built_in&quot;&gt;join&lt;/span&gt;(&lt;span class=&quot;variable&quot;&gt;__dirname&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;..&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;src/Modebase&#39;&lt;/span&gt;), &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;&#39;containers&#39;&lt;/span&gt;:path.&lt;span class=&quot;built_in&quot;&gt;join&lt;/span&gt;(&lt;span class=&quot;variable&quot;&gt;__dirname&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;..&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;src/containers&#39;&lt;/span&gt;) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;添加cssnext(postcs)&lt;br&gt;一种可以让你使用CSS最新特性的插件。它通过将最新的CSS特性转变为现阶段浏览器所兼容的特性，这样你不用再等待浏览器对某一特定新特性的支持。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="create-react-app" scheme="https://yangyfeng.github.io/blogpost/tags/create-react-app/"/>
+    
+      <category term="react" scheme="https://yangyfeng.github.io/blogpost/tags/react/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React 脚手架工具（create-react-app）</title>
+    <link href="https://yangyfeng.github.io//posts/a2043eea.html"/>
+    <id>https://yangyfeng.github.io//posts/a2043eea.html</id>
+    <published>2020-09-09T09:55:00.000Z</published>
+    <updated>2020-12-11T09:11:51.791Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;在开发react应用时，应该没有人用传统的方法引入react的源文件(js)，然后在html编辑吧。&lt;/p&gt;
+&lt;p&gt;大家都是用webpack + es6来结合react开发前端应用。&lt;/p&gt;
+&lt;p&gt;这个时候，我们可以手动使用npm来安装各种插件，来从头到尾自己搭建环境。&lt;/p&gt;
+&lt;p&gt;比如：&lt;/p&gt;
+&lt;figure class=&quot;highlight mipsasm&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm &lt;span class=&quot;keyword&quot;&gt;install &lt;/span&gt;react react-dom --save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm &lt;span class=&quot;keyword&quot;&gt;install &lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;babel &lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;babel-loader &lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;babel-core &lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;babel-preset-es2015 &lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;babel-preset-react &lt;/span&gt;--save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm &lt;span class=&quot;keyword&quot;&gt;install &lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;babel &lt;/span&gt;webpack webpack-dev-server -g&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="create-react-app" scheme="https://yangyfeng.github.io/blogpost/tags/create-react-app/"/>
+    
+      <category term="react" scheme="https://yangyfeng.github.io/blogpost/tags/react/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>devops是什么</title>
+    <link href="https://yangyfeng.github.io//posts/cfdabafc.html"/>
+    <id>https://yangyfeng.github.io//posts/cfdabafc.html</id>
+    <published>2020-09-09T09:33:00.000Z</published>
+    <updated>2020-09-09T09:39:24.783Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;DevOps是一种重视“软件开发人员（Dev）”和“IT运维技术人员（Ops）”之间沟通合作的文化、运动或惯例。透过自动化“软件交付”和“架构变更”的流程，来使得构建、测试、发布软件能够更加地快捷、频繁和可靠。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.leiue.com/tags/devops&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;DevOps&lt;/a&gt;（Development 和 Operations 的组合词）是一种重视“&lt;a href=&quot;https://www.leiue.com/tags/软件开发&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;软件开发&lt;/a&gt;人员（Dev）”和“IT 运维技术人员（Ops）”之间沟通合作的文化、运动或惯例。透过自动化“软件交付”和“架构变更”的流程，来使得构建、测试、发布软件能够更加地快捷、频繁和可靠。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="开发工具" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="开发工具" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="devops" scheme="https://yangyfeng.github.io/blogpost/tags/devops/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试题集锦（1）</title>
+    <link href="https://yangyfeng.github.io//posts/fe27deba.html"/>
+    <id>https://yangyfeng.github.io//posts/fe27deba.html</id>
+    <published>2020-09-08T16:00:00.000Z</published>
+    <updated>2020-12-17T01:57:41.358Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;什么是跨域？跨域请求资源的方法有哪些？&quot;&gt;&lt;a href=&quot;#什么是跨域？跨域请求资源的方法有哪些？&quot; class=&quot;headerlink&quot; title=&quot;什么是跨域？跨域请求资源的方法有哪些？&quot;&gt;&lt;/a&gt;什么是跨域？跨域请求资源的方法有哪些？&lt;/h2&gt;&lt;p&gt;1、什么是跨域？&lt;br&gt;由于浏览器同源策略，凡是发送请求url的协议、域名、端口三者之间任意一与当前页面地址不同即为跨域。存在跨域的情况：&lt;br&gt;网络协议不同，如http协议访问https协议。&lt;br&gt;端口不同，如80端口访问8080端口。&lt;br&gt;域名不同，如qianduanblog.com访问baidu.com。&lt;br&gt;子域名不同，如abc.qianduanblog.com访问def.qianduanblog.com。&lt;br&gt;域名和域名对应ip,如&lt;a href=&quot;http://www.a.com访问20.205.28.90&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;www.a.com访问20.205.28.90&lt;/a&gt;.&lt;br&gt;2、跨域请求资源的方法：&lt;br&gt;(1)、porxy代理&lt;br&gt;定义和用法：proxy代理用于将请求发送给后台服务器，通过服务器来发送请求，然后将请求的结果传递给前端。&lt;br&gt;实现方法：通过nginx代理；&lt;br&gt;注意点：1、如果你代理的是https协议的请求，那么你的proxy首先需要信任该证书（尤其是自定义证书）或者忽略证书检查，否则你的请求无法成功。&lt;br&gt;(2)、CORS 【Cross-Origin Resource Sharing】&lt;br&gt;定义和用法：是现代浏览器支持跨域资源请求的一种最常用的方式。&lt;br&gt;使用方法：一般需要后端人员在处理请求数据的时候，添加允许跨域的相关操作。如下：&lt;br&gt;&lt;figure class=&quot;highlight ada&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;res.writeHead(&lt;span class=&quot;number&quot;&gt;200&lt;/span&gt;, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;text/html; charset=UTF-8&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;Access-Control-Allow-Origin&quot;&lt;/span&gt;:&lt;span class=&quot;symbol&quot;&gt;&#39;http&lt;/span&gt;://localhost&#39;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;symbol&quot;&gt;&#39;Access&lt;/span&gt;-Control-Allow-Methods&#39;: &lt;span class=&quot;symbol&quot;&gt;&#39;GET&lt;/span&gt;, POST, OPTIONS&#39;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;symbol&quot;&gt;&#39;Access&lt;/span&gt;-Control-Allow-Headers&#39;: &lt;span class=&quot;symbol&quot;&gt;&#39;X&lt;/span&gt;-Requested-&lt;span class=&quot;keyword&quot;&gt;With&lt;/span&gt;, Content-&lt;span class=&quot;keyword&quot;&gt;Type&lt;/span&gt;&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;(3)、jsonp&lt;br&gt;定义和用法：通过动态插入一个script标签。浏览器对script的资源引用没有同源限制，同时资源加载到页面后会立即执行（没有阻塞的情况下）。&lt;br&gt;特点：通过情况下，通过动态创建script来读取他域的动态资源，获取的数据一般为json格式。&lt;br&gt;实例如下：&lt;br&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;actionscript&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;testjsonp&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(data)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;javascript&quot;&gt;       &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(data.name); &lt;span class=&quot;comment&quot;&gt;// 获取返回的结果&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;javascript&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; _script = &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.createElement(&lt;span class=&quot;string&quot;&gt;&#39;script&#39;&lt;/span&gt;);&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;actionscript&quot;&gt;    _script.type = &lt;span class=&quot;string&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;actionscript&quot;&gt;    _script.src = &lt;span class=&quot;string&quot;&gt;&quot;http://localhost:8888/jsonp?callback=testjsonp&quot;&lt;/span&gt;;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;javascript&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.head.appendChild(_script);&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;缺点：&lt;br&gt;　　1、这种方式无法发送post请求（这里）&lt;br&gt;　　2、另外要确定jsonp的请求是否失败并不容易，大多数框架的实现都是结合超时时间来判定。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="面试题" scheme="https://yangyfeng.github.io/blogpost/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
+  
+</feed>
