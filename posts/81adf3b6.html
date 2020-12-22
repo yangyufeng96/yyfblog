@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>面试题集锦（1） | 峰享会</title>
+  <title>javascript是如何被运行的 | 峰享会</title>
   
   <meta name="keywords" content="前端开发,科技,数据可视化,移动开发,小程序,客户端">
   
@@ -391,8 +391,8 @@
         
   
     <h1 class="title">
-      <a href="/posts/fe27deba.html">
-        面试题集锦（1）
+      <a href="/posts/81adf3b6.html">
+        javascript是如何被运行的
       </a>
     </h1>
   
@@ -421,7 +421,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-09-09</p>
+    <p>2020-12-22</p>
   </a>
 </div>
 
@@ -431,9 +431,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/blogpost/categories/前端/' rel="nofollow">
+    <a href='/blogpost/categories/深入前端/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>前端</p>
+      <p>深入前端</p>
     </a>
   </div>
 
@@ -468,14 +468,14 @@
           <div class="new-meta-item size">
             <a class="notlink">
               <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>2.5k字</p>
+              <p>498字</p>
             </a>
           </div>
           <!-- 阅读时间 -->
           <div class="new-meta-item read-time">
             <a class="notlink">
               <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>9分</p>
+              <p>1分</p>
             </a>
           </div>
         
@@ -489,61 +489,44 @@
 
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
-          <h2 id="什么是跨域？跨域请求资源的方法有哪些？"><a href="#什么是跨域？跨域请求资源的方法有哪些？" class="headerlink" title="什么是跨域？跨域请求资源的方法有哪些？"></a>什么是跨域？跨域请求资源的方法有哪些？</h2><p>1、什么是跨域？<br>由于浏览器同源策略，凡是发送请求url的协议、域名、端口三者之间任意一与当前页面地址不同即为跨域。存在跨域的情况：<br>网络协议不同，如http协议访问https协议。<br>端口不同，如80端口访问8080端口。<br>域名不同，如qianduanblog.com访问baidu.com。<br>子域名不同，如abc.qianduanblog.com访问def.qianduanblog.com。<br>域名和域名对应ip,如<a href="http://www.a.com访问20.205.28.90" target="_blank" rel="noopener">www.a.com访问20.205.28.90</a>.<br>2、跨域请求资源的方法：<br>(1)、porxy代理<br>定义和用法：proxy代理用于将请求发送给后台服务器，通过服务器来发送请求，然后将请求的结果传递给前端。<br>实现方法：通过nginx代理；<br>注意点：1、如果你代理的是https协议的请求，那么你的proxy首先需要信任该证书（尤其是自定义证书）或者忽略证书检查，否则你的请求无法成功。<br>(2)、CORS 【Cross-Origin Resource Sharing】<br>定义和用法：是现代浏览器支持跨域资源请求的一种最常用的方式。<br>使用方法：一般需要后端人员在处理请求数据的时候，添加允许跨域的相关操作。如下：<br><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">res.writeHead(<span class="number">200</span>, &#123;</span><br><span class="line">    <span class="string">"Content-Type"</span>: <span class="string">"text/html; charset=UTF-8"</span>,</span><br><span class="line">    <span class="string">"Access-Control-Allow-Origin"</span>:<span class="symbol">'http</span>://localhost',</span><br><span class="line">    <span class="symbol">'Access</span>-Control-Allow-Methods': <span class="symbol">'GET</span>, POST, OPTIONS',</span><br><span class="line">    <span class="symbol">'Access</span>-Control-Allow-Headers': <span class="symbol">'X</span>-Requested-<span class="keyword">With</span>, Content-<span class="keyword">Type</span>'</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>(3)、jsonp<br>定义和用法：通过动态插入一个script标签。浏览器对script的资源引用没有同源限制，同时资源加载到页面后会立即执行（没有阻塞的情况下）。<br>特点：通过情况下，通过动态创建script来读取他域的动态资源，获取的数据一般为json格式。<br>实例如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">testjsonp</span><span class="params">(data)</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">       <span class="built_in">console</span>.log(data.name); <span class="comment">// 获取返回的结果</span></span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> _script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span></span><br><span class="line"><span class="actionscript">    _script.type = <span class="string">"text/javascript"</span>;</span></span><br><span class="line"><span class="actionscript">    _script.src = <span class="string">"http://localhost:8888/jsonp?callback=testjsonp"</span>;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.head.appendChild(_script);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>缺点：<br>　　1、这种方式无法发送post请求（这里）<br>　　2、另外要确定jsonp的请求是否失败并不容易，大多数框架的实现都是结合超时时间来判定。</p>
+          <h2 id="JS的语言组成"><a href="#JS的语言组成" class="headerlink" title="JS的语言组成"></a>JS的语言组成</h2><ul>
+<li>基本语法：C</li>
+<li>数据类型 内存管理：Java</li>
+<li>函数式编程：Scheme  函数是第一等公民</li>
+<li>原型继承：Self   基于原型prototype的继承机制</li>
+</ul>
+<h2 id="奇葩的JS"><a href="#奇葩的JS" class="headerlink" title="奇葩的JS"></a>奇葩的JS</h2><p>对于熟悉javascript语言的前端开发小伙伴，直接上来两张图</p>
+<p><a href="https://imgchr.com/i/rrE9Gq" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rrE9Gq.md.png" alt="rrE9Gq.md.png"></a></p>
+<p><a href="https://imgchr.com/i/rrEALF" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rrEALF.md.png" alt="rrEALF.md.png"></a></p>
+<p>是不是瞬间感觉头脑发热呢。</p>
+<p>之所以会出现这些诡异的问题，是因为javascript是在设计之初并没有考虑的完善，是借鉴了多种语言的模式，基本是融合了面向过程和面向对象的。</p>
 <a id="more"></a>
-<h2 id="介绍一下-JS-的基本数据类型。"><a href="#介绍一下-JS-的基本数据类型。" class="headerlink" title="介绍一下 JS 的基本数据类型。"></a>介绍一下 JS 的基本数据类型。</h2><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Undefined</span>、<span class="keyword">Null</span>、Boolean、<span class="keyword">Number</span>、<span class="keyword">String</span></span><br></pre></td></tr></table></figure>
-<h2 id="如何利用JavaScript实现一个自定义事件，存在on，off，emit三个方法？"><a href="#如何利用JavaScript实现一个自定义事件，存在on，off，emit三个方法？" class="headerlink" title="如何利用JavaScript实现一个自定义事件，存在on，off，emit三个方法？"></a>如何利用JavaScript实现一个自定义事件，存在on，off，emit三个方法？</h2><p>这个题目的意义在哪里？我想，应该是对于一些特定的业务逻辑，比如在注册一个“通知”的事件，在与Native交互之后，假设这个交互是在入口级别的页面里，那么如何发送给具体某个业务呢？事件应该是最简单的一种方式，在某个具体的业务中注册一个事件，然后在与Native交互完，拿到某些数据后，然后触发这个事件。</p>
-<p>我们来一步一步实现一个最简单的事件类Event，不考虑任何其他复杂的情况。假设在这个Event类的内部有一个this._events = [] 数组来维系整个事件系统，我们分别实现on，off，emit三个方法即可。</p>
-<p>on（注册一个事件）：<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Event.prototype.on = function(type,<span class="function"><span class="keyword">fun</span>)&#123;</span></span><br><span class="line">    let cbs = <span class="keyword">this</span>._events[type];</span><br><span class="line">    cbs ? cbs.push(<span class="function"><span class="keyword">fun</span>) : this._events[type] = [];</span></span><br><span class="line">        <span class="keyword">if</span> (!cbs) &#123;</span><br><span class="line">            <span class="keyword">this</span>._events[type].push(<span class="function"><span class="keyword">fun</span>)</span></span><br><span class="line">    &#125;        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>这里为什么要将this._events设计为二维数组？因为事件可以是多个，但是事件名可能相同。这个逻辑意图非常的明显，根据type参数从this._events中获取是否存在。如果不存在，创建一个type为key的数组，并将事件句柄程序push到数组中。</p>
-<p>off（注销一个事件）：<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">Event.prototype.off = function (<span class="keyword">type</span>, <span class="function"><span class="keyword">fun</span>) &#123;</span></span><br><span class="line"><span class="function">    <span class="title">let</span></span> cbs = this._events[<span class="keyword">type</span>];</span><br><span class="line">    /<span class="regexp">/事件列队中无事件</span></span><br><span class="line"><span class="regexp">    if (!cbs) &#123;</span></span><br><span class="line"><span class="regexp">      return this;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">    /</span><span class="regexp">/删除所有的事件</span></span><br><span class="line"><span class="regexp">    if (!event &amp;&amp; !fun) &#123;</span></span><br><span class="line"><span class="regexp">      this._events = &#123;&#125;;</span></span><br><span class="line"><span class="regexp">      return this;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">    /</span><span class="regexp">/只有事件名称时</span></span><br><span class="line"><span class="regexp">    if (event &amp;&amp; !fun) &#123;</span></span><br><span class="line"><span class="regexp">      this._events[type] = null;</span></span><br><span class="line"><span class="regexp">      return this;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">    /</span><span class="regexp">/删除某个事件队列中的某个事件</span></span><br><span class="line"><span class="regexp">    let cb;</span></span><br><span class="line"><span class="regexp">    let i = cbs.length;</span></span><br><span class="line"><span class="regexp">    while (i--) &#123;</span></span><br><span class="line"><span class="regexp">      cb = cbs[i];</span></span><br><span class="line"><span class="regexp">      if (cb === fun || cb.fun === fun) &#123;</span></span><br><span class="line"><span class="regexp">        cbs.splice(i, 1);</span></span><br><span class="line"><span class="regexp">        break;</span></span><br><span class="line"><span class="regexp">      &#125;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br></pre></td></tr></table></figure></p>
-<p>虽然注销事件方法的逻辑可能相比之下稍许多了些，但它的实现也非常简单，只要只存在事件组key名的情况，或者删除某个事件队列中的某个事件句柄程序即可。</p>
-<p>emit（触发一个事件）：<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Event.prototype.emit = <span class="function"><span class="keyword">function</span>(<span class="params"><span class="keyword">type</span></span>)</span>&#123;    </span><br><span class="line">    <span class="keyword">let</span> cbs = <span class="keyword">this</span>._events[<span class="keyword">type</span>];    </span><br><span class="line">    <span class="keyword">let</span> args = tools.toArray(<span class="built_in">arguments</span>,<span class="number">1</span>);    </span><br><span class="line">    <span class="keyword">if</span> (cbs) &#123;        </span><br><span class="line">        <span class="keyword">let</span> i = <span class="number">0</span>;        </span><br><span class="line">        <span class="keyword">let</span> j = cbs.length;        </span><br><span class="line">        <span class="keyword">for</span>(;i&lt;j;i++)&#123;            </span><br><span class="line">            <span class="keyword">let</span> cb = cbs[i];            </span><br><span class="line">            cb.apply(<span class="keyword">this</span>,args);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>逻辑依然非常简单，通过事件名从this._events获取相应的事件句柄程序数组，然后将arguments转成数组，（这里考虑的是可能会传入参数）如果事件句柄程序数组存在，进行循环，再讲args参数apply给每一个取出来的事件句柄程序。</p>
-<p>##请描述一个网页从开始请求道最终显示的完整过程？<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">一个网页从请求到最终显示的完整过程一般可以分为如下<span class="number">7</span>个步骤：</span><br><span class="line">（<span class="number">1</span>）在浏览器中输入网址；</span><br><span class="line">（<span class="number">2</span>）发送至DNS服务器并获得域名对应的WEB服务器IP地址；</span><br><span class="line">（<span class="number">3</span>）与WEB服务器建立TCP连接；</span><br><span class="line">（<span class="number">4</span>）浏览器向WEB服务器的IP地址发送相应的HTTP请求；</span><br><span class="line">（<span class="number">5</span>）WEB服务器响应请求并返回指定URL的数据，或错误信息，如果设定重定向，则重定向到新的URL地址；</span><br><span class="line">（<span class="number">6</span>）浏览器下载数据后解析HTML源文件，解析的过程中实现对页面的排版，解析完成后在浏览器中显示基础页面；</span><br><span class="line">（<span class="number">7</span>）分析页面中的超链接并显示在当前页面，重复以上过程直至无超链接需要发送，完成全部数据显示。</span><br></pre></td></tr></table></figure></p>
-<h2 id="请描述一下-cookies，sessionStorage-和-localStorage-的区别？"><a href="#请描述一下-cookies，sessionStorage-和-localStorage-的区别？" class="headerlink" title="请描述一下 cookies，sessionStorage 和 localStorage 的区别？"></a>请描述一下 cookies，sessionStorage 和 localStorage 的区别？</h2><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Web Storage有两种形式：LocalStorage（本地存储）和sessionStorage（会话存储）。</span><br><span class="line">这两种方式都允许开发者使用js设置的键值对进行操作，在在重新加载不同的页面的时候读出它们。这一点与cookie类似。</span><br><span class="line">（<span class="number">1</span>）与cookie不同的是：Web Storage数据完全存储在客户端，不需要通过浏览器的请求将数据传给服务器，因此x相比cookie来说能够存储更多的数据，大概<span class="number">5</span>M左右。</span><br><span class="line">（<span class="number">2</span>）LocalStorage和sessionStorage功能上是一样的，但是存储持久时间不一样。</span><br><span class="line">LocalStorage：浏览器关闭了数据仍然可以保存下来，并可用于所有同源（相同的域名、协议和端口）窗口（或标签页）；</span><br><span class="line">sessionStorage：数据存储在窗口对象中，窗口关闭后对应的窗口对象消失，存储的数据也会丢失。</span><br><span class="line">注意：sessionStorage 都可以用localStorage 来代替，但需要记住的是，在窗口或者标签页关闭时，使用sessionStorage 存储的数据会丢失。</span><br><span class="line">（<span class="number">3</span>）使用 local storage和session storage主要通过在js中操作这两个对象来实现，分别为window.localStorage和window.sessionStorage. 这两个对象均是Storage类的两个实例，自然也具有Storage类的属性和方法。</span><br></pre></td></tr></table></figure>
-<h2 id="说说js中的event-loop机制？"><a href="#说说js中的event-loop机制？" class="headerlink" title="说说js中的event loop机制？"></a>说说js中的event loop机制？</h2><p>首先javascript是单线程机制，就是指当我们在执行一个任务的时候，其它的事情都得等待他执行完毕</p>
-<p>在js中所有任务分为两种, 同步任务及异步任务</p>
-<p>执行栈执行主线程任务，当有操作dom，ajax交互，使用定时器异步操作的时候，这些任务会被移入到 callback queue 任务队列中<br>当主线程任务执行完毕为空时，会读取callback queue队列中的函数，进入主线程执行<br>上述过程会不断重复，也就是常说的Event Loop(事件循环)</p>
-<p>在一个事件循环中,异步任务返回结果后会被扔进一个任务列队中，根据异步事件上的类型，这个事件会被放到对应的宏任务或者微任务列队中去， 当执行栈为空的时候，主线程会先查看微任务中的事件列队，<strong>如果微任务不是空先依次执行微任务</strong>，<strong>如果是空的再去宏任务列队中取出一个事件并把对应的回调加入到当前执行栈</strong>，如此反复，进入循环</p>
-<p>下面用一道题来加深印象</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>( <span class="function">(<span class="params">resolve,reject</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">2</span>)</span><br><span class="line">&#125;).then( <span class="function">(<span class="params">val</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(val);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">输出的结果是<span class="number">2</span>,<span class="number">1</span></span><br></pre></td></tr></table></figure>
-<p>解释：</p>
-<p>定时器是宏任务，Promise是异步的是微任务。所以先执行微任务 <code>console.log(2)</code>,在执行宏任务<code>console.log(1)</code></p>
-<h2 id="怎么理解js中的内存泄漏"><a href="#怎么理解js中的内存泄漏" class="headerlink" title="怎么理解js中的内存泄漏?"></a>怎么理解js中的内存泄漏?</h2><p>内存泄漏的定义为当程序不再需要的内存，由于某种原因其不会返回到操作系统或可用内存池，内存泄漏会导致一系列问题，比如: 运行缓阳，崩溃，高延迟等</p>
-<p>js中常见的内存泄露:</p>
-<p>1、意外的全局变量</p>
-<p>2、遗忘的计时器或回调函数</p>
-<p>3、脱离文档的DOM引用</p>
-<p>4、闭包</p>
-<h2 id="怎么理解js中是原型链-如何实现继承"><a href="#怎么理解js中是原型链-如何实现继承" class="headerlink" title="怎么理解js中是原型链? 如何实现继承?"></a>怎么理解js中是原型链? 如何实现继承?</h2><ul>
-<li><p>每个构造函数都有一个原型对象</p>
-</li>
-<li><p>每个原型对象都包含一个指向构造函数的指针</p>
-</li>
-<li><p>每个实例都包含一个指向原型对象的指针</p>
-</li>
-<li><p>查找方式是一层层向上查找直至顶层Object.prototype</p>
-</li>
-</ul>
-<p><strong>实现继承的方式常用的有:</strong></p>
-<ul>
-<li><p>原型链继承</p>
-</li>
-<li><p>借用构造函数(call,apply)</p>
-</li>
-<li><p>组合继承(原型链＋构造函数)</p>
-</li>
-<li><p>原型式继承</p>
-</li>
-<li><p>寄生式组合式继承</p>
-</li>
-</ul>
-<h2 id="new-运算符具体干了什么"><a href="#new-运算符具体干了什么" class="headerlink" title="new 运算符具体干了什么?"></a>new 运算符具体干了什么?</h2><p>1、创建一个空的对象</p>
-<p>2、将空的对象的proto成员指向构造函数的prototype成员对象</p>
-<p>3、调用构造函数将this指向前面创建的对象</p>
+<h2 id="语言特性"><a href="#语言特性" class="headerlink" title="语言特性"></a>语言特性</h2><p>动态类型语言 JS   编译环境JIT Just In Time Compilation </p>
+<p>静态类型语言 C++  编译环境 AOT  Ahead Of Time</p>
+<p><strong>JIT</strong></p>
+<p>js引擎运用了一项技术叫运行时编译  JIT<br>javascript是动态类型语言，在编译是使用的是JIT(just in time compilation) 运行时编译技术<br>白话就是：在运行时编译成机器代码</p>
+<p><strong>AOT</strong></p>
+<p>在运行前提前生成好机器代码</p>
+<p><strong>javascript引擎</strong></p>
+<p>将javascript代码高级语言转化为低级语言（机器语言）来执行</p>
+<p><strong>常用的执行javascript引擎</strong></p>
+<p>谷歌的v8引擎，javascriptcore，spidermonkey，quickjs，hermess(react nactive)</p>
+<ol>
+<li>谷歌V8</li>
+<li>苹果 - javaScriptCore</li>
+<li>火狐 - SpideMonkey</li>
+<li>QuickJs</li>
+<li>FaceBook - Hermes</li>
+</ol>
+<h2 id="javascript引擎的编译流程"><a href="#javascript引擎的编译流程" class="headerlink" title="javascript引擎的编译流程"></a>javascript引擎的编译流程</h2><p><a href="https://imgchr.com/i/rrVTjf" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rrVTjf.md.png" alt="rrVTjf.md.png"></a></p>
+<p>说明：</p>
+<p>javascript代码解析器（parser）解析成抽象语法树AST，通过解释器（interpreter）将AST编译为字节码bytecode(跨平台的一种中间表示，可以在不同的操作平台运行),字节码最后通过编译器，生成机器代码。<strong>V8在5.9之前 是没有字节码的环节</strong>。</p>
+<ol>
+<li>parser - 将js源码通过parser解析器生成AST  抽象语法树</li>
+<li>interpreter - 通过解释器将AST编程成功字节码bytecode (字节码与平台无关，是中间层，可以在各个平台上运行)</li>
+<li>compiler - 根据当前平台编译出相应的机器代码也就是汇编代码  常见的操作系统平台有：IA32 X64 ARM MIPS </li>
+</ol>
+<p><strong><a href="https://www.bilibili.com/video/BV1vh411Z7QG" target="_blank" rel="noopener">原文地址</a></strong></p>
 
         </div>
         
@@ -555,10 +538,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-21T16:54:51+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-22T17:32:47+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2020年12月21日</p>
+    <p>最后更新于 2020年12月22日</p>
   </a>
 </div>
 
@@ -567,7 +550,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/面试题/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>面试题</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/javascript/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>javascript</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/JS运行原理/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>JS运行原理</p></a></div>
 
 
         
@@ -580,9 +563,17 @@
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://yangyfeng.github.io/posts/fe27deba.html&title=面试题集锦（1） | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=什么是跨域？跨域请求资源的方法有哪些？1、什么是跨域？由于浏览器同源策略，凡是发送请求url的协议、域名、端口三者之间任意一与当前页面地址不同即为跨域。存在跨域的情况：网络协议不同，如http协议访问https协议。端口不同，如80端口访问8080端口。域名不同，如qianduanblog.com访问baidu.com。子域名不同，如abc.qianduanblog.com访问def.qianduanblog.com。域名和域名对应ip,如www.a.com访问20.205.28.90.2、跨域请求资源的方法：(1)、porxy代理定义和用法：proxy代理用于将请求发送给后台服务器，通过服务器来发送请求，然后将请求的结果传递给前端。实现方法：通过nginx代理；注意点：1、如果你代理的是https协议的请求，那么你的proxy首先需要信任该证书（尤其是自定义证书）或者忽略证书检查，否则你的请求无法成功。(2)、CORS 【Cross-Origin Resource Sharing】定义和用法：是现代浏览器支持跨域资源请求的一种最常用的方式。使用方法：一般需要后端人员在处理请求数据的时候，添加允许跨域的相关操作。如下：123456res.writeHead(200, &#123;    "Content-Type": "text/html; charset=UTF-8",    "Access-Control-Allow-Origin":'http://localhost',    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',    'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type'&#125;);
-(3)、jsonp定义和用法：通过动态插入一个script标签。浏览器对script的资源引用没有同源限制，同时资源加载到页面后会立即执行（没有阻塞的情况下）。特点：通过情况下，通过动态创建script来读取他域的动态资源，获取的数据一般为json格式。实例如下：1234567891011&lt;script&gt;    function testjsonp(data) &#123;       console.log(data.name); // 获取返回的结果    &#125;&lt;/script&gt;&lt;script&gt;    var _script = document.createElement('script');    _script.type = "text/javascript";    _script.src = "http://localhost:8888/jsonp?callback=testjsonp";    document.head.appendChild(_script);&lt;/script&gt;
-缺点：　　1、这种方式无法发送post请求（这里）　　2、另外要确定jsonp的请求是否失败并不容易，大多数框架的实现都是结合超时时间来判定。"
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://yangyfeng.github.io/posts/81adf3b6.html&title=javascript是如何被运行的 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=JS的语言组成
+基本语法：C
+数据类型 内存管理：Java
+函数式编程：Scheme  函数是第一等公民
+原型继承：Self   基于原型prototype的继承机制
+
+奇葩的JS对于熟悉javascript语言的前端开发小伙伴，直接上来两张图
+
+
+是不是瞬间感觉头脑发热呢。
+之所以会出现这些诡异的问题，是因为javascript是在设计之初并没有考虑的完善，是借鉴了多种语言的模式，基本是融合了面向过程和面向对象的。"
           
           >
           
@@ -594,9 +585,17 @@
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yangyfeng.github.io/posts/fe27deba.html&title=面试题集锦（1） | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=什么是跨域？跨域请求资源的方法有哪些？1、什么是跨域？由于浏览器同源策略，凡是发送请求url的协议、域名、端口三者之间任意一与当前页面地址不同即为跨域。存在跨域的情况：网络协议不同，如http协议访问https协议。端口不同，如80端口访问8080端口。域名不同，如qianduanblog.com访问baidu.com。子域名不同，如abc.qianduanblog.com访问def.qianduanblog.com。域名和域名对应ip,如www.a.com访问20.205.28.90.2、跨域请求资源的方法：(1)、porxy代理定义和用法：proxy代理用于将请求发送给后台服务器，通过服务器来发送请求，然后将请求的结果传递给前端。实现方法：通过nginx代理；注意点：1、如果你代理的是https协议的请求，那么你的proxy首先需要信任该证书（尤其是自定义证书）或者忽略证书检查，否则你的请求无法成功。(2)、CORS 【Cross-Origin Resource Sharing】定义和用法：是现代浏览器支持跨域资源请求的一种最常用的方式。使用方法：一般需要后端人员在处理请求数据的时候，添加允许跨域的相关操作。如下：123456res.writeHead(200, &#123;    "Content-Type": "text/html; charset=UTF-8",    "Access-Control-Allow-Origin":'http://localhost',    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',    'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type'&#125;);
-(3)、jsonp定义和用法：通过动态插入一个script标签。浏览器对script的资源引用没有同源限制，同时资源加载到页面后会立即执行（没有阻塞的情况下）。特点：通过情况下，通过动态创建script来读取他域的动态资源，获取的数据一般为json格式。实例如下：1234567891011&lt;script&gt;    function testjsonp(data) &#123;       console.log(data.name); // 获取返回的结果    &#125;&lt;/script&gt;&lt;script&gt;    var _script = document.createElement('script');    _script.type = "text/javascript";    _script.src = "http://localhost:8888/jsonp?callback=testjsonp";    document.head.appendChild(_script);&lt;/script&gt;
-缺点：　　1、这种方式无法发送post请求（这里）　　2、另外要确定jsonp的请求是否失败并不容易，大多数框架的实现都是结合超时时间来判定。"
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yangyfeng.github.io/posts/81adf3b6.html&title=javascript是如何被运行的 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=JS的语言组成
+基本语法：C
+数据类型 内存管理：Java
+函数式编程：Scheme  函数是第一等公民
+原型继承：Self   基于原型prototype的继承机制
+
+奇葩的JS对于熟悉javascript语言的前端开发小伙伴，直接上来两张图
+
+
+是不是瞬间感觉头脑发热呢。
+之所以会出现这些诡异的问题，是因为javascript是在设计之初并没有考虑的完善，是借鉴了多种语言的模式，基本是融合了面向过程和面向对象的。"
           
           >
           
@@ -608,9 +607,17 @@
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://yangyfeng.github.io/posts/fe27deba.html&title=面试题集锦（1） | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=什么是跨域？跨域请求资源的方法有哪些？1、什么是跨域？由于浏览器同源策略，凡是发送请求url的协议、域名、端口三者之间任意一与当前页面地址不同即为跨域。存在跨域的情况：网络协议不同，如http协议访问https协议。端口不同，如80端口访问8080端口。域名不同，如qianduanblog.com访问baidu.com。子域名不同，如abc.qianduanblog.com访问def.qianduanblog.com。域名和域名对应ip,如www.a.com访问20.205.28.90.2、跨域请求资源的方法：(1)、porxy代理定义和用法：proxy代理用于将请求发送给后台服务器，通过服务器来发送请求，然后将请求的结果传递给前端。实现方法：通过nginx代理；注意点：1、如果你代理的是https协议的请求，那么你的proxy首先需要信任该证书（尤其是自定义证书）或者忽略证书检查，否则你的请求无法成功。(2)、CORS 【Cross-Origin Resource Sharing】定义和用法：是现代浏览器支持跨域资源请求的一种最常用的方式。使用方法：一般需要后端人员在处理请求数据的时候，添加允许跨域的相关操作。如下：123456res.writeHead(200, &#123;    "Content-Type": "text/html; charset=UTF-8",    "Access-Control-Allow-Origin":'http://localhost',    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',    'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type'&#125;);
-(3)、jsonp定义和用法：通过动态插入一个script标签。浏览器对script的资源引用没有同源限制，同时资源加载到页面后会立即执行（没有阻塞的情况下）。特点：通过情况下，通过动态创建script来读取他域的动态资源，获取的数据一般为json格式。实例如下：1234567891011&lt;script&gt;    function testjsonp(data) &#123;       console.log(data.name); // 获取返回的结果    &#125;&lt;/script&gt;&lt;script&gt;    var _script = document.createElement('script');    _script.type = "text/javascript";    _script.src = "http://localhost:8888/jsonp?callback=testjsonp";    document.head.appendChild(_script);&lt;/script&gt;
-缺点：　　1、这种方式无法发送post请求（这里）　　2、另外要确定jsonp的请求是否失败并不容易，大多数框架的实现都是结合超时时间来判定。"
+          href="http://service.weibo.com/share/share.php?url=https://yangyfeng.github.io/posts/81adf3b6.html&title=javascript是如何被运行的 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=JS的语言组成
+基本语法：C
+数据类型 内存管理：Java
+函数式编程：Scheme  函数是第一等公民
+原型继承：Self   基于原型prototype的继承机制
+
+奇葩的JS对于熟悉javascript语言的前端开发小伙伴，直接上来两张图
+
+
+是不是瞬间感觉头脑发热呢。
+之所以会出现这些诡异的问题，是因为javascript是在设计之初并没有考虑的完善，是借鉴了多种语言的模式，基本是融合了面向过程和面向对象的。"
           
           >
           
@@ -620,7 +627,7 @@
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3aQY6DMAwF0N7/0p3tSCPSbydUQ/JYVW2BPBbGsf16xce7dfw+d3zlv3d53XFgYGA8lpEv5Y5vrtaQrw0DA+McRhIKk1iXPKDxucl9MTAwMMaXS8Ji9Z8JCQMDA6PKmNlj5ptYDAwMjOomNi+KrUoHb9mLY2BgPJCRh8vvf76lv4GBgfEoRq8lmZTSZkp15VVhYGBszcgDXA/Z+6a6HgwMjL0Z+YDFdxbdvD4GBsZhjFXjF3ljICdd/oqBgXEAY2Zgoto2yH8tNAAwMDAOYFSTtl6hPxmzyEdALt8bGBgY2zFmguBMaM7BedqKgYGxKyMprq1NB5PtcV5oizaxGBgYD2fkZa88/PVaC9Wm5octLgYGxqaM3g2qjYS8lDZe+lSei4GB8ShGdZBi7XJ7rdPCzBoGBsYWjJyUD2z1RjRWjZphYGDsx0i2iPkiZopxhVLa1VgYBgbGAYxeSlctrs08mg/9DQwMjE0ZzQGsvIYXs5flthgYGAcweiX73mjFOFiXy3MYGBjHMJIkb1W5v5kCzvQ8MTAwNmIkjcmZyY4qNXoZYGBgbMp4F48kRCbJZbVs94GKgYGxNSM/qsW1/JHNNDXLMAwMjMcy8iBbTd1mtq954MbAwDiHkQe+XrFsptkQITEwMDCGn3vFuN4DujwLAwMDY7rEP/5ndc99+3sDAwPjXzLyZkASfPNvehtpDAyM0xi9WlY17cvHy/IRMQwMjAMYP+IwQc/jrCN7AAAAAElFTkSuQmCC'>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3aS27jMBAFwNz/0h4g20TCe2xmAFHFVWBDNEuLTn/49RWvz/f6+cn9unr2auefz25eGBgYj2XsOsr9gfI9r566OhsGBsZ7GO12eYCe7J88i4GBgXGfGiaHyF8HBgYGxq6Ae19w3h+lTUMxMDAw2q2TsJv3wSbfYmBgvI3RDgb+599/ON/AwMB4CONTrjYpnBS9xakwMDCOZiSttOTKRb5P+0kxTMXAwHgBoy0vdx23LZWLdhsGBsYRjHyj+YWwtUsbyS9iYGCczVi7BDYZXu66ZIaBgfE2xtq1sLbRnxfASRoatdswMDCOYKwVqGtHSYrkNshiYGC8gdGOAdpA3IbOfAyw+H8DAwPjsYxkPDBP8iYDhqItiIGBcRxj7apE3oybB9DohWJgYBzNWAuabUI5HwOMRpgYGBjHMdorYvNjLTbXrnbDwMA4jrH28OJtjkGKWcxgMTAwjmPkUXmS8OU9vzysF5fDMDAwjmDkh5hcyGgxdUqKgYFxKGPyA7tewdoYddt7wsDAeAhjVDTGr2NtnLmhFsfAwHg4Y61ZvyuVTEhFGoqBgXEo41OutrmfHLpt5P3yLAYGxtGMfOVNsWScmTDy1hsGBsYbGEmQzVtveUDMQ3nxpjEwMI5m5EXsPEVbi/rFeAADA+PFjMkR166FFSEYAwMDY9ziz0P2WhqKgYHxBkZSxCZFad6AaxPN6LIFBgbGoYxJATkHtwnlpAzGwMB4IOMfrjrbGRbxfSAAAAAASUVORK5CYII='>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
         
@@ -628,7 +635,7 @@
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3aQY6DMAwF0N7/0p3tSCPSbydUQ/JYVW2BPBbGsf16xce7dfw+d3zlv3d53XFgYGA8lpEv5Y5vrtaQrw0DA+McRhIKk1iXPKDxucl9MTAwMMaXS8Ji9Z8JCQMDA6PKmNlj5ptYDAwMjOomNi+KrUoHb9mLY2BgPJCRh8vvf76lv4GBgfEoRq8lmZTSZkp15VVhYGBszcgDXA/Z+6a6HgwMjL0Z+YDFdxbdvD4GBsZhjFXjF3ljICdd/oqBgXEAY2Zgoto2yH8tNAAwMDAOYFSTtl6hPxmzyEdALt8bGBgY2zFmguBMaM7BedqKgYGxKyMprq1NB5PtcV5oizaxGBgYD2fkZa88/PVaC9Wm5octLgYGxqaM3g2qjYS8lDZe+lSei4GB8ShGdZBi7XJ7rdPCzBoGBsYWjJyUD2z1RjRWjZphYGDsx0i2iPkiZopxhVLa1VgYBgbGAYxeSlctrs08mg/9DQwMjE0ZzQGsvIYXs5flthgYGAcweiX73mjFOFiXy3MYGBjHMJIkb1W5v5kCzvQ8MTAwNmIkjcmZyY4qNXoZYGBgbMp4F48kRCbJZbVs94GKgYGxNSM/qsW1/JHNNDXLMAwMjMcy8iBbTd1mtq954MbAwDiHkQe+XrFsptkQITEwMDCGn3vFuN4DujwLAwMDY7rEP/5ndc99+3sDAwPjXzLyZkASfPNvehtpDAyM0xi9WlY17cvHy/IRMQwMjAMYP+IwQc/jrCN7AAAAAElFTkSuQmCC'>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3aS27jMBAFwNz/0h4g20TCe2xmAFHFVWBDNEuLTn/49RWvz/f6+cn9unr2auefz25eGBgYj2XsOsr9gfI9r566OhsGBsZ7GO12eYCe7J88i4GBgXGfGiaHyF8HBgYGxq6Ae19w3h+lTUMxMDAw2q2TsJv3wSbfYmBgvI3RDgb+599/ON/AwMB4CONTrjYpnBS9xakwMDCOZiSttOTKRb5P+0kxTMXAwHgBoy0vdx23LZWLdhsGBsYRjHyj+YWwtUsbyS9iYGCczVi7BDYZXu66ZIaBgfE2xtq1sLbRnxfASRoatdswMDCOYKwVqGtHSYrkNshiYGC8gdGOAdpA3IbOfAyw+H8DAwPjsYxkPDBP8iYDhqItiIGBcRxj7apE3oybB9DohWJgYBzNWAuabUI5HwOMRpgYGBjHMdorYvNjLTbXrnbDwMA4jrH28OJtjkGKWcxgMTAwjmPkUXmS8OU9vzysF5fDMDAwjmDkh5hcyGgxdUqKgYFxKGPyA7tewdoYddt7wsDAeAhjVDTGr2NtnLmhFsfAwHg4Y61ZvyuVTEhFGoqBgXEo41OutrmfHLpt5P3yLAYGxtGMfOVNsWScmTDy1hsGBsYbGEmQzVtveUDMQ3nxpjEwMI5m5EXsPEVbi/rFeAADA+PFjMkR166FFSEYAwMDY9ziz0P2WhqKgYHxBkZSxCZFad6AaxPN6LIFBgbGoYxJATkHtwnlpAzGwMB4IOMfrjrbGRbxfSAAAAAASUVORK5CYII='>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
         
@@ -650,36 +657,22 @@
         
             <div class="prev-next">
                 
-                    <section class="prev">
-                        <span class="art-item-left">
-                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
-                            <h4>
-                                <a href="/posts/cfdabafc.html" rel="prev" title="devops是什么">
-                                  
-                                      devops是什么
-                                  
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/blogpost/tags/开发工具/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>开发工具</a> <a class="tag" href="/blogpost/tags/devops/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>devops</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
-                
                 
                     <section class="next">
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/posts/7a527409.html" rel="prev" title="文章置顶">
+                                <a href="/posts/cf2c43d.html" rel="prev" title="V8引擎是如何运行JS">
                                     
-                                        文章置顶
+                                        V8引擎是如何运行JS
                                     
                                 </a>
                             </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/blogpost/tags/javascript/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>javascript</a> <a class="tag" href="/blogpost/tags/JS运行原理/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>JS运行原理</a> <a class="tag" href="/blogpost/tags/V8引擎/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>V8引擎</a>
+                                </h6>
                             
                         </span>
                     </section>
@@ -709,7 +702,7 @@
 
   <script>
     window.subData = {
-      title: '面试题集锦（1）',
+      title: 'javascript是如何被运行的',
       tools: true
     }
   </script>
@@ -819,7 +812,7 @@
 </header>
 
     <div class='content material'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是跨域？跨域请求资源的方法有哪些？"><span class="toc-text">什么是跨域？跨域请求资源的方法有哪些？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#介绍一下-JS-的基本数据类型。"><span class="toc-text">介绍一下 JS 的基本数据类型。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何利用JavaScript实现一个自定义事件，存在on，off，emit三个方法？"><span class="toc-text">如何利用JavaScript实现一个自定义事件，存在on，off，emit三个方法？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#请描述一下-cookies，sessionStorage-和-localStorage-的区别？"><span class="toc-text">请描述一下 cookies，sessionStorage 和 localStorage 的区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#说说js中的event-loop机制？"><span class="toc-text">说说js中的event loop机制？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#怎么理解js中的内存泄漏"><span class="toc-text">怎么理解js中的内存泄漏?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#怎么理解js中是原型链-如何实现继承"><span class="toc-text">怎么理解js中是原型链? 如何实现继承?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#new-运算符具体干了什么"><span class="toc-text">new 运算符具体干了什么?</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JS的语言组成"><span class="toc-text">JS的语言组成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#奇葩的JS"><span class="toc-text">奇葩的JS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#语言特性"><span class="toc-text">语言特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#javascript引擎的编译流程"><span class="toc-text">javascript引擎的编译流程</span></a></li></ol>
     </div>
   </section>
 
@@ -1005,7 +998,7 @@
 </header>
 
     <div class="content material">
-      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\bc152925.html" title="vue面试题（1）" rel="bookmark">vue面试题（1）</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\e210f74f.html" title="vue面试题（2）" rel="bookmark">vue面试题（2）</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\63fad71d.html" title="面试题集锦（2）" rel="bookmark">面试题集锦（2）</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\8136685c.html" title="less在vue中的使用" rel="bookmark">less在vue中的使用</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\6a5e2f06.html" title="create-react-app(注意事项)" rel="bookmark">create-react-app(注意事项)</a></h3></div></li></ul>
+      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\cf2c43d.html" title="V8引擎是如何运行JS" rel="bookmark">V8引擎是如何运行JS</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\9926a09c.html" title="什么是JS调用栈" rel="bookmark">什么是JS调用栈</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\62b88241.html" title="js的事件循环是什么" rel="bookmark">js的事件循环是什么</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\c35109d5.html" title="互联网是如何运作的" rel="bookmark">互联网是如何运作的</a></h3></div></li></ul>
     </div>
   </section>
 
