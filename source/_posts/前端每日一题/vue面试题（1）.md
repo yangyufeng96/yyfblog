@@ -2,11 +2,11 @@
 type: blog
 title: vue面试题（1）
 categories:
-	- 前端
+  - 前端
 tags:
   - 面试题
   - vue
-abbrlink: bc152925
+abbrlink: f0a558a1
 date: 2020-12-11 00:00:00
 ---
 

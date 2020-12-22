@@ -1,9 +1,9 @@
 ---
 type: blog
 title: 什么是PWA
-tags: 
+tags:
   - 前端工程化
-categories: 
+categories:
   - 前端
 abbrlink: 138dbef8
 date: 2020-11-18 09:40:00
