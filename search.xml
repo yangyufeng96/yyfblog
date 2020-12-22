@@ -4,33 +4,6 @@
   
     
     <entry>
-      <title>javascript是如何被运行的</title>
-      <link href="//posts/81adf3b6.html"/>
-      <url>//posts/81adf3b6.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="JS的语言组成"><a href="#JS的语言组成" class="headerlink" title="JS的语言组成"></a>JS的语言组成</h2><ul><li>基本语法：C</li><li>数据类型 内存管理：Java</li><li>函数式编程：Scheme  函数是第一等公民</li><li>原型继承：Self   基于原型prototype的继承机制</li></ul><h2 id="奇葩的JS"><a href="#奇葩的JS" class="headerlink" title="奇葩的JS"></a>奇葩的JS</h2><p>对于熟悉javascript语言的前端开发小伙伴，直接上来两张图</p><p><a href="https://imgchr.com/i/rrE9Gq" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rrE9Gq.md.png" alt="rrE9Gq.md.png"></a></p><p><a href="https://imgchr.com/i/rrEALF" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rrEALF.md.png" alt="rrEALF.md.png"></a></p><p>是不是瞬间感觉头脑发热呢。</p><p>之所以会出现这些诡异的问题，是因为javascript是在设计之初并没有考虑的完善，是借鉴了多种语言的模式，基本是融合了面向过程和面向对象的。</p><a id="more"></a><h2 id="语言特性"><a href="#语言特性" class="headerlink" title="语言特性"></a>语言特性</h2><p>动态类型语言 JS   编译环境JIT Just In Time Compilation </p><p>静态类型语言 C++  编译环境 AOT  Ahead Of Time</p><p><strong>JIT</strong></p><p>js引擎运用了一项技术叫运行时编译  JIT<br>javascript是动态类型语言，在编译是使用的是JIT(just in time compilation) 运行时编译技术<br>白话就是：在运行时编译成机器代码</p><p><strong>AOT</strong></p><p>在运行前提前生成好机器代码</p><p><strong>javascript引擎</strong></p><p>将javascript代码高级语言转化为低级语言（机器语言）来执行</p><p><strong>常用的执行javascript引擎</strong></p><p>谷歌的v8引擎，javascriptcore，spidermonkey，quickjs，hermess(react nactive)</p><ol><li>谷歌V8</li><li>苹果 - javaScriptCore</li><li>火狐 - SpideMonkey</li><li>QuickJs</li><li>FaceBook - Hermes</li></ol><h2 id="javascript引擎的编译流程"><a href="#javascript引擎的编译流程" class="headerlink" title="javascript引擎的编译流程"></a>javascript引擎的编译流程</h2><p><a href="https://imgchr.com/i/rrVTjf" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rrVTjf.md.png" alt="rrVTjf.md.png"></a></p><p>说明：</p><p>javascript代码解析器（parser）解析成抽象语法树AST，通过解释器（interpreter）将AST编译为字节码bytecode(跨平台的一种中间表示，可以在不同的操作平台运行),字节码最后通过编译器，生成机器代码。<strong>V8在5.9之前 是没有字节码的环节</strong>。</p><ol><li>parser - 将js源码通过parser解析器生成AST  抽象语法树</li><li>interpreter - 通过解释器将AST编程成功字节码bytecode (字节码与平台无关，是中间层，可以在各个平台上运行)</li><li>compiler - 根据当前平台编译出相应的机器代码也就是汇编代码  常见的操作系统平台有：IA32 X64 ARM MIPS </li></ol><p><strong><a href="https://www.bilibili.com/video/BV1vh411Z7QG" target="_blank" rel="noopener">原文地址</a></strong></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 深入前端 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> javascript </tag>
-            
-            <tag> JS运行原理 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>V8引擎是如何运行JS</title>
       <link href="//posts/cf2c43d.html"/>
       <url>//posts/cf2c43d.html</url>
@@ -52,6 +25,33 @@
             <tag> JS运行原理 </tag>
             
             <tag> V8引擎 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>javascript是如何被运行的</title>
+      <link href="//posts/81adf3b6.html"/>
+      <url>//posts/81adf3b6.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="JS的语言组成"><a href="#JS的语言组成" class="headerlink" title="JS的语言组成"></a>JS的语言组成</h2><ul><li>基本语法：C</li><li>数据类型 内存管理：Java</li><li>函数式编程：Scheme  函数是第一等公民</li><li>原型继承：Self   基于原型prototype的继承机制</li></ul><h2 id="奇葩的JS"><a href="#奇葩的JS" class="headerlink" title="奇葩的JS"></a>奇葩的JS</h2><p>对于熟悉javascript语言的前端开发小伙伴，直接上来两张图</p><p><a href="https://imgchr.com/i/rrE9Gq" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rrE9Gq.md.png" alt="rrE9Gq.md.png"></a></p><p><a href="https://imgchr.com/i/rrEALF" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rrEALF.md.png" alt="rrEALF.md.png"></a></p><p>是不是瞬间感觉头脑发热呢。</p><p>之所以会出现这些诡异的问题，是因为javascript是在设计之初并没有考虑的完善，是借鉴了多种语言的模式，基本是融合了面向过程和面向对象的。</p><a id="more"></a><h2 id="语言特性"><a href="#语言特性" class="headerlink" title="语言特性"></a>语言特性</h2><p>动态类型语言 JS   编译环境JIT Just In Time Compilation </p><p>静态类型语言 C++  编译环境 AOT  Ahead Of Time</p><p><strong>JIT</strong></p><p>js引擎运用了一项技术叫运行时编译  JIT<br>javascript是动态类型语言，在编译是使用的是JIT(just in time compilation) 运行时编译技术<br>白话就是：在运行时编译成机器代码</p><p><strong>AOT</strong></p><p>在运行前提前生成好机器代码</p><p><strong>javascript引擎</strong></p><p>将javascript代码高级语言转化为低级语言（机器语言）来执行</p><p><strong>常用的执行javascript引擎</strong></p><p>谷歌的v8引擎，javascriptcore，spidermonkey，quickjs，hermess(react nactive)</p><ol><li>谷歌V8</li><li>苹果 - javaScriptCore</li><li>火狐 - SpideMonkey</li><li>QuickJs</li><li>FaceBook - Hermes</li></ol><h2 id="javascript引擎的编译流程"><a href="#javascript引擎的编译流程" class="headerlink" title="javascript引擎的编译流程"></a>javascript引擎的编译流程</h2><p><a href="https://imgchr.com/i/rrVTjf" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rrVTjf.md.png" alt="rrVTjf.md.png"></a></p><p>说明：</p><p>javascript代码解析器（parser）解析成抽象语法树AST，通过解释器（interpreter）将AST编译为字节码bytecode(跨平台的一种中间表示，可以在不同的操作平台运行),字节码最后通过编译器，生成机器代码。<strong>V8在5.9之前 是没有字节码的环节</strong>。</p><ol><li>parser - 将js源码通过parser解析器生成AST  抽象语法树</li><li>interpreter - 通过解释器将AST编程成功字节码bytecode (字节码与平台无关，是中间层，可以在各个平台上运行)</li><li>compiler - 根据当前平台编译出相应的机器代码也就是汇编代码  常见的操作系统平台有：IA32 X64 ARM MIPS </li></ol><p><strong><a href="https://www.bilibili.com/video/BV1vh411Z7QG" target="_blank" rel="noopener">原文地址</a></strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深入前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> javascript </tag>
+            
+            <tag> JS运行原理 </tag>
             
         </tags>
       
@@ -112,31 +112,6 @@
     
     
     <entry>
-      <title>什么是JS调用栈</title>
-      <link href="//posts/9926a09c.html"/>
-      <url>//posts/9926a09c.html</url>
-      
-        <content type="html"><![CDATA[<p><strong>概念</strong></p><p>栈：先进后出，进栈，出栈，与堆栈不同</p><p>队列：先进先出</p><p>调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用了哪个函数</p><p><strong>例子</strong></p><p>调用栈，调用函数执行才回入栈</p><ol><li><p>push  average()</p></li><li><p>push  sum()</p></li><li><p>shift  sum()</p></li><li><p>shift  average()</p></li><li><p>push  console.log()</p></li><li><p>shift  console.log()</p></li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">average</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">const</span> aver = sum(a, b) / <span class="number">2</span>;</span><br><span class="line"> <span class="keyword">return</span> aver;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> num = average(<span class="number">3</span>, <span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(num);</span><br></pre></td></tr></table></figure><p><strong>tips</strong></p><p>用栈持持续被调用，会导致内存溢出</p><p>原因是因为，JS主线程被占用会造成堵塞：事件循环，异步回调(宏任务，微任务，面试必问哦)</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 深入前端 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> JS运行原理 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>浏览器是如何运作的</title>
       <link href="//posts/41e3ecae.html"/>
       <url>//posts/41e3ecae.html</url>
@@ -154,6 +129,31 @@
         <tags>
             
             <tag> 浏览器运行原理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>什么是JS调用栈</title>
+      <link href="//posts/9926a09c.html"/>
+      <url>//posts/9926a09c.html</url>
+      
+        <content type="html"><![CDATA[<p><strong>概念</strong></p><p>栈：先进后出，进栈，出栈，与堆栈不同</p><p>队列：先进先出</p><p>调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用了哪个函数</p><p><strong>例子</strong></p><p>调用栈，调用函数执行才回入栈</p><ol><li><p>push  average()</p></li><li><p>push  sum()</p></li><li><p>shift  sum()</p></li><li><p>shift  average()</p></li><li><p>push  console.log()</p></li><li><p>shift  console.log()</p></li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">average</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">const</span> aver = sum(a, b) / <span class="number">2</span>;</span><br><span class="line"> <span class="keyword">return</span> aver;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> num = average(<span class="number">3</span>, <span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(num);</span><br></pre></td></tr></table></figure><p><strong>tips</strong></p><p>用栈持持续被调用，会导致内存溢出</p><p>原因是因为，JS主线程被占用会造成堵塞：事件循环，异步回调(宏任务，微任务，面试必问哦)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深入前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JS运行原理 </tag>
             
         </tags>
       
@@ -214,33 +214,6 @@
     
     
     <entry>
-      <title>深入webpack</title>
-      <link href="//posts/a441c8bd.html"/>
-      <url>//posts/a441c8bd.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="实现步骤："><a href="#实现步骤：" class="headerlink" title="实现步骤："></a>实现步骤：</h2><p>0、读取webpack.config.js</p><p>1、解析文件依赖</p><p>2、替换require为<strong>webpack_require</strong></p><p>3、本地使用{}存储所有的文件，然后通过使用为<strong>webpack_require</strong>获取文件内容，执行函数方式为evel的包裹代码字符串</p><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p><strong>index.js</strong></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#! /usr/bin/env node</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 读取config</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"><span class="comment">// 默认配置</span></span><br><span class="line"><span class="keyword">const</span> defaultConfig = &#123;</span><br><span class="line">  entry: <span class="string">'./src/index.js'</span>,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="string">'build.js'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 最终的配置</span></span><br><span class="line"><span class="keyword">const</span> config = &#123;</span><br><span class="line">  ...defaultConfig,</span><br><span class="line">  ...require(path.resolve(<span class="string">'./mywebpack.config.js'</span>))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWebPack</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(config) &#123;</span><br><span class="line">    <span class="keyword">this</span>.config = config</span><br><span class="line">    <span class="keyword">this</span>.entry = config.entry</span><br><span class="line">    <span class="comment">// 根目录</span></span><br><span class="line">    <span class="keyword">this</span>.root = process.cwd()</span><br><span class="line">    <span class="comment">// 存储所有代码</span></span><br><span class="line">    <span class="keyword">this</span>.modules = &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  start() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'解析依赖'</span>)</span><br><span class="line">    <span class="keyword">const</span> entryPath = path.resolve(<span class="keyword">this</span>.root, <span class="keyword">this</span>.entry)</span><br><span class="line">    <span class="keyword">this</span>.createModule(entryPath, <span class="keyword">this</span>.entry)</span><br><span class="line">    <span class="comment">// 生成新文件</span></span><br><span class="line">    <span class="keyword">this</span>.generaleFile()</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 代码字符串</span></span><br><span class="line">  generaleModuleString() &#123;</span><br><span class="line">    <span class="keyword">let</span> fnTmp = <span class="string">''</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> name <span class="keyword">in</span> <span class="keyword">this</span>.modules) &#123;</span><br><span class="line">      fnTmp += <span class="string">`"<span class="subst">$&#123;name&#125;</span>":<span class="subst">$&#123;<span class="keyword">this</span>.modules[name].replace(<span class="regexp">/\r|\n/g</span>, <span class="string">""</span>)&#125;</span>,`</span></span><br><span class="line">    &#125;</span><br><span class="line">    fnTmp = fnTmp.substring(<span class="number">0</span>, fnTmp.length - <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">`&#123;<span class="subst">$&#123;fnTmp&#125;</span>&#125;`</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 生成新文件</span></span><br><span class="line">  generaleFile() &#123;</span><br><span class="line">    <span class="keyword">let</span> template = fs.readFileSync(path.resolve(__dirname, <span class="string">'./template.js'</span>), <span class="string">'utf-8'</span>)</span><br><span class="line">    <span class="keyword">this</span>.template = template.replace(<span class="string">'__entry__'</span>, <span class="keyword">this</span>.entry).replace(<span class="string">'__modules_content__'</span>, <span class="keyword">this</span>.generaleModuleString())</span><br><span class="line">    fs.mkdirSync(<span class="string">"./mydist"</span>);</span><br><span class="line">    fs.writeFileSync(<span class="string">'./mydist/'</span> + <span class="keyword">this</span>.config.output.filename, <span class="keyword">this</span>.template)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'写入文件完毕'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 创建依赖</span></span><br><span class="line">  createModule(modulePath, name) &#123;</span><br><span class="line">    <span class="comment">// 出现了循环依赖</span></span><br><span class="line">    <span class="comment">// if (this.modules[modulePath]) return</span></span><br><span class="line">    <span class="keyword">const</span> fileContent = fs.readFileSync(modulePath, <span class="string">'utf-8'</span>)</span><br><span class="line">    <span class="comment">// 替换后的代码和依赖数组</span></span><br><span class="line">    <span class="keyword">const</span> &#123; code, deps &#125; = <span class="keyword">this</span>.parse(fileContent, path.dirname(name))</span><br><span class="line">    <span class="keyword">this</span>.modules[name] = <span class="string">`function (module, module.exports, __mywebpack_require__) &#123;</span></span><br><span class="line"><span class="string">      eval(\`<span class="subst">$&#123;code&#125;</span>\`)</span></span><br><span class="line"><span class="string">    &#125;`</span></span><br><span class="line">    <span class="comment">// 循环获取所有依赖数组的内容</span></span><br><span class="line">    deps.forEach(<span class="function"><span class="params">dep</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">this</span>.createModule(path.join(<span class="keyword">this</span>.root, dep), <span class="string">'./'</span> + dep)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.modules)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 文件解析</span></span><br><span class="line">  parse(code, parent) &#123;</span><br><span class="line">    <span class="keyword">let</span> deps = []</span><br><span class="line">    <span class="keyword">let</span> r = <span class="regexp">/require\('(.*)'\)/g</span></span><br><span class="line">    <span class="comment">// require('xxx') 将require替换__mywebpack_require__</span></span><br><span class="line">    code = code.replace(r, <span class="function"><span class="keyword">function</span> (<span class="params">match, arg</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">const</span> retPath = path.join(parent, arg.replace(<span class="regexp">/'|"/g</span>, <span class="string">''</span>))</span><br><span class="line">      deps.push(retPath)</span><br><span class="line">      <span class="keyword">return</span> <span class="string">`__mywebpack_require__("./<span class="subst">$&#123;retPath&#125;</span>")`</span></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> &#123; code, deps &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> mywebpack = <span class="keyword">new</span> MyWebPack(config)</span><br><span class="line"></span><br><span class="line">mywebpack.start()</span><br></pre></td></tr></table></figure><p><strong>template.js</strong></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">!<span class="function"><span class="keyword">function</span> (<span class="params">modules</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 缓存</span></span><br><span class="line">  <span class="keyword">const</span> installModules = &#123;&#125;</span><br><span class="line">  <span class="comment">// 替换后的require</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">__mywebpack_require__</span>(<span class="params">moduleId</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 是否缓存</span></span><br><span class="line">    <span class="keyword">if</span> (installModules[moduleId]) &#123;</span><br><span class="line">      <span class="keyword">return</span> installModules[moduleId].exports</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> modules = installModules[moduleId] = &#123;</span><br><span class="line">      exports: &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    modules[moduleId].call(modules.exports, <span class="built_in">module</span>, exports, __mywebpack_require__)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">module</span>.exports</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 入口</span></span><br><span class="line">  <span class="keyword">return</span> __mywebpack_require__(<span class="string">"__entry__"</span>)</span><br><span class="line">&#125;(__modules_content__)</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> 前端 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> webpack </tag>
-            
-            <tag> 前端工程化 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>深入前端模块化</title>
       <link href="//posts/c00659d0.html"/>
       <url>//posts/c00659d0.html</url>
@@ -260,6 +233,33 @@
             <tag> 前端工程化 </tag>
             
             <tag> 模块化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>深入webpack</title>
+      <link href="//posts/a441c8bd.html"/>
+      <url>//posts/a441c8bd.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="实现步骤："><a href="#实现步骤：" class="headerlink" title="实现步骤："></a>实现步骤：</h2><p>0、读取webpack.config.js</p><p>1、解析文件依赖</p><p>2、替换require为<strong>webpack_require</strong></p><p>3、本地使用{}存储所有的文件，然后通过使用为<strong>webpack_require</strong>获取文件内容，执行函数方式为evel的包裹代码字符串</p><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p><strong>index.js</strong></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#! /usr/bin/env node</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 读取config</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"><span class="comment">// 默认配置</span></span><br><span class="line"><span class="keyword">const</span> defaultConfig = &#123;</span><br><span class="line">  entry: <span class="string">'./src/index.js'</span>,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="string">'build.js'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 最终的配置</span></span><br><span class="line"><span class="keyword">const</span> config = &#123;</span><br><span class="line">  ...defaultConfig,</span><br><span class="line">  ...require(path.resolve(<span class="string">'./mywebpack.config.js'</span>))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWebPack</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(config) &#123;</span><br><span class="line">    <span class="keyword">this</span>.config = config</span><br><span class="line">    <span class="keyword">this</span>.entry = config.entry</span><br><span class="line">    <span class="comment">// 根目录</span></span><br><span class="line">    <span class="keyword">this</span>.root = process.cwd()</span><br><span class="line">    <span class="comment">// 存储所有代码</span></span><br><span class="line">    <span class="keyword">this</span>.modules = &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  start() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'解析依赖'</span>)</span><br><span class="line">    <span class="keyword">const</span> entryPath = path.resolve(<span class="keyword">this</span>.root, <span class="keyword">this</span>.entry)</span><br><span class="line">    <span class="keyword">this</span>.createModule(entryPath, <span class="keyword">this</span>.entry)</span><br><span class="line">    <span class="comment">// 生成新文件</span></span><br><span class="line">    <span class="keyword">this</span>.generaleFile()</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 代码字符串</span></span><br><span class="line">  generaleModuleString() &#123;</span><br><span class="line">    <span class="keyword">let</span> fnTmp = <span class="string">''</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> name <span class="keyword">in</span> <span class="keyword">this</span>.modules) &#123;</span><br><span class="line">      fnTmp += <span class="string">`"<span class="subst">$&#123;name&#125;</span>":<span class="subst">$&#123;<span class="keyword">this</span>.modules[name].replace(<span class="regexp">/\r|\n/g</span>, <span class="string">""</span>)&#125;</span>,`</span></span><br><span class="line">    &#125;</span><br><span class="line">    fnTmp = fnTmp.substring(<span class="number">0</span>, fnTmp.length - <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">`&#123;<span class="subst">$&#123;fnTmp&#125;</span>&#125;`</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 生成新文件</span></span><br><span class="line">  generaleFile() &#123;</span><br><span class="line">    <span class="keyword">let</span> template = fs.readFileSync(path.resolve(__dirname, <span class="string">'./template.js'</span>), <span class="string">'utf-8'</span>)</span><br><span class="line">    <span class="keyword">this</span>.template = template.replace(<span class="string">'__entry__'</span>, <span class="keyword">this</span>.entry).replace(<span class="string">'__modules_content__'</span>, <span class="keyword">this</span>.generaleModuleString())</span><br><span class="line">    fs.mkdirSync(<span class="string">"./mydist"</span>);</span><br><span class="line">    fs.writeFileSync(<span class="string">'./mydist/'</span> + <span class="keyword">this</span>.config.output.filename, <span class="keyword">this</span>.template)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'写入文件完毕'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 创建依赖</span></span><br><span class="line">  createModule(modulePath, name) &#123;</span><br><span class="line">    <span class="comment">// 出现了循环依赖</span></span><br><span class="line">    <span class="comment">// if (this.modules[modulePath]) return</span></span><br><span class="line">    <span class="keyword">const</span> fileContent = fs.readFileSync(modulePath, <span class="string">'utf-8'</span>)</span><br><span class="line">    <span class="comment">// 替换后的代码和依赖数组</span></span><br><span class="line">    <span class="keyword">const</span> &#123; code, deps &#125; = <span class="keyword">this</span>.parse(fileContent, path.dirname(name))</span><br><span class="line">    <span class="keyword">this</span>.modules[name] = <span class="string">`function (module, module.exports, __mywebpack_require__) &#123;</span></span><br><span class="line"><span class="string">      eval(\`<span class="subst">$&#123;code&#125;</span>\`)</span></span><br><span class="line"><span class="string">    &#125;`</span></span><br><span class="line">    <span class="comment">// 循环获取所有依赖数组的内容</span></span><br><span class="line">    deps.forEach(<span class="function"><span class="params">dep</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">this</span>.createModule(path.join(<span class="keyword">this</span>.root, dep), <span class="string">'./'</span> + dep)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.modules)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 文件解析</span></span><br><span class="line">  parse(code, parent) &#123;</span><br><span class="line">    <span class="keyword">let</span> deps = []</span><br><span class="line">    <span class="keyword">let</span> r = <span class="regexp">/require\('(.*)'\)/g</span></span><br><span class="line">    <span class="comment">// require('xxx') 将require替换__mywebpack_require__</span></span><br><span class="line">    code = code.replace(r, <span class="function"><span class="keyword">function</span> (<span class="params">match, arg</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">const</span> retPath = path.join(parent, arg.replace(<span class="regexp">/'|"/g</span>, <span class="string">''</span>))</span><br><span class="line">      deps.push(retPath)</span><br><span class="line">      <span class="keyword">return</span> <span class="string">`__mywebpack_require__("./<span class="subst">$&#123;retPath&#125;</span>")`</span></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> &#123; code, deps &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> mywebpack = <span class="keyword">new</span> MyWebPack(config)</span><br><span class="line"></span><br><span class="line">mywebpack.start()</span><br></pre></td></tr></table></figure><p><strong>template.js</strong></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">!<span class="function"><span class="keyword">function</span> (<span class="params">modules</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 缓存</span></span><br><span class="line">  <span class="keyword">const</span> installModules = &#123;&#125;</span><br><span class="line">  <span class="comment">// 替换后的require</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">__mywebpack_require__</span>(<span class="params">moduleId</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 是否缓存</span></span><br><span class="line">    <span class="keyword">if</span> (installModules[moduleId]) &#123;</span><br><span class="line">      <span class="keyword">return</span> installModules[moduleId].exports</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> modules = installModules[moduleId] = &#123;</span><br><span class="line">      exports: &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    modules[moduleId].call(modules.exports, <span class="built_in">module</span>, exports, __mywebpack_require__)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">module</span>.exports</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 入口</span></span><br><span class="line">  <span class="keyword">return</span> __mywebpack_require__(<span class="string">"__entry__"</span>)</span><br><span class="line">&#125;(__modules_content__)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> webpack </tag>
+            
+            <tag> 前端工程化 </tag>
             
         </tags>
       
