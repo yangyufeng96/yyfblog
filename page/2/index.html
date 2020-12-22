@@ -292,6 +292,270 @@
       
         
   <h2 class="title">
+    <a href="/posts/d3643a0f.html">
+      手写简易版vue，minivue的实现
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://yangyfeng.github.io" rel="nofollow">
+      
+        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
+      
+      <p>漫道求索</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-12-08</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/blogpost/categories/前端/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>前端</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+        
+          <!-- 文章字体个数 -->
+          <div class="new-meta-item size">
+            <a class="notlink">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+              <p>2.1k字</p>
+            </a>
+          </div>
+          <!-- 阅读时间 -->
+          <div class="new-meta-item read-time">
+            <a class="notlink">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <p>10分</p>
+            </a>
+          </div>
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>基于vue2.*</p>
+<p><code>vue采取数据劫持，配合观察者模式，通过Object.defineProperty() 来劫持各个属性的setter和getter，在数据变动时，发布消息给依赖收集器dep，去通知观察者，做出对应的回调函数，去更新视图。（也就是在getter中收集依赖，在setter中通知依赖更新。</code></p>
+<blockquote>
+<p>其实vue主要就是整合Observer，compile和watcher三者，通过Observer来监听 model数据变化表，通过compile来解析编译模板指令，最终利用Watcher搭起observer 和compile的通信桥梁，达到数据变化=&gt;视图变化，视图变化=&gt;数据变化的双向绑定效果。</p>
+</blockquote>
+<p> 下面来一张图↓ </p>
+<p><a href="https://imgchr.com/i/rSsjT1" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/08/rSsjT1.png" alt="rSsjT1.png"></a></p>
+<p> 这个流程图已经非常形象深刻的表达了vue的运行模式，当你理解了这个流程，再去看vue源码时就会容易很多了 </p>
+<p> 声明一下，下面的代码只简单实现了vue里的 </p>
+<ol>
+<li>v-model（数据的双向绑定）</li>
+<li>v-bind/v-on</li>
+<li>v-text/v-html</li>
+<li>没有实现虚拟dom，采用文档碎片（createDocumentFragment）代替</li>
+<li><p>数据只劫持了Object，数组Array没有做处理</p>
+<p>代码大致结构如下，初步定义了6个类 </p>
+</li>
+</ol>
+<p><a href="https://imgchr.com/i/rSyiOH" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/08/rSyiOH.png" alt="rSyiOH.png"></a></p>
+      
+        <div class="readmore">
+          <a href="/posts/d3643a0f.html" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/blogpost/tags/vue/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>vue</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/posts/ce0a6a78.html">
+      如何使用JavaScript实现纯前端读取和导出excel文件
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://yangyfeng.github.io" rel="nofollow">
+      
+        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
+      
+      <p>漫道求索</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-12-08</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/blogpost/categories/前端/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>前端</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+        
+          <!-- 文章字体个数 -->
+          <div class="new-meta-item size">
+            <a class="notlink">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+              <p>1.6k字</p>
+            </a>
+          </div>
+          <!-- 阅读时间 -->
+          <div class="new-meta-item read-time">
+            <a class="notlink">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <p>7分</p>
+            </a>
+          </div>
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h1 id="1、js-xlsx-介绍"><a href="#1、js-xlsx-介绍" class="headerlink" title="1、js-xlsx 介绍"></a>1、js-xlsx 介绍</h1><p><code>由SheetJS出品的js-xlsx是一款非常方便的只需要纯JS即可读取和导出excel的工具库，功能强大，支持格式众多，支持xls、xlsx、ods(一种OpenOffice专有表格文件格式)等十几种格式。本文全部都是以xlsx格式为例。</code></p>
+<ul>
+<li>官方github：<a href="https://github.com/SheetJS/js-xlsx" target="_blank" rel="noopener">https://github.com/SheetJS/js-xlsx</a></li>
+<li>本文配套demo在线演示地址：<a href="http://demo.haoji.me/2017/02/08-js-xlsx/" target="_blank" rel="noopener">http://demo.haoji.me/2017/02/08-js-xlsx/</a></li>
+</ul>
+      
+        <div class="readmore">
+          <a href="/posts/ce0a6a78.html" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/blogpost/tags/excel/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>excel</a>
+        
+          <a href="/blogpost/tags/插件/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>插件</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
     <a href="/posts/b0d42301.html">
       vue响应式原理源码剖析
     </a>
@@ -1234,251 +1498,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/posts/cfdabafc.html">
-      devops是什么
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    <a href="https://yangyfeng.github.io" rel="nofollow">
-      
-        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
-      
-      <p>漫道求索</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-09-09</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blogpost/categories/开发工具/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>开发工具</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-        
-          <!-- 文章字体个数 -->
-          <div class="new-meta-item size">
-            <a class="notlink">
-              <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>833字</p>
-            </a>
-          </div>
-          <!-- 阅读时间 -->
-          <div class="new-meta-item read-time">
-            <a class="notlink">
-              <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>2分</p>
-            </a>
-          </div>
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p><strong>DevOps是一种重视“软件开发人员（Dev）”和“IT运维技术人员（Ops）”之间沟通合作的文化、运动或惯例。透过自动化“软件交付”和“架构变更”的流程，来使得构建、测试、发布软件能够更加地快捷、频繁和可靠。</strong></p>
-<p><a href="https://www.leiue.com/tags/devops" target="_blank" rel="noopener">DevOps</a>（Development 和 Operations 的组合词）是一种重视“<a href="https://www.leiue.com/tags/软件开发" target="_blank" rel="noopener">软件开发</a>人员（Dev）”和“IT 运维技术人员（Ops）”之间沟通合作的文化、运动或惯例。透过自动化“软件交付”和“架构变更”的流程，来使得构建、测试、发布软件能够更加地快捷、频繁和可靠。</p>
-      
-        <div class="readmore">
-          <a href="/posts/cfdabafc.html" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blogpost/tags/开发工具/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>开发工具</a>
-        
-          <a href="/blogpost/tags/devops/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>devops</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/posts/fe27deba.html">
-      面试题集锦（1）
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    <a href="https://yangyfeng.github.io" rel="nofollow">
-      
-        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
-      
-      <p>漫道求索</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-09-09</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blogpost/categories/前端/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>前端</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-        
-          <!-- 文章字体个数 -->
-          <div class="new-meta-item size">
-            <a class="notlink">
-              <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>2.5k字</p>
-            </a>
-          </div>
-          <!-- 阅读时间 -->
-          <div class="new-meta-item read-time">
-            <a class="notlink">
-              <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>9分</p>
-            </a>
-          </div>
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h2 id="什么是跨域？跨域请求资源的方法有哪些？"><a href="#什么是跨域？跨域请求资源的方法有哪些？" class="headerlink" title="什么是跨域？跨域请求资源的方法有哪些？"></a>什么是跨域？跨域请求资源的方法有哪些？</h2><p>1、什么是跨域？<br>由于浏览器同源策略，凡是发送请求url的协议、域名、端口三者之间任意一与当前页面地址不同即为跨域。存在跨域的情况：<br>网络协议不同，如http协议访问https协议。<br>端口不同，如80端口访问8080端口。<br>域名不同，如qianduanblog.com访问baidu.com。<br>子域名不同，如abc.qianduanblog.com访问def.qianduanblog.com。<br>域名和域名对应ip,如<a href="http://www.a.com访问20.205.28.90" target="_blank" rel="noopener">www.a.com访问20.205.28.90</a>.<br>2、跨域请求资源的方法：<br>(1)、porxy代理<br>定义和用法：proxy代理用于将请求发送给后台服务器，通过服务器来发送请求，然后将请求的结果传递给前端。<br>实现方法：通过nginx代理；<br>注意点：1、如果你代理的是https协议的请求，那么你的proxy首先需要信任该证书（尤其是自定义证书）或者忽略证书检查，否则你的请求无法成功。<br>(2)、CORS 【Cross-Origin Resource Sharing】<br>定义和用法：是现代浏览器支持跨域资源请求的一种最常用的方式。<br>使用方法：一般需要后端人员在处理请求数据的时候，添加允许跨域的相关操作。如下：<br><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">res.writeHead(<span class="number">200</span>, &#123;</span><br><span class="line">    <span class="string">"Content-Type"</span>: <span class="string">"text/html; charset=UTF-8"</span>,</span><br><span class="line">    <span class="string">"Access-Control-Allow-Origin"</span>:<span class="symbol">'http</span>://localhost',</span><br><span class="line">    <span class="symbol">'Access</span>-Control-Allow-Methods': <span class="symbol">'GET</span>, POST, OPTIONS',</span><br><span class="line">    <span class="symbol">'Access</span>-Control-Allow-Headers': <span class="symbol">'X</span>-Requested-<span class="keyword">With</span>, Content-<span class="keyword">Type</span>'</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>(3)、jsonp<br>定义和用法：通过动态插入一个script标签。浏览器对script的资源引用没有同源限制，同时资源加载到页面后会立即执行（没有阻塞的情况下）。<br>特点：通过情况下，通过动态创建script来读取他域的动态资源，获取的数据一般为json格式。<br>实例如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">testjsonp</span><span class="params">(data)</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">       <span class="built_in">console</span>.log(data.name); <span class="comment">// 获取返回的结果</span></span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> _script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span></span><br><span class="line"><span class="actionscript">    _script.type = <span class="string">"text/javascript"</span>;</span></span><br><span class="line"><span class="actionscript">    _script.src = <span class="string">"http://localhost:8888/jsonp?callback=testjsonp"</span>;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.head.appendChild(_script);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>缺点：<br>　　1、这种方式无法发送post请求（这里）<br>　　2、另外要确定jsonp的请求是否失败并不容易，大多数框架的实现都是结合超时时间来判定。</p>
-      
-        <div class="readmore">
-          <a href="/posts/fe27deba.html" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blogpost/tags/面试题/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>面试题</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
     
   </section>
   
@@ -1713,7 +1732,7 @@
         
           <li><a class="flat-box" title="/blogpost/categories/GoLang/" href="/blogpost/categories/GoLang/"><div class='name'>GoLang</div><div class='badge'>(1)</div></a></li>
         
-          <li><a class="flat-box" title="/blogpost/categories/Http/" href="/blogpost/categories/Http/"><div class='name'>Http</div><div class='badge'>(2)</div></a></li>
+          <li><a class="flat-box" title="/blogpost/categories/Http/" href="/blogpost/categories/Http/"><div class='name'>Http</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box" title="/blogpost/categories/Node/" href="/blogpost/categories/Node/"><div class='name'>Node</div><div class='badge'>(2)</div></a></li>
         
@@ -1722,6 +1741,8 @@
           <li><a class="flat-box" title="/blogpost/categories/博客文档/" href="/blogpost/categories/博客文档/"><div class='name'>博客文档</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box" title="/blogpost/categories/开发工具/" href="/blogpost/categories/开发工具/"><div class='name'>开发工具</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box" title="/blogpost/categories/浏览器/" href="/blogpost/categories/浏览器/"><div class='name'>浏览器</div><div class='badge'>(1)</div></a></li>
         
       </ul>
     </div>
@@ -1752,7 +1773,7 @@
 </header>
 
     <div class='content material'>
-      <a href="/blogpost/tags/create-react-app/" style="font-size: 16.5px; color: #888">create-react-app</a> <a href="/blogpost/tags/devops/" style="font-size: 14px; color: #999">devops</a> <a href="/blogpost/tags/excel/" style="font-size: 14px; color: #999">excel</a> <a href="/blogpost/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/blogpost/tags/less/" style="font-size: 14px; color: #999">less</a> <a href="/blogpost/tags/react/" style="font-size: 16.5px; color: #888">react</a> <a href="/blogpost/tags/vscode/" style="font-size: 16.5px; color: #888">vscode</a> <a href="/blogpost/tags/vue/" style="font-size: 24px; color: #555">vue</a> <a href="/blogpost/tags/webpack/" style="font-size: 16.5px; color: #888">webpack</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 19px; color: #777">前端工程化</a> <a href="/blogpost/tags/开发工具/" style="font-size: 16.5px; color: #888">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/面试题/" style="font-size: 21.5px; color: #666">面试题</a>
+      <a href="/blogpost/tags/create-react-app/" style="font-size: 16.5px; color: #888">create-react-app</a> <a href="/blogpost/tags/devops/" style="font-size: 14px; color: #999">devops</a> <a href="/blogpost/tags/excel/" style="font-size: 14px; color: #999">excel</a> <a href="/blogpost/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/blogpost/tags/http/" style="font-size: 14px; color: #999">http</a> <a href="/blogpost/tags/less/" style="font-size: 14px; color: #999">less</a> <a href="/blogpost/tags/react/" style="font-size: 16.5px; color: #888">react</a> <a href="/blogpost/tags/tcp/" style="font-size: 14px; color: #999">tcp</a> <a href="/blogpost/tags/vscode/" style="font-size: 16.5px; color: #888">vscode</a> <a href="/blogpost/tags/vue/" style="font-size: 24px; color: #555">vue</a> <a href="/blogpost/tags/webpack/" style="font-size: 16.5px; color: #888">webpack</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 19px; color: #777">前端工程化</a> <a href="/blogpost/tags/原理/" style="font-size: 14px; color: #999">原理</a> <a href="/blogpost/tags/开发工具/" style="font-size: 16.5px; color: #888">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/面试题/" style="font-size: 21.5px; color: #666">面试题</a>
     </div>
   </section>
 
@@ -1865,7 +1886,7 @@
     
       <span>
         <b class="fas fa-database"></b>
-        本站字数：<span class="post-count">48.6k</span>
+        本站字数：<span class="post-count">50.4k</span>
       </span>
     
     <!-- 网站运行时间 -->

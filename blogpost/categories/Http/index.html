@@ -388,9 +388,153 @@
         
           
         
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/posts/c35109d5.html">
+      互联网是如何运作的
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://yangyfeng.github.io" rel="nofollow">
+      
+        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
+      
+      <p>漫道求索</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-12-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/blogpost/categories/Http/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Http</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+        
+          <!-- 文章字体个数 -->
+          <div class="new-meta-item size">
+            <a class="notlink">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+              <p>668字</p>
+            </a>
+          </div>
+          <!-- 阅读时间 -->
+          <div class="new-meta-item read-time">
+            <a class="notlink">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <p>2分</p>
+            </a>
+          </div>
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>互联网所有的传输都通过RCP/IP协议族来传输，TCP/IP是<strong>面向连接</strong>的<strong>可靠</strong>字节流服务协议</p>
+<h2 id="什么是协议"><a href="#什么是协议" class="headerlink" title="什么是协议"></a>什么是协议</h2><p>协议是一组<strong>规则</strong>，用于指定计算机应该如何通过网络来交互通信</p>
+<h2 id="TCP-IP协议族"><a href="#TCP-IP协议族" class="headerlink" title="TCP/IP协议族"></a>TCP/IP协议族</h2><p><strong>有四层</strong></p>
+<ul>
+<li>应用层：提供特定于应用程序的协议  HTTP   FTP   IMAP(邮件)</li>
+<li>网络控制层： 发送数据包到计算机上使用特定的端口号的应用程序</li>
+<li>网络层： 使用IP地址将数据包发送到特定的计算</li>
+<li>链路层：  将二进制数据包与网络信号相互之间转换</li>
+</ul>
+<p><strong>TCP的可靠</strong></p>
+<p>tcp在建立连接会进行三次握手，每个收到的数据包都会向发送方发送ack确认，已确保发送成功</p>
+<p><strong>IP的传输</strong></p>
+<p>IP是不可靠的无连接协议，它并不关心数据包是否到达目的地，也不关系连接和端口号，目的是连接到目标IP</p>
+<p><a href="https://imgchr.com/i/rDwiod" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/22/rDwiod.png" alt="rDwiod.png"></a></p>
+<p><strong>TCP传输的质量和顺序</strong></p>
+<p>当数据包过大，在网络层会进行分包，分包后传输的链路不一样，到达的时间不一样，TCP会根据数据包上携带序列号来进行排序重组，如果发送方在一个特定时间内（也就是重试时间）没有接受到接收方的ack确认，会再次重新发送</p>
+<p><strong>IP和IP地址的区别</strong></p>
+<p>Ip是一种协议  有两种标准  IPv4 2^32次方和IPv6  2^128</p>
+<p>IP地址是一串数字192.0.0.1</p>
+<p><a href="https://imgchr.com/i/rDaLgf" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/22/rDaLgf.png" alt="rDaLgf.png"></a></p>
+<p><a href="https://imgchr.com/i/rDajKS" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/22/rDajKS.png" alt="rDajKS.png"></a></p>
+      
+        <div class="readmore">
+          <a href="/posts/c35109d5.html" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/blogpost/tags/tcp/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>tcp</a>
+        
+          <a href="/blogpost/tags/http/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>http</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -906,7 +1050,7 @@
         
           <li><a class="flat-box" title="/blogpost/categories/GoLang/" href="/blogpost/categories/GoLang/"><div class='name'>GoLang</div><div class='badge'>(1)</div></a></li>
         
-          <li><a class="flat-box" title="/blogpost/categories/Http/" href="/blogpost/categories/Http/"><div class='name'>Http</div><div class='badge'>(2)</div></a></li>
+          <li><a class="flat-box" title="/blogpost/categories/Http/" href="/blogpost/categories/Http/"><div class='name'>Http</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box" title="/blogpost/categories/Node/" href="/blogpost/categories/Node/"><div class='name'>Node</div><div class='badge'>(2)</div></a></li>
         
@@ -915,6 +1059,8 @@
           <li><a class="flat-box" title="/blogpost/categories/博客文档/" href="/blogpost/categories/博客文档/"><div class='name'>博客文档</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box" title="/blogpost/categories/开发工具/" href="/blogpost/categories/开发工具/"><div class='name'>开发工具</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box" title="/blogpost/categories/浏览器/" href="/blogpost/categories/浏览器/"><div class='name'>浏览器</div><div class='badge'>(1)</div></a></li>
         
       </ul>
     </div>
@@ -945,7 +1091,7 @@
 </header>
 
     <div class='content material'>
-      <a href="/blogpost/tags/create-react-app/" style="font-size: 16.5px; color: #888">create-react-app</a> <a href="/blogpost/tags/devops/" style="font-size: 14px; color: #999">devops</a> <a href="/blogpost/tags/excel/" style="font-size: 14px; color: #999">excel</a> <a href="/blogpost/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/blogpost/tags/less/" style="font-size: 14px; color: #999">less</a> <a href="/blogpost/tags/react/" style="font-size: 16.5px; color: #888">react</a> <a href="/blogpost/tags/vscode/" style="font-size: 16.5px; color: #888">vscode</a> <a href="/blogpost/tags/vue/" style="font-size: 24px; color: #555">vue</a> <a href="/blogpost/tags/webpack/" style="font-size: 16.5px; color: #888">webpack</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 19px; color: #777">前端工程化</a> <a href="/blogpost/tags/开发工具/" style="font-size: 16.5px; color: #888">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/面试题/" style="font-size: 21.5px; color: #666">面试题</a>
+      <a href="/blogpost/tags/create-react-app/" style="font-size: 16.5px; color: #888">create-react-app</a> <a href="/blogpost/tags/devops/" style="font-size: 14px; color: #999">devops</a> <a href="/blogpost/tags/excel/" style="font-size: 14px; color: #999">excel</a> <a href="/blogpost/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/blogpost/tags/http/" style="font-size: 14px; color: #999">http</a> <a href="/blogpost/tags/less/" style="font-size: 14px; color: #999">less</a> <a href="/blogpost/tags/react/" style="font-size: 16.5px; color: #888">react</a> <a href="/blogpost/tags/tcp/" style="font-size: 14px; color: #999">tcp</a> <a href="/blogpost/tags/vscode/" style="font-size: 16.5px; color: #888">vscode</a> <a href="/blogpost/tags/vue/" style="font-size: 24px; color: #555">vue</a> <a href="/blogpost/tags/webpack/" style="font-size: 16.5px; color: #888">webpack</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 19px; color: #777">前端工程化</a> <a href="/blogpost/tags/原理/" style="font-size: 14px; color: #999">原理</a> <a href="/blogpost/tags/开发工具/" style="font-size: 16.5px; color: #888">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/面试题/" style="font-size: 21.5px; color: #666">面试题</a>
     </div>
   </section>
 
@@ -1058,7 +1204,7 @@
     
       <span>
         <b class="fas fa-database"></b>
-        本站字数：<span class="post-count">48.6k</span>
+        本站字数：<span class="post-count">50.4k</span>
       </span>
     
     <!-- 网站运行时间 -->

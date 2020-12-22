@@ -6,7 +6,7 @@
   <link href="/./atom.xml" rel="self"/>
   
   <link href="https://yangyfeng.github.io/"/>
-  <updated>2020-12-21T08:54:58.442Z</updated>
+  <updated>2020-12-22T07:06:55.243Z</updated>
   <id>https://yangyfeng.github.io/</id>
   
   <author>
@@ -15,6 +15,102 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>互联网是如何运作的</title>
+    <link href="https://yangyfeng.github.io//posts/c35109d5.html"/>
+    <id>https://yangyfeng.github.io//posts/c35109d5.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T07:06:55.243Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;互联网所有的传输都通过RCP/IP协议族来传输，TCP/IP是&lt;strong&gt;面向连接&lt;/strong&gt;的&lt;strong&gt;可靠&lt;/strong&gt;字节流服务协议&lt;/p&gt;
+&lt;h2 id=&quot;什么是协议&quot;&gt;&lt;a href=&quot;#什么是协议&quot; class=&quot;headerlink&quot; title=&quot;什么是协议&quot;&gt;&lt;/a&gt;什么是协议&lt;/h2&gt;&lt;p&gt;协议是一组&lt;strong&gt;规则&lt;/strong&gt;，用于指定计算机应该如何通过网络来交互通信&lt;/p&gt;
+&lt;h2 id=&quot;TCP-IP协议族&quot;&gt;&lt;a href=&quot;#TCP-IP协议族&quot; class=&quot;headerlink&quot; title=&quot;TCP/IP协议族&quot;&gt;&lt;/a&gt;TCP/IP协议族&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;有四层&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;应用层：提供特定于应用程序的协议  HTTP   FTP   IMAP(邮件)&lt;/li&gt;
+&lt;li&gt;网络控制层： 发送数据包到计算机上使用特定的端口号的应用程序&lt;/li&gt;
+&lt;li&gt;网络层： 使用IP地址将数据包发送到特定的计算&lt;/li&gt;
+&lt;li&gt;链路层：  将二进制数据包与网络信号相互之间转换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;TCP的可靠&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;tcp在建立连接会进行三次握手，每个收到的数据包都会向发送方发送ack确认，已确保发送成功&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IP的传输&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;IP是不可靠的无连接协议，它并不关心数据包是否到达目的地，也不关系连接和端口号，目的是连接到目标IP&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rDwiod&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rDwiod.png&quot; alt=&quot;rDwiod.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TCP传输的质量和顺序&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;当数据包过大，在网络层会进行分包，分包后传输的链路不一样，到达的时间不一样，TCP会根据数据包上携带序列号来进行排序重组，如果发送方在一个特定时间内（也就是重试时间）没有接受到接收方的ack确认，会再次重新发送&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IP和IP地址的区别&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ip是一种协议  有两种标准  IPv4 2^32次方和IPv6  2^128&lt;/p&gt;
+&lt;p&gt;IP地址是一串数字192.0.0.1&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rDaLgf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rDaLgf.png&quot; alt=&quot;rDaLgf.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rDajKS&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rDajKS.png&quot; alt=&quot;rDajKS.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Http" scheme="https://yangyfeng.github.io/blogpost/categories/Http/"/>
+    
+    
+      <category term="tcp" scheme="https://yangyfeng.github.io/blogpost/tags/tcp/"/>
+    
+      <category term="http" scheme="https://yangyfeng.github.io/blogpost/tags/http/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浏览器是如何运作的</title>
+    <link href="https://yangyfeng.github.io//posts/41e3ecae.html"/>
+    <id>https://yangyfeng.github.io//posts/41e3ecae.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T07:08:59.618Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;浏览器是多进程结构的&quot;&gt;&lt;a href=&quot;#浏览器是多进程结构的&quot; class=&quot;headerlink&quot; title=&quot;浏览器是多进程结构的&quot;&gt;&lt;/a&gt;浏览器是多进程结构的&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;进程&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;操作系统进行资源分配和调度的基本单元。可以申请和拥有计算机资源，进程是程序的基本执行实体。两个进程分配的资源和内存是独立，如果需要通信就要使用进程通信管道IPC来传递信息。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;线程&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;操作系统能够进行运算调度的最小单位，一个进程中可以并发多个线程，每条线程并行执行不同的任务。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;浏览器功能进程拆解&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rDbTde&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rDbTde.png&quot; alt=&quot;rDbTde.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;浏览器进程&lt;/p&gt;
+&lt;p&gt;控制除标签页外的用户界面，包括地址，书签，后退，前进按钮等，以及负责与浏览器其他进程负责协调工作&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;缓存进程&lt;/p&gt;
+&lt;p&gt;负责控制浏览器的存储数据的缓存和读取&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;网络进程 &lt;/p&gt;
+&lt;p&gt;发起和接受网络请求&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;渲染器进程 &lt;/p&gt;
+&lt;p&gt;渲染Tab  有可能会为每个标签页是一个渲染进程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;GPU进程&lt;/p&gt;
+&lt;p&gt;整个浏览器界面的渲染&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;插件进程&lt;/p&gt;
+&lt;p&gt;控制网站使用的所有内置插件，例如：flash&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;浏览器结构图&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rDoRuF&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rDoRuF.png&quot; alt=&quot;rDoRuF.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;说明：&lt;/p&gt;
+&lt;p&gt;用户界面：展示除了标签页窗口之外的其他用户用户界面内容&lt;/p&gt;
+&lt;p&gt;渲染引擎：渲染用户获取数据的渲染内容。一下还有很多小的功能模块，如负责网络请求的网络模块，用于解析和执行js的js解释器&lt;/p&gt;
+&lt;p&gt;浏览器引擎：用户界面和渲染引擎之间传递数据&lt;/p&gt;
+&lt;p&gt;数据持久层：帮助浏览器存储持久数据，如cokies和storage。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我们称呼的内核就是指的渲染引擎，是整个浏览器的核心和灵魂&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Chromium会给用户创建的每一个访问实例分配一个进程，确保每一个页面是独立呈现的，并且对每个网站的独立访问也是彼此隔离的。访问不同站点和同一站点的不同页面都会创建新的进程。一个标签就是一个新的渲染器进程。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="浏览器" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+    
+      <category term="原理" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>vue面试题（2）</title>
@@ -115,9 +211,9 @@
       <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
-    
       <category term="webpack" scheme="https://yangyfeng.github.io/blogpost/tags/webpack/"/>
+    
+      <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
     
   </entry>
   
@@ -321,32 +417,6 @@
   </entry>
   
   <entry>
-    <title>如何使用JavaScript实现纯前端读取和导出excel文件</title>
-    <link href="https://yangyfeng.github.io//posts/ce0a6a78.html"/>
-    <id>https://yangyfeng.github.io//posts/ce0a6a78.html</id>
-    <published>2020-12-07T16:00:00.000Z</published>
-    <updated>2020-12-11T09:17:50.214Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;1、js-xlsx-介绍&quot;&gt;&lt;a href=&quot;#1、js-xlsx-介绍&quot; class=&quot;headerlink&quot; title=&quot;1、js-xlsx 介绍&quot;&gt;&lt;/a&gt;1、js-xlsx 介绍&lt;/h1&gt;&lt;p&gt;&lt;code&gt;由SheetJS出品的js-xlsx是一款非常方便的只需要纯JS即可读取和导出excel的工具库，功能强大，支持格式众多，支持xls、xlsx、ods(一种OpenOffice专有表格文件格式)等十几种格式。本文全部都是以xlsx格式为例。&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;官方github：&lt;a href=&quot;https://github.com/SheetJS/js-xlsx&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/SheetJS/js-xlsx&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;本文配套demo在线演示地址：&lt;a href=&quot;http://demo.haoji.me/2017/02/08-js-xlsx/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://demo.haoji.me/2017/02/08-js-xlsx/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="excel" scheme="https://yangyfeng.github.io/blogpost/tags/excel/"/>
-    
-      <category term="插件" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%8F%92%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
     <title>手写简易版vue，minivue的实现</title>
     <link href="https://yangyfeng.github.io//posts/d3643a0f.html"/>
     <id>https://yangyfeng.github.io//posts/d3643a0f.html</id>
@@ -381,6 +451,32 @@
     
     
       <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何使用JavaScript实现纯前端读取和导出excel文件</title>
+    <link href="https://yangyfeng.github.io//posts/ce0a6a78.html"/>
+    <id>https://yangyfeng.github.io//posts/ce0a6a78.html</id>
+    <published>2020-12-07T16:00:00.000Z</published>
+    <updated>2020-12-11T09:17:50.214Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;1、js-xlsx-介绍&quot;&gt;&lt;a href=&quot;#1、js-xlsx-介绍&quot; class=&quot;headerlink&quot; title=&quot;1、js-xlsx 介绍&quot;&gt;&lt;/a&gt;1、js-xlsx 介绍&lt;/h1&gt;&lt;p&gt;&lt;code&gt;由SheetJS出品的js-xlsx是一款非常方便的只需要纯JS即可读取和导出excel的工具库，功能强大，支持格式众多，支持xls、xlsx、ods(一种OpenOffice专有表格文件格式)等十几种格式。本文全部都是以xlsx格式为例。&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;官方github：&lt;a href=&quot;https://github.com/SheetJS/js-xlsx&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/SheetJS/js-xlsx&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;本文配套demo在线演示地址：&lt;a href=&quot;http://demo.haoji.me/2017/02/08-js-xlsx/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://demo.haoji.me/2017/02/08-js-xlsx/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="excel" scheme="https://yangyfeng.github.io/blogpost/tags/excel/"/>
+    
+      <category term="插件" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   
@@ -453,7 +549,7 @@
     <link href="https://yangyfeng.github.io//posts/fe27deba.html"/>
     <id>https://yangyfeng.github.io//posts/fe27deba.html</id>
     <published>2020-11-16T01:22:00.000Z</published>
-    <updated>2020-12-21T08:54:47.340Z</updated>
+    <updated>2020-12-22T02:09:10.327Z</updated>
     
     <summary type="html">
     
@@ -642,51 +738,6 @@
       <category term="create-react-app" scheme="https://yangyfeng.github.io/blogpost/tags/create-react-app/"/>
     
       <category term="react" scheme="https://yangyfeng.github.io/blogpost/tags/react/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>devops是什么</title>
-    <link href="https://yangyfeng.github.io//posts/cfdabafc.html"/>
-    <id>https://yangyfeng.github.io//posts/cfdabafc.html</id>
-    <published>2020-09-09T09:33:00.000Z</published>
-    <updated>2020-09-09T09:39:24.783Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;DevOps是一种重视“软件开发人员（Dev）”和“IT运维技术人员（Ops）”之间沟通合作的文化、运动或惯例。透过自动化“软件交付”和“架构变更”的流程，来使得构建、测试、发布软件能够更加地快捷、频繁和可靠。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.leiue.com/tags/devops&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;DevOps&lt;/a&gt;（Development 和 Operations 的组合词）是一种重视“&lt;a href=&quot;https://www.leiue.com/tags/软件开发&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;软件开发&lt;/a&gt;人员（Dev）”和“IT 运维技术人员（Ops）”之间沟通合作的文化、运动或惯例。透过自动化“软件交付”和“架构变更”的流程，来使得构建、测试、发布软件能够更加地快捷、频繁和可靠。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="开发工具" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="开发工具" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="devops" scheme="https://yangyfeng.github.io/blogpost/tags/devops/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面试题集锦（1）</title>
-    <link href="https://yangyfeng.github.io//posts/fe27deba.html"/>
-    <id>https://yangyfeng.github.io//posts/fe27deba.html</id>
-    <published>2020-09-08T16:00:00.000Z</published>
-    <updated>2020-12-21T08:54:51.237Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;什么是跨域？跨域请求资源的方法有哪些？&quot;&gt;&lt;a href=&quot;#什么是跨域？跨域请求资源的方法有哪些？&quot; class=&quot;headerlink&quot; title=&quot;什么是跨域？跨域请求资源的方法有哪些？&quot;&gt;&lt;/a&gt;什么是跨域？跨域请求资源的方法有哪些？&lt;/h2&gt;&lt;p&gt;1、什么是跨域？&lt;br&gt;由于浏览器同源策略，凡是发送请求url的协议、域名、端口三者之间任意一与当前页面地址不同即为跨域。存在跨域的情况：&lt;br&gt;网络协议不同，如http协议访问https协议。&lt;br&gt;端口不同，如80端口访问8080端口。&lt;br&gt;域名不同，如qianduanblog.com访问baidu.com。&lt;br&gt;子域名不同，如abc.qianduanblog.com访问def.qianduanblog.com。&lt;br&gt;域名和域名对应ip,如&lt;a href=&quot;http://www.a.com访问20.205.28.90&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;www.a.com访问20.205.28.90&lt;/a&gt;.&lt;br&gt;2、跨域请求资源的方法：&lt;br&gt;(1)、porxy代理&lt;br&gt;定义和用法：proxy代理用于将请求发送给后台服务器，通过服务器来发送请求，然后将请求的结果传递给前端。&lt;br&gt;实现方法：通过nginx代理；&lt;br&gt;注意点：1、如果你代理的是https协议的请求，那么你的proxy首先需要信任该证书（尤其是自定义证书）或者忽略证书检查，否则你的请求无法成功。&lt;br&gt;(2)、CORS 【Cross-Origin Resource Sharing】&lt;br&gt;定义和用法：是现代浏览器支持跨域资源请求的一种最常用的方式。&lt;br&gt;使用方法：一般需要后端人员在处理请求数据的时候，添加允许跨域的相关操作。如下：&lt;br&gt;&lt;figure class=&quot;highlight ada&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;res.writeHead(&lt;span class=&quot;number&quot;&gt;200&lt;/span&gt;, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;text/html; charset=UTF-8&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;Access-Control-Allow-Origin&quot;&lt;/span&gt;:&lt;span class=&quot;symbol&quot;&gt;&#39;http&lt;/span&gt;://localhost&#39;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;symbol&quot;&gt;&#39;Access&lt;/span&gt;-Control-Allow-Methods&#39;: &lt;span class=&quot;symbol&quot;&gt;&#39;GET&lt;/span&gt;, POST, OPTIONS&#39;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;symbol&quot;&gt;&#39;Access&lt;/span&gt;-Control-Allow-Headers&#39;: &lt;span class=&quot;symbol&quot;&gt;&#39;X&lt;/span&gt;-Requested-&lt;span class=&quot;keyword&quot;&gt;With&lt;/span&gt;, Content-&lt;span class=&quot;keyword&quot;&gt;Type&lt;/span&gt;&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;(3)、jsonp&lt;br&gt;定义和用法：通过动态插入一个script标签。浏览器对script的资源引用没有同源限制，同时资源加载到页面后会立即执行（没有阻塞的情况下）。&lt;br&gt;特点：通过情况下，通过动态创建script来读取他域的动态资源，获取的数据一般为json格式。&lt;br&gt;实例如下：&lt;br&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;actionscript&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;testjsonp&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(data)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;javascript&quot;&gt;       &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(data.name); &lt;span class=&quot;comment&quot;&gt;// 获取返回的结果&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;javascript&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; _script = &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.createElement(&lt;span class=&quot;string&quot;&gt;&#39;script&#39;&lt;/span&gt;);&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;actionscript&quot;&gt;    _script.type = &lt;span class=&quot;string&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;actionscript&quot;&gt;    _script.src = &lt;span class=&quot;string&quot;&gt;&quot;http://localhost:8888/jsonp?callback=testjsonp&quot;&lt;/span&gt;;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;javascript&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.head.appendChild(_script);&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;缺点：&lt;br&gt;　　1、这种方式无法发送post请求（这里）&lt;br&gt;　　2、另外要确定jsonp的请求是否失败并不容易，大多数框架的实现都是结合超时时间来判定。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="面试题" scheme="https://yangyfeng.github.io/blogpost/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   
