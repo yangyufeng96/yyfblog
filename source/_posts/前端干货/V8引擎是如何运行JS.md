@@ -21,7 +21,7 @@ date: 2020-12-22 00:00:00
 
 - Chrome浏览器的JS引擎是V8
 - Nodejs的运行时环境是V8
-- electron的底层引擎是V8  【ɪˈlektrɑːn】  跨平台桌面应用开发工具
+- electron的底层引擎是V8 跨平台桌面应用开发工具
 
 blink是渲染引擎，V8是JS引擎
 
