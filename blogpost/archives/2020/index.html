@@ -397,8 +397,18 @@
           
         
           
-            <div class='post-wrapper'>
-              <article class="post reveal ">
+        
+          
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
   
 
 
@@ -409,8 +419,8 @@
       
         
   <h2 class="title">
-    <a href="/posts/93532fe.html">
-      vue性能优化
+    <a href="/posts/62b88241.html">
+      js的事件循环是什么
     </a>
   </h2>
 
@@ -438,7 +448,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-12-11</p>
+    <p>2020-12-22</p>
   </a>
 </div>
 
@@ -448,9 +458,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/blogpost/categories/前端/' rel="nofollow">
+    <a href='/blogpost/categories/深入前端/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>前端</p>
+      <p>深入前端</p>
     </a>
   </div>
 
@@ -464,13 +474,6 @@
         
           
             
-  <div class="new-meta-item top-post">
-    <a class='notlink'>
-      <i class="fas fa-angle-double-up" aria-hidden="true"></i>
-      <p>置顶</p>
-    </a>
-  </div>
-
 
           
         
@@ -479,7 +482,125 @@
           <div class="new-meta-item size">
             <a class="notlink">
               <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>705字</p>
+              <p>53字</p>
+            </a>
+          </div>
+          <!-- 阅读时间 -->
+          <div class="new-meta-item read-time">
+            <a class="notlink">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <p>1分</p>
+            </a>
+          </div>
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h2 id="事件循环的机制"><a href="#事件循环的机制" class="headerlink" title="事件循环的机制"></a>事件循环的机制</h2><p><strong>概念</strong></p>
+<p>宏任务：script(整个代码)、setTimeout、setInterval、setImmediate、I/O、UI rendering</p>
+<p>微任务：promise、Object.observe、MutationObserve</p>
+<p>任务的优先级：process.nextTick &gt; promise.then &gt; setTimeout &gt; setImmediate</p>
+<p><a href="https://mp.weixin.qq.com/s/7k4skVdCIhTsTdEFmXyYLg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/7k4skVdCIhTsTdEFmXyYLg</a></p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/blogpost/tags/event-loop/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>event loop</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/posts/cf2c43d.html">
+      V8引擎是如何运行JS
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://yangyfeng.github.io" rel="nofollow">
+      
+        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
+      
+      <p>漫道求索</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-12-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/blogpost/categories/深入前端/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>深入前端</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+        
+          <!-- 文章字体个数 -->
+          <div class="new-meta-item size">
+            <a class="notlink">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+              <p>715字</p>
             </a>
           </div>
           <!-- 阅读时间 -->
@@ -500,13 +621,198 @@
 
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">
-      <h2 id="1、使用单文件组件"><a href="#1、使用单文件组件" class="headerlink" title="1、使用单文件组件"></a>1、使用单文件组件</h2><p>我们写的tmplate配置，实际上需要编译为render函数在执行的</p>
-<p>当使用DOM内模板或者JS内的字符串模板时，模板会在运行时被编译为render函数，通常情况这个过程已经足够快乐，但是对性能敏感的应用还是有影响的。</p>
-<p><a href="https://imgchr.com/i/rAis9f" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/11/rAis9f.png" alt="rAis9f.png"></a></p>
-<p>预编译模板最简单的方式就是使用<strong>单文件组件</strong>，单文件组件将相关的构建设置自动预编译好了，所以构建的代码已经包含了编译出来的render函数了，而不是原始的模板字符串了，减少了重新编译的过程了。（单文件组件导入使用直接使用vue-loader来处理，没有vue-tmplate的出来，使用起来会足够快速的。）</p>
+      <h2 id="什么是V8引擎"><a href="#什么是V8引擎" class="headerlink" title="什么是V8引擎"></a>什么是V8引擎</h2><p>一个接受JavaScript代码，编译代码然后执行的C++ 程序，编译后的代码可以在多种操作系统多种处理器上运行。</p>
+<p><strong>介绍</strong></p>
+<p>哪些程序用到V8</p>
+<ul>
+<li>Chrome浏览器的JS引擎是V8</li>
+<li>Nodejs的运行时环境是V8</li>
+<li>electron的底层引擎是V8  【ɪˈlektrɑːn】  跨平台桌面应用开发工具</li>
+</ul>
+<p>blink是渲染引擎，V8是JS引擎</p>
+<p>访问Dom的接口是由Blink提供的</p>
+<p><strong>功能</strong></p>
+<p>接收JavaScript代码，编译代码后执行C++程序，编译后的代码可以在多种操作系统多种处理器上运行。编译和执行JS代码、处理调用栈、内存分配、垃圾回收。</p>
+<ol>
+<li>编译和执行JS代码</li>
+<li>处理调用栈</li>
+<li>内存分配</li>
+<li>垃圾回收</li>
+</ol>
+<p><strong>V8的js编译和执行</strong></p>
+<ul>
+<li>解析器  parser  js –&gt; 解析成功抽象语法树AST</li>
+<li>解释器  interpreter   AST –&gt; 字节码bytecode，也有直接执行字节码的能力</li>
+<li>编译器  compiler  bytecode –&gt; 更高效的机器码</li>
+</ul>
+<p>V8版本5.9之前没有解释器，但是有两个编译器</p>
+<p><strong>5.9版本的V8</strong></p>
+<ol>
+<li>parser  解释器生成抽象语法树AST</li>
+<li>compiler  编译器Full-codegen  基准编译器  直接生成机器码</li>
+<li>运行一段时间后，由分析器线程优化js代码</li>
+<li>compiler  编译器CrankShaft   优化编译器   重新生成AST提升运行效率</li>
+</ol>
+<p>这样设计的缺点</p>
+<ol>
+<li>机器码会占用大量的内存</li>
+<li>缺少中间层机器码，无法实现一些优化策略</li>
+<li>无法很好的支持和优化JS的新语特性，无法拥抱未来</li>
+</ol>
+<h2 id="新版本的V8"><a href="#新版本的V8" class="headerlink" title="新版本的V8"></a>新版本的V8</h2><p><a href="https://imgchr.com/i/rrlwNT" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rrlwNT.md.png" alt="rrlwNT.md.png"></a></p>
+<ol>
+<li>parser  解析器  生成AST抽象语法树</li>
+<li>interpreter   解释器   Ignition   生成byteCode字节码  并直接执行</li>
+<li>清除AST 释放内存空间</li>
+<li>得到25% - 50%的等效机器代码大小</li>
+<li>compiler  运行过程中，解释器收集优化信息发送给编译器TurboFan</li>
+<li>重新生成机器码</li>
+<li>有些热点函数变更会由优化后的机器码还原成字节码 也就是deoptimization  回退字节码操作执行</li>
+</ol>
+<p>优化点：</p>
+<ol>
+<li>值声明未调用，不会被解析生成AST</li>
+<li>函数只被调用一次，bytcode直接被解释执行，不会进入到编译优化阶段</li>
+<li>函数被调用多次，Igniton会收集函数类型信息，可能会被标记为热点函数，可能被编译成优化后的机器代码</li>
+</ol>
+<p>好处：</p>
+<ol>
+<li>由于一开始不需要直接编译成机器码，生成了中间层的字节码，从而节约了时间</li>
+<li>优化编译阶段，不需要从源码重新解析,直接通过字节码进行优化，也可以deoptimization回退操作</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">x,y</span>)</span>&#123;<span class="keyword">return</span> x + y&#125;;</span><br><span class="line">sum(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">sum(<span class="number">3</span>,<span class="number">4</span>);</span><br><span class="line">sum(<span class="number">5</span>,<span class="number">6</span>);</span><br><span class="line">sum(<span class="string">"7"</span>,<span class="string">"8"</span>);<span class="comment">//会回退字节码操作执行</span></span><br></pre></td></tr></table></figure>
+<p><strong><a href="https://www.bilibili.com/video/BV1zV411z7RX" target="_blank" rel="noopener">原文地址</a></strong></p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/blogpost/tags/javascript/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>javascript</a>
+        
+          <a href="/blogpost/tags/JS运行原理/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>JS运行原理</a>
+        
+          <a href="/blogpost/tags/V8引擎/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>V8引擎</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/posts/17da10f8.html">
+      javascript是如何被运行的
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://yangyfeng.github.io" rel="nofollow">
+      
+        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
+      
+      <p>漫道求索</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-12-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/blogpost/categories/深入前端/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>深入前端</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+        
+          <!-- 文章字体个数 -->
+          <div class="new-meta-item size">
+            <a class="notlink">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+              <p>498字</p>
+            </a>
+          </div>
+          <!-- 阅读时间 -->
+          <div class="new-meta-item read-time">
+            <a class="notlink">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <p>1分</p>
+            </a>
+          </div>
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h2 id="JS的语言组成"><a href="#JS的语言组成" class="headerlink" title="JS的语言组成"></a>JS的语言组成</h2><ul>
+<li>基本语法：C</li>
+<li>数据类型 内存管理：Java</li>
+<li>函数式编程：Scheme  函数是第一等公民</li>
+<li>原型继承：Self   基于原型prototype的继承机制</li>
+</ul>
+<h2 id="奇葩的JS"><a href="#奇葩的JS" class="headerlink" title="奇葩的JS"></a>奇葩的JS</h2><p>对于熟悉javascript语言的前端开发小伙伴，直接上来两张图</p>
+<p><a href="https://imgchr.com/i/rrE9Gq" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/22/rrE9Gq.md.png" alt="rrE9Gq.md.png"></a></p>
+<p><a href="https://imgchr.com/i/rrEALF" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/22/rrEALF.md.png" alt="rrEALF.md.png"></a></p>
+<p>是不是瞬间感觉头脑发热呢。</p>
+<p>之所以会出现这些诡异的问题，是因为javascript是在设计之初并没有考虑的完善，是借鉴了多种语言的模式，基本是融合了面向过程和面向对象的。</p>
       
         <div class="readmore">
-          <a href="/posts/93532fe.html" class="flat-box">
+          <a href="/posts/17da10f8.html" class="flat-box">
             <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
             阅读全文
           </a>
@@ -516,25 +822,154 @@
     
       <div class="full-width auto-padding tags">
         
-          <a href="/blogpost/tags/vue/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>vue</a>
+          <a href="/blogpost/tags/javascript/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>javascript</a>
         
-          <a href="/blogpost/tags/性能优化/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>性能优化</a>
+          <a href="/blogpost/tags/JS运行原理/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>JS运行原理</a>
         
       </div>
     
   </section>
 </article>
 
-            </div>
-          
-        
-          
-        
-          
+          </div>
         
       
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
     
     
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/posts/9926a09c.html">
+      什么是JS调用栈
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://yangyfeng.github.io" rel="nofollow">
+      
+        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
+      
+      <p>漫道求索</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-12-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/blogpost/categories/深入前端/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>深入前端</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+        
+          <!-- 文章字体个数 -->
+          <div class="new-meta-item size">
+            <a class="notlink">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+              <p>203字</p>
+            </a>
+          </div>
+          <!-- 阅读时间 -->
+          <div class="new-meta-item read-time">
+            <a class="notlink">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <p>1分</p>
+            </a>
+          </div>
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p><strong>概念</strong></p>
+<p>栈：先进后出，进栈，出栈，与堆栈不同</p>
+<p>队列：先进先出</p>
+<p>调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用了哪个函数</p>
+<p><strong>例子</strong></p>
+<p>调用栈，调用函数执行才回入栈</p>
+<ol>
+<li><p>push  average()</p>
+</li>
+<li><p>push  sum()</p>
+</li>
+<li><p>shift  sum()</p>
+</li>
+<li><p>shift  average()</p>
+</li>
+<li><p>push  console.log()</p>
+</li>
+<li><p>shift  console.log()</p>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">average</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">const</span> aver = sum(a, b) / <span class="number">2</span>;</span><br><span class="line"> <span class="keyword">return</span> aver;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> num = average(<span class="number">3</span>, <span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(num);</span><br></pre></td></tr></table></figure>
+<p><strong>tips</strong></p>
+<p>用栈持持续被调用，会导致内存溢出</p>
+<p>原因是因为，JS主线程被占用会造成堵塞：事件循环，异步回调(宏任务，微任务，面试必问哦)</p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/blogpost/tags/JS运行原理/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>JS运行原理</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -588,9 +1023,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/blogpost/categories/Http/' rel="nofollow">
+    <a href='/blogpost/categories/深入前端/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>Http</p>
+      <p>深入前端</p>
     </a>
   </div>
 
@@ -730,9 +1165,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/blogpost/categories/浏览器/' rel="nofollow">
+    <a href='/blogpost/categories/深入前端/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>浏览器</p>
+      <p>深入前端</p>
     </a>
   </div>
 
@@ -822,7 +1257,7 @@
     
       <div class="full-width auto-padding tags">
         
-          <a href="/blogpost/tags/原理/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>原理</a>
+          <a href="/blogpost/tags/浏览器运行原理/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>浏览器运行原理</a>
         
       </div>
     
@@ -1437,416 +1872,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/posts/fbba48cc.html">
-      为什么前端需要学习node
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    <a href="https://yangyfeng.github.io" rel="nofollow">
-      
-        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
-      
-      <p>漫道求索</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-12-15</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blogpost/categories/Node/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>Node</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-        
-          <!-- 文章字体个数 -->
-          <div class="new-meta-item size">
-            <a class="notlink">
-              <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>78字</p>
-            </a>
-          </div>
-          <!-- 阅读时间 -->
-          <div class="new-meta-item read-time">
-            <a class="notlink">
-              <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>1分</p>
-            </a>
-          </div>
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <ul>
-<li><p>理解解决跨域、token鉴权、Rsetful风格、XSS、CSRF等问题，学习后端的思维。（与后端有效沟通）</p>
-</li>
-<li><p>如何只用js语言如何开发一个全栈的应用（快速开发全栈应用）</p>
-</li>
-<li><p>学习全栈和架构思维的有效途径（践行工程化思想）</p>
-</li>
-</ul>
-
-      
-    </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/posts/bc152925.html">
-      vue面试题（1）
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    <a href="https://yangyfeng.github.io" rel="nofollow">
-      
-        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
-      
-      <p>漫道求索</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-12-11</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blogpost/categories/前端/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>前端</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-        
-          <!-- 文章字体个数 -->
-          <div class="new-meta-item size">
-            <a class="notlink">
-              <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>4.9k字</p>
-            </a>
-          </div>
-          <!-- 阅读时间 -->
-          <div class="new-meta-item read-time">
-            <a class="notlink">
-              <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>21分</p>
-            </a>
-          </div>
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h2 id="Vue双向绑定实现原理？"><a href="#Vue双向绑定实现原理？" class="headerlink" title="Vue双向绑定实现原理？"></a>Vue双向绑定实现原理？</h2><p>vue实现数据双向绑定主要是：采用数据劫持结合发布者-订阅者模式的方式，通过 Object.defineProperty() 来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应监听回调。当把一个普通 Javascript 对象传给 Vue 实例来作为它的 data 选项时，Vue 将遍历它的属性，用 Object.defineProperty() 将它们转为 getter/setter。用户看不到 getter/setter，但是在内部它们让 Vue 追踪依赖，在属性被访问和修改时通知变化。</p>
-<p>vue的数据双向绑定 将MVVM作为数据绑定的入口，整合Observer，Compile和Watcher三者，通过Observer来监听自己的model的数据变化，通过Compile来解析编译模板指令（vue中是用来解析 双花括弧），最终利用watcher搭起observer和Compile之间的通信桥梁，达到数据变化 —&gt;视图更新；视图交互变化（input）—&gt;数据model变更双向绑定效果。</p>
-<ul>
-<li>Observer 对所有数据的属性进行监听</li>
-<li>Compile 对每个元素节点的指令进行扫描跟解析,根据指令模板替换数据,以及绑定相应的更新函数</li>
-<li>Watcher 作为连接Observer 跟 Compile 之间的桥梁, 能够订阅接收到每个属性变动的通知,执行相应的回调函数</li>
-</ul>
-<p>代码理解: </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Dep = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.subs = []</span><br><span class="line">&#125;;</span><br><span class="line">Dep.prototype = &#123;</span><br><span class="line">  addSub: <span class="function"><span class="keyword">function</span>(<span class="params">sub</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.subs.push(sub)</span><br><span class="line">  &#125;,</span><br><span class="line">  notify: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.subs.forEach(sub = &gt; &#123;</span><br><span class="line">      sub.update()</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> Watcher = <span class="function"><span class="keyword">function</span>(<span class="params">vm, node, name</span>) </span>&#123;</span><br><span class="line">  Dep.target = <span class="keyword">this</span>;</span><br><span class="line">  <span class="keyword">this</span>.name = name;</span><br><span class="line">  <span class="keyword">this</span>.node = node;</span><br><span class="line">  <span class="keyword">this</span>.vm = vm;</span><br><span class="line">  <span class="keyword">this</span>.update();</span><br><span class="line">  Dep.target = <span class="literal">null</span></span><br><span class="line">&#125;;</span><br><span class="line">Watcher.prototype = &#123;</span><br><span class="line">  update: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.get();</span><br><span class="line">    <span class="keyword">this</span>.node.nodeValue = <span class="keyword">this</span>.value</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="keyword">get</span>: function() &#123;</span><br><span class="line">    <span class="keyword">this</span>.value = <span class="keyword">this</span>.vm[<span class="keyword">this</span>.name]</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> compile = <span class="function"><span class="keyword">function</span>(<span class="params">node, vm</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (node.nodeType === <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> attr = node.attributes;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; attr.length; i++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (attr[i].nodeName === <span class="string">'v-model'</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> name = attr[i].nodeValue;</span><br><span class="line">        node.addEventListener(<span class="string">'input'</span>, e = &gt; &#123;</span><br><span class="line">          vm[name] = node.value</span><br><span class="line">        &#125;);</span><br><span class="line">        node.value = vm[name];</span><br><span class="line">        node.removeAttribute(<span class="string">'v-model'</span>)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (node.nodeType === <span class="number">3</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="regexp">/\&#123;\&#123;(.*)\&#125;\&#125;/</span>.test(node.nodeValue)) &#123;</span><br><span class="line">      <span class="keyword">let</span> name = <span class="built_in">RegExp</span>.$<span class="number">1</span>;</span><br><span class="line">      name = name.trim();</span><br><span class="line">      node.nodeValue = vm[name];</span><br><span class="line">      <span class="keyword">new</span> Watcher(vm, node, name)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> observe = data = &gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (!data || <span class="keyword">typeof</span> data !== <span class="string">'object'</span>) <span class="keyword">return</span> <span class="number">3344</span>;</span><br><span class="line">  <span class="built_in">Object</span>.keys(data).forEach(key = &gt; defineReactive(data, key, data[key]))</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> defineReactive = (data, key, value) = &gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> dep = <span class="keyword">new</span> Dep();</span><br><span class="line">  observe(value);</span><br><span class="line">  <span class="built_in">Object</span>.defineProperty(data, key, &#123;</span><br><span class="line">    <span class="keyword">get</span>: () = &gt; &#123;</span><br><span class="line">      <span class="keyword">if</span> (Dep.target) dep.addSub(Dep.target);</span><br><span class="line">      <span class="keyword">return</span> value</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="keyword">set</span>: function(newValue) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">`数据已发生变化，新的值为$ &#123;</span></span><br><span class="line"><span class="string">				newValue</span></span><br><span class="line"><span class="string">			&#125;`</span>);</span><br><span class="line">      value = newValue;</span><br><span class="line">      dep.notify()</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">nodeToFragment</span>(<span class="params">node, vm</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> flag = <span class="built_in">document</span>.createDocumentFragment();</span><br><span class="line">  <span class="keyword">let</span> child;</span><br><span class="line">  <span class="keyword">while</span> ((child = node.firstChild)) &#123;</span><br><span class="line">    compile(child, vm);</span><br><span class="line">    flag.appendChild(child)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> flag</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Vue</span>(<span class="params">options</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> data = <span class="keyword">this</span>.data = options.data;</span><br><span class="line">  observe(data, <span class="keyword">this</span>);</span><br><span class="line">  <span class="keyword">let</span> id = options.el;</span><br><span class="line">  <span class="keyword">let</span> dom = nodeToFragment(<span class="built_in">document</span>.getElementById(id), data);</span><br><span class="line">  <span class="built_in">document</span>.getElementById(id).appendChild(dom)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'app'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    text: <span class="string">'example text'</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p> 题目分析：双向绑定是vue的特色之一，开发中必然会用到的知识点，然而此题还问了实现原理，升级为深度考查。 </p>
-<p>思路分析：3w1h</p>
-<ol>
-<li>给出双绑定义</li>
-<li>双绑带来的好处</li>
-<li>在哪使用双绑</li>
-<li>使用方式</li>
-<li>扩展：使用细节、原理实现描述</li>
-</ol>
-<p>回答范例：</p>
-<ol>
-<li>vue中双向绑定是一个指令v-model，可以绑定一个动态值到视图，同时视图中变化能改变该值。v-model是语法糖，默认情况下相当于:value和@input。</li>
-<li>使用v-model可以减少大量繁琐的事件处理代码，提高开发效率，代码可读性也更好</li>
-<li>通常在表单项上使用v-model</li>
-<li>原生的表单项可以直接使用v-model，自定义组件上如果要使用它需要在组件内绑定value并处理输入事件</li>
-<li>我做过测试，输出包含v-model模板的组件渲染函数，发现它会被转换为value属性的绑定以及一个事件监听，事件回调函数中会做相应变量更新操作，这说明神奇魔法实际上是vue的编译器完成的。</li>
-</ol>
-<p>可能的追问：</p>
-<ol>
-<li>v-model和sync修饰符有什么区别</li>
-<li><p>自定义组件使用v-model如果想要改变事件名或者属性名应该怎么做</p>
-<p>观察输出的渲染函数： </p>
-</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// &lt;input type="text" v-model="foo"&gt;</span></span><br><span class="line">_c(<span class="string">'input'</span>, &#123; </span><br><span class="line">  directives: [&#123; <span class="attr">name</span>: <span class="string">"model"</span>, <span class="attr">rawName</span>: <span class="string">"v-model"</span>, <span class="attr">value</span>: (foo), <span class="attr">expression</span>: <span class="string">"foo"</span> &#125;], </span><br><span class="line">  attrs: &#123; <span class="string">"type"</span>: <span class="string">"text"</span> &#125;, </span><br><span class="line">  domProps: &#123; <span class="string">"value"</span>: (foo) &#125;, </span><br><span class="line">  on: &#123; </span><br><span class="line">    <span class="string">"input"</span>: <span class="function"><span class="keyword">function</span> (<span class="params">$event</span>) </span>&#123; </span><br><span class="line">      <span class="keyword">if</span> ($event.target.composing) <span class="keyword">return</span>; </span><br><span class="line">      foo = $event.target.value </span><br><span class="line">    &#125; </span><br><span class="line">  &#125; </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// &lt;input type="checkbox" v-model="bar"&gt;</span></span><br><span class="line">_c(<span class="string">'input'</span>, &#123; </span><br><span class="line">  directives: [&#123; <span class="attr">name</span>: <span class="string">"model"</span>, <span class="attr">rawName</span>: <span class="string">"v-model"</span>, <span class="attr">value</span>: (bar), <span class="attr">expression</span>: <span class="string">"bar"</span> &#125;], </span><br><span class="line">  attrs: &#123; <span class="string">"type"</span>: <span class="string">"checkbox"</span> &#125;, </span><br><span class="line">  domProps: &#123; </span><br><span class="line">    <span class="string">"checked"</span>: <span class="built_in">Array</span>.isArray(bar) ? _i(bar, <span class="literal">null</span>) &gt; <span class="number">-1</span> : (bar) </span><br><span class="line">  &#125;, </span><br><span class="line">  on: &#123; </span><br><span class="line">    <span class="string">"change"</span>: <span class="function"><span class="keyword">function</span> (<span class="params">$event</span>) </span>&#123; </span><br><span class="line">      <span class="keyword">var</span> $$a = bar, $$el = $event.target, $$c = $$el.checked ? (<span class="literal">true</span>) : (<span class="literal">false</span>); </span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">Array</span>.isArray($$a)) &#123; </span><br><span class="line">        <span class="keyword">var</span> $$v = <span class="literal">null</span>, $$i = _i($$a, $$v); </span><br><span class="line">        <span class="keyword">if</span> ($$el.checked) &#123; $$i &lt; <span class="number">0</span> &amp;&amp; (bar = $$a.concat([$$v])) &#125; </span><br><span class="line">        <span class="keyword">else</span> &#123; </span><br><span class="line">          $$i &gt; <span class="number">-1</span> &amp;&amp; (bar = $$a.slice(<span class="number">0</span>, $$i).concat($$a.slice($$i + <span class="number">1</span>))) &#125; </span><br><span class="line">      &#125; <span class="keyword">else</span> &#123; </span><br><span class="line">        bar = $$c </span><br><span class="line">      &#125; </span><br><span class="line">    &#125; </span><br><span class="line">  &#125; </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// &lt;select v-model="baz"&gt;</span></span><br><span class="line"><span class="comment">//     &lt;option value="vue"&gt;vue&lt;/option&gt;</span></span><br><span class="line"><span class="comment">//     &lt;option value="react"&gt;react&lt;/option&gt;</span></span><br><span class="line"><span class="comment">// &lt;/select&gt;</span></span><br><span class="line">_c(<span class="string">'select'</span>, &#123; </span><br><span class="line">  directives: [&#123; <span class="attr">name</span>: <span class="string">"model"</span>, <span class="attr">rawName</span>: <span class="string">"v-model"</span>, <span class="attr">value</span>: (baz), <span class="attr">expression</span>: <span class="string">"baz"</span> &#125;], </span><br><span class="line">  on: &#123; </span><br><span class="line">    <span class="string">"change"</span>: <span class="function"><span class="keyword">function</span> (<span class="params">$event</span>) </span>&#123; </span><br><span class="line">      <span class="keyword">var</span> $$selectedVal = <span class="built_in">Array</span>.prototype.filter.call(</span><br><span class="line">        $event.target.options, </span><br><span class="line">        <span class="function"><span class="keyword">function</span> (<span class="params">o</span>) </span>&#123; <span class="keyword">return</span> o.selected &#125;</span><br><span class="line">      ).map(</span><br><span class="line">        <span class="function"><span class="keyword">function</span> (<span class="params">o</span>) </span>&#123; </span><br><span class="line">          <span class="keyword">var</span> val = <span class="string">"_value"</span> <span class="keyword">in</span> o ? o._value : o.value; </span><br><span class="line">          <span class="keyword">return</span> val </span><br><span class="line">        &#125;</span><br><span class="line">      ); </span><br><span class="line">      baz = $event.target.multiple ? $$selectedVal : $$selectedVal[<span class="number">0</span>] </span><br><span class="line">    &#125; </span><br><span class="line">  &#125; </span><br><span class="line">&#125;, [</span><br><span class="line">  _c(<span class="string">'option'</span>, &#123; <span class="attr">attrs</span>: &#123; <span class="string">"value"</span>: <span class="string">"vue"</span> &#125; &#125;, [_v(<span class="string">"vue"</span>)]), _v(<span class="string">" "</span>), </span><br><span class="line">  _c(<span class="string">'option'</span>, &#123; <span class="attr">attrs</span>: &#123; <span class="string">"value"</span>: <span class="string">"react"</span> &#125; &#125;, [_v(<span class="string">"react"</span>)])</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
-      
-        <div class="readmore">
-          <a href="/posts/bc152925.html" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blogpost/tags/vue/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>vue</a>
-        
-          <a href="/blogpost/tags/面试题/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>面试题</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/posts/86248f8a.html">
-      vue3的新特性
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    <a href="https://yangyfeng.github.io" rel="nofollow">
-      
-        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
-      
-      <p>漫道求索</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-12-08</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blogpost/categories/前端/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>前端</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-        
-          <!-- 文章字体个数 -->
-          <div class="new-meta-item size">
-            <a class="notlink">
-              <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>774字</p>
-            </a>
-          </div>
-          <!-- 阅读时间 -->
-          <div class="new-meta-item read-time">
-            <a class="notlink">
-              <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>2分</p>
-            </a>
-          </div>
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p><strong>六大亮点</strong></p>
-<p><a href="https://vue3js.cn/docs/zh/api/" target="_blank" rel="noopener">vue3官方文档</a></p>
-<p><a href="https://imgchr.com/i/rSCl4A" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/08/rSCl4A.jpg" alt="rSCl4A.jpg"></a></p>
-<ul>
-<li><p><code>Performance</code>：性能更比<code>Vue 2.0</code>强。</p>
-</li>
-<li><p><code>Tree shaking support</code>：可以将无用模块“剪辑”，仅打包需要的。</p>
-</li>
-<li><p><code>Composition API</code>：组合<code>API</code></p>
-</li>
-<li><p><code>Fragment, Teleport, Suspense</code>：“碎片”，<code>Teleport</code>即<code>Protal传送门</code>，“悬念”</p>
-</li>
-<li><p><code>Better TypeScript support</code>：更优秀的 Ts 支持</p>
-</li>
-<li><p><code>Custom Renderer API</code>：暴露了自定义渲染<code>API</code></p>
-</li>
-</ul>
-      
-        <div class="readmore">
-          <a href="/posts/86248f8a.html" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blogpost/tags/vue/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>vue</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
     
   </section>
   
@@ -1856,7 +1881,7 @@
         <div class="prev-next">
           
           <p class="current">
-            1 / 3
+            1 / 4
           </p>
           
             <a class="next" rel="next" href="/blogpost/archives/2020/page/2/">
@@ -2076,7 +2101,7 @@
         
           <li><a class="flat-box" title="/blogpost/categories/GoLang/" href="/blogpost/categories/GoLang/"><div class='name'>GoLang</div><div class='badge'>(1)</div></a></li>
         
-          <li><a class="flat-box" title="/blogpost/categories/Http/" href="/blogpost/categories/Http/"><div class='name'>Http</div><div class='badge'>(3)</div></a></li>
+          <li><a class="flat-box" title="/blogpost/categories/Http/" href="/blogpost/categories/Http/"><div class='name'>Http</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box" title="/blogpost/categories/Node/" href="/blogpost/categories/Node/"><div class='name'>Node</div><div class='badge'>(2)</div></a></li>
         
@@ -2086,7 +2111,7 @@
         
           <li><a class="flat-box" title="/blogpost/categories/开发工具/" href="/blogpost/categories/开发工具/"><div class='name'>开发工具</div><div class='badge'>(4)</div></a></li>
         
-          <li><a class="flat-box" title="/blogpost/categories/浏览器/" href="/blogpost/categories/浏览器/"><div class='name'>浏览器</div><div class='badge'>(1)</div></a></li>
+          <li><a class="flat-box" title="/blogpost/categories/深入前端/" href="/blogpost/categories/深入前端/"><div class='name'>深入前端</div><div class='badge'>(6)</div></a></li>
         
       </ul>
     </div>
@@ -2117,7 +2142,7 @@
 </header>
 
     <div class='content material'>
-      <a href="/blogpost/tags/create-react-app/" style="font-size: 16.5px; color: #888">create-react-app</a> <a href="/blogpost/tags/devops/" style="font-size: 14px; color: #999">devops</a> <a href="/blogpost/tags/excel/" style="font-size: 14px; color: #999">excel</a> <a href="/blogpost/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/blogpost/tags/http/" style="font-size: 14px; color: #999">http</a> <a href="/blogpost/tags/less/" style="font-size: 14px; color: #999">less</a> <a href="/blogpost/tags/react/" style="font-size: 16.5px; color: #888">react</a> <a href="/blogpost/tags/tcp/" style="font-size: 14px; color: #999">tcp</a> <a href="/blogpost/tags/vscode/" style="font-size: 16.5px; color: #888">vscode</a> <a href="/blogpost/tags/vue/" style="font-size: 24px; color: #555">vue</a> <a href="/blogpost/tags/webpack/" style="font-size: 16.5px; color: #888">webpack</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 19px; color: #777">前端工程化</a> <a href="/blogpost/tags/原理/" style="font-size: 14px; color: #999">原理</a> <a href="/blogpost/tags/开发工具/" style="font-size: 16.5px; color: #888">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/面试题/" style="font-size: 21.5px; color: #666">面试题</a>
+      <a href="/blogpost/tags/JS运行原理/" style="font-size: 18px; color: #7e7e7e">JS运行原理</a> <a href="/blogpost/tags/V8引擎/" style="font-size: 14px; color: #999">V8引擎</a> <a href="/blogpost/tags/create-react-app/" style="font-size: 16px; color: #8b8b8b">create-react-app</a> <a href="/blogpost/tags/devops/" style="font-size: 14px; color: #999">devops</a> <a href="/blogpost/tags/event-loop/" style="font-size: 14px; color: #999">event loop</a> <a href="/blogpost/tags/excel/" style="font-size: 14px; color: #999">excel</a> <a href="/blogpost/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/blogpost/tags/http/" style="font-size: 14px; color: #999">http</a> <a href="/blogpost/tags/javascript/" style="font-size: 16px; color: #8b8b8b">javascript</a> <a href="/blogpost/tags/less/" style="font-size: 14px; color: #999">less</a> <a href="/blogpost/tags/react/" style="font-size: 16px; color: #8b8b8b">react</a> <a href="/blogpost/tags/tcp/" style="font-size: 14px; color: #999">tcp</a> <a href="/blogpost/tags/vscode/" style="font-size: 16px; color: #8b8b8b">vscode</a> <a href="/blogpost/tags/vue/" style="font-size: 24px; color: #555">vue</a> <a href="/blogpost/tags/webpack/" style="font-size: 16px; color: #8b8b8b">webpack</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 20px; color: #707070">前端工程化</a> <a href="/blogpost/tags/开发工具/" style="font-size: 16px; color: #8b8b8b">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/浏览器运行原理/" style="font-size: 14px; color: #999">浏览器运行原理</a> <a href="/blogpost/tags/面试题/" style="font-size: 22px; color: #636363">面试题</a>
     </div>
   </section>
 
@@ -2230,7 +2255,7 @@
     
       <span>
         <b class="fas fa-database"></b>
-        本站字数：<span class="post-count">50.4k</span>
+        本站字数：<span class="post-count">51.9k</span>
       </span>
     
     <!-- 网站运行时间 -->

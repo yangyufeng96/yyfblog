@@ -6,7 +6,7 @@
   <link href="/./atom.xml" rel="self"/>
   
   <link href="https://yangyfeng.github.io/"/>
-  <updated>2020-12-22T07:06:55.243Z</updated>
+  <updated>2020-12-22T09:26:46.252Z</updated>
   <id>https://yangyfeng.github.io/</id>
   
   <author>
@@ -17,11 +17,128 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>js的事件循环是什么</title>
+    <link href="https://yangyfeng.github.io//posts/62b88241.html"/>
+    <id>https://yangyfeng.github.io//posts/62b88241.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T09:26:46.252Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;事件循环的机制&quot;&gt;&lt;a href=&quot;#事件循环的机制&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="event loop" scheme="https://yangyfeng.github.io/blogpost/tags/event-loop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>V8引擎是如何运行JS</title>
+    <link href="https://yangyfeng.github.io//posts/cf2c43d.html"/>
+    <id>https://yangyfeng.github.io//posts/cf2c43d.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T08:31:30.712Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;什么是V8引擎&quot;&gt;&lt;a href=&quot;#什么是V8引擎&quot; class=&quot;headerlink&quot; title=&quot;什么是V8引擎&quot;&gt;&lt;/a&gt;什么是V8引擎&lt;/h2&gt;&lt;p&gt;一个接受JavaScript代码，编译代码然后执行的C++
+        
+      
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="javascript" scheme="https://yangyfeng.github.io/blogpost/tags/javascript/"/>
+    
+      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
+    
+      <category term="V8引擎" scheme="https://yangyfeng.github.io/blogpost/tags/V8%E5%BC%95%E6%93%8E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javascript是如何被运行的</title>
+    <link href="https://yangyfeng.github.io//posts/17da10f8.html"/>
+    <id>https://yangyfeng.github.io//posts/17da10f8.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T08:31:23.722Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;JS的语言组成&quot;&gt;&lt;a href=&quot;#JS的语言组成&quot; class=&quot;headerlink&quot; title=&quot;JS的语言组成&quot;&gt;&lt;/a&gt;JS的语言组成&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;基本语法：C&lt;/li&gt;
+&lt;li&gt;数据类型 内存管理：Java&lt;/li&gt;
+&lt;li&gt;函数式编程：Scheme  函数是第一等公民&lt;/li&gt;
+&lt;li&gt;原型继承：Self   基于原型prototype的继承机制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;奇葩的JS&quot;&gt;&lt;a href=&quot;#奇葩的JS&quot; class=&quot;headerlink&quot; title=&quot;奇葩的JS&quot;&gt;&lt;/a&gt;奇葩的JS&lt;/h2&gt;&lt;p&gt;对于熟悉javascript语言的前端开发小伙伴，直接上来两张图&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rrE9Gq&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rrE9Gq.md.png&quot; alt=&quot;rrE9Gq.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rrEALF&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rrEALF.md.png&quot; alt=&quot;rrEALF.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;是不是瞬间感觉头脑发热呢。&lt;/p&gt;
+&lt;p&gt;之所以会出现这些诡异的问题，是因为javascript是在设计之初并没有考虑的完善，是借鉴了多种语言的模式，基本是融合了面向过程和面向对象的。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="javascript" scheme="https://yangyfeng.github.io/blogpost/tags/javascript/"/>
+    
+      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么是JS调用栈</title>
+    <link href="https://yangyfeng.github.io//posts/9926a09c.html"/>
+    <id>https://yangyfeng.github.io//posts/9926a09c.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T08:45:39.515Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;栈：先进后出，进栈，出栈，与堆栈不同&lt;/p&gt;
+&lt;p&gt;队列：先进先出&lt;/p&gt;
+&lt;p&gt;调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用
+        
+      
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>互联网是如何运作的</title>
     <link href="https://yangyfeng.github.io//posts/c35109d5.html"/>
     <id>https://yangyfeng.github.io//posts/c35109d5.html</id>
     <published>2020-12-21T16:00:00.000Z</published>
-    <updated>2020-12-22T07:06:55.243Z</updated>
+    <updated>2020-12-22T07:21:09.956Z</updated>
     
     <summary type="html">
     
@@ -49,7 +166,7 @@
     
     </summary>
     
-      <category term="Http" scheme="https://yangyfeng.github.io/blogpost/categories/Http/"/>
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
     
     
       <category term="tcp" scheme="https://yangyfeng.github.io/blogpost/tags/tcp/"/>
@@ -63,7 +180,7 @@
     <link href="https://yangyfeng.github.io//posts/41e3ecae.html"/>
     <id>https://yangyfeng.github.io//posts/41e3ecae.html</id>
     <published>2020-12-21T16:00:00.000Z</published>
-    <updated>2020-12-22T07:08:59.618Z</updated>
+    <updated>2020-12-22T08:31:58.445Z</updated>
     
     <summary type="html">
     
@@ -105,10 +222,10 @@
     
     </summary>
     
-      <category term="浏览器" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="原理" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%8E%9F%E7%90%86/"/>
+      <category term="浏览器运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
@@ -619,125 +736,6 @@
     
       <category term="Node" scheme="https://yangyfeng.github.io/blogpost/categories/Node/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>http协议</title>
-    <link href="https://yangyfeng.github.io//posts/6a5e2f06.html"/>
-    <id>https://yangyfeng.github.io//posts/6a5e2f06.html</id>
-    <published>2020-09-09T10:20:00.000Z</published>
-    <updated>2020-12-11T09:10:53.881Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;HTTP 简介：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;HTTP是Hyper Text Transfer
-        
-      
-    
-    </summary>
-    
-      <category term="Http" scheme="https://yangyfeng.github.io/blogpost/categories/Http/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>TCP3次握手</title>
-    <link href="https://yangyfeng.github.io//posts/6a5e2f06.html"/>
-    <id>https://yangyfeng.github.io//posts/6a5e2f06.html</id>
-    <published>2020-09-09T10:17:00.000Z</published>
-    <updated>2020-12-11T09:11:21.708Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;什么是http&quot;&gt;&lt;a href=&quot;#什么是http&quot; class=&quot;headerlink&quot; title=&quot;什么是http?&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Http" scheme="https://yangyfeng.github.io/blogpost/categories/Http/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>create-react-app(注意事项)</title>
-    <link href="https://yangyfeng.github.io//posts/6a5e2f06.html"/>
-    <id>https://yangyfeng.github.io//posts/6a5e2f06.html</id>
-    <published>2020-09-09T10:01:00.000Z</published>
-    <updated>2020-12-11T09:11:46.131Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;React-createClass-is-not-a-function&quot;&gt;&lt;a href=&quot;#React-createClass-is-not-a-function&quot; class=&quot;headerlink&quot; title=&quot;React.createClass is not a function&quot;&gt;&lt;/a&gt;React.createClass is not a function&lt;/h2&gt;&lt;p&gt;在React16以上，已经摒弃React.createClass()这个方法&lt;/p&gt;
-&lt;p&gt;取而代之的是&lt;br&gt;&lt;figure class=&quot;highlight scala&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Welcome&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;React&lt;/span&gt;.&lt;span class=&quot;title&quot;&gt;Component&lt;/span&gt;&lt;/span&gt;&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;配置webpack&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;前置条件(precondition)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://link.jianshu.com/?t=https://reactjs.org/docs/installation.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Creating a New Application&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;安装yarn&lt;/p&gt;
-&lt;figure class=&quot;highlight cmake&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm &lt;span class=&quot;keyword&quot;&gt;install&lt;/span&gt; yarn -g&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;安装依赖&lt;/p&gt;
-&lt;figure class=&quot;highlight cmake&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yarn &lt;span class=&quot;keyword&quot;&gt;install&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;显示webpack配置&lt;/p&gt;
-&lt;figure class=&quot;highlight dockerfile&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm &lt;span class=&quot;keyword&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;bash&quot;&gt; eject&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;添加alias&lt;/p&gt;
-&lt;p&gt;可以根据项目自行配置&lt;/p&gt;
-&lt;figure class=&quot;highlight sqf&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;alias: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;&#39;react-native&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;react-native-web&#39;&lt;/span&gt;, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;&#39;src&#39;&lt;/span&gt;:path.&lt;span class=&quot;built_in&quot;&gt;join&lt;/span&gt;(&lt;span class=&quot;variable&quot;&gt;__dirname&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;..&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;src&#39;&lt;/span&gt;), &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;&#39;language&#39;&lt;/span&gt;:path.&lt;span class=&quot;built_in&quot;&gt;join&lt;/span&gt;(&lt;span class=&quot;variable&quot;&gt;__dirname&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;..&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;src/language&#39;&lt;/span&gt;), &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;&#39;router&#39;&lt;/span&gt;:path.&lt;span class=&quot;built_in&quot;&gt;join&lt;/span&gt;(&lt;span class=&quot;variable&quot;&gt;__dirname&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;..&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;src/router&#39;&lt;/span&gt;), &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;&#39;Modebase&#39;&lt;/span&gt;:path.&lt;span class=&quot;built_in&quot;&gt;join&lt;/span&gt;(&lt;span class=&quot;variable&quot;&gt;__dirname&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;..&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;src/Modebase&#39;&lt;/span&gt;), &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;&#39;containers&#39;&lt;/span&gt;:path.&lt;span class=&quot;built_in&quot;&gt;join&lt;/span&gt;(&lt;span class=&quot;variable&quot;&gt;__dirname&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;..&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;src/containers&#39;&lt;/span&gt;) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;添加cssnext(postcs)&lt;br&gt;一种可以让你使用CSS最新特性的插件。它通过将最新的CSS特性转变为现阶段浏览器所兼容的特性，这样你不用再等待浏览器对某一特定新特性的支持。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="create-react-app" scheme="https://yangyfeng.github.io/blogpost/tags/create-react-app/"/>
-    
-      <category term="react" scheme="https://yangyfeng.github.io/blogpost/tags/react/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>React 脚手架工具（create-react-app）</title>
-    <link href="https://yangyfeng.github.io//posts/a2043eea.html"/>
-    <id>https://yangyfeng.github.io//posts/a2043eea.html</id>
-    <published>2020-09-09T09:55:00.000Z</published>
-    <updated>2020-12-11T09:11:51.791Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;在开发react应用时，应该没有人用传统的方法引入react的源文件(js)，然后在html编辑吧。&lt;/p&gt;
-&lt;p&gt;大家都是用webpack + es6来结合react开发前端应用。&lt;/p&gt;
-&lt;p&gt;这个时候，我们可以手动使用npm来安装各种插件，来从头到尾自己搭建环境。&lt;/p&gt;
-&lt;p&gt;比如：&lt;/p&gt;
-&lt;figure class=&quot;highlight mipsasm&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm &lt;span class=&quot;keyword&quot;&gt;install &lt;/span&gt;react react-dom --save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm &lt;span class=&quot;keyword&quot;&gt;install &lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;babel &lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;babel-loader &lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;babel-core &lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;babel-preset-es2015 &lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;babel-preset-react &lt;/span&gt;--save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm &lt;span class=&quot;keyword&quot;&gt;install &lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;babel &lt;/span&gt;webpack webpack-dev-server -g&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="create-react-app" scheme="https://yangyfeng.github.io/blogpost/tags/create-react-app/"/>
-    
-      <category term="react" scheme="https://yangyfeng.github.io/blogpost/tags/react/"/>
     
   </entry>
   

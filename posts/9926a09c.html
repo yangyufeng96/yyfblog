@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Tag: 原理 | 峰享会</title>
+  <title>什么是JS调用栈 | 峰享会</title>
   
   <meta name="keywords" content="前端开发,科技,数据可视化,移动开发,小程序,客户端">
   
@@ -57,7 +57,7 @@
   
   
   <div class="cover-wrapper">
-    <cover class='cover  half'>
+    <cover class='cover post half'>
       
         
   <h1 class='title'>路漫漫而上下求索</h1>
@@ -375,25 +375,12 @@
 
   <div class="l_body">
     <div class='body-wrapper'>
-      
-<div class='l_main'>
+      <div class='l_main'>
   
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
+
   
+    <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+      
 
 
   <section class='meta'>
@@ -402,11 +389,13 @@
     <div class="meta" id="header-meta">
       
         
-  <h2 class="title">
-    <a href="/posts/41e3ecae.html">
-      浏览器是如何运作的
-    </a>
-  </h2>
+  
+    <h1 class="title">
+      <a href="/posts/9926a09c.html">
+        什么是JS调用栈
+      </a>
+    </h1>
+  
 
 
       
@@ -442,9 +431,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/blogpost/categories/浏览器/' rel="nofollow">
+    <a href='/blogpost/categories/深入前端/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>浏览器</p>
+      <p>深入前端</p>
     </a>
   </div>
 
@@ -453,6 +442,19 @@
         
           
             
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
+
 
           
         
@@ -466,14 +468,14 @@
           <div class="new-meta-item size">
             <a class="notlink">
               <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>1.1k字</p>
+              <p>203字</p>
             </a>
           </div>
           <!-- 阅读时间 -->
           <div class="new-meta-item read-time">
             <a class="notlink">
               <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>3分</p>
+              <p>1分</p>
             </a>
           </div>
         
@@ -485,78 +487,218 @@
   </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h2 id="浏览器是多进程结构的"><a href="#浏览器是多进程结构的" class="headerlink" title="浏览器是多进程结构的"></a>浏览器是多进程结构的</h2><p><strong>进程</strong></p>
-<p>操作系统进行资源分配和调度的基本单元。可以申请和拥有计算机资源，进程是程序的基本执行实体。两个进程分配的资源和内存是独立，如果需要通信就要使用进程通信管道IPC来传递信息。</p>
-<p><strong>线程</strong></p>
-<p>操作系统能够进行运算调度的最小单位，一个进程中可以并发多个线程，每条线程并行执行不同的任务。</p>
-<p><strong>浏览器功能进程拆解</strong></p>
-<p><a href="https://imgchr.com/i/rDbTde" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/22/rDbTde.png" alt="rDbTde.png"></a></p>
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          <p><strong>概念</strong></p>
+<p>栈：先进后出，进栈，出栈，与堆栈不同</p>
+<p>队列：先进先出</p>
+<p>调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用了哪个函数</p>
+<p><strong>例子</strong></p>
+<p>调用栈，调用函数执行才回入栈</p>
 <ol>
-<li><p>浏览器进程</p>
-<p>控制除标签页外的用户界面，包括地址，书签，后退，前进按钮等，以及负责与浏览器其他进程负责协调工作</p>
+<li><p>push  average()</p>
 </li>
-<li><p>缓存进程</p>
-<p>负责控制浏览器的存储数据的缓存和读取</p>
+<li><p>push  sum()</p>
 </li>
-<li><p>网络进程 </p>
-<p>发起和接受网络请求</p>
+<li><p>shift  sum()</p>
 </li>
-<li><p>渲染器进程 </p>
-<p>渲染Tab  有可能会为每个标签页是一个渲染进程</p>
+<li><p>shift  average()</p>
 </li>
-<li><p>GPU进程</p>
-<p>整个浏览器界面的渲染</p>
+<li><p>push  console.log()</p>
 </li>
-<li><p>插件进程</p>
-<p>控制网站使用的所有内置插件，例如：flash</p>
+<li><p>shift  console.log()</p>
 </li>
 </ol>
-<p><strong>浏览器结构图</strong></p>
-<p><a href="https://imgchr.com/i/rDoRuF" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/22/rDoRuF.png" alt="rDoRuF.png"></a></p>
-<p>说明：</p>
-<p>用户界面：展示除了标签页窗口之外的其他用户用户界面内容</p>
-<p>渲染引擎：渲染用户获取数据的渲染内容。一下还有很多小的功能模块，如负责网络请求的网络模块，用于解析和执行js的js解释器</p>
-<p>浏览器引擎：用户界面和渲染引擎之间传递数据</p>
-<p>数据持久层：帮助浏览器存储持久数据，如cokies和storage。</p>
-<p><strong>我们称呼的内核就是指的渲染引擎，是整个浏览器的核心和灵魂</strong></p>
-<p>Chromium会给用户创建的每一个访问实例分配一个进程，确保每一个页面是独立呈现的，并且对每个网站的独立访问也是彼此隔离的。访问不同站点和同一站点的不同页面都会创建新的进程。一个标签就是一个新的渲染器进程。</p>
-      
-        <div class="readmore">
-          <a href="/posts/41e3ecae.html" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">average</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">const</span> aver = sum(a, b) / <span class="number">2</span>;</span><br><span class="line"> <span class="keyword">return</span> aver;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> num = average(<span class="number">3</span>, <span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(num);</span><br></pre></td></tr></table></figure>
+<p><strong>tips</strong></p>
+<p>用栈持持续被调用，会导致内存溢出</p>
+<p>原因是因为，JS主线程被占用会造成堵塞：事件循环，异步回调(宏任务，微任务，面试必问哦)</p>
+
         </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <hr>
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-22T16:45:39+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>最后更新于 2020年12月22日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/JS运行原理/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>JS运行原理</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://yangyfeng.github.io/posts/9926a09c.html&title=什么是JS调用栈 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yangyfeng.github.io/posts/9926a09c.html&title=什么是JS调用栈 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://yangyfeng.github.io/posts/9926a09c.html&title=什么是JS调用栈 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJElEQVR42u3aS1IDMQwFwNz/0mFLFcF5kmYoYvesKEjGbi+E9Xk84ufZer5/d/3mn6s87ngwMDA+lpFvZb3F9bfWG83X/ZWKgYFxACMJhdVAmSyfHM16bxgYGBgJoxdwqyQMDAyMnNFLMtdbx8DAwEgYecmseuGbXAdvycUxMDA+kJGHy7//+Zb+BgYGxkcxei3JJOxWW5h5kH2xIgYGxtaMPMD1kL3fVPeDgYFxDqMXdq/d9ORQMDAwdmUkw1i9gJg3BuYlPwwMjL0Zvctfc4H4r6Mjw8DA2JrRK9ZX25D5d/PQjIGBcRojH+Ral/LzNHV9WOvPXzCPhoGB8e8Z1XGuvIVZfWd+xi9IGBgYWzPyj+YNy3xsIm8w5AVBDAyMvRmTJmW1fJYH9GrBDgMDY1dGNZgmYbF6ZcyPo9DZwMDA2IIxWXLeAJi850UujoGBcQCjl9BeNX4xKfZhYGDszeiNL6wxE3DvqoqBgXEC46q5hR67d3CFzgYGBsYWjLxJWU1lq4W26mG9+b+BgYGxKSOBVVPWSauyPCGCgYGxNeOOQti8eVloZ2JgYGzKeBafvNA/L9sVqBgYGFsz5iWzyRvyQP9m2AIDA+MARh5k86tknr5e1orAwMA4gNELfFcVy6pJ7K9jYRgYGBjLwJoE3Dw1Lbc5MTAwMMYl/vy62TsODAyMExh5MyBPO/OmQjV5xsDAOI3Rq2VNxsWuag9gYGAcwPgC8hnbGZeH6SsAAAAASUVORK5CYII='>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+        
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJElEQVR42u3aS1IDMQwFwNz/0mFLFcF5kmYoYvesKEjGbi+E9Xk84ufZer5/d/3mn6s87ngwMDA+lpFvZb3F9bfWG83X/ZWKgYFxACMJhdVAmSyfHM16bxgYGBgJoxdwqyQMDAyMnNFLMtdbx8DAwEgYecmseuGbXAdvycUxMDA+kJGHy7//+Zb+BgYGxkcxei3JJOxWW5h5kH2xIgYGxtaMPMD1kL3fVPeDgYFxDqMXdq/d9ORQMDAwdmUkw1i9gJg3BuYlPwwMjL0Zvctfc4H4r6Mjw8DA2JrRK9ZX25D5d/PQjIGBcRojH+Ral/LzNHV9WOvPXzCPhoGB8e8Z1XGuvIVZfWd+xi9IGBgYWzPyj+YNy3xsIm8w5AVBDAyMvRmTJmW1fJYH9GrBDgMDY1dGNZgmYbF6ZcyPo9DZwMDA2IIxWXLeAJi850UujoGBcQCjl9BeNX4xKfZhYGDszeiNL6wxE3DvqoqBgXEC46q5hR67d3CFzgYGBsYWjLxJWU1lq4W26mG9+b+BgYGxKSOBVVPWSauyPCGCgYGxNeOOQti8eVloZ2JgYGzKeBafvNA/L9sVqBgYGFsz5iWzyRvyQP9m2AIDA+MARh5k86tknr5e1orAwMA4gNELfFcVy6pJ7K9jYRgYGBjLwJoE3Dw1Lbc5MTAwMMYl/vy62TsODAyMExh5MyBPO/OmQjV5xsDAOI3Rq2VNxsWuag9gYGAcwPgC8hnbGZeH6SsAAAAASUVORK5CYII='>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
+        
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
       
     </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blogpost/tags/原理/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>原理</a>
-        
-      </div>
-    
   </section>
-</article>
 
-          </div>
+
         
-      
-    
-  </section>
+        
+            <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                            <h4>
+                                <a href="/posts/17da10f8.html" rel="prev" title="javascript是如何被运行的">
+                                  
+                                      javascript是如何被运行的
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/blogpost/tags/javascript/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>javascript</a> <a class="tag" href="/blogpost/tags/JS运行原理/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>JS运行原理</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/posts/c35109d5.html" rel="prev" title="互联网是如何运作的">
+                                    
+                                        互联网是如何运作的
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/blogpost/tags/tcp/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>tcp</a> <a class="tag" href="/blogpost/tags/http/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>http</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+      </section>
+    </article>
   
-    
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
 
   
 
 
-    
   
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: '什么是JS调用栈',
+      tools: true
+    }
+  </script>
+
+<!-- gittalk -->
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<div id="gitalk-container" style="margin: 0 5px;"></div>
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: 'c9d3bfe9137dc2038a1a',
+    clientSecret: '1ecb6999a152dad80e08c672ac5a779b92eb6ec0',
+    id: window.location.pathname,
+    repo: 'yangyfeng.github.io',
+    owner: 'yangyfeng',
+    admin: 'yangyfeng'
+  })
+  gitalk.render('gitalk-container')
+</script>
+
 </div>
 <aside class='l_side'>
   
@@ -756,7 +898,7 @@
         
           <li><a class="flat-box" title="/blogpost/categories/GoLang/" href="/blogpost/categories/GoLang/"><div class='name'>GoLang</div><div class='badge'>(1)</div></a></li>
         
-          <li><a class="flat-box" title="/blogpost/categories/Http/" href="/blogpost/categories/Http/"><div class='name'>Http</div><div class='badge'>(3)</div></a></li>
+          <li><a class="flat-box" title="/blogpost/categories/Http/" href="/blogpost/categories/Http/"><div class='name'>Http</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box" title="/blogpost/categories/Node/" href="/blogpost/categories/Node/"><div class='name'>Node</div><div class='badge'>(2)</div></a></li>
         
@@ -766,7 +908,7 @@
         
           <li><a class="flat-box" title="/blogpost/categories/开发工具/" href="/blogpost/categories/开发工具/"><div class='name'>开发工具</div><div class='badge'>(4)</div></a></li>
         
-          <li><a class="flat-box" title="/blogpost/categories/浏览器/" href="/blogpost/categories/浏览器/"><div class='name'>浏览器</div><div class='badge'>(1)</div></a></li>
+          <li><a class="flat-box" title="/blogpost/categories/深入前端/" href="/blogpost/categories/深入前端/"><div class='name'>深入前端</div><div class='badge'>(6)</div></a></li>
         
       </ul>
     </div>
@@ -797,7 +939,7 @@
 </header>
 
     <div class='content material'>
-      <a href="/blogpost/tags/create-react-app/" style="font-size: 16.5px; color: #888">create-react-app</a> <a href="/blogpost/tags/devops/" style="font-size: 14px; color: #999">devops</a> <a href="/blogpost/tags/excel/" style="font-size: 14px; color: #999">excel</a> <a href="/blogpost/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/blogpost/tags/http/" style="font-size: 14px; color: #999">http</a> <a href="/blogpost/tags/less/" style="font-size: 14px; color: #999">less</a> <a href="/blogpost/tags/react/" style="font-size: 16.5px; color: #888">react</a> <a href="/blogpost/tags/tcp/" style="font-size: 14px; color: #999">tcp</a> <a href="/blogpost/tags/vscode/" style="font-size: 16.5px; color: #888">vscode</a> <a href="/blogpost/tags/vue/" style="font-size: 24px; color: #555">vue</a> <a href="/blogpost/tags/webpack/" style="font-size: 16.5px; color: #888">webpack</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 19px; color: #777">前端工程化</a> <a href="/blogpost/tags/原理/" style="font-size: 14px; color: #999">原理</a> <a href="/blogpost/tags/开发工具/" style="font-size: 16.5px; color: #888">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/面试题/" style="font-size: 21.5px; color: #666">面试题</a>
+      <a href="/blogpost/tags/JS运行原理/" style="font-size: 18px; color: #7e7e7e">JS运行原理</a> <a href="/blogpost/tags/V8引擎/" style="font-size: 14px; color: #999">V8引擎</a> <a href="/blogpost/tags/create-react-app/" style="font-size: 16px; color: #8b8b8b">create-react-app</a> <a href="/blogpost/tags/devops/" style="font-size: 14px; color: #999">devops</a> <a href="/blogpost/tags/event-loop/" style="font-size: 14px; color: #999">event loop</a> <a href="/blogpost/tags/excel/" style="font-size: 14px; color: #999">excel</a> <a href="/blogpost/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/blogpost/tags/http/" style="font-size: 14px; color: #999">http</a> <a href="/blogpost/tags/javascript/" style="font-size: 16px; color: #8b8b8b">javascript</a> <a href="/blogpost/tags/less/" style="font-size: 14px; color: #999">less</a> <a href="/blogpost/tags/react/" style="font-size: 16px; color: #8b8b8b">react</a> <a href="/blogpost/tags/tcp/" style="font-size: 14px; color: #999">tcp</a> <a href="/blogpost/tags/vscode/" style="font-size: 16px; color: #8b8b8b">vscode</a> <a href="/blogpost/tags/vue/" style="font-size: 24px; color: #555">vue</a> <a href="/blogpost/tags/webpack/" style="font-size: 16px; color: #8b8b8b">webpack</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 20px; color: #707070">前端工程化</a> <a href="/blogpost/tags/开发工具/" style="font-size: 16px; color: #8b8b8b">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/浏览器运行原理/" style="font-size: 14px; color: #999">浏览器运行原理</a> <a href="/blogpost/tags/面试题/" style="font-size: 22px; color: #636363">面试题</a>
     </div>
   </section>
 
@@ -809,6 +951,18 @@
           
           
             
+  <section class='widget related_posts'>
+    
+<header class='material'>
+  <div><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;相关文章</div>
+  
+</header>
+
+    <div class="content material">
+      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\cf2c43d.html" title="V8引擎是如何运行JS" rel="bookmark">V8引擎是如何运行JS</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\17da10f8.html" title="javascript是如何被运行的" rel="bookmark">javascript是如何被运行的</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\62b88241.html" title="js的事件循环是什么" rel="bookmark">js的事件循环是什么</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\c35109d5.html" title="互联网是如何运作的" rel="bookmark">互联网是如何运作的</a></h3></div></li></ul>
+    </div>
+  </section>
+
 
           
         
@@ -910,7 +1064,7 @@
     
       <span>
         <b class="fas fa-database"></b>
-        本站字数：<span class="post-count">50.4k</span>
+        本站字数：<span class="post-count">51.9k</span>
       </span>
     
     <!-- 网站运行时间 -->
