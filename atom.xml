@@ -6,7 +6,7 @@
   <link href="/./atom.xml" rel="self"/>
   
   <link href="https://yangyfeng.github.io/"/>
-  <updated>2020-12-24T08:41:04.790Z</updated>
+  <updated>2021-01-11T05:06:55.760Z</updated>
   <id>https://yangyfeng.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Babel转码器</title>
+    <link href="https://yangyfeng.github.io//posts/390a51fc.html"/>
+    <id>https://yangyfeng.github.io//posts/390a51fc.html</id>
+    <published>2021-01-07T16:00:00.000Z</published>
+    <updated>2021-01-11T05:06:55.760Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt; &lt;a href=&quot;https://babeljs.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Babel&lt;/a&gt; 是一个广泛使用的 ES6 转码器(下一代的JavaScript编译器)，可以将 ES6 代码转为 ES5
+        
+      
+    
+    </summary>
+    
+      <category term="Es6" scheme="https://yangyfeng.github.io/blogpost/categories/Es6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>globalThis对象</title>
+    <link href="https://yangyfeng.github.io//posts/180dd8a3.html"/>
+    <id>https://yangyfeng.github.io//posts/180dd8a3.html</id>
+    <published>2021-01-07T16:00:00.000Z</published>
+    <updated>2021-01-08T03:37:10.534Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt; JavaScript 语言存在一个顶层对象，它提供全局环境（即全局作用域），所有代码都是在这个环境中运行。但是，顶层对象在各种实现里面是不统一的。 &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;浏览器里面，顶层对象是&lt;code&gt;window&lt;/code&gt;，但 Node 和 Web
+        
+      
+    
+    </summary>
+    
+      <category term="Es6" scheme="https://yangyfeng.github.io/blogpost/categories/Es6/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>js 优化for循环-Duff装置</title>
@@ -107,6 +157,61 @@
   </entry>
   
   <entry>
+    <title>js的事件循环是什么</title>
+    <link href="https://yangyfeng.github.io//posts/62b88241.html"/>
+    <id>https://yangyfeng.github.io//posts/62b88241.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:51.778Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;事件循环的机制&quot;&gt;&lt;a href=&quot;#事件循环的机制&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="event loop" scheme="https://yangyfeng.github.io/blogpost/tags/event-loop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么是JS调用栈</title>
+    <link href="https://yangyfeng.github.io//posts/9926a09c.html"/>
+    <id>https://yangyfeng.github.io//posts/9926a09c.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:41.337Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;栈：先进后出，进栈，出栈，与堆栈不同&lt;/p&gt;
+&lt;p&gt;队列：先进先出&lt;/p&gt;
+&lt;p&gt;调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用
+        
+      
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>互联网是如何运作的</title>
     <link href="https://yangyfeng.github.io//posts/c35109d5.html"/>
     <id>https://yangyfeng.github.io//posts/c35109d5.html</id>
@@ -145,32 +250,6 @@
       <category term="tcp" scheme="https://yangyfeng.github.io/blogpost/tags/tcp/"/>
     
       <category term="http" scheme="https://yangyfeng.github.io/blogpost/tags/http/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js的事件循环是什么</title>
-    <link href="https://yangyfeng.github.io//posts/62b88241.html"/>
-    <id>https://yangyfeng.github.io//posts/62b88241.html</id>
-    <published>2020-12-21T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:51.778Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;事件循环的机制&quot;&gt;&lt;a href=&quot;#事件循环的机制&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="event loop" scheme="https://yangyfeng.github.io/blogpost/tags/event-loop/"/>
     
   </entry>
   
@@ -225,35 +304,6 @@
     
     
       <category term="浏览器运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>什么是JS调用栈</title>
-    <link href="https://yangyfeng.github.io//posts/9926a09c.html"/>
-    <id>https://yangyfeng.github.io//posts/9926a09c.html</id>
-    <published>2020-12-21T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:41.337Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;栈：先进后出，进栈，出栈，与堆栈不同&lt;/p&gt;
-&lt;p&gt;队列：先进先出&lt;/p&gt;
-&lt;p&gt;调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用
-        
-      
-    
-    </summary>
-    
-      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
@@ -335,34 +385,6 @@
   </entry>
   
   <entry>
-    <title>深入webpack</title>
-    <link href="https://yangyfeng.github.io//posts/a441c8bd.html"/>
-    <id>https://yangyfeng.github.io//posts/a441c8bd.html</id>
-    <published>2020-12-15T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:13.138Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;实现步骤：&quot;&gt;&lt;a href=&quot;#实现步骤：&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="webpack" scheme="https://yangyfeng.github.io/blogpost/tags/webpack/"/>
-    
-      <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
     <title>深入前端模块化</title>
     <link href="https://yangyfeng.github.io//posts/c00659d0.html"/>
     <id>https://yangyfeng.github.io//posts/c00659d0.html</id>
@@ -411,6 +433,34 @@
       <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
     
       <category term="模块化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深入webpack</title>
+    <link href="https://yangyfeng.github.io//posts/a441c8bd.html"/>
+    <id>https://yangyfeng.github.io//posts/a441c8bd.html</id>
+    <published>2020-12-15T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:13.138Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;实现步骤：&quot;&gt;&lt;a href=&quot;#实现步骤：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+      <category term="webpack" scheme="https://yangyfeng.github.io/blogpost/tags/webpack/"/>
     
   </entry>
   
@@ -644,104 +694,6 @@
     
     
       <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>什么是PWA</title>
-    <link href="https://yangyfeng.github.io//posts/138dbef8.html"/>
-    <id>https://yangyfeng.github.io//posts/138dbef8.html</id>
-    <published>2020-11-18T01:40:00.000Z</published>
-    <updated>2020-12-22T09:32:23.005Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、背景&quot;&gt;&lt;a href=&quot;#一、背景&quot; class=&quot;headerlink&quot; title=&quot;一、背景&quot;&gt;&lt;/a&gt;一、背景&lt;/h1&gt;&lt;p&gt;大家都知道Native app体验确实很好，下载到手机上之后入口也方便。它也有一些缺点:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;开发成本高(ios和安卓)&lt;/li&gt;
-&lt;li&gt;软件上线需要审核&lt;/li&gt;
-&lt;li&gt;版本更新需要将新版本上传到不同的应用商店&lt;/li&gt;
-&lt;li&gt;想使用一个app就必须去下载才能使用，即使是偶尔需要使用一下下&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;而web网页开发成本低，网站更新时上传最新的资源到服务器即可，用手机带的浏览器打开就可以使用。但是除了体验上比Native app还是差一些，还有一些明显的缺点&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;手机桌面入口不够便捷，想要进入一个页面必须要记住它的url或者加入书签&lt;/li&gt;
-&lt;li&gt;没网络就没响应，不具备离线能力&lt;/li&gt;
-&lt;li&gt;不像APP一样能进行消息推送&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;那么什么是PWA呢？&lt;/p&gt;
-&lt;h1 id=&quot;二、What’s-PWA&quot;&gt;&lt;a href=&quot;#二、What’s-PWA&quot; class=&quot;headerlink&quot; title=&quot;二、What’s PWA?&quot;&gt;&lt;/a&gt;二、What’s PWA?&lt;/h1&gt;&lt;p&gt;PWA全称Progressive Web App，即渐进式WEB应用。&lt;/p&gt;
-&lt;p&gt;一个 PWA 应用首先是一个网页, 可以通过 Web 技术编写出一个网页应用. 随后添加上 App Manifest 和 Service Worker 来实现 PWA 的安装和离线等功能&lt;/p&gt;
-&lt;p&gt;解决了哪些问题？&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;可以添加至主屏幕，点击主屏幕图标可以实现启动动画以及隐藏地址栏&lt;/li&gt;
-&lt;li&gt;实现离线缓存功能，即使用户手机没有网络，依然可以使用一些离线功能&lt;/li&gt;
-&lt;li&gt;实现了消息推送&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;它解决了上述提到的问题，这些特性将使得 Web 应用渐进式接近原生 App。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>⼤⼚⾯试章法</title>
-    <link href="https://yangyfeng.github.io//posts/37eb3f8a.html"/>
-    <id>https://yangyfeng.github.io//posts/37eb3f8a.html</id>
-    <published>2020-11-16T01:22:00.000Z</published>
-    <updated>2020-12-22T09:30:59.600Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;简历&quot;&gt;&lt;a href=&quot;#简历&quot; class=&quot;headerlink&quot; title=&quot;简历&quot;&gt;&lt;/a&gt;简历&lt;/h2&gt;&lt;p&gt;2⻚以内，简历有点类似相亲的介绍，⼩时候拿过三好学&lt;/p&gt;
-&lt;p&gt;⽣就别说了，就像别写你会html+css，别写你⽤vue做 &lt;/p&gt;
-&lt;p&gt;过todolist⼀样&lt;/p&gt;
-&lt;p&gt;突出⾃⼰的技术亮点&lt;/p&gt;
-&lt;p&gt;别瞎写精通&lt;/p&gt;
-&lt;p&gt;markdown就好，别⽤word&lt;/p&gt;
-&lt;p&gt;突出亮点！&lt;/p&gt;
-&lt;h2 id=&quot;⽬标公司&quot;&gt;&lt;a href=&quot;#⽬标公司&quot; class=&quot;headerlink&quot; title=&quot;⽬标公司&quot;&gt;&lt;/a&gt;⽬标公司&lt;/h2&gt;&lt;p&gt;天眼查，脉脉，知乎&lt;/p&gt;
-&lt;h2 id=&quot;如何描述做过的项⽬&quot;&gt;&lt;a href=&quot;#如何描述做过的项⽬&quot; class=&quot;headerlink&quot; title=&quot;如何描述做过的项⽬&quot;&gt;&lt;/a&gt;如何描述做过的项⽬&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;做过的明星项⽬&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;项⽬技术栈和细节&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;源码深度&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;优化，性能，体验，极客&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;填坑&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;成⻓&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;⾯试技巧合计&quot;&gt;&lt;a href=&quot;#⾯试技巧合计&quot; class=&quot;headerlink&quot; title=&quot;⾯试技巧合计&quot;&gt;&lt;/a&gt;⾯试技巧合计&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;认识⾃⼰（市场）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;阐述优势&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;谈判得来的 都是纯利润&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;hr细节(考勤，补贴，996，五险⼀⾦，补贴&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;⼀个⾯试题的精讲&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;精讲面试题之前端⽂件上传&quot;&gt;&lt;a href=&quot;#精讲面试题之前端⽂件上传&quot; class=&quot;headerlink&quot; title=&quot;精讲面试题之前端⽂件上传&quot;&gt;&lt;/a&gt;精讲面试题之前端⽂件上传&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;1、原理概述&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;考察全栈思维，http协议 ，node⽂件处理&lt;/p&gt;
-&lt;p&gt;我⽤vue+element+nodejs来演示&lt;/p&gt;
-&lt;p&gt;基本答案 （&lt;strong&gt;10K&lt;/strong&gt;）&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="面试题" scheme="https://yangyfeng.github.io/blogpost/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   

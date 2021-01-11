@@ -404,6 +404,14 @@
           
         
           
+        
+          
+        
+          
+        
+          
+        
+          
             
               <div class='post-wrapper'>
                 <article class="post reveal ">
@@ -535,24 +543,6 @@
 
               </div>
             
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
           
         
           
@@ -756,9 +746,279 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/posts/390a51fc.html">
+      Babel转码器
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://yangyfeng.github.io" rel="nofollow">
+      
+        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
+      
+      <p>漫道求索</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2021-01-08</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/blogpost/categories/Es6/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Es6</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+        
+          <!-- 文章字体个数 -->
+          <div class="new-meta-item size">
+            <a class="notlink">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+              <p>662字</p>
+            </a>
+          </div>
+          <!-- 阅读时间 -->
+          <div class="new-meta-item read-time">
+            <a class="notlink">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <p>2分</p>
+            </a>
+          </div>
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p> <a href="https://babeljs.io/" target="_blank" rel="noopener">Babel</a> 是一个广泛使用的 ES6 转码器(下一代的JavaScript编译器)，可以将 ES6 代码转为 ES5 代码，从而在老版本的浏览器执行。这意味着，你可以用 ES6 的方式编写程序，又不用担心现有环境是否支持。下面是一个例子。 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 转码前</span></span><br><span class="line">input.map(<span class="function"><span class="params">item</span> =&gt;</span> item + <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 转码后</span></span><br><span class="line">input.map(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> item + <span class="number">1</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>上面的原始代码用了箭头函数，Babel 将其转为普通函数，就能在不支持箭头函数的 JavaScript 环境执行了。</p>
+<p>下面的命令在项目目录中，安装 Babel。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save-dev @babel/core</span><br></pre></td></tr></table></figure>
+<h2 id="配置文件-babelrc"><a href="#配置文件-babelrc" class="headerlink" title="配置文件.babelrc"></a>配置文件.babelrc</h2><p>Babel 的配置文件是<code>.babelrc</code>，存放在项目的根目录下。使用 Babel 的第一步，就是配置这个文件。</p>
+<p>该文件用来设置转码规则和插件，基本格式如下。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"presets"</span>: [],</span><br><span class="line">  <span class="string">"plugins"</span>: []</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> <code>presets</code>字段设定转码规则，官方提供以下的规则集，你可以根据需要安装。 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 最新转码规则</span></span><br><span class="line">$ npm install --save-dev @babel/preset-env</span><br><span class="line"></span><br><span class="line"><span class="comment"># react 转码规则</span></span><br><span class="line">$ npm install --save-dev @babel/preset-react</span><br></pre></td></tr></table></figure>
+<p> 然后，将这些规则加入<code>.babelrc</code>。 </p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   <span class="attr">"presets"</span>: [</span><br><span class="line">     <span class="string">"@babel/env"</span>,</span><br><span class="line">     <span class="string">"@babel/preset-react"</span></span><br><span class="line">   ],</span><br><span class="line">   <span class="attr">"plugins"</span>: []</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>注意，以下所有 Babel 工具和模块的使用，都必须先写好<code>.babelrc</code>。</p>
+<h2 id="命令行转码"><a href="#命令行转码" class="headerlink" title="命令行转码"></a>命令行转码</h2><p> Babel 提供命令行工具<code>@babel/cli</code>，用于命令行转码。 </p>
+<p> 它的安装命令如下。 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save-dev @babel/cli</span><br></pre></td></tr></table></figure>
+<p> 基本用法如下。 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 转码结果输出到标准输出</span></span><br><span class="line">$ npx babel example.js</span><br><span class="line"></span><br><span class="line"><span class="comment"># 转码结果写入一个文件</span></span><br><span class="line"><span class="comment"># --out-file 或 -o 参数指定输出文件</span></span><br><span class="line">$ npx babel example.js --out-file compiled.js</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">$ npx babel example.js -o compiled.js</span><br><span class="line"></span><br><span class="line"><span class="comment"># 整个目录转码</span></span><br><span class="line"><span class="comment"># --out-dir 或 -d 参数指定输出目录</span></span><br><span class="line">$ npx babel src --out-dir lib</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">$ npx babel src -d lib</span><br><span class="line"></span><br><span class="line"><span class="comment"># -s 参数生成source map文件</span></span><br><span class="line">$ npx babel src -d lib -s</span><br></pre></td></tr></table></figure>
+<h2 id="polyfill"><a href="#polyfill" class="headerlink" title="polyfill"></a>polyfill</h2><p>Babel 默认只转换新的 JavaScript 句法（syntax），而不转换新的 API，比如<code>Iterator</code>、<code>Generator</code>、<code>Set</code>、<code>Map</code>、<code>Proxy</code>、<code>Reflect</code>、<code>Symbol</code>、<code>Promise</code>等全局对象，以及一些定义在全局对象上的方法（比如<code>Object.assign</code>）都不会转码。</p>
+<p>举例来说，ES6 在<code>Array</code>对象上新增了<code>Array.from</code>方法。Babel 就不会转码这个方法。如果想让这个方法运行，可以使用<code>core-js</code>和<code>regenerator-runtime</code>(后者提供generator函数的转码)，为当前环境提供一个垫片。</p>
+<p> 安装命令如下。 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save-dev core-js regenerator-runtime</span><br></pre></td></tr></table></figure>
+<p> 然后，在脚本头部，加入如下两行代码。 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'core-js'</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">'regenerator-runtime/runtime'</span>;</span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">'core-js'</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">'regenerator-runtime/runtime);</span></span><br></pre></td></tr></table></figure>
+<p> Babel 默认不转码的 API 非常多，详细清单可以查看<code>babel-plugin-transform-runtime</code>模块的<a href="https://github.com/babel/babel/blob/master/packages/babel-plugin-transform-runtime/src/runtime-corejs3-definitions.js" target="_blank" rel="noopener">definitions.js</a>文件。 </p>
+
+      
+    </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/posts/180dd8a3.html">
+      globalThis对象
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://yangyfeng.github.io" rel="nofollow">
+      
+        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
+      
+      <p>漫道求索</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2021-01-08</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/blogpost/categories/Es6/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Es6</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+        
+          <!-- 文章字体个数 -->
+          <div class="new-meta-item size">
+            <a class="notlink">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+              <p>485字</p>
+            </a>
+          </div>
+          <!-- 阅读时间 -->
+          <div class="new-meta-item read-time">
+            <a class="notlink">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <p>1分</p>
+            </a>
+          </div>
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p> JavaScript 语言存在一个顶层对象，它提供全局环境（即全局作用域），所有代码都是在这个环境中运行。但是，顶层对象在各种实现里面是不统一的。 </p>
+<ul>
+<li>浏览器里面，顶层对象是<code>window</code>，但 Node 和 Web Worker 没有<code>window</code>。</li>
+<li>浏览器和 Web Worker 里面，<code>self</code>也指向顶层对象，但是 Node 没有<code>self</code>。</li>
+<li><p>Node 里面，顶层对象是<code>global</code>，但其他环境都不支持。</p>
+<p>同一段代码为了能够在各种环境，都能取到顶层对象，现在一般是使用<code>this</code>变量，但是有局限性。 </p>
+</li>
+<li><p>全局环境中，<code>this</code>会返回顶层对象。但是，Node.js 模块中<code>this</code>返回的是当前模块，ES6 模块中<code>this</code>返回的是<code>undefined</code>。</p>
+</li>
+<li>函数里面的<code>this</code>，如果函数不是作为对象的方法运行，而是单纯作为函数运行，<code>this</code>会指向顶层对象。但是，严格模式下，这时<code>this</code>会返回<code>undefined</code>。</li>
+<li><p>不管是严格模式，还是普通模式，<code>new Function(&#39;return this&#39;)()</code>，总是会返回全局对象。但是，如果浏览器用了 CSP（Content Security Policy，内容安全策略），那么<code>eval</code>、<code>new Function</code>这些方法都可能无法使用。</p>
+<p>综上所述，很难找到一种方法，可以在所有情况下，都取到顶层对象。下面是两种勉强可以使用的方法。 </p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 方法一</span></span><br><span class="line">(<span class="keyword">typeof</span> <span class="built_in">window</span> !== <span class="string">'undefined'</span></span><br><span class="line">   ? <span class="built_in">window</span></span><br><span class="line">   : (<span class="keyword">typeof</span> process === <span class="string">'object'</span> &amp;&amp;</span><br><span class="line">      <span class="keyword">typeof</span> <span class="built_in">require</span> === <span class="string">'function'</span> &amp;&amp;</span><br><span class="line">      <span class="keyword">typeof</span> global === <span class="string">'object'</span>)</span><br><span class="line">     ? global</span><br><span class="line">     : <span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法二</span></span><br><span class="line"><span class="keyword">var</span> getGlobal = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> self !== <span class="string">'undefined'</span>) &#123; <span class="keyword">return</span> self; &#125;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="built_in">window</span> !== <span class="string">'undefined'</span>) &#123; <span class="keyword">return</span> <span class="built_in">window</span>; &#125;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> global !== <span class="string">'undefined'</span>) &#123; <span class="keyword">return</span> global; &#125;</span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'unable to locate global object'</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><a href="https://github.com/tc39/proposal-global" target="_blank" rel="noopener">ES2020</a> 在语言标准的层面，引入<code>globalThis</code>作为顶层对象。也就是说，任何环境下，<code>globalThis</code>都是存在的，都可以从它拿到顶层对象，指向全局环境下的<code>this</code>。</p>
+<p>垫片库<a href="https://github.com/ungap/global-this" target="_blank" rel="noopener"><code>global-this</code></a>模拟了这个提案，可以在所有环境拿到<code>globalThis</code>。</p>
+
+      
+    </div>
+    
+  </section>
+</article>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -1214,6 +1474,261 @@
       
         
   <h2 class="title">
+    <a href="/posts/62b88241.html">
+      js的事件循环是什么
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://yangyfeng.github.io" rel="nofollow">
+      
+        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
+      
+      <p>漫道求索</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-12-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/blogpost/categories/深入前端/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>深入前端</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+        
+          <!-- 文章字体个数 -->
+          <div class="new-meta-item size">
+            <a class="notlink">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+              <p>53字</p>
+            </a>
+          </div>
+          <!-- 阅读时间 -->
+          <div class="new-meta-item read-time">
+            <a class="notlink">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <p>1分</p>
+            </a>
+          </div>
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h2 id="事件循环的机制"><a href="#事件循环的机制" class="headerlink" title="事件循环的机制"></a>事件循环的机制</h2><p><strong>概念</strong></p>
+<p>宏任务：script(整个代码)、setTimeout、setInterval、setImmediate、I/O、UI rendering</p>
+<p>微任务：promise、Object.observe、MutationObserve</p>
+<p>任务的优先级：process.nextTick &gt; promise.then &gt; setTimeout &gt; setImmediate</p>
+<p><a href="https://mp.weixin.qq.com/s/7k4skVdCIhTsTdEFmXyYLg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/7k4skVdCIhTsTdEFmXyYLg</a></p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/blogpost/tags/event-loop/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>event loop</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/posts/9926a09c.html">
+      什么是JS调用栈
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://yangyfeng.github.io" rel="nofollow">
+      
+        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
+      
+      <p>漫道求索</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-12-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/blogpost/categories/深入前端/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>深入前端</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+        
+          <!-- 文章字体个数 -->
+          <div class="new-meta-item size">
+            <a class="notlink">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+              <p>203字</p>
+            </a>
+          </div>
+          <!-- 阅读时间 -->
+          <div class="new-meta-item read-time">
+            <a class="notlink">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <p>1分</p>
+            </a>
+          </div>
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p><strong>概念</strong></p>
+<p>栈：先进后出，进栈，出栈，与堆栈不同</p>
+<p>队列：先进先出</p>
+<p>调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用了哪个函数</p>
+<p><strong>例子</strong></p>
+<p>调用栈，调用函数执行才回入栈</p>
+<ol>
+<li><p>push  average()</p>
+</li>
+<li><p>push  sum()</p>
+</li>
+<li><p>shift  sum()</p>
+</li>
+<li><p>shift  average()</p>
+</li>
+<li><p>push  console.log()</p>
+</li>
+<li><p>shift  console.log()</p>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">average</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">const</span> aver = sum(a, b) / <span class="number">2</span>;</span><br><span class="line"> <span class="keyword">return</span> aver;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> num = average(<span class="number">3</span>, <span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(num);</span><br></pre></td></tr></table></figure>
+<p><strong>tips</strong></p>
+<p>用栈持持续被调用，会导致内存溢出</p>
+<p>原因是因为，JS主线程被占用会造成堵塞：事件循环，异步回调(宏任务，微任务，面试必问哦)</p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/blogpost/tags/JS运行原理/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>JS运行原理</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
     <a href="/posts/c35109d5.html">
       互联网是如何运作的
     </a>
@@ -1334,124 +1849,6 @@
           <a href="/blogpost/tags/tcp/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>tcp</a>
         
           <a href="/blogpost/tags/http/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>http</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/posts/62b88241.html">
-      js的事件循环是什么
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    <a href="https://yangyfeng.github.io" rel="nofollow">
-      
-        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
-      
-      <p>漫道求索</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-12-22</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blogpost/categories/深入前端/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>深入前端</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-        
-          <!-- 文章字体个数 -->
-          <div class="new-meta-item size">
-            <a class="notlink">
-              <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>53字</p>
-            </a>
-          </div>
-          <!-- 阅读时间 -->
-          <div class="new-meta-item read-time">
-            <a class="notlink">
-              <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>1分</p>
-            </a>
-          </div>
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h2 id="事件循环的机制"><a href="#事件循环的机制" class="headerlink" title="事件循环的机制"></a>事件循环的机制</h2><p><strong>概念</strong></p>
-<p>宏任务：script(整个代码)、setTimeout、setInterval、setImmediate、I/O、UI rendering</p>
-<p>微任务：promise、Object.observe、MutationObserve</p>
-<p>任务的优先级：process.nextTick &gt; promise.then &gt; setTimeout &gt; setImmediate</p>
-<p><a href="https://mp.weixin.qq.com/s/7k4skVdCIhTsTdEFmXyYLg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/7k4skVdCIhTsTdEFmXyYLg</a></p>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blogpost/tags/event-loop/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>event loop</a>
         
       </div>
     
@@ -1628,143 +2025,6 @@
       
         
   <h2 class="title">
-    <a href="/posts/9926a09c.html">
-      什么是JS调用栈
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    <a href="https://yangyfeng.github.io" rel="nofollow">
-      
-        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
-      
-      <p>漫道求索</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-12-22</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blogpost/categories/深入前端/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>深入前端</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-        
-          <!-- 文章字体个数 -->
-          <div class="new-meta-item size">
-            <a class="notlink">
-              <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>203字</p>
-            </a>
-          </div>
-          <!-- 阅读时间 -->
-          <div class="new-meta-item read-time">
-            <a class="notlink">
-              <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>1分</p>
-            </a>
-          </div>
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p><strong>概念</strong></p>
-<p>栈：先进后出，进栈，出栈，与堆栈不同</p>
-<p>队列：先进先出</p>
-<p>调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用了哪个函数</p>
-<p><strong>例子</strong></p>
-<p>调用栈，调用函数执行才回入栈</p>
-<ol>
-<li><p>push  average()</p>
-</li>
-<li><p>push  sum()</p>
-</li>
-<li><p>shift  sum()</p>
-</li>
-<li><p>shift  average()</p>
-</li>
-<li><p>push  console.log()</p>
-</li>
-<li><p>shift  console.log()</p>
-</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">average</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">const</span> aver = sum(a, b) / <span class="number">2</span>;</span><br><span class="line"> <span class="keyword">return</span> aver;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> num = average(<span class="number">3</span>, <span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(num);</span><br></pre></td></tr></table></figure>
-<p><strong>tips</strong></p>
-<p>用栈持持续被调用，会导致内存溢出</p>
-<p>原因是因为，JS主线程被占用会造成堵塞：事件循环，异步回调(宏任务，微任务，面试必问哦)</p>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blogpost/tags/JS运行原理/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>JS运行原理</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
     <a href="/posts/e210f74f.html">
       vue面试题（2）
     </a>
@@ -1903,308 +2163,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/posts/63fad71d.html">
-      面试题集锦（2）
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    <a href="https://yangyfeng.github.io" rel="nofollow">
-      
-        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
-      
-      <p>漫道求索</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-12-17</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blogpost/categories/前端/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>前端</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-        
-          <!-- 文章字体个数 -->
-          <div class="new-meta-item size">
-            <a class="notlink">
-              <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>814字</p>
-            </a>
-          </div>
-          <!-- 阅读时间 -->
-          <div class="new-meta-item read-time">
-            <a class="notlink">
-              <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>3分</p>
-            </a>
-          </div>
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h2 id="web安全攻击手段有哪些？以及如何防范"><a href="#web安全攻击手段有哪些？以及如何防范" class="headerlink" title="web安全攻击手段有哪些？以及如何防范"></a>web安全攻击手段有哪些？以及如何防范</h2><p>常见的有xss, csrf, sql注入</p>
-<p><strong>xss(cross site scripting) 跨站脚本攻击</strong></p>
-<p>定义: 指攻击者在网页嵌入脚本，用户浏览网页触发恶意脚本执行</p>
-<p>XSS攻击分为3类：存储型（持久型）、反射型（非持久型）、基于DOM</p>
-<p>如何防范:</p>
-<p>设置HttpOnly以避免cookie劫持的危险<br>过滤，对诸如<code>&lt;script&gt;、&lt;img&gt;、&lt;a&gt;</code>等标签进行过滤<br>编码，像一些常见的符号，如&lt;&gt;在输入的时候要对其进行转换编码<br>限制，对于一些可以预期的输入可以通过限制长度强制截断来进行防御</p>
-<p><strong>csrf(cross site request forgery) 跨站请求伪造</strong></p>
-<p>定义: 是一种劫持受信任用户向服务器发送非预期请求的攻击方式</p>
-<p>如何防范:</p>
-<p>验证 HTTP Referer 字段<br>请求地址中添加 token 并验证<br>HTTP 头中自定义属性并验证</p>
-<p><strong>sql注入(SQL injection)</strong></p>
-<p>定义: 在未授权情况下，非法访问数据库信息</p>
-<p>如何防范:</p>
-<p>杜绝用户提交的参数入库并且执行<br>在代码层，不准出现sql语句<br>在web输入参数处，对所有的参数做sql转义<br>上线测试，需要使用sql自动注入工具进行所有的页面sql注入测试</p>
-<h2 id="前端优化手段有哪些？"><a href="#前端优化手段有哪些？" class="headerlink" title="前端优化手段有哪些？"></a>前端优化手段有哪些？</h2><ul>
-<li>静态资源合并压缩(js,css, images)<ul>
-<li>请求数量优化</li>
-</ul>
-</li>
-<li>Gzip压缩<ul>
-<li>带宽优化</li>
-</ul>
-</li>
-<li>CDN<ul>
-<li>就近节点，减少DNS查找</li>
-</ul>
-</li>
-<li>按需加载</li>
-<li>lazyload<ul>
-<li>减少请求</li>
-</ul>
-</li>
-<li>骨架屏<ul>
-<li>优化白屏</li>
-</ul>
-</li>
-<li>web缓存<ul>
-<li>缓存ajax数据</li>
-</ul>
-</li>
-<li>减少重绘和重排<ul>
-<li>批量更新ＤＯＭ样式</li>
-</ul>
-</li>
-<li>页面结构<ul>
-<li>将样式表放在顶部，将脚本放在底部，尽早刷新文档的输出</li>
-</ul>
-</li>
-</ul>
-<h2 id="如何理解es6中的Decorator（装饰器）？"><a href="#如何理解es6中的Decorator（装饰器）？" class="headerlink" title="如何理解es6中的Decorator（装饰器）？"></a>如何理解es6中的Decorator（装饰器）？</h2><p><strong>定义</strong></p>
-<p>Decorator是ES7中的提案，概念借鉴于python， 它作用于一个目标类为其添加属性于方法</p>
-<p>我们用一个比喻来理解Decorator, 把孙悟空看成是一个类，那么棒子就是装饰器为其装备的武器</p>
-<p> 代码理解: </p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">@stick</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Monkey</span> </span>&#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">stick</span><span class="params">(target)</span> </span>&#123;<span class="comment">// 第一个参数就是目标类的本身</span></span><br><span class="line">  target.ATK = <span class="number">100000</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Monkey.ATK<span class="comment">// 为悟空装备了棒子，攻击力提高了100000</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果一个参数不够用，可以在装饰器外层再包一层</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">stick</span><span class="params">(atk)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="params">(targt)</span> </span>&#123;</span><br><span class="line">    target.ATK = atk</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@stick(<span class="number">200000</span>)<span class="comment">// 这样我们就为悟空增加了200000攻击力</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Monkey</span> </span>&#123; &#125;</span><br></pre></td></tr></table></figure>
-<p> Decorator 不仅能修饰类，也能修饰类的方法 </p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Monkey</span> </span>&#123;</span><br><span class="line">  <span class="meta">@setName</span></span><br><span class="line">  name() &#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">'孙悟空'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> Decorator 只能修饰类及类的方法,不能修饰于函数,因为存在函数提升 </p>
-<p><strong>Mixin</strong></p>
-<p> 在修饰器基础上，我们可以实现mixin(混入),意思在一个对象中混入另一个对象的方法 </p>
-<p> 代码示例: </p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">export <span class="function"><span class="keyword">function</span> <span class="title">mixins</span><span class="params">(<span class="rest_arg">...list</span>)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="params">(target)</span> </span>&#123;</span><br><span class="line">    Object.assign(target.prototype, ...list)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> skill = &#123;</span><br><span class="line">  shapeshifting() &#123;</span><br><span class="line">    console.log(<span class="string">'72变'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@mixins(skill)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Monkey</span> </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Object.assign(Monkey.prototype, skill)</span><br><span class="line"><span class="keyword">const</span> swk = <span class="keyword">new</span> Monkey()</span><br><span class="line">swk.shapeshifting() <span class="comment">// 72变</span></span><br></pre></td></tr></table></figure>
-<p><strong>使用Decorator的好处</strong></p>
-<ul>
-<li>扩展功能，相对于继承增加了更多的灵活性</li>
-<li>代码可读性更高，装饰器正确命名相当于注释</li>
-</ul>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blogpost/tags/面试题/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>面试题</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/posts/a441c8bd.html">
-      深入webpack
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    <a href="https://yangyfeng.github.io" rel="nofollow">
-      
-        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
-      
-      <p>漫道求索</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-12-16</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blogpost/categories/前端/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>前端</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-        
-          <!-- 文章字体个数 -->
-          <div class="new-meta-item size">
-            <a class="notlink">
-              <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>489字</p>
-            </a>
-          </div>
-          <!-- 阅读时间 -->
-          <div class="new-meta-item read-time">
-            <a class="notlink">
-              <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>2分</p>
-            </a>
-          </div>
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h2 id="实现步骤："><a href="#实现步骤：" class="headerlink" title="实现步骤："></a>实现步骤：</h2><p>0、读取webpack.config.js</p>
-<p>1、解析文件依赖</p>
-<p>2、替换require为<strong>webpack_require</strong></p>
-<p>3、本地使用{}存储所有的文件，然后通过使用为<strong>webpack_require</strong>获取文件内容，执行函数方式为evel的包裹代码字符串</p>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p><strong>index.js</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#! /usr/bin/env node</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 读取config</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"><span class="comment">// 默认配置</span></span><br><span class="line"><span class="keyword">const</span> defaultConfig = &#123;</span><br><span class="line">  entry: <span class="string">'./src/index.js'</span>,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="string">'build.js'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 最终的配置</span></span><br><span class="line"><span class="keyword">const</span> config = &#123;</span><br><span class="line">  ...defaultConfig,</span><br><span class="line">  ...require(path.resolve(<span class="string">'./mywebpack.config.js'</span>))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWebPack</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(config) &#123;</span><br><span class="line">    <span class="keyword">this</span>.config = config</span><br><span class="line">    <span class="keyword">this</span>.entry = config.entry</span><br><span class="line">    <span class="comment">// 根目录</span></span><br><span class="line">    <span class="keyword">this</span>.root = process.cwd()</span><br><span class="line">    <span class="comment">// 存储所有代码</span></span><br><span class="line">    <span class="keyword">this</span>.modules = &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  start() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'解析依赖'</span>)</span><br><span class="line">    <span class="keyword">const</span> entryPath = path.resolve(<span class="keyword">this</span>.root, <span class="keyword">this</span>.entry)</span><br><span class="line">    <span class="keyword">this</span>.createModule(entryPath, <span class="keyword">this</span>.entry)</span><br><span class="line">    <span class="comment">// 生成新文件</span></span><br><span class="line">    <span class="keyword">this</span>.generaleFile()</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 代码字符串</span></span><br><span class="line">  generaleModuleString() &#123;</span><br><span class="line">    <span class="keyword">let</span> fnTmp = <span class="string">''</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> name <span class="keyword">in</span> <span class="keyword">this</span>.modules) &#123;</span><br><span class="line">      fnTmp += <span class="string">`"<span class="subst">$&#123;name&#125;</span>":<span class="subst">$&#123;<span class="keyword">this</span>.modules[name].replace(<span class="regexp">/\r|\n/g</span>, <span class="string">""</span>)&#125;</span>,`</span></span><br><span class="line">    &#125;</span><br><span class="line">    fnTmp = fnTmp.substring(<span class="number">0</span>, fnTmp.length - <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">`&#123;<span class="subst">$&#123;fnTmp&#125;</span>&#125;`</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 生成新文件</span></span><br><span class="line">  generaleFile() &#123;</span><br><span class="line">    <span class="keyword">let</span> template = fs.readFileSync(path.resolve(__dirname, <span class="string">'./template.js'</span>), <span class="string">'utf-8'</span>)</span><br><span class="line">    <span class="keyword">this</span>.template = template.replace(<span class="string">'__entry__'</span>, <span class="keyword">this</span>.entry).replace(<span class="string">'__modules_content__'</span>, <span class="keyword">this</span>.generaleModuleString())</span><br><span class="line">    fs.mkdirSync(<span class="string">"./mydist"</span>);</span><br><span class="line">    fs.writeFileSync(<span class="string">'./mydist/'</span> + <span class="keyword">this</span>.config.output.filename, <span class="keyword">this</span>.template)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'写入文件完毕'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 创建依赖</span></span><br><span class="line">  createModule(modulePath, name) &#123;</span><br><span class="line">    <span class="comment">// 出现了循环依赖</span></span><br><span class="line">    <span class="comment">// if (this.modules[modulePath]) return</span></span><br><span class="line">    <span class="keyword">const</span> fileContent = fs.readFileSync(modulePath, <span class="string">'utf-8'</span>)</span><br><span class="line">    <span class="comment">// 替换后的代码和依赖数组</span></span><br><span class="line">    <span class="keyword">const</span> &#123; code, deps &#125; = <span class="keyword">this</span>.parse(fileContent, path.dirname(name))</span><br><span class="line">    <span class="keyword">this</span>.modules[name] = <span class="string">`function (module, module.exports, __mywebpack_require__) &#123;</span></span><br><span class="line"><span class="string">      eval(\`<span class="subst">$&#123;code&#125;</span>\`)</span></span><br><span class="line"><span class="string">    &#125;`</span></span><br><span class="line">    <span class="comment">// 循环获取所有依赖数组的内容</span></span><br><span class="line">    deps.forEach(<span class="function"><span class="params">dep</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">this</span>.createModule(path.join(<span class="keyword">this</span>.root, dep), <span class="string">'./'</span> + dep)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.modules)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 文件解析</span></span><br><span class="line">  parse(code, parent) &#123;</span><br><span class="line">    <span class="keyword">let</span> deps = []</span><br><span class="line">    <span class="keyword">let</span> r = <span class="regexp">/require\('(.*)'\)/g</span></span><br><span class="line">    <span class="comment">// require('xxx') 将require替换__mywebpack_require__</span></span><br><span class="line">    code = code.replace(r, <span class="function"><span class="keyword">function</span> (<span class="params">match, arg</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">const</span> retPath = path.join(parent, arg.replace(<span class="regexp">/'|"/g</span>, <span class="string">''</span>))</span><br><span class="line">      deps.push(retPath)</span><br><span class="line">      <span class="keyword">return</span> <span class="string">`__mywebpack_require__("./<span class="subst">$&#123;retPath&#125;</span>")`</span></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> &#123; code, deps &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> mywebpack = <span class="keyword">new</span> MyWebPack(config)</span><br><span class="line"></span><br><span class="line">mywebpack.start()</span><br></pre></td></tr></table></figure>
-<p><strong>template.js</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">!<span class="function"><span class="keyword">function</span> (<span class="params">modules</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 缓存</span></span><br><span class="line">  <span class="keyword">const</span> installModules = &#123;&#125;</span><br><span class="line">  <span class="comment">// 替换后的require</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">__mywebpack_require__</span>(<span class="params">moduleId</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 是否缓存</span></span><br><span class="line">    <span class="keyword">if</span> (installModules[moduleId]) &#123;</span><br><span class="line">      <span class="keyword">return</span> installModules[moduleId].exports</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> modules = installModules[moduleId] = &#123;</span><br><span class="line">      exports: &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    modules[moduleId].call(modules.exports, <span class="built_in">module</span>, exports, __mywebpack_require__)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">module</span>.exports</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 入口</span></span><br><span class="line">  <span class="keyword">return</span> __mywebpack_require__(<span class="string">"__entry__"</span>)</span><br><span class="line">&#125;(__modules_content__)</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blogpost/tags/webpack/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>webpack</a>
-        
-          <a href="/blogpost/tags/前端工程化/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>前端工程化</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
     
   </section>
   
@@ -2214,7 +2172,7 @@
         <div class="prev-next">
           
           <p class="current">
-            1 / 4
+            1 / 5
           </p>
           
             <a class="next" rel="next" href="/page/2/">
@@ -2429,6 +2387,8 @@
     <div class='content material'>
       <ul class="entry">
         
+          <li><a class="flat-box" title="/blogpost/categories/Es6/" href="/blogpost/categories/Es6/"><div class='name'>Es6</div><div class='badge'>(2)</div></a></li>
+        
           <li><a class="flat-box" title="/blogpost/categories/Git/" href="/blogpost/categories/Git/"><div class='name'>Git</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box" title="/blogpost/categories/GoLang/" href="/blogpost/categories/GoLang/"><div class='name'>GoLang</div><div class='badge'>(1)</div></a></li>
@@ -2587,7 +2547,7 @@
     
       <span>
         <b class="fas fa-database"></b>
-        本站字数：<span class="post-count">52.8k</span>
+        本站字数：<span class="post-count">54k</span>
       </span>
     
     <!-- 网站运行时间 -->
