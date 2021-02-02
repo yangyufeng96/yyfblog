@@ -22,7 +22,7 @@ vue2数组响应式原理：覆盖可以修改数组7个方法，从数组原型
 
 ### 对象的属性劫持
 
-```
+```js
 // 具体定义指定的key拦截器
 function defineReactive(obj, key, val) {
   // 递归遍历
@@ -47,7 +47,7 @@ function defineReactive(obj, key, val) {
 
 ### 数组属性的劫持
 
-```
+```js
 // 修改数组的7个api的原型
 const originalProto = Array.prototype
 const arrayProto = Object.create(originalProto)
@@ -66,7 +66,7 @@ const arrayProto = Object.create(originalProto)
 
 ### 数据响应
 
-```
+```js
 // 思想：递归遍历传入obj，定义每个属性的拦截
 function observe(obj) {
   if (typeof obj !== 'object' || obj == null) {
@@ -89,7 +89,7 @@ function observe(obj) {
 
 ### 跟新处理
 
-```
+```js
 function notifyUpdate() {
   console.log('页面更新！')
 }
@@ -121,7 +121,7 @@ observe(data)
 
 **vue3响应式原理：利用[Proxy](https://es6.ruanyifeng.com/?search=Proxy&x=0&y=0#docs/proxy)对象对数据拦截**
 
-```
+```js
 // WeakMap 弱引用的方式缓存代理数据和原始数据
 const toProxy = new WeakMap() // 形如 obj: observed
 const toRaw = new WeakMap() // 形如 observed: obj
@@ -294,3 +294,6 @@ effect(() => {
 react.foo = 'fooooooo'
 ```
 
+## vue响应式数据更新的流程
+
+[![ymNdWF.png](https://s3.ax1x.com/2021/02/02/ymNdWF.png)](https://imgchr.com/i/ymNdWF)

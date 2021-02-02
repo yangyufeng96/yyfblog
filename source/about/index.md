@@ -1,17 +1,14 @@
 ---
 layout: page
-title: 关于
 body: [article, grid, comments]
 meta:
-  header: true
+  header: false
   footer: false
 sidebar: false
 ---
 
 {% raw %}<div class="aboutme">{% endraw %}
-<center class="group">[<i class="fas fa-home"></i>](/)[<i class="fab fa-github"></i>](https://github.com/yangyfeng)[<i class="fas fa-headphones"></i>](https://music.163.com/#/user/home?id=629541737)[<i class="fas fa-envelope"></i>](yangyufeng.web@foxmail.com)[<i class="fab fa-qq"></i>](http://wpa.qq.com/msgrd?v=3&uin=1539558157&site=qq&menu=yes)</center>
-<hr>
-![](https://avatar-static.segmentfault.com/363/364/3633641306-5aabcbbea165b_huge256)
+<img width="400" src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
 <hr>
 - 我是个快乐的前端小码农，现就职于北京
 - 喜欢古风音乐

@@ -129,16 +129,6 @@ menu_desktop:
     icon: fas fa-info-circle
     url: about/
     rel: nofollow
-  - name: 思否
-    icon: fas fa-link
-    url: https://segmentfault.com/u/yangyufeng
-    rel: nofollow
-    target: _blank
-  - name: 工具箱
-    icon: fas fa-toolbox
-    url: https://tool.lu/
-    rel: nofollow
-    target: _blank
 
 # 手机端导航菜单（从右上角的按钮点击展开）
 menu_mobile:
@@ -240,15 +230,15 @@ social:
   # 邮箱
   - icon: fas fa-envelope
     url: mailto:yangyufeng.web@foxmail.com
-  # qq
-  - icon: fab fa-qq
-    url: http://wpa.qq.com/msgrd?v=3&uin=1539558157&site=qq&menu=yes
-  # zhihu
-  - icon: fab fa-zhihu
-    url: https://www.zhihu.com/people/man-dao-qiu-suo-11/activities
-  # weibo
-  - icon: fab fa-weibo
-    url: https://weibo.com/yangyufeng66
+  # 思否
+  - icon: fas fa-link
+    url: https://segmentfault.com/u/yangyufeng
+  # csdn
+  - icon: fa fa-paper-plane
+    url: https://blog.csdn.net/qq_35676160
+  # 工具箱
+  - icon: fas fa-toolbox
+    url: https://tool.lu/
 
 # 分享按钮
 # 当id为qrcode时需要安装插件  npm i -S hexo-helper-qrcode
