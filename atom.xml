@@ -6,7 +6,7 @@
   <link href="/./atom.xml" rel="self"/>
   
   <link href="https://yangyfeng.github.io/"/>
-  <updated>2021-01-11T05:06:55.760Z</updated>
+  <updated>2021-02-05T03:05:44.367Z</updated>
   <id>https://yangyfeng.github.io/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>大数据可视化系统</title>
+    <link href="https://yangyfeng.github.io//posts/5f998618.html"/>
+    <id>https://yangyfeng.github.io//posts/5f998618.html</id>
+    <published>2021-02-02T01:22:00.000Z</published>
+    <updated>2021-02-05T03:05:44.367Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;项目简介&quot;&gt;&lt;a href=&quot;#项目简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="个人项目" scheme="https://yangyfeng.github.io/blogpost/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="数据可视化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021年前端重修课</title>
+    <link href="https://yangyfeng.github.io//posts/cf2c43d.html"/>
+    <id>https://yangyfeng.github.io//posts/cf2c43d.html</id>
+    <published>2021-02-01T16:00:00.000Z</published>
+    <updated>2021-02-02T01:27:12.592Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;2021年前端重修课&quot;&gt;&lt;a href=&quot;#2021年前端重修课&quot; class=&quot;headerlink&quot; title=&quot;2021年前端重修课&quot;&gt;&lt;/a&gt;2021年前端重修课&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/ymtXrR&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="javascript" scheme="https://yangyfeng.github.io/blogpost/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>Babel转码器</title>
@@ -125,38 +181,6 @@
   </entry>
   
   <entry>
-    <title>javascript是如何被运行的</title>
-    <link href="https://yangyfeng.github.io//posts/81adf3b6.html"/>
-    <id>https://yangyfeng.github.io//posts/81adf3b6.html</id>
-    <published>2020-12-21T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:47.499Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;JS的语言组成&quot;&gt;&lt;a href=&quot;#JS的语言组成&quot; class=&quot;headerlink&quot; title=&quot;JS的语言组成&quot;&gt;&lt;/a&gt;JS的语言组成&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;基本语法：C&lt;/li&gt;
-&lt;li&gt;数据类型 内存管理：Java&lt;/li&gt;
-&lt;li&gt;函数式编程：Scheme  函数是第一等公民&lt;/li&gt;
-&lt;li&gt;原型继承：Self   基于原型prototype的继承机制&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;奇葩的JS&quot;&gt;&lt;a href=&quot;#奇葩的JS&quot; class=&quot;headerlink&quot; title=&quot;奇葩的JS&quot;&gt;&lt;/a&gt;奇葩的JS&lt;/h2&gt;&lt;p&gt;对于熟悉javascript语言的前端开发小伙伴，直接上来两张图&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rrE9Gq&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rrE9Gq.md.png&quot; alt=&quot;rrE9Gq.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rrEALF&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rrEALF.md.png&quot; alt=&quot;rrEALF.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;是不是瞬间感觉头脑发热呢。&lt;/p&gt;
-&lt;p&gt;之所以会出现这些诡异的问题，是因为javascript是在设计之初并没有考虑的完善，是借鉴了多种语言的模式，基本是融合了面向过程和面向对象的。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="javascript" scheme="https://yangyfeng.github.io/blogpost/tags/javascript/"/>
-    
-      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
     <title>js的事件循环是什么</title>
     <link href="https://yangyfeng.github.io//posts/62b88241.html"/>
     <id>https://yangyfeng.github.io//posts/62b88241.html</id>
@@ -179,35 +203,6 @@
     
     
       <category term="event loop" scheme="https://yangyfeng.github.io/blogpost/tags/event-loop/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>什么是JS调用栈</title>
-    <link href="https://yangyfeng.github.io//posts/9926a09c.html"/>
-    <id>https://yangyfeng.github.io//posts/9926a09c.html</id>
-    <published>2020-12-21T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:41.337Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;栈：先进后出，进栈，出栈，与堆栈不同&lt;/p&gt;
-&lt;p&gt;队列：先进先出&lt;/p&gt;
-&lt;p&gt;调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用
-        
-      
-    
-    </summary>
-    
-      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
@@ -250,6 +245,67 @@
       <category term="tcp" scheme="https://yangyfeng.github.io/blogpost/tags/tcp/"/>
     
       <category term="http" scheme="https://yangyfeng.github.io/blogpost/tags/http/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么是JS调用栈</title>
+    <link href="https://yangyfeng.github.io//posts/9926a09c.html"/>
+    <id>https://yangyfeng.github.io//posts/9926a09c.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:41.337Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;栈：先进后出，进栈，出栈，与堆栈不同&lt;/p&gt;
+&lt;p&gt;队列：先进先出&lt;/p&gt;
+&lt;p&gt;调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用
+        
+      
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javascript是如何被运行的</title>
+    <link href="https://yangyfeng.github.io//posts/81adf3b6.html"/>
+    <id>https://yangyfeng.github.io//posts/81adf3b6.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:47.499Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;JS的语言组成&quot;&gt;&lt;a href=&quot;#JS的语言组成&quot; class=&quot;headerlink&quot; title=&quot;JS的语言组成&quot;&gt;&lt;/a&gt;JS的语言组成&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;基本语法：C&lt;/li&gt;
+&lt;li&gt;数据类型 内存管理：Java&lt;/li&gt;
+&lt;li&gt;函数式编程：Scheme  函数是第一等公民&lt;/li&gt;
+&lt;li&gt;原型继承：Self   基于原型prototype的继承机制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;奇葩的JS&quot;&gt;&lt;a href=&quot;#奇葩的JS&quot; class=&quot;headerlink&quot; title=&quot;奇葩的JS&quot;&gt;&lt;/a&gt;奇葩的JS&lt;/h2&gt;&lt;p&gt;对于熟悉javascript语言的前端开发小伙伴，直接上来两张图&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rrE9Gq&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rrE9Gq.md.png&quot; alt=&quot;rrE9Gq.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rrEALF&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rrEALF.md.png&quot; alt=&quot;rrEALF.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;是不是瞬间感觉头脑发热呢。&lt;/p&gt;
+&lt;p&gt;之所以会出现这些诡异的问题，是因为javascript是在设计之初并没有考虑的完善，是借鉴了多种语言的模式，基本是融合了面向过程和面向对象的。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="javascript" scheme="https://yangyfeng.github.io/blogpost/tags/javascript/"/>
+    
+      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
@@ -385,6 +441,34 @@
   </entry>
   
   <entry>
+    <title>深入webpack</title>
+    <link href="https://yangyfeng.github.io//posts/a441c8bd.html"/>
+    <id>https://yangyfeng.github.io//posts/a441c8bd.html</id>
+    <published>2020-12-15T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:13.138Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;实现步骤：&quot;&gt;&lt;a href=&quot;#实现步骤：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+      <category term="webpack" scheme="https://yangyfeng.github.io/blogpost/tags/webpack/"/>
+    
+  </entry>
+  
+  <entry>
     <title>深入前端模块化</title>
     <link href="https://yangyfeng.github.io//posts/c00659d0.html"/>
     <id>https://yangyfeng.github.io//posts/c00659d0.html</id>
@@ -433,34 +517,6 @@
       <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
     
       <category term="模块化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深入webpack</title>
-    <link href="https://yangyfeng.github.io//posts/a441c8bd.html"/>
-    <id>https://yangyfeng.github.io//posts/a441c8bd.html</id>
-    <published>2020-12-15T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:13.138Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;实现步骤：&quot;&gt;&lt;a href=&quot;#实现步骤：&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
-    
-      <category term="webpack" scheme="https://yangyfeng.github.io/blogpost/tags/webpack/"/>
     
   </entry>
   
@@ -639,54 +695,6 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rSyiOH&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/08/rSyiOH.png&quot; alt=&quot;rSyiOH.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何使用JavaScript实现纯前端读取和导出excel文件</title>
-    <link href="https://yangyfeng.github.io//posts/ce0a6a78.html"/>
-    <id>https://yangyfeng.github.io//posts/ce0a6a78.html</id>
-    <published>2020-12-07T16:00:00.000Z</published>
-    <updated>2020-12-11T09:17:50.214Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;1、js-xlsx-介绍&quot;&gt;&lt;a href=&quot;#1、js-xlsx-介绍&quot; class=&quot;headerlink&quot; title=&quot;1、js-xlsx 介绍&quot;&gt;&lt;/a&gt;1、js-xlsx 介绍&lt;/h1&gt;&lt;p&gt;&lt;code&gt;由SheetJS出品的js-xlsx是一款非常方便的只需要纯JS即可读取和导出excel的工具库，功能强大，支持格式众多，支持xls、xlsx、ods(一种OpenOffice专有表格文件格式)等十几种格式。本文全部都是以xlsx格式为例。&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;官方github：&lt;a href=&quot;https://github.com/SheetJS/js-xlsx&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/SheetJS/js-xlsx&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;本文配套demo在线演示地址：&lt;a href=&quot;http://demo.haoji.me/2017/02/08-js-xlsx/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://demo.haoji.me/2017/02/08-js-xlsx/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="excel" scheme="https://yangyfeng.github.io/blogpost/tags/excel/"/>
-    
-      <category term="插件" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%8F%92%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue响应式原理源码剖析</title>
-    <link href="https://yangyfeng.github.io//posts/b0d42301.html"/>
-    <id>https://yangyfeng.github.io//posts/b0d42301.html</id>
-    <published>2020-11-26T02:37:00.000Z</published>
-    <updated>2020-12-11T09:14:04.788Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;vue2更新到vue3对数据的响应式，做了重大的调整。&lt;/p&gt;
-&lt;h2 id=&quot;先回顾下vue2的响应式怎么做的&quot;&gt;&lt;a href=&quot;#先回顾下vue2的响应式怎么做的&quot; class=&quot;headerlink&quot; title=&quot;先回顾下vue2的响应式怎么做的&quot;&gt;&lt;/a&gt;先回顾下vue2的响应式怎么做的&lt;/h2&gt;&lt;p&gt;vue2对象响应式原理：Object.defineProperty()&lt;/p&gt;
-&lt;p&gt;vue2数组响应式原理：覆盖可以修改数组7个方法，从数组原型中获取这7个方法，并覆盖为可以发送更新通知的函数实现&lt;/p&gt;
     
     </summary>
     

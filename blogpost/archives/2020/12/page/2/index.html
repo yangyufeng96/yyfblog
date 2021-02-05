@@ -237,32 +237,6 @@
 								</a>
 							</li>
       			
-  						<li>
-								<a class="nav flat-box" href="https://segmentfault.com/u/yangyufeng"
-                  
-                    rel="nofollow"
-                  
-                  
-                    target="_blank"
-                  
-                  id="https:segmentfault.comuyangyufeng">
-									<i class='fas fa-link fa-fw'></i>&nbsp;思否
-								</a>
-							</li>
-      			
-  						<li>
-								<a class="nav flat-box" href="https://tool.lu/"
-                  
-                    rel="nofollow"
-                  
-                  
-                    target="_blank"
-                  
-                  id="https:tool.lu">
-									<i class='fas fa-toolbox fa-fw'></i>&nbsp;工具箱
-								</a>
-							</li>
-      			
       		
 				</ul>
 			</div>
@@ -395,8 +369,8 @@
       
         
   <h2 class="title">
-    <a href="/posts/a441c8bd.html">
-      深入webpack
+    <a href="/posts/c00659d0.html">
+      深入前端模块化
     </a>
   </h2>
 
@@ -458,14 +432,14 @@
           <div class="new-meta-item size">
             <a class="notlink">
               <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>489字</p>
+              <p>2.8k字</p>
             </a>
           </div>
           <!-- 阅读时间 -->
           <div class="new-meta-item read-time">
             <a class="notlink">
               <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>2分</p>
+              <p>11分</p>
             </a>
           </div>
         
@@ -479,15 +453,44 @@
 
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">
-      <h2 id="实现步骤："><a href="#实现步骤：" class="headerlink" title="实现步骤："></a>实现步骤：</h2><p>0、读取webpack.config.js</p>
-<p>1、解析文件依赖</p>
-<p>2、替换require为<strong>webpack_require</strong></p>
-<p>3、本地使用{}存储所有的文件，然后通过使用为<strong>webpack_require</strong>获取文件内容，执行函数方式为evel的包裹代码字符串</p>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p><strong>index.js</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#! /usr/bin/env node</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 读取config</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"><span class="comment">// 默认配置</span></span><br><span class="line"><span class="keyword">const</span> defaultConfig = &#123;</span><br><span class="line">  entry: <span class="string">'./src/index.js'</span>,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="string">'build.js'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 最终的配置</span></span><br><span class="line"><span class="keyword">const</span> config = &#123;</span><br><span class="line">  ...defaultConfig,</span><br><span class="line">  ...require(path.resolve(<span class="string">'./mywebpack.config.js'</span>))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWebPack</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(config) &#123;</span><br><span class="line">    <span class="keyword">this</span>.config = config</span><br><span class="line">    <span class="keyword">this</span>.entry = config.entry</span><br><span class="line">    <span class="comment">// 根目录</span></span><br><span class="line">    <span class="keyword">this</span>.root = process.cwd()</span><br><span class="line">    <span class="comment">// 存储所有代码</span></span><br><span class="line">    <span class="keyword">this</span>.modules = &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  start() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'解析依赖'</span>)</span><br><span class="line">    <span class="keyword">const</span> entryPath = path.resolve(<span class="keyword">this</span>.root, <span class="keyword">this</span>.entry)</span><br><span class="line">    <span class="keyword">this</span>.createModule(entryPath, <span class="keyword">this</span>.entry)</span><br><span class="line">    <span class="comment">// 生成新文件</span></span><br><span class="line">    <span class="keyword">this</span>.generaleFile()</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 代码字符串</span></span><br><span class="line">  generaleModuleString() &#123;</span><br><span class="line">    <span class="keyword">let</span> fnTmp = <span class="string">''</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> name <span class="keyword">in</span> <span class="keyword">this</span>.modules) &#123;</span><br><span class="line">      fnTmp += <span class="string">`"<span class="subst">$&#123;name&#125;</span>":<span class="subst">$&#123;<span class="keyword">this</span>.modules[name].replace(<span class="regexp">/\r|\n/g</span>, <span class="string">""</span>)&#125;</span>,`</span></span><br><span class="line">    &#125;</span><br><span class="line">    fnTmp = fnTmp.substring(<span class="number">0</span>, fnTmp.length - <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">`&#123;<span class="subst">$&#123;fnTmp&#125;</span>&#125;`</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 生成新文件</span></span><br><span class="line">  generaleFile() &#123;</span><br><span class="line">    <span class="keyword">let</span> template = fs.readFileSync(path.resolve(__dirname, <span class="string">'./template.js'</span>), <span class="string">'utf-8'</span>)</span><br><span class="line">    <span class="keyword">this</span>.template = template.replace(<span class="string">'__entry__'</span>, <span class="keyword">this</span>.entry).replace(<span class="string">'__modules_content__'</span>, <span class="keyword">this</span>.generaleModuleString())</span><br><span class="line">    fs.mkdirSync(<span class="string">"./mydist"</span>);</span><br><span class="line">    fs.writeFileSync(<span class="string">'./mydist/'</span> + <span class="keyword">this</span>.config.output.filename, <span class="keyword">this</span>.template)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'写入文件完毕'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 创建依赖</span></span><br><span class="line">  createModule(modulePath, name) &#123;</span><br><span class="line">    <span class="comment">// 出现了循环依赖</span></span><br><span class="line">    <span class="comment">// if (this.modules[modulePath]) return</span></span><br><span class="line">    <span class="keyword">const</span> fileContent = fs.readFileSync(modulePath, <span class="string">'utf-8'</span>)</span><br><span class="line">    <span class="comment">// 替换后的代码和依赖数组</span></span><br><span class="line">    <span class="keyword">const</span> &#123; code, deps &#125; = <span class="keyword">this</span>.parse(fileContent, path.dirname(name))</span><br><span class="line">    <span class="keyword">this</span>.modules[name] = <span class="string">`function (module, module.exports, __mywebpack_require__) &#123;</span></span><br><span class="line"><span class="string">      eval(\`<span class="subst">$&#123;code&#125;</span>\`)</span></span><br><span class="line"><span class="string">    &#125;`</span></span><br><span class="line">    <span class="comment">// 循环获取所有依赖数组的内容</span></span><br><span class="line">    deps.forEach(<span class="function"><span class="params">dep</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">this</span>.createModule(path.join(<span class="keyword">this</span>.root, dep), <span class="string">'./'</span> + dep)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.modules)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 文件解析</span></span><br><span class="line">  parse(code, parent) &#123;</span><br><span class="line">    <span class="keyword">let</span> deps = []</span><br><span class="line">    <span class="keyword">let</span> r = <span class="regexp">/require\('(.*)'\)/g</span></span><br><span class="line">    <span class="comment">// require('xxx') 将require替换__mywebpack_require__</span></span><br><span class="line">    code = code.replace(r, <span class="function"><span class="keyword">function</span> (<span class="params">match, arg</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">const</span> retPath = path.join(parent, arg.replace(<span class="regexp">/'|"/g</span>, <span class="string">''</span>))</span><br><span class="line">      deps.push(retPath)</span><br><span class="line">      <span class="keyword">return</span> <span class="string">`__mywebpack_require__("./<span class="subst">$&#123;retPath&#125;</span>")`</span></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> &#123; code, deps &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> mywebpack = <span class="keyword">new</span> MyWebPack(config)</span><br><span class="line"></span><br><span class="line">mywebpack.start()</span><br></pre></td></tr></table></figure>
-<p><strong>template.js</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">!<span class="function"><span class="keyword">function</span> (<span class="params">modules</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 缓存</span></span><br><span class="line">  <span class="keyword">const</span> installModules = &#123;&#125;</span><br><span class="line">  <span class="comment">// 替换后的require</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">__mywebpack_require__</span>(<span class="params">moduleId</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 是否缓存</span></span><br><span class="line">    <span class="keyword">if</span> (installModules[moduleId]) &#123;</span><br><span class="line">      <span class="keyword">return</span> installModules[moduleId].exports</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> modules = installModules[moduleId] = &#123;</span><br><span class="line">      exports: &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    modules[moduleId].call(modules.exports, <span class="built_in">module</span>, exports, __mywebpack_require__)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">module</span>.exports</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 入口</span></span><br><span class="line">  <span class="keyword">return</span> __mywebpack_require__(<span class="string">"__entry__"</span>)</span><br><span class="line">&#125;(__modules_content__)</span><br></pre></td></tr></table></figure>
-
+      <p>什么是前端的模块化？理解的不太透彻。</p>
+<p>平常一直用的也只有ES6模块化，对于其他几种模块化规范用的也少，理解不够深，但是经常会见到一些面试题是问这几种模块化规范的区别，所以这次做一个整理总结</p>
+<h1 id="一、对于模块化的理解"><a href="#一、对于模块化的理解" class="headerlink" title="一、对于模块化的理解"></a>一、对于模块化的理解</h1><h2 id="1、什么是模块化？"><a href="#1、什么是模块化？" class="headerlink" title="1、什么是模块化？"></a>1、什么是模块化？</h2><p>模块化开发是一种管理方式，是一种生产方式，一种解决问题的方案，一个模块就是实现特定功能的文件，有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块，但是模块开发需要遵循一定的规范，否则就都乱套了，因此，才有了后来大家熟悉的AMD规范，CMD规范，以及ES6自带的模块化规范</p>
+<h2 id="2、模块化带来的好处？"><a href="#2、模块化带来的好处？" class="headerlink" title="2、模块化带来的好处？"></a>2、模块化带来的好处？</h2><ul>
+<li>解决命名冲突</li>
+<li>提供复用性</li>
+<li>提高代码可维护性</li>
+<li>灵活架构，焦点分离，方便模块间组合、分解</li>
+<li>多人协作互不干扰</li>
+</ul>
+<h2 id="3、模块化规范的发展进程"><a href="#3、模块化规范的发展进程" class="headerlink" title="3、模块化规范的发展进程"></a>3、模块化规范的发展进程</h2><ul>
+<li><strong>原始写法（全局function）</strong></li>
+</ul>
+<p>模块就是实现特定**功能的一组方法，只要把不同的函数（以及记录状态的变量）简单的放在一起，就算是一个模块。</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">m1</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">m2</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>这样写上面的函数 m1() 和 m2() ，组成了一个模块，在使用的时候直接调用就可以了。
+但是带来的问题也很明显：&quot;污染&quot;了全局变量 ，无法保证不与其他模块发生变量名冲突，而且模块成员之间看不出直接关系</code></p>
+<ul>
+<li><strong>namespace写法（简单对象）</strong></li>
+</ul>
+<p>为了解决上面写法带来的缺点，可以吧模块写成一个对象，所有的模块成员都放到这个对象里面，这样减少了全局变量，减少命名冲突</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> myModule = <span class="keyword">new</span> <span class="built_in">Object</span>(&#123;</span><br><span class="line">  count: <span class="number">0</span>,</span><br><span class="line">  m1: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'m1:'</span> + <span class="keyword">this</span>.count);</span><br><span class="line">    </span><br><span class="line">  &#125;,</span><br><span class="line">  m2: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'m2:'</span> + <span class="keyword">this</span>.count)</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用</span></span><br><span class="line">myModule.m1() <span class="comment">// m1:0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 改变模块内部状态</span></span><br><span class="line">myModule.count = <span class="number">5</span>;</span><br><span class="line">myModule.m1() <span class="comment">// m1:5</span></span><br></pre></td></tr></table></figure>
+<p><code>上面的函数 m1 和 m2 ，都封装在myModule对象里。使用的时候，就是调用这个对象的属性。但是，这样的写法会暴露所有模块成员，内部状态可以被外部改写。比如，外部代码可以直接改变内部计数器的值。</code></p>
+<ul>
+<li><strong>立即执行函数写法（匿名函数自执行 ，闭包）</strong></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> myModule = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> m1 = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'m1:'</span> + count)</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">let</span> m2 = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'m2:'</span> + count)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> &#123; m1, m2 &#125;;</span><br><span class="line">&#125;)()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这样写在外面就无法读取内部的 count 变量</span></span><br><span class="line"><span class="built_in">console</span>.log(myModule.count); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>立即执行函数增强(引入依赖)</strong></li>
+</ul>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> myModule = (<span class="function"><span class="keyword">function</span> <span class="params">($)</span> </span>&#123;</span><br><span class="line">  <span class="comment">// 这里面就可以使用JQuery</span></span><br><span class="line">&#125;)(JQuery)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这样做除了保证模块的独立性，还使得模块之间的依赖关系变得明显</span></span><br></pre></td></tr></table></figure>
+      
+        <div class="readmore">
+          <a href="/posts/c00659d0.html" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
       
     </div>
     
@@ -495,7 +498,7 @@
         
           <a href="/blogpost/tags/前端工程化/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>前端工程化</a>
         
-          <a href="/blogpost/tags/webpack/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>webpack</a>
+          <a href="/blogpost/tags/模块化/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>模块化</a>
         
       </div>
     
@@ -1252,24 +1255,24 @@
           
         
           
-            <a href="http://wpa.qq.com/msgrd?v=3&uin=1539558157&site=qq&menu=yes"
-              class="social fab fa-qq flat-btn"
+            <a href="https://segmentfault.com/u/yangyufeng"
+              class="social fas fa-link flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
             </a>
           
         
           
-            <a href="https://www.zhihu.com/people/man-dao-qiu-suo-11/activities"
-              class="social fab fa-zhihu flat-btn"
+            <a href="https://blog.csdn.net/qq_35676160"
+              class="social fa fa-paper-plane flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
             </a>
           
         
           
-            <a href="https://weibo.com/yangyufeng66"
-              class="social fab fa-weibo flat-btn"
+            <a href="https://tool.lu/"
+              class="social fas fa-toolbox flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
             </a>
@@ -1414,13 +1417,15 @@
         
           <li><a class="flat-box" title="/blogpost/categories/Node/" href="/blogpost/categories/Node/"><div class='name'>Node</div><div class='badge'>(2)</div></a></li>
         
+          <li><a class="flat-box" title="/blogpost/categories/个人项目/" href="/blogpost/categories/个人项目/"><div class='name'>个人项目</div><div class='badge'>(1)</div></a></li>
+        
           <li><a class="flat-box" title="/blogpost/categories/前端/" href="/blogpost/categories/前端/"><div class='name'>前端</div><div class='badge'>(20)</div></a></li>
         
           <li><a class="flat-box" title="/blogpost/categories/博客文档/" href="/blogpost/categories/博客文档/"><div class='name'>博客文档</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box" title="/blogpost/categories/开发工具/" href="/blogpost/categories/开发工具/"><div class='name'>开发工具</div><div class='badge'>(4)</div></a></li>
         
-          <li><a class="flat-box" title="/blogpost/categories/深入前端/" href="/blogpost/categories/深入前端/"><div class='name'>深入前端</div><div class='badge'>(7)</div></a></li>
+          <li><a class="flat-box" title="/blogpost/categories/深入前端/" href="/blogpost/categories/深入前端/"><div class='name'>深入前端</div><div class='badge'>(8)</div></a></li>
         
       </ul>
     </div>
@@ -1451,7 +1456,7 @@
 </header>
 
     <div class='content material'>
-      <a href="/blogpost/tags/JS运行原理/" style="font-size: 18px; color: #7e7e7e">JS运行原理</a> <a href="/blogpost/tags/V8引擎/" style="font-size: 14px; color: #999">V8引擎</a> <a href="/blogpost/tags/create-react-app/" style="font-size: 16px; color: #8b8b8b">create-react-app</a> <a href="/blogpost/tags/devops/" style="font-size: 14px; color: #999">devops</a> <a href="/blogpost/tags/event-loop/" style="font-size: 14px; color: #999">event loop</a> <a href="/blogpost/tags/excel/" style="font-size: 14px; color: #999">excel</a> <a href="/blogpost/tags/for循环/" style="font-size: 14px; color: #999">for循环</a> <a href="/blogpost/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/blogpost/tags/http/" style="font-size: 14px; color: #999">http</a> <a href="/blogpost/tags/javascript/" style="font-size: 16px; color: #8b8b8b">javascript</a> <a href="/blogpost/tags/less/" style="font-size: 14px; color: #999">less</a> <a href="/blogpost/tags/react/" style="font-size: 16px; color: #8b8b8b">react</a> <a href="/blogpost/tags/tcp/" style="font-size: 14px; color: #999">tcp</a> <a href="/blogpost/tags/vscode/" style="font-size: 16px; color: #8b8b8b">vscode</a> <a href="/blogpost/tags/vue/" style="font-size: 24px; color: #555">vue</a> <a href="/blogpost/tags/webpack/" style="font-size: 16px; color: #8b8b8b">webpack</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 20px; color: #707070">前端工程化</a> <a href="/blogpost/tags/开发工具/" style="font-size: 16px; color: #8b8b8b">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/浏览器运行原理/" style="font-size: 14px; color: #999">浏览器运行原理</a> <a href="/blogpost/tags/面试题/" style="font-size: 22px; color: #636363">面试题</a>
+      <a href="/blogpost/tags/JS运行原理/" style="font-size: 18px; color: #7e7e7e">JS运行原理</a> <a href="/blogpost/tags/V8引擎/" style="font-size: 14px; color: #999">V8引擎</a> <a href="/blogpost/tags/create-react-app/" style="font-size: 16px; color: #8b8b8b">create-react-app</a> <a href="/blogpost/tags/devops/" style="font-size: 14px; color: #999">devops</a> <a href="/blogpost/tags/event-loop/" style="font-size: 14px; color: #999">event loop</a> <a href="/blogpost/tags/excel/" style="font-size: 14px; color: #999">excel</a> <a href="/blogpost/tags/for循环/" style="font-size: 14px; color: #999">for循环</a> <a href="/blogpost/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/blogpost/tags/http/" style="font-size: 14px; color: #999">http</a> <a href="/blogpost/tags/javascript/" style="font-size: 18px; color: #7e7e7e">javascript</a> <a href="/blogpost/tags/less/" style="font-size: 14px; color: #999">less</a> <a href="/blogpost/tags/react/" style="font-size: 16px; color: #8b8b8b">react</a> <a href="/blogpost/tags/tcp/" style="font-size: 14px; color: #999">tcp</a> <a href="/blogpost/tags/vscode/" style="font-size: 16px; color: #8b8b8b">vscode</a> <a href="/blogpost/tags/vue/" style="font-size: 24px; color: #555">vue</a> <a href="/blogpost/tags/webpack/" style="font-size: 16px; color: #8b8b8b">webpack</a> <a href="/blogpost/tags/前端/" style="font-size: 14px; color: #999">前端</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 20px; color: #707070">前端工程化</a> <a href="/blogpost/tags/开发工具/" style="font-size: 16px; color: #8b8b8b">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/数据可视化/" style="font-size: 14px; color: #999">数据可视化</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/浏览器运行原理/" style="font-size: 14px; color: #999">浏览器运行原理</a> <a href="/blogpost/tags/面试题/" style="font-size: 22px; color: #636363">面试题</a>
     </div>
   </section>
 
@@ -1532,19 +1537,19 @@
         
       
         
-          <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1539558157&amp;site=qq&amp;menu=yes" class="social fab fa-qq flat-btn" target="_blank"
+          <a href="https://segmentfault.com/u/yangyufeng" class="social fas fa-link flat-btn" target="_blank"
             rel="external nofollow noopener noreferrer">
           </a>
         
       
         
-          <a href="https://www.zhihu.com/people/man-dao-qiu-suo-11/activities" class="social fab fa-zhihu flat-btn" target="_blank"
+          <a href="https://blog.csdn.net/qq_35676160" class="social fa fa-paper-plane flat-btn" target="_blank"
             rel="external nofollow noopener noreferrer">
           </a>
         
       
         
-          <a href="https://weibo.com/yangyufeng66" class="social fab fa-weibo flat-btn" target="_blank"
+          <a href="https://tool.lu/" class="social fas fa-toolbox flat-btn" target="_blank"
             rel="external nofollow noopener noreferrer">
           </a>
         
