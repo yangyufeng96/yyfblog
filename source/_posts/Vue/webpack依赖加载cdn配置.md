@@ -1,5 +1,5 @@
 ---
-title: vue项目中webpack使用HtmlWebpackPlugin进行cdn配置
+title: webpack依赖加载cdn配置
 type: blog
 layout: post
 tags:
