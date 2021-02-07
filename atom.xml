@@ -181,6 +181,48 @@
   </entry>
   
   <entry>
+    <title>互联网是如何运作的</title>
+    <link href="https://yangyfeng.github.io//posts/c35109d5.html"/>
+    <id>https://yangyfeng.github.io//posts/c35109d5.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:31.314Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;互联网所有的传输都通过RCP/IP协议族来传输，TCP/IP是&lt;strong&gt;面向连接&lt;/strong&gt;的&lt;strong&gt;可靠&lt;/strong&gt;字节流服务协议&lt;/p&gt;
+&lt;h2 id=&quot;什么是协议&quot;&gt;&lt;a href=&quot;#什么是协议&quot; class=&quot;headerlink&quot; title=&quot;什么是协议&quot;&gt;&lt;/a&gt;什么是协议&lt;/h2&gt;&lt;p&gt;协议是一组&lt;strong&gt;规则&lt;/strong&gt;，用于指定计算机应该如何通过网络来交互通信&lt;/p&gt;
+&lt;h2 id=&quot;TCP-IP协议族&quot;&gt;&lt;a href=&quot;#TCP-IP协议族&quot; class=&quot;headerlink&quot; title=&quot;TCP/IP协议族&quot;&gt;&lt;/a&gt;TCP/IP协议族&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;有四层&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;应用层：提供特定于应用程序的协议  HTTP   FTP   IMAP(邮件)&lt;/li&gt;
+&lt;li&gt;网络控制层： 发送数据包到计算机上使用特定的端口号的应用程序&lt;/li&gt;
+&lt;li&gt;网络层： 使用IP地址将数据包发送到特定的计算&lt;/li&gt;
+&lt;li&gt;链路层：  将二进制数据包与网络信号相互之间转换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;TCP的可靠&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;tcp在建立连接会进行三次握手，每个收到的数据包都会向发送方发送ack确认，已确保发送成功&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IP的传输&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;IP是不可靠的无连接协议，它并不关心数据包是否到达目的地，也不关系连接和端口号，目的是连接到目标IP&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rDwiod&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rDwiod.png&quot; alt=&quot;rDwiod.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TCP传输的质量和顺序&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;当数据包过大，在网络层会进行分包，分包后传输的链路不一样，到达的时间不一样，TCP会根据数据包上携带序列号来进行排序重组，如果发送方在一个特定时间内（也就是重试时间）没有接受到接收方的ack确认，会再次重新发送&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IP和IP地址的区别&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ip是一种协议  有两种标准  IPv4 2^32次方和IPv6  2^128&lt;/p&gt;
+&lt;p&gt;IP地址是一串数字192.0.0.1&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rDaLgf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rDaLgf.png&quot; alt=&quot;rDaLgf.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rDajKS&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rDajKS.png&quot; alt=&quot;rDajKS.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tcp" scheme="https://yangyfeng.github.io/blogpost/tags/tcp/"/>
+    
+      <category term="http" scheme="https://yangyfeng.github.io/blogpost/tags/http/"/>
+    
+  </entry>
+  
+  <entry>
     <title>javascript是如何被运行的</title>
     <link href="https://yangyfeng.github.io//posts/81adf3b6.html"/>
     <id>https://yangyfeng.github.io//posts/81adf3b6.html</id>
@@ -322,48 +364,6 @@
   </entry>
   
   <entry>
-    <title>互联网是如何运作的</title>
-    <link href="https://yangyfeng.github.io//posts/c35109d5.html"/>
-    <id>https://yangyfeng.github.io//posts/c35109d5.html</id>
-    <published>2020-12-21T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:31.314Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;互联网所有的传输都通过RCP/IP协议族来传输，TCP/IP是&lt;strong&gt;面向连接&lt;/strong&gt;的&lt;strong&gt;可靠&lt;/strong&gt;字节流服务协议&lt;/p&gt;
-&lt;h2 id=&quot;什么是协议&quot;&gt;&lt;a href=&quot;#什么是协议&quot; class=&quot;headerlink&quot; title=&quot;什么是协议&quot;&gt;&lt;/a&gt;什么是协议&lt;/h2&gt;&lt;p&gt;协议是一组&lt;strong&gt;规则&lt;/strong&gt;，用于指定计算机应该如何通过网络来交互通信&lt;/p&gt;
-&lt;h2 id=&quot;TCP-IP协议族&quot;&gt;&lt;a href=&quot;#TCP-IP协议族&quot; class=&quot;headerlink&quot; title=&quot;TCP/IP协议族&quot;&gt;&lt;/a&gt;TCP/IP协议族&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;有四层&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;应用层：提供特定于应用程序的协议  HTTP   FTP   IMAP(邮件)&lt;/li&gt;
-&lt;li&gt;网络控制层： 发送数据包到计算机上使用特定的端口号的应用程序&lt;/li&gt;
-&lt;li&gt;网络层： 使用IP地址将数据包发送到特定的计算&lt;/li&gt;
-&lt;li&gt;链路层：  将二进制数据包与网络信号相互之间转换&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;TCP的可靠&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;tcp在建立连接会进行三次握手，每个收到的数据包都会向发送方发送ack确认，已确保发送成功&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;IP的传输&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;IP是不可靠的无连接协议，它并不关心数据包是否到达目的地，也不关系连接和端口号，目的是连接到目标IP&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rDwiod&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rDwiod.png&quot; alt=&quot;rDwiod.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;TCP传输的质量和顺序&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;当数据包过大，在网络层会进行分包，分包后传输的链路不一样，到达的时间不一样，TCP会根据数据包上携带序列号来进行排序重组，如果发送方在一个特定时间内（也就是重试时间）没有接受到接收方的ack确认，会再次重新发送&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;IP和IP地址的区别&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Ip是一种协议  有两种标准  IPv4 2^32次方和IPv6  2^128&lt;/p&gt;
-&lt;p&gt;IP地址是一串数字192.0.0.1&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rDaLgf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rDaLgf.png&quot; alt=&quot;rDaLgf.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rDajKS&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rDajKS.png&quot; alt=&quot;rDajKS.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tcp" scheme="https://yangyfeng.github.io/blogpost/tags/tcp/"/>
-    
-      <category term="http" scheme="https://yangyfeng.github.io/blogpost/tags/http/"/>
-    
-  </entry>
-  
-  <entry>
     <title>vue面试题（2）</title>
     <link href="https://yangyfeng.github.io//posts/e210f74f.html"/>
     <id>https://yangyfeng.github.io//posts/e210f74f.html</id>
@@ -441,34 +441,6 @@
   </entry>
   
   <entry>
-    <title>深入webpack</title>
-    <link href="https://yangyfeng.github.io//posts/a441c8bd.html"/>
-    <id>https://yangyfeng.github.io//posts/a441c8bd.html</id>
-    <published>2020-12-15T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:13.138Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;实现步骤：&quot;&gt;&lt;a href=&quot;#实现步骤：&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="webpack" scheme="https://yangyfeng.github.io/blogpost/tags/webpack/"/>
-    
-      <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
     <title>深入前端模块化</title>
     <link href="https://yangyfeng.github.io//posts/c00659d0.html"/>
     <id>https://yangyfeng.github.io//posts/c00659d0.html</id>
@@ -517,6 +489,34 @@
       <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
     
       <category term="模块化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深入webpack</title>
+    <link href="https://yangyfeng.github.io//posts/a441c8bd.html"/>
+    <id>https://yangyfeng.github.io//posts/a441c8bd.html</id>
+    <published>2020-12-15T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:13.138Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;实现步骤：&quot;&gt;&lt;a href=&quot;#实现步骤：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="webpack" scheme="https://yangyfeng.github.io/blogpost/tags/webpack/"/>
+    
+      <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
     
   </entry>
   
