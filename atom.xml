@@ -73,30 +73,6 @@
   </entry>
   
   <entry>
-    <title>Babel转码器</title>
-    <link href="https://yangyfeng.github.io//posts/390a51fc.html"/>
-    <id>https://yangyfeng.github.io//posts/390a51fc.html</id>
-    <published>2021-01-07T16:00:00.000Z</published>
-    <updated>2021-01-11T05:06:55.760Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt; &lt;a href=&quot;https://babeljs.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Babel&lt;/a&gt; 是一个广泛使用的 ES6 转码器(下一代的JavaScript编译器)，可以将 ES6 代码转为 ES5
-        
-      
-    
-    </summary>
-    
-      <category term="Es6" scheme="https://yangyfeng.github.io/blogpost/categories/Es6/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>globalThis对象</title>
     <link href="https://yangyfeng.github.io//posts/180dd8a3.html"/>
     <id>https://yangyfeng.github.io//posts/180dd8a3.html</id>
@@ -112,6 +88,30 @@
           &lt;p&gt; JavaScript 语言存在一个顶层对象，它提供全局环境（即全局作用域），所有代码都是在这个环境中运行。但是，顶层对象在各种实现里面是不统一的。 &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;浏览器里面，顶层对象是&lt;code&gt;window&lt;/code&gt;，但 Node 和 Web
+        
+      
+    
+    </summary>
+    
+      <category term="Es6" scheme="https://yangyfeng.github.io/blogpost/categories/Es6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Babel转码器</title>
+    <link href="https://yangyfeng.github.io//posts/390a51fc.html"/>
+    <id>https://yangyfeng.github.io//posts/390a51fc.html</id>
+    <published>2021-01-07T16:00:00.000Z</published>
+    <updated>2021-01-11T05:06:55.760Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt; &lt;a href=&quot;https://babeljs.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Babel&lt;/a&gt; 是一个广泛使用的 ES6 转码器(下一代的JavaScript编译器)，可以将 ES6 代码转为 ES5
         
       
     
@@ -147,32 +147,6 @@
     
     
       <category term="for循环" scheme="https://yangyfeng.github.io/blogpost/tags/for%E5%BE%AA%E7%8E%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js的事件循环是什么</title>
-    <link href="https://yangyfeng.github.io//posts/62b88241.html"/>
-    <id>https://yangyfeng.github.io//posts/62b88241.html</id>
-    <published>2020-12-21T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:51.778Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;事件循环的机制&quot;&gt;&lt;a href=&quot;#事件循环的机制&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="event loop" scheme="https://yangyfeng.github.io/blogpost/tags/event-loop/"/>
     
   </entry>
   
@@ -239,53 +213,11 @@
   </entry>
   
   <entry>
-    <title>互联网是如何运作的</title>
-    <link href="https://yangyfeng.github.io//posts/c35109d5.html"/>
-    <id>https://yangyfeng.github.io//posts/c35109d5.html</id>
+    <title>js的事件循环是什么</title>
+    <link href="https://yangyfeng.github.io//posts/62b88241.html"/>
+    <id>https://yangyfeng.github.io//posts/62b88241.html</id>
     <published>2020-12-21T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:31.314Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;互联网所有的传输都通过RCP/IP协议族来传输，TCP/IP是&lt;strong&gt;面向连接&lt;/strong&gt;的&lt;strong&gt;可靠&lt;/strong&gt;字节流服务协议&lt;/p&gt;
-&lt;h2 id=&quot;什么是协议&quot;&gt;&lt;a href=&quot;#什么是协议&quot; class=&quot;headerlink&quot; title=&quot;什么是协议&quot;&gt;&lt;/a&gt;什么是协议&lt;/h2&gt;&lt;p&gt;协议是一组&lt;strong&gt;规则&lt;/strong&gt;，用于指定计算机应该如何通过网络来交互通信&lt;/p&gt;
-&lt;h2 id=&quot;TCP-IP协议族&quot;&gt;&lt;a href=&quot;#TCP-IP协议族&quot; class=&quot;headerlink&quot; title=&quot;TCP/IP协议族&quot;&gt;&lt;/a&gt;TCP/IP协议族&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;有四层&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;应用层：提供特定于应用程序的协议  HTTP   FTP   IMAP(邮件)&lt;/li&gt;
-&lt;li&gt;网络控制层： 发送数据包到计算机上使用特定的端口号的应用程序&lt;/li&gt;
-&lt;li&gt;网络层： 使用IP地址将数据包发送到特定的计算&lt;/li&gt;
-&lt;li&gt;链路层：  将二进制数据包与网络信号相互之间转换&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;TCP的可靠&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;tcp在建立连接会进行三次握手，每个收到的数据包都会向发送方发送ack确认，已确保发送成功&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;IP的传输&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;IP是不可靠的无连接协议，它并不关心数据包是否到达目的地，也不关系连接和端口号，目的是连接到目标IP&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rDwiod&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rDwiod.png&quot; alt=&quot;rDwiod.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;TCP传输的质量和顺序&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;当数据包过大，在网络层会进行分包，分包后传输的链路不一样，到达的时间不一样，TCP会根据数据包上携带序列号来进行排序重组，如果发送方在一个特定时间内（也就是重试时间）没有接受到接收方的ack确认，会再次重新发送&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;IP和IP地址的区别&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Ip是一种协议  有两种标准  IPv4 2^32次方和IPv6  2^128&lt;/p&gt;
-&lt;p&gt;IP地址是一串数字192.0.0.1&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rDaLgf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rDaLgf.png&quot; alt=&quot;rDaLgf.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rDajKS&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rDajKS.png&quot; alt=&quot;rDajKS.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="tcp" scheme="https://yangyfeng.github.io/blogpost/tags/tcp/"/>
-    
-      <category term="http" scheme="https://yangyfeng.github.io/blogpost/tags/http/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>什么是JS调用栈</title>
-    <link href="https://yangyfeng.github.io//posts/9926a09c.html"/>
-    <id>https://yangyfeng.github.io//posts/9926a09c.html</id>
-    <published>2020-12-21T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:41.337Z</updated>
+    <updated>2020-12-22T09:32:51.778Z</updated>
     
     <summary type="html">
     
@@ -293,10 +225,7 @@
       
         
         
-          &lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;栈：先进后出，进栈，出栈，与堆栈不同&lt;/p&gt;
-&lt;p&gt;队列：先进先出&lt;/p&gt;
-&lt;p&gt;调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用
+          &lt;h2 id=&quot;事件循环的机制&quot;&gt;&lt;a href=&quot;#事件循环的机制&quot; class=&quot;headerlink&quot;
         
       
     
@@ -305,7 +234,7 @@
       <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
+      <category term="event loop" scheme="https://yangyfeng.github.io/blogpost/tags/event-loop/"/>
     
   </entry>
   
@@ -360,6 +289,77 @@
     
     
       <category term="浏览器运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么是JS调用栈</title>
+    <link href="https://yangyfeng.github.io//posts/9926a09c.html"/>
+    <id>https://yangyfeng.github.io//posts/9926a09c.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:41.337Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;栈：先进后出，进栈，出栈，与堆栈不同&lt;/p&gt;
+&lt;p&gt;队列：先进先出&lt;/p&gt;
+&lt;p&gt;调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用
+        
+      
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>互联网是如何运作的</title>
+    <link href="https://yangyfeng.github.io//posts/c35109d5.html"/>
+    <id>https://yangyfeng.github.io//posts/c35109d5.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:31.314Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;互联网所有的传输都通过RCP/IP协议族来传输，TCP/IP是&lt;strong&gt;面向连接&lt;/strong&gt;的&lt;strong&gt;可靠&lt;/strong&gt;字节流服务协议&lt;/p&gt;
+&lt;h2 id=&quot;什么是协议&quot;&gt;&lt;a href=&quot;#什么是协议&quot; class=&quot;headerlink&quot; title=&quot;什么是协议&quot;&gt;&lt;/a&gt;什么是协议&lt;/h2&gt;&lt;p&gt;协议是一组&lt;strong&gt;规则&lt;/strong&gt;，用于指定计算机应该如何通过网络来交互通信&lt;/p&gt;
+&lt;h2 id=&quot;TCP-IP协议族&quot;&gt;&lt;a href=&quot;#TCP-IP协议族&quot; class=&quot;headerlink&quot; title=&quot;TCP/IP协议族&quot;&gt;&lt;/a&gt;TCP/IP协议族&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;有四层&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;应用层：提供特定于应用程序的协议  HTTP   FTP   IMAP(邮件)&lt;/li&gt;
+&lt;li&gt;网络控制层： 发送数据包到计算机上使用特定的端口号的应用程序&lt;/li&gt;
+&lt;li&gt;网络层： 使用IP地址将数据包发送到特定的计算&lt;/li&gt;
+&lt;li&gt;链路层：  将二进制数据包与网络信号相互之间转换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;TCP的可靠&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;tcp在建立连接会进行三次握手，每个收到的数据包都会向发送方发送ack确认，已确保发送成功&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IP的传输&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;IP是不可靠的无连接协议，它并不关心数据包是否到达目的地，也不关系连接和端口号，目的是连接到目标IP&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rDwiod&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rDwiod.png&quot; alt=&quot;rDwiod.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TCP传输的质量和顺序&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;当数据包过大，在网络层会进行分包，分包后传输的链路不一样，到达的时间不一样，TCP会根据数据包上携带序列号来进行排序重组，如果发送方在一个特定时间内（也就是重试时间）没有接受到接收方的ack确认，会再次重新发送&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IP和IP地址的区别&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ip是一种协议  有两种标准  IPv4 2^32次方和IPv6  2^128&lt;/p&gt;
+&lt;p&gt;IP地址是一串数字192.0.0.1&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rDaLgf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rDaLgf.png&quot; alt=&quot;rDaLgf.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rDajKS&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rDajKS.png&quot; alt=&quot;rDajKS.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="tcp" scheme="https://yangyfeng.github.io/blogpost/tags/tcp/"/>
+    
+      <category term="http" scheme="https://yangyfeng.github.io/blogpost/tags/http/"/>
     
   </entry>
   
@@ -632,6 +632,42 @@
   </entry>
   
   <entry>
+    <title>vue3的新特性</title>
+    <link href="https://yangyfeng.github.io//posts/86248f8a.html"/>
+    <id>https://yangyfeng.github.io//posts/86248f8a.html</id>
+    <published>2020-12-07T16:00:00.000Z</published>
+    <updated>2020-12-11T09:17:52.241Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;六大亮点&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://vue3js.cn/docs/zh/api/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;vue3官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rSCl4A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/08/rSCl4A.jpg&quot; alt=&quot;rSCl4A.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Performance&lt;/code&gt;：性能更比&lt;code&gt;Vue 2.0&lt;/code&gt;强。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Tree shaking support&lt;/code&gt;：可以将无用模块“剪辑”，仅打包需要的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Composition API&lt;/code&gt;：组合&lt;code&gt;API&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Fragment, Teleport, Suspense&lt;/code&gt;：“碎片”，&lt;code&gt;Teleport&lt;/code&gt;即&lt;code&gt;Protal传送门&lt;/code&gt;，“悬念”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Better TypeScript support&lt;/code&gt;：更优秀的 Ts 支持&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Custom Renderer API&lt;/code&gt;：暴露了自定义渲染&lt;code&gt;API&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
     <title>手写简易版vue，minivue的实现</title>
     <link href="https://yangyfeng.github.io//posts/d3643a0f.html"/>
     <id>https://yangyfeng.github.io//posts/d3643a0f.html</id>
@@ -659,42 +695,6 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rSyiOH&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/08/rSyiOH.png&quot; alt=&quot;rSyiOH.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue3的新特性</title>
-    <link href="https://yangyfeng.github.io//posts/86248f8a.html"/>
-    <id>https://yangyfeng.github.io//posts/86248f8a.html</id>
-    <published>2020-12-07T16:00:00.000Z</published>
-    <updated>2020-12-11T09:17:52.241Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;六大亮点&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://vue3js.cn/docs/zh/api/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;vue3官方文档&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rSCl4A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/08/rSCl4A.jpg&quot; alt=&quot;rSCl4A.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;Performance&lt;/code&gt;：性能更比&lt;code&gt;Vue 2.0&lt;/code&gt;强。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;Tree shaking support&lt;/code&gt;：可以将无用模块“剪辑”，仅打包需要的。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;Composition API&lt;/code&gt;：组合&lt;code&gt;API&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;Fragment, Teleport, Suspense&lt;/code&gt;：“碎片”，&lt;code&gt;Teleport&lt;/code&gt;即&lt;code&gt;Protal传送门&lt;/code&gt;，“悬念”&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;Better TypeScript support&lt;/code&gt;：更优秀的 Ts 支持&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;Custom Renderer API&lt;/code&gt;：暴露了自定义渲染&lt;code&gt;API&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
     
     </summary>
     
