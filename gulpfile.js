@@ -28,12 +28,12 @@ gulp.task('minify-js', function () {
 });
 
 // 压缩html文件
-gulp.task('minify-html', function () {
-  return gulp.src('./blog/**/*.html')
-    .pipe(htmlclean())
-    .pipe(htmlmin(options))
-    .pipe(gulp.dest('./blog'))
-});
+// gulp.task('minify-html', function () {
+//   return gulp.src('./blog/**/*.html')
+//     .pipe(htmlclean())
+//     .pipe(htmlmin(options))
+//     .pipe(gulp.dest('./blog'))
+// });
 
 //build the website
-gulp.task('default', gulp.parallel('minify-css', 'minify-js', 'minify-html'));
+gulp.task('default', gulp.parallel('minify-css', 'minify-js'));
