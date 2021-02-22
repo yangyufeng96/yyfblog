@@ -6,7 +6,7 @@
   <link href="/./atom.xml" rel="self"/>
   
   <link href="https://yangyfeng.github.io/"/>
-  <updated>2021-02-05T03:05:44.367Z</updated>
+  <updated>2021-02-22T09:18:58.999Z</updated>
   <id>https://yangyfeng.github.io/</id>
   
   <author>
@@ -21,17 +21,20 @@
     <link href="https://yangyfeng.github.io//posts/5f998618.html"/>
     <id>https://yangyfeng.github.io//posts/5f998618.html</id>
     <published>2021-02-02T01:22:00.000Z</published>
-    <updated>2021-02-05T03:05:44.367Z</updated>
+    <updated>2021-02-22T09:18:58.999Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;项目简介&quot;&gt;&lt;a href=&quot;#项目简介&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h2 id=&quot;项目描述&quot;&gt;&lt;a href=&quot;#项目描述&quot; class=&quot;headerlink&quot; title=&quot;项目描述&quot;&gt;&lt;/a&gt;项目描述&lt;/h2&gt;&lt;p&gt;数维可视化平台：一套数据可视化展示平台，支持多种数据源类型（CSV静态文件，数据库连接，Http接口，JSON静态数据，WebSocket连接）。拥有多种酷炫图表和动画，同时支持本地化部署，镜像保存，分享，权限控制等。支持自定义图表上传，支持多种可视化插件，如Echarts，D3，AntV等。3D可视化功能目前只支持Unity3D引擎。&lt;/p&gt;
+&lt;h2 id=&quot;功能介绍&quot;&gt;&lt;a href=&quot;#功能介绍&quot; class=&quot;headerlink&quot; title=&quot;功能介绍&quot;&gt;&lt;/a&gt;功能介绍&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;本地部署&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;适配非常规拼接大屏，支持加密发布，支持本地部署，数据无需上传至第三方服务器或云端，私密数据的安全性更有保障。 &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;多种数据源支持&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;支持接入关系型数据库、本地CSV上传和在线API等，支持动态请求，多服务平台信息可视化呈现。 &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;数据源跨平台兼容&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;兼容各种数据源类型，支持海量数据。可连接公司各种各样业务管理系统、第三方平台互联网技术统计数据、电子表格等数据文件以及公共数据综合服务平台，轻松整合所有相关业务数据，帮助企业消除数据孤岛。 &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3D可视化&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;我们不仅提供全周期模型资源支持，还可以通过设计师灵动设计的场景模型与现实设备进行数据互通与联动，真正实现3D万物可视，还支持3D地图等效果，支持地理数据多层叠加。 &lt;/p&gt;
+&lt;p&gt;大屏加密发布，数据加密使用等。&lt;/p&gt;
     
     </summary>
     
@@ -73,6 +76,30 @@
   </entry>
   
   <entry>
+    <title>Babel转码器</title>
+    <link href="https://yangyfeng.github.io//posts/390a51fc.html"/>
+    <id>https://yangyfeng.github.io//posts/390a51fc.html</id>
+    <published>2021-01-07T16:00:00.000Z</published>
+    <updated>2021-01-11T05:06:55.760Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt; &lt;a href=&quot;https://babeljs.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Babel&lt;/a&gt; 是一个广泛使用的 ES6 转码器(下一代的JavaScript编译器)，可以将 ES6 代码转为 ES5
+        
+      
+    
+    </summary>
+    
+      <category term="Es6" scheme="https://yangyfeng.github.io/blogpost/categories/Es6/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>globalThis对象</title>
     <link href="https://yangyfeng.github.io//posts/180dd8a3.html"/>
     <id>https://yangyfeng.github.io//posts/180dd8a3.html</id>
@@ -88,30 +115,6 @@
           &lt;p&gt; JavaScript 语言存在一个顶层对象，它提供全局环境（即全局作用域），所有代码都是在这个环境中运行。但是，顶层对象在各种实现里面是不统一的。 &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;浏览器里面，顶层对象是&lt;code&gt;window&lt;/code&gt;，但 Node 和 Web
-        
-      
-    
-    </summary>
-    
-      <category term="Es6" scheme="https://yangyfeng.github.io/blogpost/categories/Es6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Babel转码器</title>
-    <link href="https://yangyfeng.github.io//posts/390a51fc.html"/>
-    <id>https://yangyfeng.github.io//posts/390a51fc.html</id>
-    <published>2021-01-07T16:00:00.000Z</published>
-    <updated>2021-01-11T05:06:55.760Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt; &lt;a href=&quot;https://babeljs.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Babel&lt;/a&gt; 是一个广泛使用的 ES6 转码器(下一代的JavaScript编译器)，可以将 ES6 代码转为 ES5
         
       
     
@@ -181,6 +184,67 @@
   </entry>
   
   <entry>
+    <title>javascript是如何被运行的</title>
+    <link href="https://yangyfeng.github.io//posts/81adf3b6.html"/>
+    <id>https://yangyfeng.github.io//posts/81adf3b6.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:47.499Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;JS的语言组成&quot;&gt;&lt;a href=&quot;#JS的语言组成&quot; class=&quot;headerlink&quot; title=&quot;JS的语言组成&quot;&gt;&lt;/a&gt;JS的语言组成&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;基本语法：C&lt;/li&gt;
+&lt;li&gt;数据类型 内存管理：Java&lt;/li&gt;
+&lt;li&gt;函数式编程：Scheme  函数是第一等公民&lt;/li&gt;
+&lt;li&gt;原型继承：Self   基于原型prototype的继承机制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;奇葩的JS&quot;&gt;&lt;a href=&quot;#奇葩的JS&quot; class=&quot;headerlink&quot; title=&quot;奇葩的JS&quot;&gt;&lt;/a&gt;奇葩的JS&lt;/h2&gt;&lt;p&gt;对于熟悉javascript语言的前端开发小伙伴，直接上来两张图&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rrE9Gq&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rrE9Gq.md.png&quot; alt=&quot;rrE9Gq.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rrEALF&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rrEALF.md.png&quot; alt=&quot;rrEALF.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;是不是瞬间感觉头脑发热呢。&lt;/p&gt;
+&lt;p&gt;之所以会出现这些诡异的问题，是因为javascript是在设计之初并没有考虑的完善，是借鉴了多种语言的模式，基本是融合了面向过程和面向对象的。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="javascript" scheme="https://yangyfeng.github.io/blogpost/tags/javascript/"/>
+    
+      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么是JS调用栈</title>
+    <link href="https://yangyfeng.github.io//posts/9926a09c.html"/>
+    <id>https://yangyfeng.github.io//posts/9926a09c.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:41.337Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;栈：先进后出，进栈，出栈，与堆栈不同&lt;/p&gt;
+&lt;p&gt;队列：先进先出&lt;/p&gt;
+&lt;p&gt;调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用
+        
+      
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>互联网是如何运作的</title>
     <link href="https://yangyfeng.github.io//posts/c35109d5.html"/>
     <id>https://yangyfeng.github.io//posts/c35109d5.html</id>
@@ -219,38 +283,6 @@
       <category term="tcp" scheme="https://yangyfeng.github.io/blogpost/tags/tcp/"/>
     
       <category term="http" scheme="https://yangyfeng.github.io/blogpost/tags/http/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>javascript是如何被运行的</title>
-    <link href="https://yangyfeng.github.io//posts/81adf3b6.html"/>
-    <id>https://yangyfeng.github.io//posts/81adf3b6.html</id>
-    <published>2020-12-21T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:47.499Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;JS的语言组成&quot;&gt;&lt;a href=&quot;#JS的语言组成&quot; class=&quot;headerlink&quot; title=&quot;JS的语言组成&quot;&gt;&lt;/a&gt;JS的语言组成&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;基本语法：C&lt;/li&gt;
-&lt;li&gt;数据类型 内存管理：Java&lt;/li&gt;
-&lt;li&gt;函数式编程：Scheme  函数是第一等公民&lt;/li&gt;
-&lt;li&gt;原型继承：Self   基于原型prototype的继承机制&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;奇葩的JS&quot;&gt;&lt;a href=&quot;#奇葩的JS&quot; class=&quot;headerlink&quot; title=&quot;奇葩的JS&quot;&gt;&lt;/a&gt;奇葩的JS&lt;/h2&gt;&lt;p&gt;对于熟悉javascript语言的前端开发小伙伴，直接上来两张图&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rrE9Gq&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rrE9Gq.md.png&quot; alt=&quot;rrE9Gq.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rrEALF&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/22/rrEALF.md.png&quot; alt=&quot;rrEALF.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;是不是瞬间感觉头脑发热呢。&lt;/p&gt;
-&lt;p&gt;之所以会出现这些诡异的问题，是因为javascript是在设计之初并没有考虑的完善，是借鉴了多种语言的模式，基本是融合了面向过程和面向对象的。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="javascript" scheme="https://yangyfeng.github.io/blogpost/tags/javascript/"/>
-    
-      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
@@ -335,35 +367,6 @@
   </entry>
   
   <entry>
-    <title>什么是JS调用栈</title>
-    <link href="https://yangyfeng.github.io//posts/9926a09c.html"/>
-    <id>https://yangyfeng.github.io//posts/9926a09c.html</id>
-    <published>2020-12-21T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:41.337Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;栈：先进后出，进栈，出栈，与堆栈不同&lt;/p&gt;
-&lt;p&gt;队列：先进先出&lt;/p&gt;
-&lt;p&gt;调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用
-        
-      
-    
-    </summary>
-    
-      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
     <title>vue面试题（2）</title>
     <link href="https://yangyfeng.github.io//posts/e210f74f.html"/>
     <id>https://yangyfeng.github.io//posts/e210f74f.html</id>
@@ -441,6 +444,34 @@
   </entry>
   
   <entry>
+    <title>深入webpack</title>
+    <link href="https://yangyfeng.github.io//posts/a441c8bd.html"/>
+    <id>https://yangyfeng.github.io//posts/a441c8bd.html</id>
+    <published>2020-12-15T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:13.138Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;实现步骤：&quot;&gt;&lt;a href=&quot;#实现步骤：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="webpack" scheme="https://yangyfeng.github.io/blogpost/tags/webpack/"/>
+    
+      <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
     <title>深入前端模块化</title>
     <link href="https://yangyfeng.github.io//posts/c00659d0.html"/>
     <id>https://yangyfeng.github.io//posts/c00659d0.html</id>
@@ -489,34 +520,6 @@
       <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
     
       <category term="模块化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深入webpack</title>
-    <link href="https://yangyfeng.github.io//posts/a441c8bd.html"/>
-    <id>https://yangyfeng.github.io//posts/a441c8bd.html</id>
-    <published>2020-12-15T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:13.138Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;实现步骤：&quot;&gt;&lt;a href=&quot;#实现步骤：&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="webpack" scheme="https://yangyfeng.github.io/blogpost/tags/webpack/"/>
-    
-      <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
     
   </entry>
   
