@@ -52,6 +52,6 @@ https://github.com/mygitname/mywebsite/tree/master/static/css/style.css
 **图床地址** <a href="https://imgchr.com/">https://imgchr.com/</a>
 
 ```
-用户：yangyufeng0423@163.com
+用户：yangyufeng.web@foxmail.com
 ```
 
