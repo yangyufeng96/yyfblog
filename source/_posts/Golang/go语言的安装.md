@@ -25,20 +25,20 @@ Go 语言被设计成一门应用于搭载 Web 服务器，存储集群或类似
 
 ## 语言环境安装
 
- Go 语言支持以下系统： 
+Go 语言支持以下系统： 
 
 - Linux
 - FreeBSD
 - Mac OS X（也称为 Darwin）
 - Window
 
- 使用这个地址：https://golang.google.cn/dl/。 
+使用这个地址：https://golang.google.cn/dl/。 
 
 ## Go 环境变量
 
 [![yq0W1f.png](https://s3.ax1x.com/2021/02/23/yq0W1f.png)](https://imgchr.com/i/yq0W1f)
 
- 将%GOPATH%\bin添加到Path里 
+将%GOPATH%\bin添加到Path里 
 
 [![yq0IBQ.png](https://s3.ax1x.com/2021/02/23/yq0IBQ.png)](https://imgchr.com/i/yq0IBQ)
 
