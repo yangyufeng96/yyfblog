@@ -6,7 +6,7 @@
   <link href="/./atom.xml" rel="self"/>
   
   <link href="https://yangyfeng.github.io/"/>
-  <updated>2021-02-22T09:18:58.999Z</updated>
+  <updated>2021-02-23T06:30:24.298Z</updated>
   <id>https://yangyfeng.github.io/</id>
   
   <author>
@@ -15,6 +15,88 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>华北电力控制系统</title>
+    <link href="https://yangyfeng.github.io//posts/763ea06e.html"/>
+    <id>https://yangyfeng.github.io//posts/763ea06e.html</id>
+    <published>2021-02-22T16:00:00.000Z</published>
+    <updated>2021-02-23T06:30:24.298Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;项目描述&quot;&gt;&lt;a href=&quot;#项目描述&quot; class=&quot;headerlink&quot; title=&quot;项目描述&quot;&gt;&lt;/a&gt;项目描述&lt;/h2&gt;&lt;h2 id=&quot;功能介绍&quot;&gt;&lt;a href=&quot;#功能介绍&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="个人项目" scheme="https://yangyfeng.github.io/blogpost/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="数据可视化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>智慧农业可视化</title>
+    <link href="https://yangyfeng.github.io//posts/d02d7caa.html"/>
+    <id>https://yangyfeng.github.io//posts/d02d7caa.html</id>
+    <published>2021-02-22T16:00:00.000Z</published>
+    <updated>2021-02-23T06:41:01.184Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="个人项目" scheme="https://yangyfeng.github.io/blogpost/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="数据可视化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>风力发电SCADA</title>
+    <link href="https://yangyfeng.github.io//posts/5f998618.html"/>
+    <id>https://yangyfeng.github.io//posts/5f998618.html</id>
+    <published>2021-02-22T16:00:00.000Z</published>
+    <updated>2021-02-23T06:38:27.448Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;什么是SCADA&quot;&gt;&lt;a href=&quot;#什么是SCADA&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="个人项目" scheme="https://yangyfeng.github.io/blogpost/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="数据可视化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>大数据可视化系统</title>
@@ -184,6 +266,32 @@
   </entry>
   
   <entry>
+    <title>js的事件循环是什么</title>
+    <link href="https://yangyfeng.github.io//posts/62b88241.html"/>
+    <id>https://yangyfeng.github.io//posts/62b88241.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:51.778Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;事件循环的机制&quot;&gt;&lt;a href=&quot;#事件循环的机制&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="event loop" scheme="https://yangyfeng.github.io/blogpost/tags/event-loop/"/>
+    
+  </entry>
+  
+  <entry>
     <title>javascript是如何被运行的</title>
     <link href="https://yangyfeng.github.io//posts/81adf3b6.html"/>
     <id>https://yangyfeng.github.io//posts/81adf3b6.html</id>
@@ -210,35 +318,6 @@
     
     
       <category term="javascript" scheme="https://yangyfeng.github.io/blogpost/tags/javascript/"/>
-    
-      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>什么是JS调用栈</title>
-    <link href="https://yangyfeng.github.io//posts/9926a09c.html"/>
-    <id>https://yangyfeng.github.io//posts/9926a09c.html</id>
-    <published>2020-12-21T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:41.337Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;栈：先进后出，进栈，出栈，与堆栈不同&lt;/p&gt;
-&lt;p&gt;队列：先进先出&lt;/p&gt;
-&lt;p&gt;调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用
-        
-      
-    
-    </summary>
-    
-      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
-    
     
       <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
     
@@ -283,32 +362,6 @@
       <category term="tcp" scheme="https://yangyfeng.github.io/blogpost/tags/tcp/"/>
     
       <category term="http" scheme="https://yangyfeng.github.io/blogpost/tags/http/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js的事件循环是什么</title>
-    <link href="https://yangyfeng.github.io//posts/62b88241.html"/>
-    <id>https://yangyfeng.github.io//posts/62b88241.html</id>
-    <published>2020-12-21T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:51.778Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;事件循环的机制&quot;&gt;&lt;a href=&quot;#事件循环的机制&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="event loop" scheme="https://yangyfeng.github.io/blogpost/tags/event-loop/"/>
     
   </entry>
   
@@ -363,6 +416,35 @@
     
     
       <category term="浏览器运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么是JS调用栈</title>
+    <link href="https://yangyfeng.github.io//posts/9926a09c.html"/>
+    <id>https://yangyfeng.github.io//posts/9926a09c.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:41.337Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;栈：先进后出，进栈，出栈，与堆栈不同&lt;/p&gt;
+&lt;p&gt;队列：先进先出&lt;/p&gt;
+&lt;p&gt;调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用
+        
+      
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
@@ -444,34 +526,6 @@
   </entry>
   
   <entry>
-    <title>深入webpack</title>
-    <link href="https://yangyfeng.github.io//posts/a441c8bd.html"/>
-    <id>https://yangyfeng.github.io//posts/a441c8bd.html</id>
-    <published>2020-12-15T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:13.138Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;实现步骤：&quot;&gt;&lt;a href=&quot;#实现步骤：&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="webpack" scheme="https://yangyfeng.github.io/blogpost/tags/webpack/"/>
-    
-      <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
     <title>深入前端模块化</title>
     <link href="https://yangyfeng.github.io//posts/c00659d0.html"/>
     <id>https://yangyfeng.github.io//posts/c00659d0.html</id>
@@ -520,6 +574,34 @@
       <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
     
       <category term="模块化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深入webpack</title>
+    <link href="https://yangyfeng.github.io//posts/a441c8bd.html"/>
+    <id>https://yangyfeng.github.io//posts/a441c8bd.html</id>
+    <published>2020-12-15T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:13.138Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;实现步骤：&quot;&gt;&lt;a href=&quot;#实现步骤：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+      <category term="webpack" scheme="https://yangyfeng.github.io/blogpost/tags/webpack/"/>
     
   </entry>
   
@@ -574,137 +656,6 @@
       <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
     
       <category term="性能优化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue面试题（1）</title>
-    <link href="https://yangyfeng.github.io//posts/f0a558a1.html"/>
-    <id>https://yangyfeng.github.io//posts/f0a558a1.html</id>
-    <published>2020-12-10T16:00:00.000Z</published>
-    <updated>2020-12-22T09:31:15.896Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Vue双向绑定实现原理？&quot;&gt;&lt;a href=&quot;#Vue双向绑定实现原理？&quot; class=&quot;headerlink&quot; title=&quot;Vue双向绑定实现原理？&quot;&gt;&lt;/a&gt;Vue双向绑定实现原理？&lt;/h2&gt;&lt;p&gt;vue实现数据双向绑定主要是：采用数据劫持结合发布者-订阅者模式的方式，通过 Object.defineProperty() 来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应监听回调。当把一个普通 Javascript 对象传给 Vue 实例来作为它的 data 选项时，Vue 将遍历它的属性，用 Object.defineProperty() 将它们转为 getter/setter。用户看不到 getter/setter，但是在内部它们让 Vue 追踪依赖，在属性被访问和修改时通知变化。&lt;/p&gt;
-&lt;p&gt;vue的数据双向绑定 将MVVM作为数据绑定的入口，整合Observer，Compile和Watcher三者，通过Observer来监听自己的model的数据变化，通过Compile来解析编译模板指令（vue中是用来解析 双花括弧），最终利用watcher搭起observer和Compile之间的通信桥梁，达到数据变化 —&amp;gt;视图更新；视图交互变化（input）—&amp;gt;数据model变更双向绑定效果。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Observer 对所有数据的属性进行监听&lt;/li&gt;
-&lt;li&gt;Compile 对每个元素节点的指令进行扫描跟解析,根据指令模板替换数据,以及绑定相应的更新函数&lt;/li&gt;
-&lt;li&gt;Watcher 作为连接Observer 跟 Compile 之间的桥梁, 能够订阅接收到每个属性变动的通知,执行相应的回调函数&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;代码理解: &lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;72&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;73&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;74&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;75&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;76&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;77&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;78&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;79&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;80&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;81&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;82&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;83&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;84&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;85&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;86&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;87&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;88&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;89&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;90&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;91&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;92&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;93&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;94&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;95&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;96&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;97&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; Dep = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.subs = []&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Dep.prototype = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  addSub: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;sub&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.subs.push(sub)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  notify: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.subs.forEach(sub = &amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      sub.update()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; Watcher = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;vm, node, name&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Dep.target = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.name = name;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.node = node;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.vm = vm;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.update();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Dep.target = &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Watcher.prototype = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  update: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.get();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.node.nodeValue = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.value&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;get&lt;/span&gt;: function() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.value = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.vm[&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.name]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; compile = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;node, vm&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (node.nodeType === &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; attr = node.attributes;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; attr.length; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (attr[i].nodeName === &lt;span class=&quot;string&quot;&gt;&#39;v-model&#39;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; name = attr[i].nodeValue;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        node.addEventListener(&lt;span class=&quot;string&quot;&gt;&#39;input&#39;&lt;/span&gt;, e = &amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          vm[name] = node.value&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        node.value = vm[name];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        node.removeAttribute(&lt;span class=&quot;string&quot;&gt;&#39;v-model&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (node.nodeType === &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;regexp&quot;&gt;/\&amp;#123;\&amp;#123;(.*)\&amp;#125;\&amp;#125;/&lt;/span&gt;.test(node.nodeValue)) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; name = &lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;.$&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      name = name.trim();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      node.nodeValue = vm[name];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Watcher(vm, node, name)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; observe = data = &amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!data || &lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; data !== &lt;span class=&quot;string&quot;&gt;&#39;object&#39;&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;3344&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.keys(data).forEach(key = &amp;gt; defineReactive(data, key, data[key]))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; defineReactive = (data, key, value) = &amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; dep = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Dep();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  observe(value);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.defineProperty(data, key, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;get&lt;/span&gt;: () = &amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (Dep.target) dep.addSub(Dep.target);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; value&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;set&lt;/span&gt;: function(newValue) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;`数据已发生变化，新的值为$ &amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;				newValue&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;			&amp;#125;`&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      value = newValue;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      dep.notify()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;nodeToFragment&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;node, vm&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; flag = &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.createDocumentFragment();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; child;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; ((child = node.firstChild)) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    compile(child, vm);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    flag.appendChild(child)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; flag&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Vue&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;options&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; data = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.data = options.data;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  observe(data, &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; id = options.el;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; dom = nodeToFragment(&lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.getElementById(id), data);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.getElementById(id).appendChild(dom)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; vm = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Vue(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  el: &lt;span class=&quot;string&quot;&gt;&#39;app&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  data: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    text: &lt;span class=&quot;string&quot;&gt;&#39;example text&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt; 题目分析：双向绑定是vue的特色之一，开发中必然会用到的知识点，然而此题还问了实现原理，升级为深度考查。 &lt;/p&gt;
-&lt;p&gt;思路分析：3w1h&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;给出双绑定义&lt;/li&gt;
-&lt;li&gt;双绑带来的好处&lt;/li&gt;
-&lt;li&gt;在哪使用双绑&lt;/li&gt;
-&lt;li&gt;使用方式&lt;/li&gt;
-&lt;li&gt;扩展：使用细节、原理实现描述&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;回答范例：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;vue中双向绑定是一个指令v-model，可以绑定一个动态值到视图，同时视图中变化能改变该值。v-model是语法糖，默认情况下相当于:value和@input。&lt;/li&gt;
-&lt;li&gt;使用v-model可以减少大量繁琐的事件处理代码，提高开发效率，代码可读性也更好&lt;/li&gt;
-&lt;li&gt;通常在表单项上使用v-model&lt;/li&gt;
-&lt;li&gt;原生的表单项可以直接使用v-model，自定义组件上如果要使用它需要在组件内绑定value并处理输入事件&lt;/li&gt;
-&lt;li&gt;我做过测试，输出包含v-model模板的组件渲染函数，发现它会被转换为value属性的绑定以及一个事件监听，事件回调函数中会做相应变量更新操作，这说明神奇魔法实际上是vue的编译器完成的。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;可能的追问：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;v-model和sync修饰符有什么区别&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;自定义组件使用v-model如果想要改变事件名或者属性名应该怎么做&lt;/p&gt;
-&lt;p&gt;观察输出的渲染函数： &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;lt;input type=&quot;text&quot; v-model=&quot;foo&quot;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;_c(&lt;span class=&quot;string&quot;&gt;&#39;input&#39;&lt;/span&gt;, &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  directives: [&amp;#123; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;model&quot;&lt;/span&gt;, &lt;span class=&quot;attr&quot;&gt;rawName&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;v-model&quot;&lt;/span&gt;, &lt;span class=&quot;attr&quot;&gt;value&lt;/span&gt;: (foo), &lt;span class=&quot;attr&quot;&gt;expression&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;foo&quot;&lt;/span&gt; &amp;#125;], &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  attrs: &amp;#123; &lt;span class=&quot;string&quot;&gt;&quot;type&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;text&quot;&lt;/span&gt; &amp;#125;, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  domProps: &amp;#123; &lt;span class=&quot;string&quot;&gt;&quot;value&quot;&lt;/span&gt;: (foo) &amp;#125;, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  on: &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;input&quot;&lt;/span&gt;: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;$event&lt;/span&gt;) &lt;/span&gt;&amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ($event.target.composing) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      foo = $event.target.value &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;lt;input type=&quot;checkbox&quot; v-model=&quot;bar&quot;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;_c(&lt;span class=&quot;string&quot;&gt;&#39;input&#39;&lt;/span&gt;, &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  directives: [&amp;#123; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;model&quot;&lt;/span&gt;, &lt;span class=&quot;attr&quot;&gt;rawName&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;v-model&quot;&lt;/span&gt;, &lt;span class=&quot;attr&quot;&gt;value&lt;/span&gt;: (bar), &lt;span class=&quot;attr&quot;&gt;expression&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;bar&quot;&lt;/span&gt; &amp;#125;], &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  attrs: &amp;#123; &lt;span class=&quot;string&quot;&gt;&quot;type&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;checkbox&quot;&lt;/span&gt; &amp;#125;, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  domProps: &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;checked&quot;&lt;/span&gt;: &lt;span class=&quot;built_in&quot;&gt;Array&lt;/span&gt;.isArray(bar) ? _i(bar, &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;) &amp;gt; &lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt; : (bar) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  on: &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;change&quot;&lt;/span&gt;: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;$event&lt;/span&gt;) &lt;/span&gt;&amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; $$a = bar, $$el = $event.target, $$c = $$el.checked ? (&lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;) : (&lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;); &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;built_in&quot;&gt;Array&lt;/span&gt;.isArray($$a)) &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; $$v = &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;, $$i = _i($$a, $$v); &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ($$el.checked) &amp;#123; $$i &amp;lt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;amp;&amp;amp; (bar = $$a.concat([$$v])) &amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          $$i &amp;gt; &lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt; &amp;amp;&amp;amp; (bar = $$a.slice(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, $$i).concat($$a.slice($$i + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;))) &amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        bar = $$c &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;lt;select v-model=&quot;baz&quot;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//     &amp;lt;option value=&quot;vue&quot;&amp;gt;vue&amp;lt;/option&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//     &amp;lt;option value=&quot;react&quot;&amp;gt;react&amp;lt;/option&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;lt;/select&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;_c(&lt;span class=&quot;string&quot;&gt;&#39;select&#39;&lt;/span&gt;, &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  directives: [&amp;#123; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;model&quot;&lt;/span&gt;, &lt;span class=&quot;attr&quot;&gt;rawName&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;v-model&quot;&lt;/span&gt;, &lt;span class=&quot;attr&quot;&gt;value&lt;/span&gt;: (baz), &lt;span class=&quot;attr&quot;&gt;expression&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;baz&quot;&lt;/span&gt; &amp;#125;], &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  on: &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;change&quot;&lt;/span&gt;: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;$event&lt;/span&gt;) &lt;/span&gt;&amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; $$selectedVal = &lt;span class=&quot;built_in&quot;&gt;Array&lt;/span&gt;.prototype.filter.call(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        $event.target.options, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;o&lt;/span&gt;) &lt;/span&gt;&amp;#123; &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; o.selected &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      ).map(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;o&lt;/span&gt;) &lt;/span&gt;&amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; val = &lt;span class=&quot;string&quot;&gt;&quot;_value&quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; o ? o._value : o.value; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; val &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      ); &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      baz = $event.target.multiple ? $$selectedVal : $$selectedVal[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;] &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;, [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  _c(&lt;span class=&quot;string&quot;&gt;&#39;option&#39;&lt;/span&gt;, &amp;#123; &lt;span class=&quot;attr&quot;&gt;attrs&lt;/span&gt;: &amp;#123; &lt;span class=&quot;string&quot;&gt;&quot;value&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;vue&quot;&lt;/span&gt; &amp;#125; &amp;#125;, [_v(&lt;span class=&quot;string&quot;&gt;&quot;vue&quot;&lt;/span&gt;)]), _v(&lt;span class=&quot;string&quot;&gt;&quot; &quot;&lt;/span&gt;), &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  _c(&lt;span class=&quot;string&quot;&gt;&#39;option&#39;&lt;/span&gt;, &amp;#123; &lt;span class=&quot;attr&quot;&gt;attrs&lt;/span&gt;: &amp;#123; &lt;span class=&quot;string&quot;&gt;&quot;value&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;react&quot;&lt;/span&gt; &amp;#125; &amp;#125;, [_v(&lt;span class=&quot;string&quot;&gt;&quot;react&quot;&lt;/span&gt;)])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;])&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
-    
-      <category term="面试题" scheme="https://yangyfeng.github.io/blogpost/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue3的新特性</title>
-    <link href="https://yangyfeng.github.io//posts/86248f8a.html"/>
-    <id>https://yangyfeng.github.io//posts/86248f8a.html</id>
-    <published>2020-12-07T16:00:00.000Z</published>
-    <updated>2020-12-11T09:17:52.241Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;六大亮点&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://vue3js.cn/docs/zh/api/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;vue3官方文档&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rSCl4A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/08/rSCl4A.jpg&quot; alt=&quot;rSCl4A.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;Performance&lt;/code&gt;：性能更比&lt;code&gt;Vue 2.0&lt;/code&gt;强。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;Tree shaking support&lt;/code&gt;：可以将无用模块“剪辑”，仅打包需要的。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;Composition API&lt;/code&gt;：组合&lt;code&gt;API&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;Fragment, Teleport, Suspense&lt;/code&gt;：“碎片”，&lt;code&gt;Teleport&lt;/code&gt;即&lt;code&gt;Protal传送门&lt;/code&gt;，“悬念”&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;Better TypeScript support&lt;/code&gt;：更优秀的 Ts 支持&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;Custom Renderer API&lt;/code&gt;：暴露了自定义渲染&lt;code&gt;API&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>手写简易版vue，minivue的实现</title>
-    <link href="https://yangyfeng.github.io//posts/d3643a0f.html"/>
-    <id>https://yangyfeng.github.io//posts/d3643a0f.html</id>
-    <published>2020-12-07T16:00:00.000Z</published>
-    <updated>2020-12-11T09:17:53.446Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;基于vue2.*&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;vue采取数据劫持，配合观察者模式，通过Object.defineProperty() 来劫持各个属性的setter和getter，在数据变动时，发布消息给依赖收集器dep，去通知观察者，做出对应的回调函数，去更新视图。（也就是在getter中收集依赖，在setter中通知依赖更新。&lt;/code&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;其实vue主要就是整合Observer，compile和watcher三者，通过Observer来监听 model数据变化表，通过compile来解析编译模板指令，最终利用Watcher搭起observer 和compile的通信桥梁，达到数据变化=&amp;gt;视图变化，视图变化=&amp;gt;数据变化的双向绑定效果。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt; 下面来一张图↓ &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rSsjT1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/08/rSsjT1.png&quot; alt=&quot;rSsjT1.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt; 这个流程图已经非常形象深刻的表达了vue的运行模式，当你理解了这个流程，再去看vue源码时就会容易很多了 &lt;/p&gt;
-&lt;p&gt; 声明一下，下面的代码只简单实现了vue里的 &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;v-model（数据的双向绑定）&lt;/li&gt;
-&lt;li&gt;v-bind/v-on&lt;/li&gt;
-&lt;li&gt;v-text/v-html&lt;/li&gt;
-&lt;li&gt;没有实现虚拟dom，采用文档碎片（createDocumentFragment）代替&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;数据只劫持了Object，数组Array没有做处理&lt;/p&gt;
-&lt;p&gt;代码大致结构如下，初步定义了6个类 &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rSyiOH&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/08/rSyiOH.png&quot; alt=&quot;rSyiOH.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
     
   </entry>
   
