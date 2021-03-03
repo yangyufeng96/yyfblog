@@ -58,15 +58,11 @@ console.log("开始初始化评论...");
       });
     });
     // 排除不需要初始化的链接
-    // 友情链接：/friends/index.html 
-    // 关于我：/about/index.html 
     // 文章标签页： /blogpost/tags/index.html
     // 文章分类页： /blogpost/categories/index.html 
     // 文章归档页： /blogpost/archives/index.html 
     // 404页：/404.html
     const filterPages = [
-      '/friends/index.html',
-      '/about/index.html',
       '/blogpost/tags/index.html',
       '/blogpost/categories/index.html',
       '/blogpost/archives/index.html',
