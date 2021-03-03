@@ -814,124 +814,6 @@
       
         
   <h2 class="title">
-    <a href="/posts/62b88241.html">
-      js的事件循环是什么
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    <a href="https://yangyfeng.github.io" rel="nofollow">
-      
-        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
-      
-      <p>漫道求索</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-12-22</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blogpost/categories/深入前端/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>深入前端</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-        
-          <!-- 文章字体个数 -->
-          <div class="new-meta-item size">
-            <a class="notlink">
-              <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>53字</p>
-            </a>
-          </div>
-          <!-- 阅读时间 -->
-          <div class="new-meta-item read-time">
-            <a class="notlink">
-              <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>1分</p>
-            </a>
-          </div>
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h2 id="事件循环的机制"><a href="#事件循环的机制" class="headerlink" title="事件循环的机制"></a>事件循环的机制</h2><p><strong>概念</strong></p>
-<p>宏任务：script(整个代码)、setTimeout、setInterval、setImmediate、I/O、UI rendering</p>
-<p>微任务：promise、Object.observe、MutationObserve</p>
-<p>任务的优先级：process.nextTick &gt; promise.then &gt; setTimeout &gt; setImmediate</p>
-<p><a href="https://mp.weixin.qq.com/s/7k4skVdCIhTsTdEFmXyYLg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/7k4skVdCIhTsTdEFmXyYLg</a></p>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blogpost/tags/event-loop/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>event loop</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
     <a href="/posts/81adf3b6.html">
       javascript是如何被运行的
     </a>
@@ -1206,8 +1088,8 @@
       
         
   <h2 class="title">
-    <a href="/posts/41e3ecae.html">
-      浏览器是如何运作的
+    <a href="/posts/62b88241.html">
+      js的事件循环是什么
     </a>
   </h2>
 
@@ -1269,14 +1151,14 @@
           <div class="new-meta-item size">
             <a class="notlink">
               <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>1.1k字</p>
+              <p>53字</p>
             </a>
           </div>
           <!-- 阅读时间 -->
           <div class="new-meta-item read-time">
             <a class="notlink">
               <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>3分</p>
+              <p>1分</p>
             </a>
           </div>
         
@@ -1290,54 +1172,18 @@
 
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">
-      <h2 id="浏览器是多进程结构的"><a href="#浏览器是多进程结构的" class="headerlink" title="浏览器是多进程结构的"></a>浏览器是多进程结构的</h2><p><strong>进程</strong></p>
-<p>操作系统进行资源分配和调度的基本单元。可以申请和拥有计算机资源，进程是程序的基本执行实体。两个进程分配的资源和内存是独立，如果需要通信就要使用进程通信管道IPC来传递信息。</p>
-<p><strong>线程</strong></p>
-<p>操作系统能够进行运算调度的最小单位，一个进程中可以并发多个线程，每条线程并行执行不同的任务。</p>
-<p><strong>浏览器功能进程拆解</strong></p>
-<p><a href="https://imgchr.com/i/rDbTde" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/22/rDbTde.png" alt="rDbTde.png"></a></p>
-<ol>
-<li><p>浏览器进程</p>
-<p>控制除标签页外的用户界面，包括地址，书签，后退，前进按钮等，以及负责与浏览器其他进程负责协调工作</p>
-</li>
-<li><p>缓存进程</p>
-<p>负责控制浏览器的存储数据的缓存和读取</p>
-</li>
-<li><p>网络进程 </p>
-<p>发起和接受网络请求</p>
-</li>
-<li><p>渲染器进程 </p>
-<p>渲染Tab  有可能会为每个标签页是一个渲染进程</p>
-</li>
-<li><p>GPU进程</p>
-<p>整个浏览器界面的渲染</p>
-</li>
-<li><p>插件进程</p>
-<p>控制网站使用的所有内置插件，例如：flash</p>
-</li>
-</ol>
-<p><strong>浏览器结构图</strong></p>
-<p><a href="https://imgchr.com/i/rDoRuF" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/22/rDoRuF.png" alt="rDoRuF.png"></a></p>
-<p>说明：</p>
-<p>用户界面：展示除了标签页窗口之外的其他用户用户界面内容</p>
-<p>渲染引擎：渲染用户获取数据的渲染内容。一下还有很多小的功能模块，如负责网络请求的网络模块，用于解析和执行js的js解释器</p>
-<p>浏览器引擎：用户界面和渲染引擎之间传递数据</p>
-<p>数据持久层：帮助浏览器存储持久数据，如cokies和storage。</p>
-<p><strong>我们称呼的内核就是指的渲染引擎，是整个浏览器的核心和灵魂</strong></p>
-<p>Chromium会给用户创建的每一个访问实例分配一个进程，确保每一个页面是独立呈现的，并且对每个网站的独立访问也是彼此隔离的。访问不同站点和同一站点的不同页面都会创建新的进程。一个标签就是一个新的渲染器进程。</p>
-      
-        <div class="readmore">
-          <a href="/posts/41e3ecae.html" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
-        </div>
+      <h2 id="事件循环的机制"><a href="#事件循环的机制" class="headerlink" title="事件循环的机制"></a>事件循环的机制</h2><p><strong>概念</strong></p>
+<p>宏任务：script(整个代码)、setTimeout、setInterval、setImmediate、I/O、UI rendering</p>
+<p>微任务：promise、Object.observe、MutationObserve</p>
+<p>任务的优先级：process.nextTick &gt; promise.then &gt; setTimeout &gt; setImmediate</p>
+<p><a href="https://mp.weixin.qq.com/s/7k4skVdCIhTsTdEFmXyYLg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/7k4skVdCIhTsTdEFmXyYLg</a></p>
+
       
     </div>
     
       <div class="full-width auto-padding tags">
         
-          <a href="/blogpost/tags/浏览器运行原理/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>浏览器运行原理</a>
+          <a href="/blogpost/tags/event-loop/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>event loop</a>
         
       </div>
     
@@ -1475,6 +1321,160 @@
       <div class="full-width auto-padding tags">
         
           <a href="/blogpost/tags/JS运行原理/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>JS运行原理</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/posts/41e3ecae.html">
+      浏览器是如何运作的
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://yangyfeng.github.io" rel="nofollow">
+      
+        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
+      
+      <p>漫道求索</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-12-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/blogpost/categories/深入前端/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>深入前端</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+        
+          <!-- 文章字体个数 -->
+          <div class="new-meta-item size">
+            <a class="notlink">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+              <p>1.1k字</p>
+            </a>
+          </div>
+          <!-- 阅读时间 -->
+          <div class="new-meta-item read-time">
+            <a class="notlink">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <p>3分</p>
+            </a>
+          </div>
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h2 id="浏览器是多进程结构的"><a href="#浏览器是多进程结构的" class="headerlink" title="浏览器是多进程结构的"></a>浏览器是多进程结构的</h2><p><strong>进程</strong></p>
+<p>操作系统进行资源分配和调度的基本单元。可以申请和拥有计算机资源，进程是程序的基本执行实体。两个进程分配的资源和内存是独立，如果需要通信就要使用进程通信管道IPC来传递信息。</p>
+<p><strong>线程</strong></p>
+<p>操作系统能够进行运算调度的最小单位，一个进程中可以并发多个线程，每条线程并行执行不同的任务。</p>
+<p><strong>浏览器功能进程拆解</strong></p>
+<p><a href="https://imgchr.com/i/rDbTde" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/22/rDbTde.png" alt="rDbTde.png"></a></p>
+<ol>
+<li><p>浏览器进程</p>
+<p>控制除标签页外的用户界面，包括地址，书签，后退，前进按钮等，以及负责与浏览器其他进程负责协调工作</p>
+</li>
+<li><p>缓存进程</p>
+<p>负责控制浏览器的存储数据的缓存和读取</p>
+</li>
+<li><p>网络进程 </p>
+<p>发起和接受网络请求</p>
+</li>
+<li><p>渲染器进程 </p>
+<p>渲染Tab  有可能会为每个标签页是一个渲染进程</p>
+</li>
+<li><p>GPU进程</p>
+<p>整个浏览器界面的渲染</p>
+</li>
+<li><p>插件进程</p>
+<p>控制网站使用的所有内置插件，例如：flash</p>
+</li>
+</ol>
+<p><strong>浏览器结构图</strong></p>
+<p><a href="https://imgchr.com/i/rDoRuF" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/22/rDoRuF.png" alt="rDoRuF.png"></a></p>
+<p>说明：</p>
+<p>用户界面：展示除了标签页窗口之外的其他用户用户界面内容</p>
+<p>渲染引擎：渲染用户获取数据的渲染内容。一下还有很多小的功能模块，如负责网络请求的网络模块，用于解析和执行js的js解释器</p>
+<p>浏览器引擎：用户界面和渲染引擎之间传递数据</p>
+<p>数据持久层：帮助浏览器存储持久数据，如cokies和storage。</p>
+<p><strong>我们称呼的内核就是指的渲染引擎，是整个浏览器的核心和灵魂</strong></p>
+<p>Chromium会给用户创建的每一个访问实例分配一个进程，确保每一个页面是独立呈现的，并且对每个网站的独立访问也是彼此隔离的。访问不同站点和同一站点的不同页面都会创建新的进程。一个标签就是一个新的渲染器进程。</p>
+      
+        <div class="readmore">
+          <a href="/posts/41e3ecae.html" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/blogpost/tags/浏览器运行原理/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>浏览器运行原理</a>
         
       </div>
     
@@ -2423,11 +2423,11 @@
     gl_FragColor.a = 1.0;
     }
   </script>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":100,"height":200},"mobile":{"show":false,"scale":0.7},"log":false});</script><script>
+<script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":100,"height":200},"mobile":{"show":false,"scale":0.7},"log":false});</script></body>
 </html>

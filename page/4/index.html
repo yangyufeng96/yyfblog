@@ -896,6 +896,130 @@
       
         
   <h2 class="title">
+    <a href="/posts/8136685c.html">
+      less在vue中的使用
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://yangyfeng.github.io" rel="nofollow">
+      
+        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
+      
+      <p>漫道求索</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-09-08</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/blogpost/categories/前端/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>前端</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+        
+          <!-- 文章字体个数 -->
+          <div class="new-meta-item size">
+            <a class="notlink">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+              <p>174字</p>
+            </a>
+          </div>
+          <!-- 阅读时间 -->
+          <div class="new-meta-item read-time">
+            <a class="notlink">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <p>1分</p>
+            </a>
+          </div>
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h1 id="less在vue中的使用"><a href="#less在vue中的使用" class="headerlink" title="less在vue中的使用"></a>less在vue中的使用</h1><p>首先vue环境搭建成功</p>
+<h2 id="第一步："><a href="#第一步：" class="headerlink" title="第一步："></a>第一步：</h2><p><strong>安装 less 和less-loader</strong></p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">安装<span class="keyword">less</span>依赖：npm <span class="keyword">install</span> <span class="keyword">less</span> <span class="keyword">less</span>-loader --save</span><br></pre></td></tr></table></figure>
+<h2 id="第二步："><a href="#第二步：" class="headerlink" title="第二步："></a>第二步：</h2><p><strong>修改webpack.base.config.js文件，配置loader加载依赖，让其支持外部的less,在原来的代码上添加</strong></p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 此种方法在控制台中标签样式显示的是style标签样式</span></span><br><span class="line">&#123; </span><br><span class="line"><span class="symbol">    test:</span> /\.less$/,</span><br><span class="line"></span><br><span class="line"><span class="symbol">    loader:</span> <span class="string">"style-loader!css-loader!less-loader"</span>,</span><br><span class="line"></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">//</span> <span class="string">可以在控制台中看到当前标签样式来自于哪个less文件</span></span><br><span class="line"><span class="string">&#123;</span> </span><br><span class="line">    <span class="attr">test:</span> <span class="string">/\.less$/,</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">loader:</span> <span class="string">"style-loader!css-loader!less-loader"</span><span class="string">,</span></span><br><span class="line">　　　　 <span class="attr">options:</span> <span class="string">&#123;</span> <span class="attr">sourceMap:</span> <span class="literal">true</span> <span class="string">&#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://img2018.cnblogs.com/blog/1281517/201902/1281517-20190220094624448-2102626446.png" alt></p>
+<h2 id="第三步："><a href="#第三步：" class="headerlink" title="第三步："></a>第三步：</h2><p><strong>在vue文件中的style标签中添加lang=”less”即可在标签中使用less，或者外部引入less</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://img2018.cnblogs.com/blog/1281517/201902/1281517-20190220095032656-1323519047.png" alt></p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/blogpost/tags/less/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>less</a>
+        
+          <a href="/blogpost/tags/vue/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>vue</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
     <a href="/posts/7b1282c0.html">
       go语言的安装
     </a>
@@ -1005,130 +1129,6 @@
 
       
     </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/posts/8136685c.html">
-      less在vue中的使用
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    <a href="https://yangyfeng.github.io" rel="nofollow">
-      
-        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
-      
-      <p>漫道求索</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-09-08</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blogpost/categories/前端/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>前端</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-        
-          <!-- 文章字体个数 -->
-          <div class="new-meta-item size">
-            <a class="notlink">
-              <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>174字</p>
-            </a>
-          </div>
-          <!-- 阅读时间 -->
-          <div class="new-meta-item read-time">
-            <a class="notlink">
-              <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>1分</p>
-            </a>
-          </div>
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h1 id="less在vue中的使用"><a href="#less在vue中的使用" class="headerlink" title="less在vue中的使用"></a>less在vue中的使用</h1><p>首先vue环境搭建成功</p>
-<h2 id="第一步："><a href="#第一步：" class="headerlink" title="第一步："></a>第一步：</h2><p><strong>安装 less 和less-loader</strong></p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">安装<span class="keyword">less</span>依赖：npm <span class="keyword">install</span> <span class="keyword">less</span> <span class="keyword">less</span>-loader --save</span><br></pre></td></tr></table></figure>
-<h2 id="第二步："><a href="#第二步：" class="headerlink" title="第二步："></a>第二步：</h2><p><strong>修改webpack.base.config.js文件，配置loader加载依赖，让其支持外部的less,在原来的代码上添加</strong></p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 此种方法在控制台中标签样式显示的是style标签样式</span></span><br><span class="line">&#123; </span><br><span class="line"><span class="symbol">    test:</span> /\.less$/,</span><br><span class="line"></span><br><span class="line"><span class="symbol">    loader:</span> <span class="string">"style-loader!css-loader!less-loader"</span>,</span><br><span class="line"></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">//</span> <span class="string">可以在控制台中看到当前标签样式来自于哪个less文件</span></span><br><span class="line"><span class="string">&#123;</span> </span><br><span class="line">    <span class="attr">test:</span> <span class="string">/\.less$/,</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">loader:</span> <span class="string">"style-loader!css-loader!less-loader"</span><span class="string">,</span></span><br><span class="line">　　　　 <span class="attr">options:</span> <span class="string">&#123;</span> <span class="attr">sourceMap:</span> <span class="literal">true</span> <span class="string">&#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://img2018.cnblogs.com/blog/1281517/201902/1281517-20190220094624448-2102626446.png" alt></p>
-<h2 id="第三步："><a href="#第三步：" class="headerlink" title="第三步："></a>第三步：</h2><p><strong>在vue文件中的style标签中添加lang=”less”即可在标签中使用less，或者外部引入less</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://img2018.cnblogs.com/blog/1281517/201902/1281517-20190220095032656-1323519047.png" alt></p>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blogpost/tags/less/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>less</a>
-        
-          <a href="/blogpost/tags/vue/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>vue</a>
-        
-      </div>
     
   </section>
 </article>
@@ -2463,11 +2463,11 @@
     gl_FragColor.a = 1.0;
     }
   </script>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":100,"height":200},"mobile":{"show":false,"scale":0.7},"log":false});</script><script>
+<script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":100,"height":200},"mobile":{"show":false,"scale":0.7},"log":false});</script></body>
 </html>

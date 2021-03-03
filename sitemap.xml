@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yangyfeng.github.io/about/index.html</loc>
+    
+    <lastmod>2021-03-03T06:38:11.376Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yangyfeng.github.io/friends/index.html</loc>
+    
+    <lastmod>2021-03-03T03:45:20.112Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yangyfeng.github.io/posts/7b1282c0.html</loc>
     
     <lastmod>2021-02-23T08:12:46.900Z</lastmod>
@@ -33,13 +47,6 @@
     <loc>https://yangyfeng.github.io/posts/5f998618.html</loc>
     
     <lastmod>2021-02-22T09:18:58.999Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yangyfeng.github.io/about/index.html</loc>
-    
-    <lastmod>2021-02-22T08:44:10.978Z</lastmod>
     
   </url>
   
@@ -334,13 +341,6 @@
     <loc>https://yangyfeng.github.io/posts/cfdabafc.html</loc>
     
     <lastmod>2020-09-09T09:39:24.783Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yangyfeng.github.io/friends/index.html</loc>
-    
-    <lastmod>2020-09-08T09:57:47.522Z</lastmod>
     
   </url>
   
