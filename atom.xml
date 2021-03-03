@@ -6,7 +6,7 @@
   <link href="/./atom.xml" rel="self"/>
   
   <link href="https://yangyfeng.github.io/"/>
-  <updated>2021-02-23T06:30:24.298Z</updated>
+  <updated>2021-03-03T13:39:42.083Z</updated>
   <id>https://yangyfeng.github.io/</id>
   
   <author>
@@ -21,17 +21,9 @@
     <link href="https://yangyfeng.github.io//posts/763ea06e.html"/>
     <id>https://yangyfeng.github.io//posts/763ea06e.html</id>
     <published>2021-02-22T16:00:00.000Z</published>
-    <updated>2021-02-23T06:30:24.298Z</updated>
+    <updated>2021-03-03T13:39:42.083Z</updated>
     
     <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;项目描述&quot;&gt;&lt;a href=&quot;#项目描述&quot; class=&quot;headerlink&quot; title=&quot;项目描述&quot;&gt;&lt;/a&gt;项目描述&lt;/h2&gt;&lt;h2 id=&quot;功能介绍&quot;&gt;&lt;a href=&quot;#功能介绍&quot; class=&quot;headerlink&quot;
-        
-      
     
     </summary>
     
@@ -51,7 +43,7 @@
     <link href="https://yangyfeng.github.io//posts/d02d7caa.html"/>
     <id>https://yangyfeng.github.io//posts/d02d7caa.html</id>
     <published>2021-02-22T16:00:00.000Z</published>
-    <updated>2021-02-23T06:41:01.184Z</updated>
+    <updated>2021-03-03T13:40:50.072Z</updated>
     
     <summary type="html">
     
@@ -73,7 +65,7 @@
     <link href="https://yangyfeng.github.io//posts/5f998618.html"/>
     <id>https://yangyfeng.github.io//posts/5f998618.html</id>
     <published>2021-02-22T16:00:00.000Z</published>
-    <updated>2021-02-23T06:38:27.448Z</updated>
+    <updated>2021-03-03T13:41:00.150Z</updated>
     
     <summary type="html">
     
@@ -103,20 +95,51 @@
     <link href="https://yangyfeng.github.io//posts/5f998618.html"/>
     <id>https://yangyfeng.github.io//posts/5f998618.html</id>
     <published>2021-02-02T01:22:00.000Z</published>
-    <updated>2021-02-22T09:18:58.999Z</updated>
+    <updated>2021-03-03T13:35:32.453Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;项目描述&quot;&gt;&lt;a href=&quot;#项目描述&quot; class=&quot;headerlink&quot; title=&quot;项目描述&quot;&gt;&lt;/a&gt;项目描述&lt;/h2&gt;&lt;p&gt;数维可视化平台：一套数据可视化展示平台，支持多种数据源类型（CSV静态文件，数据库连接，Http接口，JSON静态数据，WebSocket连接）。拥有多种酷炫图表和动画，同时支持本地化部署，镜像保存，分享，权限控制等。支持自定义图表上传，支持多种可视化插件，如Echarts，D3，AntV等。3D可视化功能目前只支持Unity3D引擎。&lt;/p&gt;
-&lt;h2 id=&quot;功能介绍&quot;&gt;&lt;a href=&quot;#功能介绍&quot; class=&quot;headerlink&quot; title=&quot;功能介绍&quot;&gt;&lt;/a&gt;功能介绍&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;本地部署&lt;/strong&gt;&lt;/p&gt;
+      &lt;h2 id=&quot;项目描述&quot;&gt;&lt;a href=&quot;#项目描述&quot; class=&quot;headerlink&quot; title=&quot;项目描述&quot;&gt;&lt;/a&gt;项目描述&lt;/h2&gt;&lt;p&gt;一套数据可视化展示平台，支持多种数据源类型（CSV静态文件，数据库连接，Http接口，JSON静态数据，WebSocket连接）。拥有多种酷炫图表和动画，同时支持本地化部署，镜像保存，分享，权限控制等。支持自定义图表上传，支持多种可视化插件，如Echarts，D3，AntV等。3D可视化功能目前只支持Unity3D引擎。&lt;/p&gt;
+&lt;h2 id=&quot;系统简介&quot;&gt;&lt;a href=&quot;#系统简介&quot; class=&quot;headerlink&quot; title=&quot;系统简介&quot;&gt;&lt;/a&gt;系统简介&lt;/h2&gt;&lt;p&gt;探索您拥有的所有数据，发现新的模式，创造丰富的视觉效果来共享洞察。利用该系统易于使用的分析和商业智能工具，您能够：&lt;/p&gt;
+&lt;p&gt;①　快速获得信息概览，更快的通过可视化探索所有相关数据，飞速获取洞察。发现未知模式识别关键的联系，发现隐藏的机会。&lt;/p&gt;
+&lt;p&gt;②　看到数据，理解数据，通过炫目的可视化方式，快速理解数据所表明的一切。基于分析的交互可视化让每个人都可以理解分析结果。&lt;/p&gt;
+&lt;p&gt;③　停止猜测，更智慧地工作，简化数据准备。软件自动突出显示相关的重要发现，无需编程。&lt;/p&gt;
+&lt;h2 id=&quot;功能详解&quot;&gt;&lt;a href=&quot;#功能详解&quot; class=&quot;headerlink&quot; title=&quot;功能详解&quot;&gt;&lt;/a&gt;功能详解&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;登录&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/yHG0ln&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2021/02/22/yHG0ln.md.png&quot; alt=&quot;yHG0ln.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;项目只支持内网部署版本，未发版sass平台。&lt;/p&gt;
+&lt;p&gt;用户有管理员逐一分配，适合多类企业的需求。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;可视化大屏列表&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;展示方式有两种：卡片模式、列表模式&lt;/p&gt;
+&lt;p&gt;卡片模式可以获取大屏内部的画面作为预览图或者用户自己设置封面&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgtu.com/i/6EpKA0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2021/03/03/6EpKA0.md.png&quot; alt=&quot;6EpKA0.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/yHG3OP&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2021/02/22/yHG3OP.md.png&quot; alt=&quot;yHG3OP.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;之外每个大屏都可以锁定（设置密码）、发布、预览、复制、编辑等功能。&lt;/p&gt;
+&lt;p&gt;左上角的创建按钮，跳转到创建大屏页面，创建时可选择模板、空白的任意比例的大屏，以及加入到多选分类中。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;可视化大屏配置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgtu.com/i/6E9MqA&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2021/03/03/6E9MqA.md.png&quot; alt=&quot;6E9MqA.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在上方选择需要的图表拖入到中间画布，即可在右侧配置对应属性和数据，并能加入到收藏，供后面使用。&lt;/p&gt;
+&lt;p&gt;其中在使用数据时，选择创建的数据源，然后做好字段映射即可，非常方便。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;离线部署&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;适配非常规拼接大屏，支持加密发布，支持本地部署，数据无需上传至第三方服务器或云端，私密数据的安全性更有保障。 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;多种数据源支持&lt;/strong&gt; &lt;/p&gt;
 &lt;p&gt;支持接入关系型数据库、本地CSV上传和在线API等，支持动态请求，多服务平台信息可视化呈现。 &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgtu.com/i/6E15T0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2021/03/03/6E15T0.md.png&quot; alt=&quot;6E15T0.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;以及可以使用用户自定义的数据做为数据源在图表上使用。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgtu.com/i/6E3w3F&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2021/03/03/6E3w3F.md.png&quot; alt=&quot;6E3w3F.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;数据源跨平台兼容&lt;/strong&gt; &lt;/p&gt;
 &lt;p&gt;兼容各种数据源类型，支持海量数据。可连接公司各种各样业务管理系统、第三方平台互联网技术统计数据、电子表格等数据文件以及公共数据综合服务平台，轻松整合所有相关业务数据，帮助企业消除数据孤岛。 &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;用户权限控制&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;RBAC控制，以及数据的用户绑定，用户创建的数据源只能为单用户使用，使数据更加安全和独立。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgtu.com/i/6E3oDA&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2021/03/03/6E3oDA.md.png&quot; alt=&quot;6E3oDA.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;3D可视化&lt;/strong&gt; &lt;/p&gt;
 &lt;p&gt;我们不仅提供全周期模型资源支持，还可以通过设计师灵动设计的场景模型与现实设备进行数据互通与联动，真正实现3D万物可视，还支持3D地图等效果，支持地理数据多层叠加。 &lt;/p&gt;
 &lt;p&gt;大屏加密发布，数据加密使用等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;支持多种图表效果&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;支持各类图表，折线，点，柱，地图等都有涉及，支持多种可视化图表库，echarts，highcharts，d3，g2等。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgtu.com/i/6AztxJ&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2021/03/03/6AztxJ.md.png&quot; alt=&quot;6AztxJ.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;数据下钻和上浮&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;支持多图表数据联动，以及下钻和上浮&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/yHG6TU&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2021/02/22/yHG6TU.md.png&quot; alt=&quot;yHG6TU.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
@@ -298,6 +321,32 @@
   </entry>
   
   <entry>
+    <title>js的事件循环是什么</title>
+    <link href="https://yangyfeng.github.io//posts/62b88241.html"/>
+    <id>https://yangyfeng.github.io//posts/62b88241.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:51.778Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;事件循环的机制&quot;&gt;&lt;a href=&quot;#事件循环的机制&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="event loop" scheme="https://yangyfeng.github.io/blogpost/tags/event-loop/"/>
+    
+  </entry>
+  
+  <entry>
     <title>互联网是如何运作的</title>
     <link href="https://yangyfeng.github.io//posts/c35109d5.html"/>
     <id>https://yangyfeng.github.io//posts/c35109d5.html</id>
@@ -336,32 +385,6 @@
       <category term="tcp" scheme="https://yangyfeng.github.io/blogpost/tags/tcp/"/>
     
       <category term="http" scheme="https://yangyfeng.github.io/blogpost/tags/http/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js的事件循环是什么</title>
-    <link href="https://yangyfeng.github.io//posts/62b88241.html"/>
-    <id>https://yangyfeng.github.io//posts/62b88241.html</id>
-    <published>2020-12-21T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:51.778Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;事件循环的机制&quot;&gt;&lt;a href=&quot;#事件循环的机制&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="event loop" scheme="https://yangyfeng.github.io/blogpost/tags/event-loop/"/>
     
   </entry>
   
@@ -576,7 +599,7 @@
 &lt;li&gt;&lt;strong&gt;原始写法（全局function）&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;模块就是实现特定**功能的一组方法，只要把不同的函数（以及记录状态的变量）简单的放在一起，就算是一个模块。&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;m1&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// ...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;m2&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// ...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;m1&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// ...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;m2&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// ...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;这样写上面的函数 m1() 和 m2() ，组成了一个模块，在使用的时候直接调用就可以了。
 但是带来的问题也很明显：&amp;quot;污染&amp;quot;了全局变量 ，无法保证不与其他模块发生变量名冲突，而且模块成员之间看不出直接关系&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -592,7 +615,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;立即执行函数增强(引入依赖)&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; myModule = (&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;$&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// 这里面就可以使用JQuery&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)(JQuery)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 这样做除了保证模块的独立性，还使得模块之间的依赖关系变得明显&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; myModule = (&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;($)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// 这里面就可以使用JQuery&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)(JQuery)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 这样做除了保证模块的独立性，还使得模块之间的依赖关系变得明显&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
