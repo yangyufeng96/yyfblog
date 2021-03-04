@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>峰享会</title>
   
-  <subtitle>路漫漫其修远兮，吾将上下而求索！</subtitle>
+  <subtitle>漫道求索</subtitle>
   <link href="/./atom.xml" rel="self"/>
   
   <link href="https://yangyfeng.github.io/"/>
-  <updated>2021-03-03T13:39:42.083Z</updated>
+  <updated>2021-03-03T13:40:50.072Z</updated>
   <id>https://yangyfeng.github.io/</id>
   
   <author>
@@ -15,28 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>华北电力控制系统</title>
-    <link href="https://yangyfeng.github.io//posts/763ea06e.html"/>
-    <id>https://yangyfeng.github.io//posts/763ea06e.html</id>
-    <published>2021-02-22T16:00:00.000Z</published>
-    <updated>2021-03-03T13:39:42.083Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="个人项目" scheme="https://yangyfeng.github.io/blogpost/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"/>
-    
-    
-      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="数据可视化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
-    
-  </entry>
   
   <entry>
     <title>智慧农业可视化</title>
@@ -62,20 +40,48 @@
   
   <entry>
     <title>风力发电SCADA</title>
-    <link href="https://yangyfeng.github.io//posts/5f998618.html"/>
-    <id>https://yangyfeng.github.io//posts/5f998618.html</id>
+    <link href="https://yangyfeng.github.io//posts/fa28e10b.html"/>
+    <id>https://yangyfeng.github.io//posts/fa28e10b.html</id>
     <published>2021-02-22T16:00:00.000Z</published>
-    <updated>2021-03-03T13:41:00.150Z</updated>
+    <updated>2021-03-04T03:34:45.643Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;什么是SCADA&quot;&gt;&lt;a href=&quot;#什么是SCADA&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h2 id=&quot;什么是SCADA&quot;&gt;&lt;a href=&quot;#什么是SCADA&quot; class=&quot;headerlink&quot; title=&quot;什么是SCADA&quot;&gt;&lt;/a&gt;什么是SCADA&lt;/h2&gt;&lt;p&gt;SCADA系统，即数据采集与监视控制系统。SCADA系统是以计算机为基础的DCS与电力自动化监控系统；它应用领域很广，可以应用于电力、冶金、石油、化工、燃气、铁路等领域的数据采集与监视控制以及过程控制等诸多领域。其功能主要围绕生产数据实时采集、生产设备过程监控、生产设备异常报警、数据分析、数据报表及仪表盘展示四个方面进行，其特性主要体现以下几个方面：&lt;/p&gt;
+&lt;p&gt;1、支持5000多种通讯协议，满足市场上百分之99.99的控制器、仪器仪表的通讯要求。打通自动化硬件系统与信息化软件系统信息传递。&lt;br&gt;2、将办公网络IP与工业设备IP进行硬件隔离，避免IP冲突。&lt;br&gt;3、直观展示生产动态，对现场设备实现直接或间接控制，满足可视化管理的需求。&lt;br&gt;4、进行数据统计分析，并通过仪表盘进行展示。&lt;/p&gt;
+&lt;h2 id=&quot;项目描述&quot;&gt;&lt;a href=&quot;#项目描述&quot; class=&quot;headerlink&quot; title=&quot;项目描述&quot;&gt;&lt;/a&gt;项目描述&lt;/h2&gt;&lt;p&gt;风力发电厂的安全监测平台。将SCADA和IT运维监控内容融与数据可视化相融合形成安全监测平台。分别有数据可视化、SACDA、IT运维监控和基本功能4个主要功能模块。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;数据可视化：&lt;/em&gt;&lt;/strong&gt;主要提供前端展示内容，包括3D、2D建模和图表元素，形成沉浸式的监控展示体系，将业务、告警等相融合。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;SCADA：&lt;/em&gt;&lt;/strong&gt;将SCADA的原有功能和信息发布功能相结合，对升压站、风机进行实时数据监控，形成数据采集、分析、监控和预警的统一功能。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;IT运维监测：&lt;/em&gt;&lt;/strong&gt;对机房网络和服务进行整体的监控。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;基本功能：&lt;/em&gt;&lt;/strong&gt;账号管理、权限管理、部门管理和角色管理等内容。&lt;/p&gt;
+&lt;p&gt;建设要求遵循了灵活性和可扩展性原则，能够适应业务变化和进步的要求，满足同行业电厂业务要求。平台系统所采用的相关标准必须与国际、国家、省、市级及行业标准相符合，确保系统具有良好的开放性，能实现与多种技术和软硬件平台的有机集成。&lt;/p&gt;
+&lt;p&gt;对于用户而言，解决了在业务中一些棘手问题，如下：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; &lt;strong&gt;&lt;em&gt;运营管理场景：&lt;/em&gt;&lt;/strong&gt;对变电站和风机进行全面的监控，提供直观高效的数据展现形式。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; &lt;strong&gt;&lt;em&gt;预警告警：&lt;/em&gt;&lt;/strong&gt;对预警和告警信息作出实时数据监控并发送相应的告警信息。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; &lt;strong&gt;&lt;em&gt;运维支撑：&lt;/em&gt;&lt;/strong&gt;对业务运维和IT运维人员提供及时的信息提醒和展示，便于运维人员及时有效的进行电厂的整体维护。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; &lt;strong&gt;&lt;em&gt;培训人员：&lt;/em&gt;&lt;/strong&gt;减少员工培训成本，快速理解电厂业务和相关工作岗位，增加员工的业务熟练程度和应急处理能力。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="个人项目" scheme="https://yangyfeng.github.io/blogpost/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="数据可视化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>华北电力控制系统</title>
+    <link href="https://yangyfeng.github.io//posts/763ea06e.html"/>
+    <id>https://yangyfeng.github.io//posts/763ea06e.html</id>
+    <published>2021-02-22T16:00:00.000Z</published>
+    <updated>2021-03-03T13:39:42.083Z</updated>
+    
+    <summary type="html">
     
     </summary>
     
@@ -95,7 +101,7 @@
     <link href="https://yangyfeng.github.io//posts/5f998618.html"/>
     <id>https://yangyfeng.github.io//posts/5f998618.html</id>
     <published>2021-02-02T01:22:00.000Z</published>
-    <updated>2021-03-03T13:35:32.453Z</updated>
+    <updated>2021-03-04T02:17:32.671Z</updated>
     
     <summary type="html">
     
@@ -133,7 +139,6 @@
 &lt;p&gt;&lt;a href=&quot;https://imgtu.com/i/6E3oDA&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2021/03/03/6E3oDA.md.png&quot; alt=&quot;6E3oDA.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;3D可视化&lt;/strong&gt; &lt;/p&gt;
 &lt;p&gt;我们不仅提供全周期模型资源支持，还可以通过设计师灵动设计的场景模型与现实设备进行数据互通与联动，真正实现3D万物可视，还支持3D地图等效果，支持地理数据多层叠加。 &lt;/p&gt;
-&lt;p&gt;大屏加密发布，数据加密使用等。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;支持多种图表效果&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;支持各类图表，折线，点，柱，地图等都有涉及，支持多种可视化图表库，echarts，highcharts，d3，g2等。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://imgtu.com/i/6AztxJ&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2021/03/03/6AztxJ.md.png&quot; alt=&quot;6AztxJ.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -289,32 +294,6 @@
   </entry>
   
   <entry>
-    <title>js的事件循环是什么</title>
-    <link href="https://yangyfeng.github.io//posts/62b88241.html"/>
-    <id>https://yangyfeng.github.io//posts/62b88241.html</id>
-    <published>2020-12-21T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:51.778Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;事件循环的机制&quot;&gt;&lt;a href=&quot;#事件循环的机制&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="event loop" scheme="https://yangyfeng.github.io/blogpost/tags/event-loop/"/>
-    
-  </entry>
-  
-  <entry>
     <title>javascript是如何被运行的</title>
     <link href="https://yangyfeng.github.io//posts/81adf3b6.html"/>
     <id>https://yangyfeng.github.io//posts/81adf3b6.html</id>
@@ -343,6 +322,61 @@
       <category term="javascript" scheme="https://yangyfeng.github.io/blogpost/tags/javascript/"/>
     
       <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么是JS调用栈</title>
+    <link href="https://yangyfeng.github.io//posts/9926a09c.html"/>
+    <id>https://yangyfeng.github.io//posts/9926a09c.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:41.337Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;栈：先进后出，进栈，出栈，与堆栈不同&lt;/p&gt;
+&lt;p&gt;队列：先进先出&lt;/p&gt;
+&lt;p&gt;调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用
+        
+      
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js的事件循环是什么</title>
+    <link href="https://yangyfeng.github.io//posts/62b88241.html"/>
+    <id>https://yangyfeng.github.io//posts/62b88241.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:51.778Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;事件循环的机制&quot;&gt;&lt;a href=&quot;#事件循环的机制&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="event loop" scheme="https://yangyfeng.github.io/blogpost/tags/event-loop/"/>
     
   </entry>
   
@@ -439,35 +473,6 @@
     
     
       <category term="浏览器运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>什么是JS调用栈</title>
-    <link href="https://yangyfeng.github.io//posts/9926a09c.html"/>
-    <id>https://yangyfeng.github.io//posts/9926a09c.html</id>
-    <published>2020-12-21T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:41.337Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;栈：先进后出，进栈，出栈，与堆栈不同&lt;/p&gt;
-&lt;p&gt;队列：先进先出&lt;/p&gt;
-&lt;p&gt;调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用
-        
-      
-    
-    </summary>
-    
-      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   

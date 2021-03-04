@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>React 脚手架工具（create-react-app） | 峰享会</title>
+  <title>风力发电SCADA | 峰享会</title>
   
   <meta name="keywords" content="前端开发,科技,数据可视化,移动开发,小程序,客户端">
   
@@ -352,8 +352,8 @@
         
   
     <h1 class="title">
-      <a href="/posts/a2043eea.html">
-        React 脚手架工具（create-react-app）
+      <a href="/posts/fa28e10b.html">
+        风力发电SCADA
       </a>
     </h1>
   
@@ -382,7 +382,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-09-09</p>
+    <p>2021-02-23</p>
   </a>
 </div>
 
@@ -392,9 +392,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/blogpost/categories/前端/' rel="nofollow">
+    <a href='/blogpost/categories/个人项目/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>前端</p>
+      <p>个人项目</p>
     </a>
   </div>
 
@@ -429,14 +429,14 @@
           <div class="new-meta-item size">
             <a class="notlink">
               <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>571字</p>
+              <p>1.4k字</p>
             </a>
           </div>
           <!-- 阅读时间 -->
           <div class="new-meta-item read-time">
             <a class="notlink">
               <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>2分</p>
+              <p>4分</p>
             </a>
           </div>
         
@@ -450,36 +450,54 @@
 
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
-          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>在开发react应用时，应该没有人用传统的方法引入react的源文件(js)，然后在html编辑吧。</p>
-<p>大家都是用webpack + es6来结合react开发前端应用。</p>
-<p>这个时候，我们可以手动使用npm来安装各种插件，来从头到尾自己搭建环境。</p>
-<p>比如：</p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install </span>react react-dom --save</span><br><span class="line"></span><br><span class="line">npm <span class="keyword">install </span><span class="keyword">babel </span><span class="keyword">babel-loader </span><span class="keyword">babel-core </span><span class="keyword">babel-preset-es2015 </span><span class="keyword">babel-preset-react </span>--save</span><br><span class="line"></span><br><span class="line">npm <span class="keyword">install </span><span class="keyword">babel </span>webpack webpack-dev-server -g</span><br></pre></td></tr></table></figure>
+          <h2 id="什么是SCADA"><a href="#什么是SCADA" class="headerlink" title="什么是SCADA"></a>什么是SCADA</h2><p>SCADA系统，即数据采集与监视控制系统。SCADA系统是以计算机为基础的DCS与电力自动化监控系统；它应用领域很广，可以应用于电力、冶金、石油、化工、燃气、铁路等领域的数据采集与监视控制以及过程控制等诸多领域。其功能主要围绕生产数据实时采集、生产设备过程监控、生产设备异常报警、数据分析、数据报表及仪表盘展示四个方面进行，其特性主要体现以下几个方面：</p>
+<p>1、支持5000多种通讯协议，满足市场上百分之99.99的控制器、仪器仪表的通讯要求。打通自动化硬件系统与信息化软件系统信息传递。<br>2、将办公网络IP与工业设备IP进行硬件隔离，避免IP冲突。<br>3、直观展示生产动态，对现场设备实现直接或间接控制，满足可视化管理的需求。<br>4、进行数据统计分析，并通过仪表盘进行展示。</p>
+<h2 id="项目描述"><a href="#项目描述" class="headerlink" title="项目描述"></a>项目描述</h2><p>风力发电厂的安全监测平台。将SCADA和IT运维监控内容融与数据可视化相融合形成安全监测平台。分别有数据可视化、SACDA、IT运维监控和基本功能4个主要功能模块。</p>
+<p><strong><em>数据可视化：</em></strong>主要提供前端展示内容，包括3D、2D建模和图表元素，形成沉浸式的监控展示体系，将业务、告警等相融合。</p>
+<p><strong><em>SCADA：</em></strong>将SCADA的原有功能和信息发布功能相结合，对升压站、风机进行实时数据监控，形成数据采集、分析、监控和预警的统一功能。</p>
+<p><strong><em>IT运维监测：</em></strong>对机房网络和服务进行整体的监控。</p>
+<p><strong><em>基本功能：</em></strong>账号管理、权限管理、部门管理和角色管理等内容。</p>
+<p>建设要求遵循了灵活性和可扩展性原则，能够适应业务变化和进步的要求，满足同行业电厂业务要求。平台系统所采用的相关标准必须与国际、国家、省、市级及行业标准相符合，确保系统具有良好的开放性，能实现与多种技术和软硬件平台的有机集成。</p>
+<p>对于用户而言，解决了在业务中一些棘手问题，如下：</p>
+<p><strong>1.</strong> <strong><em>运营管理场景：</em></strong>对变电站和风机进行全面的监控，提供直观高效的数据展现形式。</p>
+<p><strong>2.</strong> <strong><em>预警告警：</em></strong>对预警和告警信息作出实时数据监控并发送相应的告警信息。</p>
+<p><strong>3.</strong> <strong><em>运维支撑：</em></strong>对业务运维和IT运维人员提供及时的信息提醒和展示，便于运维人员及时有效的进行电厂的整体维护。</p>
+<p><strong>4.</strong> <strong><em>培训人员：</em></strong>减少员工培训成本，快速理解电厂业务和相关工作岗位，增加员工的业务熟练程度和应急处理能力。</p>
 <a id="more"></a>
-<p>类似这样的脚手架，我扫了网络上比较多人用和关注的，一共发现了三个，它们分别是：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">react-boilerplate</span><br><span class="line">react-redux-starter-kit</span><br><span class="line"><span class="function"><span class="title">create-react-app</span><span class="params">(facebook官方开发)</span></span></span><br></pre></td></tr></table></figure>
-<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><p><strong>安装和使用(默认监听3000端口)</strong></p>
-<figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">npm </span><span class="string">install </span>-g <span class="built_in">create-react-app</span></span><br><span class="line"><span class="built_in"></span></span><br><span class="line"><span class="built_in">create-react-app</span> <span class="string">my-app</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">cd </span><span class="string">my-app/</span></span><br><span class="line"></span><br><span class="line"><span class="string">npm </span><span class="string">start</span></span><br></pre></td></tr></table></figure>
-<p>源码结构简单清晰</p>
-<p>如果你使用过webpack-dev-server或webpack搭建过开发环境，你就会发现，create-react-app的开发环境也有类似webpack-dev-server的–inline –hot自动刷新的功能。</p>
-<p>翻看了一下源码，没有找到webpack.config.js文件，如果有使用webpack就应该有这个文件，好奇怪。</p>
-<p>看了一下node_modules目录，也没找到webpack相关的东西。</p>
-<p><strong>package.json</strong></p>
-<p>package.json中也没有webpack相关的东西,但是在react-scripts中依赖了webpack</p>
-<p><strong>线上编译命令</strong></p>
-<p>编译出来的文件很小，且文件名还带hash值，方便我们做cache，而且它还提供一个服务器，让我们在本地也能看到线上生产环境类似的效果</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">run</span><span class="bash"> build</span></span><br></pre></td></tr></table></figure>
-<p>运行下面两条命令，可以查看线上生产环境的运行效果</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> -g pushstate-<span class="keyword">server</span></span><br><span class="line"></span><br><span class="line">pushstate-<span class="keyword">server</span> <span class="keyword">build</span></span><br></pre></td></tr></table></figure>
-<p><strong>api开发</strong></p>
-<p>CORS问题:毕竟端口不同，而线上环境却没有这个问题，因为你都控制线上环境的react应用和api应用，跑在同一个端口上。</p>
-<p>按照以往思路，解决的方法可能是用环境变量，比如</p>
-<p>const apiBaseUrl = process.env.NODE_ENV === ‘development’ ? ‘localhost:3001’ : ‘/‘</p>
-<p>但是这样搞起来，还是有些复杂，然而，create-react-app提供了一个超级简单的方法，只需要在package.json文件中，加一个配置项就可以了。</p>
-<p>“proxy”: “<a href="http://localhost:3001/&quot;" target="_blank" rel="noopener">http://localhost:3001/&quot;</a>,</p>
-<p>执行npm run eject 暴露配置文件等</p>
-<p><strong>报错解决方案：</strong></p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">先执行git <span class="builtin-name">add</span> . 和 git commit -m <span class="string">"init"</span> 在执行 npm <span class="builtin-name">run</span> eject</span><br></pre></td></tr></table></figure>
+<h2 id="架构分析"><a href="#架构分析" class="headerlink" title="架构分析"></a>架构分析</h2><p>系统围绕“5个1工程”的核心建设目标，设计总体框架如下图所示，采用五层框架结构“感知层”、“网络层”、“数据层”、“平台层”，“应用层”。</p>
+<p><strong><em>感知层：</em></strong>主要是进行数据采集清洗转换等功能。</p>
+<p><strong><em>网络层：</em></strong>采用电厂原有网络结构，进行传输。</p>
+<p><strong><em>数据层：</em></strong>提供标准化的业务数据库。</p>
+<p><strong><em>平台层：</em></strong>平台功能的业务服务程序。</p>
+<p><strong><em>应用层：</em></strong>共有PC，手机和大屏端三个应用前端场景。</p>
+<p><a href="https://imgtu.com/i/6ExSVx" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6ExSVx.md.png" alt="6ExSVx.md.png"></a></p>
+<p>我们将安全平台进行了逻辑分层，具体的分层架构图如下图所示：</p>
+<p><a href="https://imgtu.com/i/6EzJpD" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6EzJpD.png" alt="6EzJpD.png"></a></p>
+<p><strong><em>整体说明如下：</em></strong></p>
+<p>1.基础设备：数据底层设备和系统层将各系统之前完成对接，包括在SDK、硬件、软件、API、数据库等多种对接方式；</p>
+<p>2.数据对接层：将数据采集后，进行结构化和半结构化的数据治理。直接操作数据库，针对数据的增添、删除、修改、查找等。</p>
+<p>3.业务逻辑层针对具体问题的操作，也可以说是对数据层的操作，对数据业务逻辑处理。（关键在于由原始数据抽象出逻辑数据）能够提供interface\API层次上所有的功能。“中间业务层”的实际目的是将“数据访问层”的最基础的存储逻辑组合起来，形成一种业务规则。</p>
+<p>4.将非实时数据及实时数据进行数据清洗通过不同的匹配规则在页面端进行展示。</p>
+<p>5.按照业务对接需求中的展示效果实现，使用大数据可视化平台进行展示。</p>
+<h2 id="功能详解"><a href="#功能详解" class="headerlink" title="功能详解"></a>功能详解</h2><p>业务功能太多，只展示部分！！！</p>
+<p><strong>业务安全监测</strong></p>
+<p>设置系统预警阈值，预警信息展示，自由控制设备状态。</p>
+<p><a href="https://imgtu.com/i/6V9tcF" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6V9tcF.md.png" alt="6V9tcF.md.png"></a></p>
+<p><a href="https://imgtu.com/i/6V9z40" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6V9z40.md.png" alt="6V9z40.md.png"></a></p>
+<p><strong>运维监测</strong></p>
+<p>多维度业务管理展示，图表展示相关运维指标数据，拓扑结构展示（网络拓扑，设备拓扑，服务拓扑，业务拓扑）。</p>
+<p><a href="https://imgtu.com/i/6VP9II" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6VP9II.md.png" alt="6VP9II.md.png"></a></p>
+<p><a href="https://imgtu.com/i/6VPmZj" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6VPmZj.md.png" alt="6VPmZj.md.png"></a></p>
+<p><strong>风场电站电压路线图监控</strong></p>
+<p>监控输电线路，排查故障，线路检测等。</p>
+<p><a href="https://imgtu.com/i/6ViDNn" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6ViDNn.md.png" alt="6ViDNn.md.png"></a></p>
+<p><a href="https://imgtu.com/i/6VibjO" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6VibjO.md.png" alt="6VibjO.md.png"></a></p>
+<p><strong>业务功能架构</strong></p>
+<p><a href="https://imgtu.com/i/6VF98P" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6VF98P.md.png" alt="6VF98P.md.png"></a></p>
+<h2 id="开发说明"><a href="#开发说明" class="headerlink" title="开发说明"></a>开发说明</h2><p>工业数据采集 ➜</p>
+<p>存储实时数据库（RabbitMQ）➜</p>
+<p>高效Go程序（UA）将工业数据处理为业务数据（JSON），并建立HTTP和WebSocket模块与前端做数据通信 ➜</p>
+<p>restful Api与前端交互，做数据渲染和可视化渲染（各类图表库，Echarts，D3等，其中3D可视化采用建模和WebGL渲染）</p>
 
         </div>
         
@@ -491,10 +509,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-11T17:11:51+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-04T11:34:45+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2020年12月11日</p>
+    <p>最后更新于 2021年3月4日</p>
   </a>
 </div>
 
@@ -503,7 +521,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/create-react-app/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>create-react-app</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/react/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>react</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/vue/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>vue</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/前端/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>前端</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/数据可视化/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>数据可视化</p></a></div>
 
 
         
@@ -516,11 +534,19 @@
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://yangyfeng.github.io/posts/a2043eea.html&title=React 脚手架工具（create-react-app） | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=介绍在开发react应用时，应该没有人用传统的方法引入react的源文件(js)，然后在html编辑吧。
-大家都是用webpack + es6来结合react开发前端应用。
-这个时候，我们可以手动使用npm来安装各种插件，来从头到尾自己搭建环境。
-比如：
-12345npm install react react-dom --savenpm install babel babel-loader babel-core babel-preset-es2015 babel-preset-react --savenpm install babel webpack webpack-dev-server -g"
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://yangyfeng.github.io/posts/fa28e10b.html&title=风力发电SCADA | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=什么是SCADASCADA系统，即数据采集与监视控制系统。SCADA系统是以计算机为基础的DCS与电力自动化监控系统；它应用领域很广，可以应用于电力、冶金、石油、化工、燃气、铁路等领域的数据采集与监视控制以及过程控制等诸多领域。其功能主要围绕生产数据实时采集、生产设备过程监控、生产设备异常报警、数据分析、数据报表及仪表盘展示四个方面进行，其特性主要体现以下几个方面：
+1、支持5000多种通讯协议，满足市场上百分之99.99的控制器、仪器仪表的通讯要求。打通自动化硬件系统与信息化软件系统信息传递。2、将办公网络IP与工业设备IP进行硬件隔离，避免IP冲突。3、直观展示生产动态，对现场设备实现直接或间接控制，满足可视化管理的需求。4、进行数据统计分析，并通过仪表盘进行展示。
+项目描述风力发电厂的安全监测平台。将SCADA和IT运维监控内容融与数据可视化相融合形成安全监测平台。分别有数据可视化、SACDA、IT运维监控和基本功能4个主要功能模块。
+数据可视化：主要提供前端展示内容，包括3D、2D建模和图表元素，形成沉浸式的监控展示体系，将业务、告警等相融合。
+SCADA：将SCADA的原有功能和信息发布功能相结合，对升压站、风机进行实时数据监控，形成数据采集、分析、监控和预警的统一功能。
+IT运维监测：对机房网络和服务进行整体的监控。
+基本功能：账号管理、权限管理、部门管理和角色管理等内容。
+建设要求遵循了灵活性和可扩展性原则，能够适应业务变化和进步的要求，满足同行业电厂业务要求。平台系统所采用的相关标准必须与国际、国家、省、市级及行业标准相符合，确保系统具有良好的开放性，能实现与多种技术和软硬件平台的有机集成。
+对于用户而言，解决了在业务中一些棘手问题，如下：
+1. 运营管理场景：对变电站和风机进行全面的监控，提供直观高效的数据展现形式。
+2. 预警告警：对预警和告警信息作出实时数据监控并发送相应的告警信息。
+3. 运维支撑：对业务运维和IT运维人员提供及时的信息提醒和展示，便于运维人员及时有效的进行电厂的整体维护。
+4. 培训人员：减少员工培训成本，快速理解电厂业务和相关工作岗位，增加员工的业务熟练程度和应急处理能力。"
           
           >
           
@@ -532,11 +558,19 @@
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yangyfeng.github.io/posts/a2043eea.html&title=React 脚手架工具（create-react-app） | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=介绍在开发react应用时，应该没有人用传统的方法引入react的源文件(js)，然后在html编辑吧。
-大家都是用webpack + es6来结合react开发前端应用。
-这个时候，我们可以手动使用npm来安装各种插件，来从头到尾自己搭建环境。
-比如：
-12345npm install react react-dom --savenpm install babel babel-loader babel-core babel-preset-es2015 babel-preset-react --savenpm install babel webpack webpack-dev-server -g"
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yangyfeng.github.io/posts/fa28e10b.html&title=风力发电SCADA | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=什么是SCADASCADA系统，即数据采集与监视控制系统。SCADA系统是以计算机为基础的DCS与电力自动化监控系统；它应用领域很广，可以应用于电力、冶金、石油、化工、燃气、铁路等领域的数据采集与监视控制以及过程控制等诸多领域。其功能主要围绕生产数据实时采集、生产设备过程监控、生产设备异常报警、数据分析、数据报表及仪表盘展示四个方面进行，其特性主要体现以下几个方面：
+1、支持5000多种通讯协议，满足市场上百分之99.99的控制器、仪器仪表的通讯要求。打通自动化硬件系统与信息化软件系统信息传递。2、将办公网络IP与工业设备IP进行硬件隔离，避免IP冲突。3、直观展示生产动态，对现场设备实现直接或间接控制，满足可视化管理的需求。4、进行数据统计分析，并通过仪表盘进行展示。
+项目描述风力发电厂的安全监测平台。将SCADA和IT运维监控内容融与数据可视化相融合形成安全监测平台。分别有数据可视化、SACDA、IT运维监控和基本功能4个主要功能模块。
+数据可视化：主要提供前端展示内容，包括3D、2D建模和图表元素，形成沉浸式的监控展示体系，将业务、告警等相融合。
+SCADA：将SCADA的原有功能和信息发布功能相结合，对升压站、风机进行实时数据监控，形成数据采集、分析、监控和预警的统一功能。
+IT运维监测：对机房网络和服务进行整体的监控。
+基本功能：账号管理、权限管理、部门管理和角色管理等内容。
+建设要求遵循了灵活性和可扩展性原则，能够适应业务变化和进步的要求，满足同行业电厂业务要求。平台系统所采用的相关标准必须与国际、国家、省、市级及行业标准相符合，确保系统具有良好的开放性，能实现与多种技术和软硬件平台的有机集成。
+对于用户而言，解决了在业务中一些棘手问题，如下：
+1. 运营管理场景：对变电站和风机进行全面的监控，提供直观高效的数据展现形式。
+2. 预警告警：对预警和告警信息作出实时数据监控并发送相应的告警信息。
+3. 运维支撑：对业务运维和IT运维人员提供及时的信息提醒和展示，便于运维人员及时有效的进行电厂的整体维护。
+4. 培训人员：减少员工培训成本，快速理解电厂业务和相关工作岗位，增加员工的业务熟练程度和应急处理能力。"
           
           >
           
@@ -548,11 +582,19 @@
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://yangyfeng.github.io/posts/a2043eea.html&title=React 脚手架工具（create-react-app） | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=介绍在开发react应用时，应该没有人用传统的方法引入react的源文件(js)，然后在html编辑吧。
-大家都是用webpack + es6来结合react开发前端应用。
-这个时候，我们可以手动使用npm来安装各种插件，来从头到尾自己搭建环境。
-比如：
-12345npm install react react-dom --savenpm install babel babel-loader babel-core babel-preset-es2015 babel-preset-react --savenpm install babel webpack webpack-dev-server -g"
+          href="http://service.weibo.com/share/share.php?url=https://yangyfeng.github.io/posts/fa28e10b.html&title=风力发电SCADA | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=什么是SCADASCADA系统，即数据采集与监视控制系统。SCADA系统是以计算机为基础的DCS与电力自动化监控系统；它应用领域很广，可以应用于电力、冶金、石油、化工、燃气、铁路等领域的数据采集与监视控制以及过程控制等诸多领域。其功能主要围绕生产数据实时采集、生产设备过程监控、生产设备异常报警、数据分析、数据报表及仪表盘展示四个方面进行，其特性主要体现以下几个方面：
+1、支持5000多种通讯协议，满足市场上百分之99.99的控制器、仪器仪表的通讯要求。打通自动化硬件系统与信息化软件系统信息传递。2、将办公网络IP与工业设备IP进行硬件隔离，避免IP冲突。3、直观展示生产动态，对现场设备实现直接或间接控制，满足可视化管理的需求。4、进行数据统计分析，并通过仪表盘进行展示。
+项目描述风力发电厂的安全监测平台。将SCADA和IT运维监控内容融与数据可视化相融合形成安全监测平台。分别有数据可视化、SACDA、IT运维监控和基本功能4个主要功能模块。
+数据可视化：主要提供前端展示内容，包括3D、2D建模和图表元素，形成沉浸式的监控展示体系，将业务、告警等相融合。
+SCADA：将SCADA的原有功能和信息发布功能相结合，对升压站、风机进行实时数据监控，形成数据采集、分析、监控和预警的统一功能。
+IT运维监测：对机房网络和服务进行整体的监控。
+基本功能：账号管理、权限管理、部门管理和角色管理等内容。
+建设要求遵循了灵活性和可扩展性原则，能够适应业务变化和进步的要求，满足同行业电厂业务要求。平台系统所采用的相关标准必须与国际、国家、省、市级及行业标准相符合，确保系统具有良好的开放性，能实现与多种技术和软硬件平台的有机集成。
+对于用户而言，解决了在业务中一些棘手问题，如下：
+1. 运营管理场景：对变电站和风机进行全面的监控，提供直观高效的数据展现形式。
+2. 预警告警：对预警和告警信息作出实时数据监控并发送相应的告警信息。
+3. 运维支撑：对业务运维和IT运维人员提供及时的信息提醒和展示，便于运维人员及时有效的进行电厂的整体维护。
+4. 培训人员：减少员工培训成本，快速理解电厂业务和相关工作岗位，增加员工的业务熟练程度和应急处理能力。"
           
           >
           
@@ -562,7 +604,7 @@
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJklEQVR42u3aQW7DMAwEwPz/0+m1QBFnl3IKRBqfAqeONTqwpMjHI76eo+v3s9e//Pctj09cGBgYX8vIl3K9xOunrheav/clFQMD4wBGEgrXF3f9N9fvfbNmDAwMjHLRyZ2WhIGBgTFj5GXn9dIxMDAwEkZ+ZJYs/a508CO1OAYGxhcy8lP3///8kf4GBgbGVzFmLck2pctD83BVGBgYWzPyANeOU6zcGZbEGBgYBzDuCr4ri175fQwMjL0Zs7A7K4OvD/pvOPLDwMDYlNEe4s9GMfJv283FwMA4h5E3A5ItaBO+dvuKWhwDA2MLRhvHkqP8vExdB2NgYOzNSBqHKwdqeYhM2pwvP2NgYGzNyB9rBy/yQ7RZUzNKDTEwMLZjtGVhXuLm25GT3rQwMTAwNmLc1f+cLTdJQIsUEAMDY2vGrJE5W8RK8/LlHQwMjK0Z+RBGW1K24xftUVqRyGJgYGzEWAmLecHZhukb2pkYGBhbMGaBsk3g2vBdl7sYGBjHMNogOOtC5INlxT8ADAyMAxjtiFgepmflaBv6MTAwTmCslKx3Bdx2yAMDA+MExrO8ZuljC07GPjAwMM5h5Fc77HXXLyQFMwYGxgmM2RjrrEmw0v4c7jQGBsZGjDzwJYdi663QukjGwMDACNoAt41NxO2HpYCLgYGxNWMlQ8u3pk1eMTAwTmDkAxbtmEU+tLoy0oGBgbE3YxZG27Qvb462iSkGBsbWjB+hCnRyfpVjCQAAAABJRU5ErkJggg=='>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACI0lEQVR42u3awY7CMAxFUf7/p8sWhNK5z25HqnOzQqjQnCye4jivFx7Hx/j9ZjU+nzz/59VbLh4yZMh4LINPhT/Dv1n9P3+vDBky9mGQKFw9zydHfkvCWoYMGTJSRi1wU5IMGTJkpIy01DyfugwZMmQQBj8y+6OYbAfr7bW4DBkyHsjgcfn/n2/pb8iQIeNRjCMc55uz2rRqzdGvX8mQIWM0gwfctci0wYBKYhkyZAxlHKVBDr9qky4uigwZMjZgpLFbKzX58Rw/kvsKXBkyZGzD4E2CWoOTB3fQAJAhQ8ZoRnrZgl/zSjd8tYVAtbgMGTJGM9JNW/ok2W7yi2IyZMiYyiBbQ17E1q6I8aVcfpYhQ8ZoBnlZuu3jhXGKQcWwDBkyRjNqf9Qpg3nI8uCWIUPGPAZvA9wxXV5no7WXIUPGUEaK6V/h6jQvW3fcZMiQ8VjG+Q9qgcjB8VHaKqxlyJAxmlGrdMmLa4d3ZCbFxoAMGTIGMXgDshaOPIiDva0MGTI2YPBysR+XvPEZH8/JkCFjS8Z5RHY2fzzo48aADBkytmEQ3n2BGx+xyZAhYzTjCEctpjvFLaLKkCFjNIOPtGHAl6zT1IxhMmTIeCyjdo21tnEkS5MGtwwZMvZhpMHHt5L9sEZIGTJkyMBHbP0Du2KbU4YMGTLCQOxMq7YcMmTI2IHBt3e8uOXbxAsKaRkyZIxm1GI0vRCWNkdr0SxDhoxxjDddXSLgReVSgQAAAABJRU5ErkJggg=='>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
         
@@ -570,7 +612,7 @@
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJklEQVR42u3aQW7DMAwEwPz/0+m1QBFnl3IKRBqfAqeONTqwpMjHI76eo+v3s9e//Pctj09cGBgYX8vIl3K9xOunrheav/clFQMD4wBGEgrXF3f9N9fvfbNmDAwMjHLRyZ2WhIGBgTFj5GXn9dIxMDAwEkZ+ZJYs/a508CO1OAYGxhcy8lP3///8kf4GBgbGVzFmLck2pctD83BVGBgYWzPyANeOU6zcGZbEGBgYBzDuCr4ri175fQwMjL0Zs7A7K4OvD/pvOPLDwMDYlNEe4s9GMfJv283FwMA4h5E3A5ItaBO+dvuKWhwDA2MLRhvHkqP8vExdB2NgYOzNSBqHKwdqeYhM2pwvP2NgYGzNyB9rBy/yQ7RZUzNKDTEwMLZjtGVhXuLm25GT3rQwMTAwNmLc1f+cLTdJQIsUEAMDY2vGrJE5W8RK8/LlHQwMjK0Z+RBGW1K24xftUVqRyGJgYGzEWAmLecHZhukb2pkYGBhbMGaBsk3g2vBdl7sYGBjHMNogOOtC5INlxT8ADAyMAxjtiFgepmflaBv6MTAwTmCslKx3Bdx2yAMDA+MExrO8ZuljC07GPjAwMM5h5Fc77HXXLyQFMwYGxgmM2RjrrEmw0v4c7jQGBsZGjDzwJYdi663QukjGwMDACNoAt41NxO2HpYCLgYGxNWMlQ8u3pk1eMTAwTmDkAxbtmEU+tLoy0oGBgbE3YxZG27Qvb462iSkGBsbWjB+hCnRyfpVjCQAAAABJRU5ErkJggg=='>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACI0lEQVR42u3awY7CMAxFUf7/p8sWhNK5z25HqnOzQqjQnCye4jivFx7Hx/j9ZjU+nzz/59VbLh4yZMh4LINPhT/Dv1n9P3+vDBky9mGQKFw9zydHfkvCWoYMGTJSRi1wU5IMGTJkpIy01DyfugwZMmQQBj8y+6OYbAfr7bW4DBkyHsjgcfn/n2/pb8iQIeNRjCMc55uz2rRqzdGvX8mQIWM0gwfctci0wYBKYhkyZAxlHKVBDr9qky4uigwZMjZgpLFbKzX58Rw/kvsKXBkyZGzD4E2CWoOTB3fQAJAhQ8ZoRnrZgl/zSjd8tYVAtbgMGTJGM9JNW/ok2W7yi2IyZMiYyiBbQ17E1q6I8aVcfpYhQ8ZoBnlZuu3jhXGKQcWwDBkyRjNqf9Qpg3nI8uCWIUPGPAZvA9wxXV5no7WXIUPGUEaK6V/h6jQvW3fcZMiQ8VjG+Q9qgcjB8VHaKqxlyJAxmlGrdMmLa4d3ZCbFxoAMGTIGMXgDshaOPIiDva0MGTI2YPBysR+XvPEZH8/JkCFjS8Z5RHY2fzzo48aADBkytmEQ3n2BGx+xyZAhYzTjCEctpjvFLaLKkCFjNIOPtGHAl6zT1IxhMmTIeCyjdo21tnEkS5MGtwwZMvZhpMHHt5L9sEZIGTJkyMBHbP0Du2KbU4YMGTLCQOxMq7YcMmTI2IHBt3e8uOXbxAsKaRkyZIxm1GI0vRCWNkdr0SxDhoxxjDddXSLgReVSgQAAAABJRU5ErkJggg=='>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
         
@@ -596,16 +638,16 @@
                         <span class="art-item-left">
                             <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
                             <h4>
-                                <a href="/posts/6a5e2f06.html" rel="prev" title="create-react-app(注意事项)">
+                                <a href="/posts/d02d7caa.html" rel="prev" title="智慧农业可视化">
                                   
-                                      create-react-app(注意事项)
+                                      智慧农业可视化
                                   
                                 </a>
                             </h4>
                             
                                 
                                 <h6 class="tags">
-                                    <a class="tag" href="/blogpost/tags/create-react-app/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>create-react-app</a> <a class="tag" href="/blogpost/tags/react/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>react</a>
+                                    <a class="tag" href="/blogpost/tags/vue/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>vue</a> <a class="tag" href="/blogpost/tags/前端/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>前端</a> <a class="tag" href="/blogpost/tags/数据可视化/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>数据可视化</a>
                                 </h6>
                             
                         </span>
@@ -616,16 +658,16 @@
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/posts/cfdabafc.html" rel="prev" title="devops是什么">
+                                <a href="/posts/763ea06e.html" rel="prev" title="华北电力控制系统">
                                     
-                                        devops是什么
+                                        华北电力控制系统
                                     
                                 </a>
                             </h4>
                             
                                 
                                 <h6 class="tags">
-                                    <a class="tag" href="/blogpost/tags/开发工具/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>开发工具</a> <a class="tag" href="/blogpost/tags/devops/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>devops</a>
+                                    <a class="tag" href="/blogpost/tags/vue/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>vue</a> <a class="tag" href="/blogpost/tags/前端/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>前端</a> <a class="tag" href="/blogpost/tags/数据可视化/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>数据可视化</a>
                                 </h6>
                             
                         </span>
@@ -656,7 +698,7 @@
 
   <script>
     window.subData = {
-      title: 'React 脚手架工具（create-react-app）',
+      title: '风力发电SCADA',
       tools: true
     }
   </script>
@@ -766,7 +808,7 @@
 </header>
 
     <div class='content material'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#介绍"><span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特点"><span class="toc-text">特点</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是SCADA"><span class="toc-text">什么是SCADA</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目描述"><span class="toc-text">项目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#架构分析"><span class="toc-text">架构分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#功能详解"><span class="toc-text">功能详解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开发说明"><span class="toc-text">开发说明</span></a></li></ol>
     </div>
   </section>
 
@@ -956,7 +998,7 @@
 </header>
 
     <div class="content material">
-      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\6a5e2f06.html" title="TCP3次握手" rel="bookmark">TCP3次握手</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\8136685c.html" title="less在vue中的使用" rel="bookmark">less在vue中的使用</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\4de2b0c3.html" title="vue.config.js配置" rel="bookmark">vue.config.js配置</a></h3></div></li></ul>
+      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\d02d7caa.html" title="智慧农业可视化" rel="bookmark">智慧农业可视化</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\5f998618.html" title="大数据可视化系统" rel="bookmark">大数据可视化系统</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\763ea06e.html" title="华北电力控制系统" rel="bookmark">华北电力控制系统</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\8136685c.html" title="less在vue中的使用" rel="bookmark">less在vue中的使用</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\4de2b0c3.html" title="vue.config.js配置" rel="bookmark">vue.config.js配置</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\b0d42301.html" title="vue响应式原理源码剖析" rel="bookmark">vue响应式原理源码剖析</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\93532fe.html" title="vue性能优化" rel="bookmark">vue性能优化</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\d3643a0f.html" title="手写简易版vue，minivue的实现" rel="bookmark">手写简易版vue，minivue的实现</a></h3></div></li></ul>
     </div>
   </section>
 

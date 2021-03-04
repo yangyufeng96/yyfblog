@@ -4,35 +4,6 @@
   
     
     <entry>
-      <title>华北电力控制系统</title>
-      <link href="//posts/763ea06e.html"/>
-      <url>//posts/763ea06e.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> 个人项目 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> vue </tag>
-            
-            <tag> 前端 </tag>
-            
-            <tag> 数据可视化 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>智慧农业可视化</title>
       <link href="//posts/d02d7caa.html"/>
       <url>//posts/d02d7caa.html</url>
@@ -63,10 +34,39 @@
     
     <entry>
       <title>风力发电SCADA</title>
-      <link href="//posts/5f998618.html"/>
-      <url>//posts/5f998618.html</url>
+      <link href="//posts/fa28e10b.html"/>
+      <url>//posts/fa28e10b.html</url>
       
-        <content type="html"><![CDATA[<h2 id="什么是SCADA"><a href="#什么是SCADA" class="headerlink" title="什么是SCADA"></a>什么是SCADA</h2><p>SCADA系统，即数据采集与监视控制系统。SCADA系统是以计算机为基础的DCS与电力自动化监控系统；它应用领域很广，可以应用于电力、冶金、石油、化工、燃气、铁路等领域的数据采集与监视控制以及过程控制等诸多领域。其功能主要围绕生产数据实时采集、生产设备过程监控、生产设备异常报警、数据分析、数据报表及仪表盘展示四个方面进行，其特性主要体现以下几个方面：</p><p>1、支持5000多种通讯协议，满足市场上百分之99.99的控制器、仪器仪表的通讯要求。打通自动化硬件系统与信息化软件系统信息传递。<br>2、将办公网络IP与工业设备IP进行硬件隔离，避免IP冲突。<br>3、直观展示生产动态，对现场设备实现直接或间接控制，满足可视化管理的需求。<br>4、进行数据统计分析，并通过仪表盘进行展示。</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="什么是SCADA"><a href="#什么是SCADA" class="headerlink" title="什么是SCADA"></a>什么是SCADA</h2><p>SCADA系统，即数据采集与监视控制系统。SCADA系统是以计算机为基础的DCS与电力自动化监控系统；它应用领域很广，可以应用于电力、冶金、石油、化工、燃气、铁路等领域的数据采集与监视控制以及过程控制等诸多领域。其功能主要围绕生产数据实时采集、生产设备过程监控、生产设备异常报警、数据分析、数据报表及仪表盘展示四个方面进行，其特性主要体现以下几个方面：</p><p>1、支持5000多种通讯协议，满足市场上百分之99.99的控制器、仪器仪表的通讯要求。打通自动化硬件系统与信息化软件系统信息传递。<br>2、将办公网络IP与工业设备IP进行硬件隔离，避免IP冲突。<br>3、直观展示生产动态，对现场设备实现直接或间接控制，满足可视化管理的需求。<br>4、进行数据统计分析，并通过仪表盘进行展示。</p><h2 id="项目描述"><a href="#项目描述" class="headerlink" title="项目描述"></a>项目描述</h2><p>风力发电厂的安全监测平台。将SCADA和IT运维监控内容融与数据可视化相融合形成安全监测平台。分别有数据可视化、SACDA、IT运维监控和基本功能4个主要功能模块。</p><p><strong><em>数据可视化：</em></strong>主要提供前端展示内容，包括3D、2D建模和图表元素，形成沉浸式的监控展示体系，将业务、告警等相融合。</p><p><strong><em>SCADA：</em></strong>将SCADA的原有功能和信息发布功能相结合，对升压站、风机进行实时数据监控，形成数据采集、分析、监控和预警的统一功能。</p><p><strong><em>IT运维监测：</em></strong>对机房网络和服务进行整体的监控。</p><p><strong><em>基本功能：</em></strong>账号管理、权限管理、部门管理和角色管理等内容。</p><p>建设要求遵循了灵活性和可扩展性原则，能够适应业务变化和进步的要求，满足同行业电厂业务要求。平台系统所采用的相关标准必须与国际、国家、省、市级及行业标准相符合，确保系统具有良好的开放性，能实现与多种技术和软硬件平台的有机集成。</p><p>对于用户而言，解决了在业务中一些棘手问题，如下：</p><p><strong>1.</strong> <strong><em>运营管理场景：</em></strong>对变电站和风机进行全面的监控，提供直观高效的数据展现形式。</p><p><strong>2.</strong> <strong><em>预警告警：</em></strong>对预警和告警信息作出实时数据监控并发送相应的告警信息。</p><p><strong>3.</strong> <strong><em>运维支撑：</em></strong>对业务运维和IT运维人员提供及时的信息提醒和展示，便于运维人员及时有效的进行电厂的整体维护。</p><p><strong>4.</strong> <strong><em>培训人员：</em></strong>减少员工培训成本，快速理解电厂业务和相关工作岗位，增加员工的业务熟练程度和应急处理能力。</p><a id="more"></a><h2 id="架构分析"><a href="#架构分析" class="headerlink" title="架构分析"></a>架构分析</h2><p>系统围绕“5个1工程”的核心建设目标，设计总体框架如下图所示，采用五层框架结构“感知层”、“网络层”、“数据层”、“平台层”，“应用层”。</p><p><strong><em>感知层：</em></strong>主要是进行数据采集清洗转换等功能。</p><p><strong><em>网络层：</em></strong>采用电厂原有网络结构，进行传输。</p><p><strong><em>数据层：</em></strong>提供标准化的业务数据库。</p><p><strong><em>平台层：</em></strong>平台功能的业务服务程序。</p><p><strong><em>应用层：</em></strong>共有PC，手机和大屏端三个应用前端场景。</p><p><a href="https://imgtu.com/i/6ExSVx" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6ExSVx.md.png" alt="6ExSVx.md.png"></a></p><p>我们将安全平台进行了逻辑分层，具体的分层架构图如下图所示：</p><p><a href="https://imgtu.com/i/6EzJpD" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6EzJpD.png" alt="6EzJpD.png"></a></p><p><strong><em>整体说明如下：</em></strong></p><p>1.基础设备：数据底层设备和系统层将各系统之前完成对接，包括在SDK、硬件、软件、API、数据库等多种对接方式；</p><p>2.数据对接层：将数据采集后，进行结构化和半结构化的数据治理。直接操作数据库，针对数据的增添、删除、修改、查找等。</p><p>3.业务逻辑层针对具体问题的操作，也可以说是对数据层的操作，对数据业务逻辑处理。（关键在于由原始数据抽象出逻辑数据）能够提供interface\API层次上所有的功能。“中间业务层”的实际目的是将“数据访问层”的最基础的存储逻辑组合起来，形成一种业务规则。</p><p>4.将非实时数据及实时数据进行数据清洗通过不同的匹配规则在页面端进行展示。</p><p>5.按照业务对接需求中的展示效果实现，使用大数据可视化平台进行展示。</p><h2 id="功能详解"><a href="#功能详解" class="headerlink" title="功能详解"></a>功能详解</h2><p>业务功能太多，只展示部分！！！</p><p><strong>业务安全监测</strong></p><p>设置系统预警阈值，预警信息展示，自由控制设备状态。</p><p><a href="https://imgtu.com/i/6V9tcF" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6V9tcF.md.png" alt="6V9tcF.md.png"></a></p><p><a href="https://imgtu.com/i/6V9z40" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6V9z40.md.png" alt="6V9z40.md.png"></a></p><p><strong>运维监测</strong></p><p>多维度业务管理展示，图表展示相关运维指标数据，拓扑结构展示（网络拓扑，设备拓扑，服务拓扑，业务拓扑）。</p><p><a href="https://imgtu.com/i/6VP9II" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6VP9II.md.png" alt="6VP9II.md.png"></a></p><p><a href="https://imgtu.com/i/6VPmZj" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6VPmZj.md.png" alt="6VPmZj.md.png"></a></p><p><strong>风场电站电压路线图监控</strong></p><p>监控输电线路，排查故障，线路检测等。</p><p><a href="https://imgtu.com/i/6ViDNn" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6ViDNn.md.png" alt="6ViDNn.md.png"></a></p><p><a href="https://imgtu.com/i/6VibjO" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6VibjO.md.png" alt="6VibjO.md.png"></a></p><p><strong>业务功能架构</strong></p><p><a href="https://imgtu.com/i/6VF98P" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6VF98P.md.png" alt="6VF98P.md.png"></a></p><h2 id="开发说明"><a href="#开发说明" class="headerlink" title="开发说明"></a>开发说明</h2><p>工业数据采集 ➜</p><p>存储实时数据库（RabbitMQ）➜</p><p>高效Go程序（UA）将工业数据处理为业务数据（JSON），并建立HTTP和WebSocket模块与前端做数据通信 ➜</p><p>restful Api与前端交互，做数据渲染和可视化渲染（各类图表库，Echarts，D3等，其中3D可视化采用建模和WebGL渲染）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 个人项目 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 数据可视化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>华北电力控制系统</title>
+      <link href="//posts/763ea06e.html"/>
+      <url>//posts/763ea06e.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
       
       <categories>
@@ -95,7 +95,7 @@
       <link href="//posts/5f998618.html"/>
       <url>//posts/5f998618.html</url>
       
-        <content type="html"><![CDATA[<h2 id="项目描述"><a href="#项目描述" class="headerlink" title="项目描述"></a>项目描述</h2><p>一套数据可视化展示平台，支持多种数据源类型（CSV静态文件，数据库连接，Http接口，JSON静态数据，WebSocket连接）。拥有多种酷炫图表和动画，同时支持本地化部署，镜像保存，分享，权限控制等。支持自定义图表上传，支持多种可视化插件，如Echarts，D3，AntV等。3D可视化功能目前只支持Unity3D引擎。</p><h2 id="系统简介"><a href="#系统简介" class="headerlink" title="系统简介"></a>系统简介</h2><p>探索您拥有的所有数据，发现新的模式，创造丰富的视觉效果来共享洞察。利用该系统易于使用的分析和商业智能工具，您能够：</p><p>①　快速获得信息概览，更快的通过可视化探索所有相关数据，飞速获取洞察。发现未知模式识别关键的联系，发现隐藏的机会。</p><p>②　看到数据，理解数据，通过炫目的可视化方式，快速理解数据所表明的一切。基于分析的交互可视化让每个人都可以理解分析结果。</p><p>③　停止猜测，更智慧地工作，简化数据准备。软件自动突出显示相关的重要发现，无需编程。</p><h2 id="功能详解"><a href="#功能详解" class="headerlink" title="功能详解"></a>功能详解</h2><p><strong>登录</strong></p><p><a href="https://imgchr.com/i/yHG0ln" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/02/22/yHG0ln.md.png" alt="yHG0ln.md.png"></a></p><p>项目只支持内网部署版本，未发版sass平台。</p><p>用户有管理员逐一分配，适合多类企业的需求。</p><p><strong>可视化大屏列表</strong></p><p>展示方式有两种：卡片模式、列表模式</p><p>卡片模式可以获取大屏内部的画面作为预览图或者用户自己设置封面</p><p><a href="https://imgtu.com/i/6EpKA0" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/03/6EpKA0.md.png" alt="6EpKA0.md.png"></a></p><p><a href="https://imgchr.com/i/yHG3OP" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/02/22/yHG3OP.md.png" alt="yHG3OP.md.png"></a></p><p>之外每个大屏都可以锁定（设置密码）、发布、预览、复制、编辑等功能。</p><p>左上角的创建按钮，跳转到创建大屏页面，创建时可选择模板、空白的任意比例的大屏，以及加入到多选分类中。</p><p><strong>可视化大屏配置</strong></p><p><a href="https://imgtu.com/i/6E9MqA" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/03/6E9MqA.md.png" alt="6E9MqA.md.png"></a></p><p>在上方选择需要的图表拖入到中间画布，即可在右侧配置对应属性和数据，并能加入到收藏，供后面使用。</p><p>其中在使用数据时，选择创建的数据源，然后做好字段映射即可，非常方便。</p><p><strong>离线部署</strong></p><p>适配非常规拼接大屏，支持加密发布，支持本地部署，数据无需上传至第三方服务器或云端，私密数据的安全性更有保障。 </p><p><strong>多种数据源支持</strong> </p><p>支持接入关系型数据库、本地CSV上传和在线API等，支持动态请求，多服务平台信息可视化呈现。 </p><p><a href="https://imgtu.com/i/6E15T0" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/03/6E15T0.md.png" alt="6E15T0.md.png"></a></p><p>以及可以使用用户自定义的数据做为数据源在图表上使用。</p><p><a href="https://imgtu.com/i/6E3w3F" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/03/6E3w3F.md.png" alt="6E3w3F.md.png"></a></p><p><strong>数据源跨平台兼容</strong> </p><p>兼容各种数据源类型，支持海量数据。可连接公司各种各样业务管理系统、第三方平台互联网技术统计数据、电子表格等数据文件以及公共数据综合服务平台，轻松整合所有相关业务数据，帮助企业消除数据孤岛。 </p><p><strong>用户权限控制</strong></p><p>RBAC控制，以及数据的用户绑定，用户创建的数据源只能为单用户使用，使数据更加安全和独立。</p><p><a href="https://imgtu.com/i/6E3oDA" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/03/6E3oDA.md.png" alt="6E3oDA.md.png"></a></p><p><strong>3D可视化</strong> </p><p>我们不仅提供全周期模型资源支持，还可以通过设计师灵动设计的场景模型与现实设备进行数据互通与联动，真正实现3D万物可视，还支持3D地图等效果，支持地理数据多层叠加。 </p><p>大屏加密发布，数据加密使用等。</p><p><strong>支持多种图表效果</strong></p><p>支持各类图表，折线，点，柱，地图等都有涉及，支持多种可视化图表库，echarts，highcharts，d3，g2等。</p><p><a href="https://imgtu.com/i/6AztxJ" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/03/6AztxJ.md.png" alt="6AztxJ.md.png"></a></p><p><strong>数据下钻和上浮</strong></p><p>支持多图表数据联动，以及下钻和上浮</p><p><a href="https://imgchr.com/i/yHG6TU" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/02/22/yHG6TU.md.png" alt="yHG6TU.md.png"></a></p><a id="more"></a><h2 id="发版案例"><a href="#发版案例" class="headerlink" title="发版案例"></a>发版案例</h2><p><strong>智慧发电控系统</strong></p><p>携手国家能源集团</p><p><a href="https://imgchr.com/i/yHJSnP" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/02/22/yHJSnP.md.png" alt="yHJSnP.md.png"></a></p><p><strong>BIPV光伏发电控制</strong></p><p><a href="https://imgchr.com/i/yHJZXq" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/02/22/yHJZXq.md.png" alt="yHJZXq.md.png"></a></p><p><strong>东胜电厂数据大屏</strong></p><p><a href="https://imgtu.com/i/6E8fI0" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/03/6E8fI0.md.jpg" alt="6E8fI0.md.jpg"></a></p><p><strong>手搭新冠疫情大数据趋势</strong></p><p><a href="https://imgtu.com/i/6EGdOJ" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/03/6EGdOJ.md.png" alt="6EGdOJ.md.png"></a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="项目描述"><a href="#项目描述" class="headerlink" title="项目描述"></a>项目描述</h2><p>一套数据可视化展示平台，支持多种数据源类型（CSV静态文件，数据库连接，Http接口，JSON静态数据，WebSocket连接）。拥有多种酷炫图表和动画，同时支持本地化部署，镜像保存，分享，权限控制等。支持自定义图表上传，支持多种可视化插件，如Echarts，D3，AntV等。3D可视化功能目前只支持Unity3D引擎。</p><h2 id="系统简介"><a href="#系统简介" class="headerlink" title="系统简介"></a>系统简介</h2><p>探索您拥有的所有数据，发现新的模式，创造丰富的视觉效果来共享洞察。利用该系统易于使用的分析和商业智能工具，您能够：</p><p>①　快速获得信息概览，更快的通过可视化探索所有相关数据，飞速获取洞察。发现未知模式识别关键的联系，发现隐藏的机会。</p><p>②　看到数据，理解数据，通过炫目的可视化方式，快速理解数据所表明的一切。基于分析的交互可视化让每个人都可以理解分析结果。</p><p>③　停止猜测，更智慧地工作，简化数据准备。软件自动突出显示相关的重要发现，无需编程。</p><h2 id="功能详解"><a href="#功能详解" class="headerlink" title="功能详解"></a>功能详解</h2><p><strong>登录</strong></p><p><a href="https://imgchr.com/i/yHG0ln" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/02/22/yHG0ln.md.png" alt="yHG0ln.md.png"></a></p><p>项目只支持内网部署版本，未发版sass平台。</p><p>用户有管理员逐一分配，适合多类企业的需求。</p><p><strong>可视化大屏列表</strong></p><p>展示方式有两种：卡片模式、列表模式</p><p>卡片模式可以获取大屏内部的画面作为预览图或者用户自己设置封面</p><p><a href="https://imgtu.com/i/6EpKA0" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/03/6EpKA0.md.png" alt="6EpKA0.md.png"></a></p><p><a href="https://imgchr.com/i/yHG3OP" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/02/22/yHG3OP.md.png" alt="yHG3OP.md.png"></a></p><p>之外每个大屏都可以锁定（设置密码）、发布、预览、复制、编辑等功能。</p><p>左上角的创建按钮，跳转到创建大屏页面，创建时可选择模板、空白的任意比例的大屏，以及加入到多选分类中。</p><p><strong>可视化大屏配置</strong></p><p><a href="https://imgtu.com/i/6E9MqA" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/03/6E9MqA.md.png" alt="6E9MqA.md.png"></a></p><p>在上方选择需要的图表拖入到中间画布，即可在右侧配置对应属性和数据，并能加入到收藏，供后面使用。</p><p>其中在使用数据时，选择创建的数据源，然后做好字段映射即可，非常方便。</p><p><strong>离线部署</strong></p><p>适配非常规拼接大屏，支持加密发布，支持本地部署，数据无需上传至第三方服务器或云端，私密数据的安全性更有保障。 </p><p><strong>多种数据源支持</strong> </p><p>支持接入关系型数据库、本地CSV上传和在线API等，支持动态请求，多服务平台信息可视化呈现。 </p><p><a href="https://imgtu.com/i/6E15T0" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/03/6E15T0.md.png" alt="6E15T0.md.png"></a></p><p>以及可以使用用户自定义的数据做为数据源在图表上使用。</p><p><a href="https://imgtu.com/i/6E3w3F" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/03/6E3w3F.md.png" alt="6E3w3F.md.png"></a></p><p><strong>数据源跨平台兼容</strong> </p><p>兼容各种数据源类型，支持海量数据。可连接公司各种各样业务管理系统、第三方平台互联网技术统计数据、电子表格等数据文件以及公共数据综合服务平台，轻松整合所有相关业务数据，帮助企业消除数据孤岛。 </p><p><strong>用户权限控制</strong></p><p>RBAC控制，以及数据的用户绑定，用户创建的数据源只能为单用户使用，使数据更加安全和独立。</p><p><a href="https://imgtu.com/i/6E3oDA" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/03/6E3oDA.md.png" alt="6E3oDA.md.png"></a></p><p><strong>3D可视化</strong> </p><p>我们不仅提供全周期模型资源支持，还可以通过设计师灵动设计的场景模型与现实设备进行数据互通与联动，真正实现3D万物可视，还支持3D地图等效果，支持地理数据多层叠加。 </p><p><strong>支持多种图表效果</strong></p><p>支持各类图表，折线，点，柱，地图等都有涉及，支持多种可视化图表库，echarts，highcharts，d3，g2等。</p><p><a href="https://imgtu.com/i/6AztxJ" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/03/6AztxJ.md.png" alt="6AztxJ.md.png"></a></p><p><strong>数据下钻和上浮</strong></p><p>支持多图表数据联动，以及下钻和上浮</p><p><a href="https://imgchr.com/i/yHG6TU" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/02/22/yHG6TU.md.png" alt="yHG6TU.md.png"></a></p><a id="more"></a><h2 id="发版案例"><a href="#发版案例" class="headerlink" title="发版案例"></a>发版案例</h2><h3 id="能源行业"><a href="#能源行业" class="headerlink" title="能源行业"></a>能源行业</h3><p>在高峰用量时段，若电力供应不足可能导致断电。相反，则会造成资源浪费。先进的需求预测技术可以详细预测特定日每小时的需求与高峰时。我们还针对电力产生企业进行煤耗、智能发电进行全面的技术支持。</p><p><strong>智慧发电控系统</strong></p><p>携手国家能源集团</p><p><a href="https://imgchr.com/i/yHJSnP" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/02/22/yHJSnP.md.png" alt="yHJSnP.md.png"></a></p><p><strong>BIPV光伏发电控制</strong></p><p><a href="https://imgchr.com/i/yHJZXq" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/02/22/yHJZXq.md.png" alt="yHJZXq.md.png"></a></p><p><strong>东胜电厂数据大屏</strong></p><p><a href="https://imgtu.com/i/6E8fI0" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/03/6E8fI0.md.jpg" alt="6E8fI0.md.jpg"></a></p><h3 id="旅游行业"><a href="#旅游行业" class="headerlink" title="旅游行业"></a>旅游行业</h3><p>游客来源:通过车牌、游客的手机号码、身份证多维度的分析明确广告投放。</p><p>车流:对车流量、各卡口入口的流量进行分析，方便进行整体交通疏导。</p><p>搜索分析:对数据关键词进行定制和展示，帮助宣传、文案引导来源客流。</p><p>门票、酒店:全面对门票销售数据、时间数据进行对比，以及对酒店入住进行分析。</p><p>环境检测:对于景区的整体环镜、PM2.5、负氧离子进行分析，对景区更信赖 。</p><p><strong>全国旅游分布图</strong></p><p><a href="https://imgtu.com/i/6ELeln" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6ELeln.md.png" alt="6ELeln.md.png"></a></p><p><strong>旅游车辆信息汇总</strong></p><p><a href="https://imgtu.com/i/6ELMwT" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6ELMwT.md.png" alt="6ELMwT.md.png"></a></p><h3 id="个人创作"><a href="#个人创作" class="headerlink" title="个人创作"></a>个人创作</h3><p><strong>手搭新冠疫情大数据趋势</strong></p><p>利用静态数据和炫酷的图片，个人也能很容易搭建出一个可视化大屏，在屏幕上发挥自己的聪明才智！！！</p><p><a href="https://imgtu.com/i/6EGdOJ" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/03/6EGdOJ.md.png" alt="6EGdOJ.md.png"></a></p>]]></content>
       
       
       <categories>
@@ -237,31 +237,6 @@
     
     
     <entry>
-      <title>js的事件循环是什么</title>
-      <link href="//posts/62b88241.html"/>
-      <url>//posts/62b88241.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="事件循环的机制"><a href="#事件循环的机制" class="headerlink" title="事件循环的机制"></a>事件循环的机制</h2><p><strong>概念</strong></p><p>宏任务：script(整个代码)、setTimeout、setInterval、setImmediate、I/O、UI rendering</p><p>微任务：promise、Object.observe、MutationObserve</p><p>任务的优先级：process.nextTick &gt; promise.then &gt; setTimeout &gt; setImmediate</p><p><a href="https://mp.weixin.qq.com/s/7k4skVdCIhTsTdEFmXyYLg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/7k4skVdCIhTsTdEFmXyYLg</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 深入前端 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> event loop </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>javascript是如何被运行的</title>
       <link href="//posts/81adf3b6.html"/>
       <url>//posts/81adf3b6.html</url>
@@ -281,6 +256,56 @@
             <tag> javascript </tag>
             
             <tag> JS运行原理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>什么是JS调用栈</title>
+      <link href="//posts/9926a09c.html"/>
+      <url>//posts/9926a09c.html</url>
+      
+        <content type="html"><![CDATA[<p><strong>概念</strong></p><p>栈：先进后出，进栈，出栈，与堆栈不同</p><p>队列：先进先出</p><p>调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用了哪个函数</p><p><strong>例子</strong></p><p>调用栈，调用函数执行才回入栈</p><ol><li><p>push  average()</p></li><li><p>push  sum()</p></li><li><p>shift  sum()</p></li><li><p>shift  average()</p></li><li><p>push  console.log()</p></li><li><p>shift  console.log()</p></li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">average</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">const</span> aver = sum(a, b) / <span class="number">2</span>;</span><br><span class="line"> <span class="keyword">return</span> aver;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> num = average(<span class="number">3</span>, <span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(num);</span><br></pre></td></tr></table></figure><p><strong>tips</strong></p><p>用栈持持续被调用，会导致内存溢出</p><p>原因是因为，JS主线程被占用会造成堵塞：事件循环，异步回调(宏任务，微任务，面试必问哦)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深入前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JS运行原理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>js的事件循环是什么</title>
+      <link href="//posts/62b88241.html"/>
+      <url>//posts/62b88241.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="事件循环的机制"><a href="#事件循环的机制" class="headerlink" title="事件循环的机制"></a>事件循环的机制</h2><p><strong>概念</strong></p><p>宏任务：script(整个代码)、setTimeout、setInterval、setImmediate、I/O、UI rendering</p><p>微任务：promise、Object.observe、MutationObserve</p><p>任务的优先级：process.nextTick &gt; promise.then &gt; setTimeout &gt; setImmediate</p><p><a href="https://mp.weixin.qq.com/s/7k4skVdCIhTsTdEFmXyYLg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/7k4skVdCIhTsTdEFmXyYLg</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深入前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> event loop </tag>
             
         </tags>
       
@@ -333,31 +358,6 @@
         <tags>
             
             <tag> 浏览器运行原理 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>什么是JS调用栈</title>
-      <link href="//posts/9926a09c.html"/>
-      <url>//posts/9926a09c.html</url>
-      
-        <content type="html"><![CDATA[<p><strong>概念</strong></p><p>栈：先进后出，进栈，出栈，与堆栈不同</p><p>队列：先进先出</p><p>调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用了哪个函数</p><p><strong>例子</strong></p><p>调用栈，调用函数执行才回入栈</p><ol><li><p>push  average()</p></li><li><p>push  sum()</p></li><li><p>shift  sum()</p></li><li><p>shift  average()</p></li><li><p>push  console.log()</p></li><li><p>shift  console.log()</p></li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">average</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">const</span> aver = sum(a, b) / <span class="number">2</span>;</span><br><span class="line"> <span class="keyword">return</span> aver;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> num = average(<span class="number">3</span>, <span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(num);</span><br></pre></td></tr></table></figure><p><strong>tips</strong></p><p>用栈持持续被调用，会导致内存溢出</p><p>原因是因为，JS主线程被占用会造成堵塞：事件循环，异步回调(宏任务，微任务，面试必问哦)</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 深入前端 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> JS运行原理 </tag>
             
         </tags>
       
