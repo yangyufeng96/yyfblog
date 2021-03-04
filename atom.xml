@@ -6,7 +6,7 @@
   <link href="/./atom.xml" rel="self"/>
   
   <link href="https://yangyfeng.github.io/"/>
-  <updated>2021-03-03T13:40:50.072Z</updated>
+  <updated>2021-03-04T03:50:39.022Z</updated>
   <id>https://yangyfeng.github.io/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>QTV2直播商城</title>
+    <link href="https://yangyfeng.github.io//posts/5f998618.html"/>
+    <id>https://yangyfeng.github.io//posts/5f998618.html</id>
+    <published>2021-03-03T16:00:00.000Z</published>
+    <updated>2021-03-04T03:50:39.022Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="个人项目" scheme="https://yangyfeng.github.io/blogpost/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>华北电力控制系统</title>
+    <link href="https://yangyfeng.github.io//posts/763ea06e.html"/>
+    <id>https://yangyfeng.github.io//posts/763ea06e.html</id>
+    <published>2021-02-22T16:00:00.000Z</published>
+    <updated>2021-03-03T13:39:42.083Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="个人项目" scheme="https://yangyfeng.github.io/blogpost/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="数据可视化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>智慧农业可视化</title>
@@ -60,28 +102,6 @@
 &lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; &lt;strong&gt;&lt;em&gt;预警告警：&lt;/em&gt;&lt;/strong&gt;对预警和告警信息作出实时数据监控并发送相应的告警信息。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; &lt;strong&gt;&lt;em&gt;运维支撑：&lt;/em&gt;&lt;/strong&gt;对业务运维和IT运维人员提供及时的信息提醒和展示，便于运维人员及时有效的进行电厂的整体维护。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; &lt;strong&gt;&lt;em&gt;培训人员：&lt;/em&gt;&lt;/strong&gt;减少员工培训成本，快速理解电厂业务和相关工作岗位，增加员工的业务熟练程度和应急处理能力。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="个人项目" scheme="https://yangyfeng.github.io/blogpost/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"/>
-    
-    
-      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="数据可视化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>华北电力控制系统</title>
-    <link href="https://yangyfeng.github.io//posts/763ea06e.html"/>
-    <id>https://yangyfeng.github.io//posts/763ea06e.html</id>
-    <published>2021-02-22T16:00:00.000Z</published>
-    <updated>2021-03-03T13:39:42.083Z</updated>
-    
-    <summary type="html">
     
     </summary>
     
@@ -186,30 +206,6 @@
   </entry>
   
   <entry>
-    <title>Babel转码器</title>
-    <link href="https://yangyfeng.github.io//posts/390a51fc.html"/>
-    <id>https://yangyfeng.github.io//posts/390a51fc.html</id>
-    <published>2021-01-07T16:00:00.000Z</published>
-    <updated>2021-01-11T05:06:55.760Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt; &lt;a href=&quot;https://babeljs.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Babel&lt;/a&gt; 是一个广泛使用的 ES6 转码器(下一代的JavaScript编译器)，可以将 ES6 代码转为 ES5
-        
-      
-    
-    </summary>
-    
-      <category term="Es6" scheme="https://yangyfeng.github.io/blogpost/categories/Es6/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>globalThis对象</title>
     <link href="https://yangyfeng.github.io//posts/180dd8a3.html"/>
     <id>https://yangyfeng.github.io//posts/180dd8a3.html</id>
@@ -225,6 +221,30 @@
           &lt;p&gt; JavaScript 语言存在一个顶层对象，它提供全局环境（即全局作用域），所有代码都是在这个环境中运行。但是，顶层对象在各种实现里面是不统一的。 &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;浏览器里面，顶层对象是&lt;code&gt;window&lt;/code&gt;，但 Node 和 Web
+        
+      
+    
+    </summary>
+    
+      <category term="Es6" scheme="https://yangyfeng.github.io/blogpost/categories/Es6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Babel转码器</title>
+    <link href="https://yangyfeng.github.io//posts/390a51fc.html"/>
+    <id>https://yangyfeng.github.io//posts/390a51fc.html</id>
+    <published>2021-01-07T16:00:00.000Z</published>
+    <updated>2021-01-11T05:06:55.760Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt; &lt;a href=&quot;https://babeljs.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Babel&lt;/a&gt; 是一个广泛使用的 ES6 转码器(下一代的JavaScript编译器)，可以将 ES6 代码转为 ES5
         
       
     
@@ -326,6 +346,32 @@
   </entry>
   
   <entry>
+    <title>js的事件循环是什么</title>
+    <link href="https://yangyfeng.github.io//posts/62b88241.html"/>
+    <id>https://yangyfeng.github.io//posts/62b88241.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:51.778Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;事件循环的机制&quot;&gt;&lt;a href=&quot;#事件循环的机制&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="event loop" scheme="https://yangyfeng.github.io/blogpost/tags/event-loop/"/>
+    
+  </entry>
+  
+  <entry>
     <title>什么是JS调用栈</title>
     <link href="https://yangyfeng.github.io//posts/9926a09c.html"/>
     <id>https://yangyfeng.github.io//posts/9926a09c.html</id>
@@ -351,32 +397,6 @@
     
     
       <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js的事件循环是什么</title>
-    <link href="https://yangyfeng.github.io//posts/62b88241.html"/>
-    <id>https://yangyfeng.github.io//posts/62b88241.html</id>
-    <published>2020-12-21T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:51.778Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;事件循环的机制&quot;&gt;&lt;a href=&quot;#事件循环的机制&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="event loop" scheme="https://yangyfeng.github.io/blogpost/tags/event-loop/"/>
     
   </entry>
   
@@ -659,31 +679,6 @@
     
       <category term="Node" scheme="https://yangyfeng.github.io/blogpost/categories/Node/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>vue性能优化</title>
-    <link href="https://yangyfeng.github.io//posts/93532fe.html"/>
-    <id>https://yangyfeng.github.io//posts/93532fe.html</id>
-    <published>2020-12-10T16:00:00.000Z</published>
-    <updated>2020-12-11T09:14:10.312Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;1、使用单文件组件&quot;&gt;&lt;a href=&quot;#1、使用单文件组件&quot; class=&quot;headerlink&quot; title=&quot;1、使用单文件组件&quot;&gt;&lt;/a&gt;1、使用单文件组件&lt;/h2&gt;&lt;p&gt;我们写的tmplate配置，实际上需要编译为render函数在执行的&lt;/p&gt;
-&lt;p&gt;当使用DOM内模板或者JS内的字符串模板时，模板会在运行时被编译为render函数，通常情况这个过程已经足够快乐，但是对性能敏感的应用还是有影响的。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/rAis9f&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/11/rAis9f.png&quot; alt=&quot;rAis9f.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;预编译模板最简单的方式就是使用&lt;strong&gt;单文件组件&lt;/strong&gt;，单文件组件将相关的构建设置自动预编译好了，所以构建的代码已经包含了编译出来的render函数了，而不是原始的模板字符串了，减少了重新编译的过程了。（单文件组件导入使用直接使用vue-loader来处理，没有vue-tmplate的出来，使用起来会足够快速的。）&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
-    
-      <category term="性能优化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
