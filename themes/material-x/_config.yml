@@ -54,8 +54,8 @@ backstretch:
   fade: 1000     # 渐变（毫秒）
   images:
     - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gb3.jpg
-    # - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/jxjy.jpg
-    # - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gd.jpg
+    - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/jxjy.jpg
+    - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gd.jpg
     # - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/stzz.jpg
     # - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gd2.jpg
     # - https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/jxjy2.jpg
@@ -98,11 +98,6 @@ cover:
       icon: fas fa-info-circle
       url: about/
       rel: nofollow
-    - name: 工具箱
-      icon: fas fa-toolbox
-      url: http://www.bejson.com/
-      rel: nofollow
-      target: _blank
 
 # 桌面端导航栏菜单
 menu_desktop:
