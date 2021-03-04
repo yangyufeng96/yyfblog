@@ -6,7 +6,7 @@
   <link href="/./atom.xml" rel="self"/>
   
   <link href="https://yangyfeng.github.io/"/>
-  <updated>2021-03-04T03:50:39.022Z</updated>
+  <updated>2021-03-04T07:12:34.471Z</updated>
   <id>https://yangyfeng.github.io/</id>
   
   <author>
@@ -21,9 +21,17 @@
     <link href="https://yangyfeng.github.io//posts/5f998618.html"/>
     <id>https://yangyfeng.github.io//posts/5f998618.html</id>
     <published>2021-03-03T16:00:00.000Z</published>
-    <updated>2021-03-04T03:50:39.022Z</updated>
+    <updated>2021-03-04T07:12:34.471Z</updated>
     
     <summary type="html">
+    
+      &lt;h2 id=&quot;项目描述&quot;&gt;&lt;a href=&quot;#项目描述&quot; class=&quot;headerlink&quot; title=&quot;项目描述&quot;&gt;&lt;/a&gt;项目描述&lt;/h2&gt;&lt;p&gt;QTV-2直播生活供货商入驻系统，运行在微信公众号， 集资讯短视频，电商直播，购物商城为一体的青岛广电生活服务平台 。 其功能主要有直播打赏，直播抽奖，会员制，商品分享，弹幕评论等。微信搜索“QTV蛤蜊帮”，即可进入。 &lt;/p&gt;
+&lt;h2 id=&quot;系统结构说明&quot;&gt;&lt;a href=&quot;#系统结构说明&quot; class=&quot;headerlink&quot; title=&quot;系统结构说明&quot;&gt;&lt;/a&gt;系统结构说明&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;核心模型&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgtu.com/i/6VwFh9&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2021/03/04/6VwFh9.md.png&quot; alt=&quot;6VwFh9.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgtu.com/i/6VsNFO&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2021/03/04/6VsNFO.png&quot; alt=&quot;6VsNFO.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;业务介绍&quot;&gt;&lt;a href=&quot;#业务介绍&quot; class=&quot;headerlink&quot; title=&quot;业务介绍&quot;&gt;&lt;/a&gt;业务介绍&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;产品分类&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;推荐、大牌MALL（商超大牌）、扶农助农、工厂清仓、母婴亲子、美食美味、珠光宝气、潮搭攻略、乐家生活、美妆心得等&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgtu.com/i/6V0Nx1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2021/03/04/6V0Nx1.md.png&quot; alt=&quot;6V0Nx1.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
@@ -41,9 +49,14 @@
     <link href="https://yangyfeng.github.io//posts/763ea06e.html"/>
     <id>https://yangyfeng.github.io//posts/763ea06e.html</id>
     <published>2021-02-22T16:00:00.000Z</published>
-    <updated>2021-03-03T13:39:42.083Z</updated>
+    <updated>2021-03-04T07:57:15.327Z</updated>
     
     <summary type="html">
+    
+      &lt;h2 id=&quot;项目概况&quot;&gt;&lt;a href=&quot;#项目概况&quot; class=&quot;headerlink&quot; title=&quot;项目概况&quot;&gt;&lt;/a&gt;项目概况&lt;/h2&gt;&lt;p&gt;数据可视化展示与开发中心，通过开发可视化设计器、可视化展示引擎、可视化控制平台、可视化后台服务及音视屏驱动软件，用于全方面、多角度展示智能发电运行控制系统整体架构与主要功能，开展发电设备三维可视化、发电过程音视频数据分析、状态识别与故障定位算法研究，最终形成“多业务，多窗口，多交互手段，少人工”的数据驾驶舱系统。&lt;/p&gt;
+&lt;h2 id=&quot;系统架构&quot;&gt;&lt;a href=&quot;#系统架构&quot; class=&quot;headerlink&quot; title=&quot;系统架构&quot;&gt;&lt;/a&gt;系统架构&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://imgtu.com/i/6V6DdP&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2021/03/04/6V6DdP.md.png&quot; alt=&quot;6V6DdP.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;总体应用框架分为六层框架结构，提供两类支撑，分别是“网络层”、“数据层”、“应用层”、“业务层”、“交互层”、“表现层”，支撑为“标准规范”与“硬件体系”。&lt;/p&gt;
+&lt;h2 id=&quot;系统业务&quot;&gt;&lt;a href=&quot;#系统业务&quot; class=&quot;headerlink&quot; title=&quot;系统业务&quot;&gt;&lt;/a&gt;系统业务&lt;/h2&gt;&lt;p&gt;业务主要包括，工业指标的数据可视化展示（数据监测），设备的精准控制（手动，阀值报警或制动，语音智能控制），对数据的多类方式分析并给出高价值结果，各类测试数据下指标对比（灵活筛选对比的指标），以及用户权限控制，报表分析与下载，3d场景下的工业数据的可视化展示等。&lt;/p&gt;
     
     </summary>
     
@@ -59,13 +72,21 @@
   </entry>
   
   <entry>
-    <title>智慧农业可视化</title>
+    <title>国珍知识库管理系统</title>
     <link href="https://yangyfeng.github.io//posts/d02d7caa.html"/>
     <id>https://yangyfeng.github.io//posts/d02d7caa.html</id>
     <published>2021-02-22T16:00:00.000Z</published>
-    <updated>2021-03-03T13:40:50.072Z</updated>
+    <updated>2021-03-04T08:41:57.529Z</updated>
     
     <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;项目描述&quot;&gt;&lt;a href=&quot;#项目描述&quot; class=&quot;headerlink&quot;
+        
+      
     
     </summary>
     
@@ -75,8 +96,6 @@
       <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
     
       <category term="前端" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="数据可视化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     
   </entry>
   
@@ -372,35 +391,6 @@
   </entry>
   
   <entry>
-    <title>什么是JS调用栈</title>
-    <link href="https://yangyfeng.github.io//posts/9926a09c.html"/>
-    <id>https://yangyfeng.github.io//posts/9926a09c.html</id>
-    <published>2020-12-21T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:41.337Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;栈：先进后出，进栈，出栈，与堆栈不同&lt;/p&gt;
-&lt;p&gt;队列：先进先出&lt;/p&gt;
-&lt;p&gt;调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用
-        
-      
-    
-    </summary>
-    
-      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
     <title>互联网是如何运作的</title>
     <link href="https://yangyfeng.github.io//posts/c35109d5.html"/>
     <id>https://yangyfeng.github.io//posts/c35109d5.html</id>
@@ -439,6 +429,35 @@
       <category term="tcp" scheme="https://yangyfeng.github.io/blogpost/tags/tcp/"/>
     
       <category term="http" scheme="https://yangyfeng.github.io/blogpost/tags/http/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么是JS调用栈</title>
+    <link href="https://yangyfeng.github.io//posts/9926a09c.html"/>
+    <id>https://yangyfeng.github.io//posts/9926a09c.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:41.337Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;栈：先进后出，进栈，出栈，与堆栈不同&lt;/p&gt;
+&lt;p&gt;队列：先进先出&lt;/p&gt;
+&lt;p&gt;调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用
+        
+      
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
@@ -574,6 +593,34 @@
   </entry>
   
   <entry>
+    <title>深入webpack</title>
+    <link href="https://yangyfeng.github.io//posts/a441c8bd.html"/>
+    <id>https://yangyfeng.github.io//posts/a441c8bd.html</id>
+    <published>2020-12-15T16:00:00.000Z</published>
+    <updated>2020-12-22T09:32:13.138Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;实现步骤：&quot;&gt;&lt;a href=&quot;#实现步骤：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="webpack" scheme="https://yangyfeng.github.io/blogpost/tags/webpack/"/>
+    
+      <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
     <title>深入前端模块化</title>
     <link href="https://yangyfeng.github.io//posts/c00659d0.html"/>
     <id>https://yangyfeng.github.io//posts/c00659d0.html</id>
@@ -622,34 +669,6 @@
       <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
     
       <category term="模块化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深入webpack</title>
-    <link href="https://yangyfeng.github.io//posts/a441c8bd.html"/>
-    <id>https://yangyfeng.github.io//posts/a441c8bd.html</id>
-    <published>2020-12-15T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:13.138Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;实现步骤：&quot;&gt;&lt;a href=&quot;#实现步骤：&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="webpack" scheme="https://yangyfeng.github.io/blogpost/tags/webpack/"/>
-    
-      <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
     
   </entry>
   
