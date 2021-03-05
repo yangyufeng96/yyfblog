@@ -6,8 +6,8 @@ categories:
 tags:
   - 前端
   - vue
-abbrlink: 5f998618
-date: 2021-03-04
+abbrlink: b1fde4c6
+date: 2021-03-04 00:00:00
 ---
 
 ## 项目描述
@@ -20,7 +20,10 @@ QTV-2直播生活供货商入驻系统，运行在微信公众号， 集资讯�
 
 [![6VwFh9.md.png](https://s3.ax1x.com/2021/03/04/6VwFh9.md.png)](https://imgtu.com/i/6VwFh9)
 
-[![6VsNFO.png](https://s3.ax1x.com/2021/03/04/6VsNFO.png)](https://imgtu.com/i/6VsNFO)
+**业务架构**
+
+[![6ehCSx.md.png](https://s3.ax1x.com/2021/03/05/6ehCSx.md.png)](https://imgtu.com/i/6ehCSx)
+[![6ehpf1.md.png](https://s3.ax1x.com/2021/03/05/6ehpf1.md.png)](https://imgtu.com/i/6ehpf1)
 
 ## 业务介绍
 
