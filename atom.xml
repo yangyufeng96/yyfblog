@@ -6,7 +6,7 @@
   <link href="/./atom.xml" rel="self"/>
   
   <link href="https://yangyfeng.github.io/"/>
-  <updated>2021-03-04T07:12:34.471Z</updated>
+  <updated>2021-03-05T07:10:53.292Z</updated>
   <id>https://yangyfeng.github.io/</id>
   
   <author>
@@ -17,18 +17,79 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>应急管理中心 刑侦案件地理信息可视化展示系统</title>
+    <link href="https://yangyfeng.github.io//posts/f2d2e0b4.html"/>
+    <id>https://yangyfeng.github.io//posts/f2d2e0b4.html</id>
+    <published>2021-03-04T16:00:00.000Z</published>
+    <updated>2021-03-05T07:10:53.292Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="个人项目" scheme="https://yangyfeng.github.io/blogpost/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络安全监控</title>
+    <link href="https://yangyfeng.github.io//posts/aab0fbb9.html"/>
+    <id>https://yangyfeng.github.io//posts/aab0fbb9.html</id>
+    <published>2021-03-04T16:00:00.000Z</published>
+    <updated>2021-03-05T07:29:41.683Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;慧盾网络安全监控&quot;&gt;&lt;a href=&quot;#慧盾网络安全监控&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="个人项目" scheme="https://yangyfeng.github.io/blogpost/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+      <category term="vue" scheme="https://yangyfeng.github.io/blogpost/tags/vue/"/>
+    
+      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="数据可视化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="可视化定制" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AE%9A%E5%88%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>QTV2直播商城</title>
-    <link href="https://yangyfeng.github.io//posts/5f998618.html"/>
-    <id>https://yangyfeng.github.io//posts/5f998618.html</id>
+    <link href="https://yangyfeng.github.io//posts/b1fde4c6.html"/>
+    <id>https://yangyfeng.github.io//posts/b1fde4c6.html</id>
     <published>2021-03-03T16:00:00.000Z</published>
-    <updated>2021-03-04T07:12:34.471Z</updated>
+    <updated>2021-03-05T06:20:52.176Z</updated>
     
     <summary type="html">
     
       &lt;h2 id=&quot;项目描述&quot;&gt;&lt;a href=&quot;#项目描述&quot; class=&quot;headerlink&quot; title=&quot;项目描述&quot;&gt;&lt;/a&gt;项目描述&lt;/h2&gt;&lt;p&gt;QTV-2直播生活供货商入驻系统，运行在微信公众号， 集资讯短视频，电商直播，购物商城为一体的青岛广电生活服务平台 。 其功能主要有直播打赏，直播抽奖，会员制，商品分享，弹幕评论等。微信搜索“QTV蛤蜊帮”，即可进入。 &lt;/p&gt;
 &lt;h2 id=&quot;系统结构说明&quot;&gt;&lt;a href=&quot;#系统结构说明&quot; class=&quot;headerlink&quot; title=&quot;系统结构说明&quot;&gt;&lt;/a&gt;系统结构说明&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;核心模型&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://imgtu.com/i/6VwFh9&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2021/03/04/6VwFh9.md.png&quot; alt=&quot;6VwFh9.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://imgtu.com/i/6VsNFO&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2021/03/04/6VsNFO.png&quot; alt=&quot;6VsNFO.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;业务架构&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgtu.com/i/6ehCSx&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2021/03/05/6ehCSx.md.png&quot; alt=&quot;6ehCSx.md.png&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://imgtu.com/i/6ehpf1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2021/03/05/6ehpf1.md.png&quot; alt=&quot;6ehpf1.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;业务介绍&quot;&gt;&lt;a href=&quot;#业务介绍&quot; class=&quot;headerlink&quot; title=&quot;业务介绍&quot;&gt;&lt;/a&gt;业务介绍&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;产品分类&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;推荐、大牌MALL（商超大牌）、扶农助农、工厂清仓、母婴亲子、美食美味、珠光宝气、潮搭攻略、乐家生活、美妆心得等&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://imgtu.com/i/6V0Nx1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s3.ax1x.com/2021/03/04/6V0Nx1.md.png&quot; alt=&quot;6V0Nx1.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -76,7 +137,7 @@
     <link href="https://yangyfeng.github.io//posts/d02d7caa.html"/>
     <id>https://yangyfeng.github.io//posts/d02d7caa.html</id>
     <published>2021-02-22T16:00:00.000Z</published>
-    <updated>2021-03-04T08:41:57.529Z</updated>
+    <updated>2021-03-05T06:33:50.967Z</updated>
     
     <summary type="html">
     
@@ -140,7 +201,7 @@
     <link href="https://yangyfeng.github.io//posts/5f998618.html"/>
     <id>https://yangyfeng.github.io//posts/5f998618.html</id>
     <published>2021-02-02T01:22:00.000Z</published>
-    <updated>2021-03-04T02:17:32.671Z</updated>
+    <updated>2021-03-05T07:31:00.080Z</updated>
     
     <summary type="html">
     
@@ -225,6 +286,30 @@
   </entry>
   
   <entry>
+    <title>Babel转码器</title>
+    <link href="https://yangyfeng.github.io//posts/390a51fc.html"/>
+    <id>https://yangyfeng.github.io//posts/390a51fc.html</id>
+    <published>2021-01-07T16:00:00.000Z</published>
+    <updated>2021-01-11T05:06:55.760Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt; &lt;a href=&quot;https://babeljs.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Babel&lt;/a&gt; 是一个广泛使用的 ES6 转码器(下一代的JavaScript编译器)，可以将 ES6 代码转为 ES5
+        
+      
+    
+    </summary>
+    
+      <category term="Es6" scheme="https://yangyfeng.github.io/blogpost/categories/Es6/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>globalThis对象</title>
     <link href="https://yangyfeng.github.io//posts/180dd8a3.html"/>
     <id>https://yangyfeng.github.io//posts/180dd8a3.html</id>
@@ -240,30 +325,6 @@
           &lt;p&gt; JavaScript 语言存在一个顶层对象，它提供全局环境（即全局作用域），所有代码都是在这个环境中运行。但是，顶层对象在各种实现里面是不统一的。 &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;浏览器里面，顶层对象是&lt;code&gt;window&lt;/code&gt;，但 Node 和 Web
-        
-      
-    
-    </summary>
-    
-      <category term="Es6" scheme="https://yangyfeng.github.io/blogpost/categories/Es6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Babel转码器</title>
-    <link href="https://yangyfeng.github.io//posts/390a51fc.html"/>
-    <id>https://yangyfeng.github.io//posts/390a51fc.html</id>
-    <published>2021-01-07T16:00:00.000Z</published>
-    <updated>2021-01-11T05:06:55.760Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt; &lt;a href=&quot;https://babeljs.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Babel&lt;/a&gt; 是一个广泛使用的 ES6 转码器(下一代的JavaScript编译器)，可以将 ES6 代码转为 ES5
         
       
     
@@ -299,36 +360,6 @@
     
     
       <category term="for循环" scheme="https://yangyfeng.github.io/blogpost/tags/for%E5%BE%AA%E7%8E%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>V8引擎是如何运行JS</title>
-    <link href="https://yangyfeng.github.io//posts/cf2c43d.html"/>
-    <id>https://yangyfeng.github.io//posts/cf2c43d.html</id>
-    <published>2020-12-21T16:00:00.000Z</published>
-    <updated>2020-12-22T09:55:33.925Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;什么是V8引擎&quot;&gt;&lt;a href=&quot;#什么是V8引擎&quot; class=&quot;headerlink&quot; title=&quot;什么是V8引擎&quot;&gt;&lt;/a&gt;什么是V8引擎&lt;/h2&gt;&lt;p&gt;一个接受JavaScript代码，编译代码然后执行的C++
-        
-      
-    
-    </summary>
-    
-      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="javascript" scheme="https://yangyfeng.github.io/blogpost/tags/javascript/"/>
-    
-      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
-    
-      <category term="V8引擎" scheme="https://yangyfeng.github.io/blogpost/tags/V8%E5%BC%95%E6%93%8E/"/>
     
   </entry>
   
@@ -429,6 +460,36 @@
       <category term="tcp" scheme="https://yangyfeng.github.io/blogpost/tags/tcp/"/>
     
       <category term="http" scheme="https://yangyfeng.github.io/blogpost/tags/http/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>V8引擎是如何运行JS</title>
+    <link href="https://yangyfeng.github.io//posts/cf2c43d.html"/>
+    <id>https://yangyfeng.github.io//posts/cf2c43d.html</id>
+    <published>2020-12-21T16:00:00.000Z</published>
+    <updated>2020-12-22T09:55:33.925Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;什么是V8引擎&quot;&gt;&lt;a href=&quot;#什么是V8引擎&quot; class=&quot;headerlink&quot; title=&quot;什么是V8引擎&quot;&gt;&lt;/a&gt;什么是V8引擎&lt;/h2&gt;&lt;p&gt;一个接受JavaScript代码，编译代码然后执行的C++
+        
+      
+    
+    </summary>
+    
+      <category term="深入前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E6%B7%B1%E5%85%A5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="javascript" scheme="https://yangyfeng.github.io/blogpost/tags/javascript/"/>
+    
+      <category term="JS运行原理" scheme="https://yangyfeng.github.io/blogpost/tags/JS%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86/"/>
+    
+      <category term="V8引擎" scheme="https://yangyfeng.github.io/blogpost/tags/V8%E5%BC%95%E6%93%8E/"/>
     
   </entry>
   
@@ -617,87 +678,6 @@
       <category term="webpack" scheme="https://yangyfeng.github.io/blogpost/tags/webpack/"/>
     
       <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深入前端模块化</title>
-    <link href="https://yangyfeng.github.io//posts/c00659d0.html"/>
-    <id>https://yangyfeng.github.io//posts/c00659d0.html</id>
-    <published>2020-12-15T16:00:00.000Z</published>
-    <updated>2020-12-22T09:32:18.050Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;什么是前端的模块化？理解的不太透彻。&lt;/p&gt;
-&lt;p&gt;平常一直用的也只有ES6模块化，对于其他几种模块化规范用的也少，理解不够深，但是经常会见到一些面试题是问这几种模块化规范的区别，所以这次做一个整理总结&lt;/p&gt;
-&lt;h1 id=&quot;一、对于模块化的理解&quot;&gt;&lt;a href=&quot;#一、对于模块化的理解&quot; class=&quot;headerlink&quot; title=&quot;一、对于模块化的理解&quot;&gt;&lt;/a&gt;一、对于模块化的理解&lt;/h1&gt;&lt;h2 id=&quot;1、什么是模块化？&quot;&gt;&lt;a href=&quot;#1、什么是模块化？&quot; class=&quot;headerlink&quot; title=&quot;1、什么是模块化？&quot;&gt;&lt;/a&gt;1、什么是模块化？&lt;/h2&gt;&lt;p&gt;模块化开发是一种管理方式，是一种生产方式，一种解决问题的方案，一个模块就是实现特定功能的文件，有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块，但是模块开发需要遵循一定的规范，否则就都乱套了，因此，才有了后来大家熟悉的AMD规范，CMD规范，以及ES6自带的模块化规范&lt;/p&gt;
-&lt;h2 id=&quot;2、模块化带来的好处？&quot;&gt;&lt;a href=&quot;#2、模块化带来的好处？&quot; class=&quot;headerlink&quot; title=&quot;2、模块化带来的好处？&quot;&gt;&lt;/a&gt;2、模块化带来的好处？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;解决命名冲突&lt;/li&gt;
-&lt;li&gt;提供复用性&lt;/li&gt;
-&lt;li&gt;提高代码可维护性&lt;/li&gt;
-&lt;li&gt;灵活架构，焦点分离，方便模块间组合、分解&lt;/li&gt;
-&lt;li&gt;多人协作互不干扰&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;3、模块化规范的发展进程&quot;&gt;&lt;a href=&quot;#3、模块化规范的发展进程&quot; class=&quot;headerlink&quot; title=&quot;3、模块化规范的发展进程&quot;&gt;&lt;/a&gt;3、模块化规范的发展进程&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;原始写法（全局function）&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;模块就是实现特定**功能的一组方法，只要把不同的函数（以及记录状态的变量）简单的放在一起，就算是一个模块。&lt;/p&gt;
-&lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;m1&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// ...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;m2&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// ...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;code&gt;这样写上面的函数 m1() 和 m2() ，组成了一个模块，在使用的时候直接调用就可以了。
-但是带来的问题也很明显：&amp;quot;污染&amp;quot;了全局变量 ，无法保证不与其他模块发生变量名冲突，而且模块成员之间看不出直接关系&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;namespace写法（简单对象）&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;为了解决上面写法带来的缺点，可以吧模块写成一个对象，所有的模块成员都放到这个对象里面，这样减少了全局变量，减少命名冲突&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; myModule = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  count: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  m1: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&#39;m1:&#39;&lt;/span&gt; + &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.count);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  m2: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&#39;m2:&#39;&lt;/span&gt; + &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.count)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 调用&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;myModule.m1() &lt;span class=&quot;comment&quot;&gt;// m1:0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 改变模块内部状态&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;myModule.count = &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;myModule.m1() &lt;span class=&quot;comment&quot;&gt;// m1:5&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;code&gt;上面的函数 m1 和 m2 ，都封装在myModule对象里。使用的时候，就是调用这个对象的属性。但是，这样的写法会暴露所有模块成员，内部状态可以被外部改写。比如，外部代码可以直接改变内部计数器的值。&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;立即执行函数写法（匿名函数自执行 ，闭包）&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; myModule = (&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; count = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; m1 = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&#39;m1:&#39;&lt;/span&gt; + count)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; m2 = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&#39;m2:&#39;&lt;/span&gt; + count)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &amp;#123; m1, m2 &amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 这样写在外面就无法读取内部的 count 变量&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(myModule.count); &lt;span class=&quot;comment&quot;&gt;// undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;立即执行函数增强(引入依赖)&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; myModule = (&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;($)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// 这里面就可以使用JQuery&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)(JQuery)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 这样做除了保证模块的独立性，还使得模块之间的依赖关系变得明显&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="https://yangyfeng.github.io/blogpost/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="前端工程化" scheme="https://yangyfeng.github.io/blogpost/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
-    
-      <category term="模块化" scheme="https://yangyfeng.github.io/blogpost/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>为什么前端需要学习node</title>
-    <link href="https://yangyfeng.github.io//posts/fbba48cc.html"/>
-    <id>https://yangyfeng.github.io//posts/fbba48cc.html</id>
-    <published>2020-12-14T16:00:00.000Z</published>
-    <updated>2020-12-15T08:33:17.940Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;理解解决跨域、token鉴权、Rsetful风格、XSS、CSRF等问题，学习后端的思维。（与后端有效沟通）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;如何只用js语言如何开发一个全栈的应用（快速开发全栈应用）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;学习全栈和架构思维
-        
-      
-    
-    </summary>
-    
-      <category term="Node" scheme="https://yangyfeng.github.io/blogpost/categories/Node/"/>
-    
     
   </entry>
   

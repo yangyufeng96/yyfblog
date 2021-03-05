@@ -623,184 +623,6 @@
       
         
   <h2 class="title">
-    <a href="/posts/cf2c43d.html">
-      V8引擎是如何运行JS
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    <a href="https://yangyfeng.github.io" rel="nofollow">
-      
-        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
-      
-      <p>漫道求索</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-12-22</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blogpost/categories/深入前端/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>深入前端</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-        
-          <!-- 文章字体个数 -->
-          <div class="new-meta-item size">
-            <a class="notlink">
-              <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>713字</p>
-            </a>
-          </div>
-          <!-- 阅读时间 -->
-          <div class="new-meta-item read-time">
-            <a class="notlink">
-              <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>2分</p>
-            </a>
-          </div>
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h2 id="什么是V8引擎"><a href="#什么是V8引擎" class="headerlink" title="什么是V8引擎"></a>什么是V8引擎</h2><p>一个接受JavaScript代码，编译代码然后执行的C++ 程序，编译后的代码可以在多种操作系统多种处理器上运行。</p>
-<p><strong>介绍</strong></p>
-<p>哪些程序用到V8</p>
-<ul>
-<li>Chrome浏览器的JS引擎是V8</li>
-<li>Nodejs的运行时环境是V8</li>
-<li>electron的底层引擎是V8 跨平台桌面应用开发工具</li>
-</ul>
-<p>blink是渲染引擎，V8是JS引擎</p>
-<p>访问Dom的接口是由Blink提供的</p>
-<p><strong>功能</strong></p>
-<p>接收JavaScript代码，编译代码后执行C++程序，编译后的代码可以在多种操作系统多种处理器上运行。编译和执行JS代码、处理调用栈、内存分配、垃圾回收。</p>
-<ol>
-<li>编译和执行JS代码</li>
-<li>处理调用栈</li>
-<li>内存分配</li>
-<li>垃圾回收</li>
-</ol>
-<p><strong>V8的js编译和执行</strong></p>
-<ul>
-<li>解析器  parser  js –&gt; 解析成功抽象语法树AST</li>
-<li>解释器  interpreter   AST –&gt; 字节码bytecode，也有直接执行字节码的能力</li>
-<li>编译器  compiler  bytecode –&gt; 更高效的机器码</li>
-</ul>
-<p>V8版本5.9之前没有解释器，但是有两个编译器</p>
-<p><strong>5.9版本的V8</strong></p>
-<ol>
-<li>parser  解释器生成抽象语法树AST</li>
-<li>compiler  编译器Full-codegen  基准编译器  直接生成机器码</li>
-<li>运行一段时间后，由分析器线程优化js代码</li>
-<li>compiler  编译器CrankShaft   优化编译器   重新生成AST提升运行效率</li>
-</ol>
-<p>这样设计的缺点</p>
-<ol>
-<li>机器码会占用大量的内存</li>
-<li>缺少中间层机器码，无法实现一些优化策略</li>
-<li>无法很好的支持和优化JS的新语特性，无法拥抱未来</li>
-</ol>
-<h2 id="新版本的V8"><a href="#新版本的V8" class="headerlink" title="新版本的V8"></a>新版本的V8</h2><p><a href="https://imgchr.com/i/rrlwNT" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rrlwNT.md.png" alt="rrlwNT.md.png"></a></p>
-<ol>
-<li>parser  解析器  生成AST抽象语法树</li>
-<li>interpreter   解释器   Ignition   生成byteCode字节码  并直接执行</li>
-<li>清除AST 释放内存空间</li>
-<li>得到25% - 50%的等效机器代码大小</li>
-<li>compiler  运行过程中，解释器收集优化信息发送给编译器TurboFan</li>
-<li>重新生成机器码</li>
-<li>有些热点函数变更会由优化后的机器码还原成字节码 也就是deoptimization  回退字节码操作执行</li>
-</ol>
-<p>优化点：</p>
-<ol>
-<li>值声明未调用，不会被解析生成AST</li>
-<li>函数只被调用一次，bytcode直接被解释执行，不会进入到编译优化阶段</li>
-<li>函数被调用多次，Igniton会收集函数类型信息，可能会被标记为热点函数，可能被编译成优化后的机器代码</li>
-</ol>
-<p>好处：</p>
-<ol>
-<li>由于一开始不需要直接编译成机器码，生成了中间层的字节码，从而节约了时间</li>
-<li>优化编译阶段，不需要从源码重新解析,直接通过字节码进行优化，也可以deoptimization回退操作</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">x,y</span>)</span>&#123;<span class="keyword">return</span> x + y&#125;;</span><br><span class="line">sum(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">sum(<span class="number">3</span>,<span class="number">4</span>);</span><br><span class="line">sum(<span class="number">5</span>,<span class="number">6</span>);</span><br><span class="line">sum(<span class="string">"7"</span>,<span class="string">"8"</span>);<span class="comment">//会回退字节码操作执行</span></span><br></pre></td></tr></table></figure>
-<p><strong><a href="https://www.bilibili.com/video/BV1zV411z7RX" target="_blank" rel="noopener">原文地址</a></strong></p>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blogpost/tags/javascript/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>javascript</a>
-        
-          <a href="/blogpost/tags/JS运行原理/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>JS运行原理</a>
-        
-          <a href="/blogpost/tags/V8引擎/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>V8引擎</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
     <a href="/posts/81adf3b6.html">
       javascript是如何被运行的
     </a>
@@ -1171,6 +993,184 @@
           <a href="/blogpost/tags/tcp/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>tcp</a>
         
           <a href="/blogpost/tags/http/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>http</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/posts/cf2c43d.html">
+      V8引擎是如何运行JS
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://yangyfeng.github.io" rel="nofollow">
+      
+        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
+      
+      <p>漫道求索</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-12-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/blogpost/categories/深入前端/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>深入前端</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+        
+          <!-- 文章字体个数 -->
+          <div class="new-meta-item size">
+            <a class="notlink">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+              <p>713字</p>
+            </a>
+          </div>
+          <!-- 阅读时间 -->
+          <div class="new-meta-item read-time">
+            <a class="notlink">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <p>2分</p>
+            </a>
+          </div>
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h2 id="什么是V8引擎"><a href="#什么是V8引擎" class="headerlink" title="什么是V8引擎"></a>什么是V8引擎</h2><p>一个接受JavaScript代码，编译代码然后执行的C++ 程序，编译后的代码可以在多种操作系统多种处理器上运行。</p>
+<p><strong>介绍</strong></p>
+<p>哪些程序用到V8</p>
+<ul>
+<li>Chrome浏览器的JS引擎是V8</li>
+<li>Nodejs的运行时环境是V8</li>
+<li>electron的底层引擎是V8 跨平台桌面应用开发工具</li>
+</ul>
+<p>blink是渲染引擎，V8是JS引擎</p>
+<p>访问Dom的接口是由Blink提供的</p>
+<p><strong>功能</strong></p>
+<p>接收JavaScript代码，编译代码后执行C++程序，编译后的代码可以在多种操作系统多种处理器上运行。编译和执行JS代码、处理调用栈、内存分配、垃圾回收。</p>
+<ol>
+<li>编译和执行JS代码</li>
+<li>处理调用栈</li>
+<li>内存分配</li>
+<li>垃圾回收</li>
+</ol>
+<p><strong>V8的js编译和执行</strong></p>
+<ul>
+<li>解析器  parser  js –&gt; 解析成功抽象语法树AST</li>
+<li>解释器  interpreter   AST –&gt; 字节码bytecode，也有直接执行字节码的能力</li>
+<li>编译器  compiler  bytecode –&gt; 更高效的机器码</li>
+</ul>
+<p>V8版本5.9之前没有解释器，但是有两个编译器</p>
+<p><strong>5.9版本的V8</strong></p>
+<ol>
+<li>parser  解释器生成抽象语法树AST</li>
+<li>compiler  编译器Full-codegen  基准编译器  直接生成机器码</li>
+<li>运行一段时间后，由分析器线程优化js代码</li>
+<li>compiler  编译器CrankShaft   优化编译器   重新生成AST提升运行效率</li>
+</ol>
+<p>这样设计的缺点</p>
+<ol>
+<li>机器码会占用大量的内存</li>
+<li>缺少中间层机器码，无法实现一些优化策略</li>
+<li>无法很好的支持和优化JS的新语特性，无法拥抱未来</li>
+</ol>
+<h2 id="新版本的V8"><a href="#新版本的V8" class="headerlink" title="新版本的V8"></a>新版本的V8</h2><p><a href="https://imgchr.com/i/rrlwNT" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rrlwNT.md.png" alt="rrlwNT.md.png"></a></p>
+<ol>
+<li>parser  解析器  生成AST抽象语法树</li>
+<li>interpreter   解释器   Ignition   生成byteCode字节码  并直接执行</li>
+<li>清除AST 释放内存空间</li>
+<li>得到25% - 50%的等效机器代码大小</li>
+<li>compiler  运行过程中，解释器收集优化信息发送给编译器TurboFan</li>
+<li>重新生成机器码</li>
+<li>有些热点函数变更会由优化后的机器码还原成字节码 也就是deoptimization  回退字节码操作执行</li>
+</ol>
+<p>优化点：</p>
+<ol>
+<li>值声明未调用，不会被解析生成AST</li>
+<li>函数只被调用一次，bytcode直接被解释执行，不会进入到编译优化阶段</li>
+<li>函数被调用多次，Igniton会收集函数类型信息，可能会被标记为热点函数，可能被编译成优化后的机器代码</li>
+</ol>
+<p>好处：</p>
+<ol>
+<li>由于一开始不需要直接编译成机器码，生成了中间层的字节码，从而节约了时间</li>
+<li>优化编译阶段，不需要从源码重新解析,直接通过字节码进行优化，也可以deoptimization回退操作</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">x,y</span>)</span>&#123;<span class="keyword">return</span> x + y&#125;;</span><br><span class="line">sum(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">sum(<span class="number">3</span>,<span class="number">4</span>);</span><br><span class="line">sum(<span class="number">5</span>,<span class="number">6</span>);</span><br><span class="line">sum(<span class="string">"7"</span>,<span class="string">"8"</span>);<span class="comment">//会回退字节码操作执行</span></span><br></pre></td></tr></table></figure>
+<p><strong><a href="https://www.bilibili.com/video/BV1zV411z7RX" target="_blank" rel="noopener">原文地址</a></strong></p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/blogpost/tags/javascript/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>javascript</a>
+        
+          <a href="/blogpost/tags/JS运行原理/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>JS运行原理</a>
+        
+          <a href="/blogpost/tags/V8引擎/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>V8引擎</a>
         
       </div>
     
@@ -1690,7 +1690,7 @@
         
           <li><a class="flat-box" title="/blogpost/categories/Node/" href="/blogpost/categories/Node/"><div class='name'>Node</div><div class='badge'>(2)</div></a></li>
         
-          <li><a class="flat-box" title="/blogpost/categories/个人项目/" href="/blogpost/categories/个人项目/"><div class='name'>个人项目</div><div class='badge'>(5)</div></a></li>
+          <li><a class="flat-box" title="/blogpost/categories/个人项目/" href="/blogpost/categories/个人项目/"><div class='name'>个人项目</div><div class='badge'>(7)</div></a></li>
         
           <li><a class="flat-box" title="/blogpost/categories/前端/" href="/blogpost/categories/前端/"><div class='name'>前端</div><div class='badge'>(20)</div></a></li>
         
@@ -1729,7 +1729,7 @@
 </header>
 
     <div class='content material'>
-      <a href="/blogpost/tags/JS运行原理/" style="font-size: 18px; color: #7e7e7e">JS运行原理</a> <a href="/blogpost/tags/V8引擎/" style="font-size: 14px; color: #999">V8引擎</a> <a href="/blogpost/tags/create-react-app/" style="font-size: 16px; color: #8b8b8b">create-react-app</a> <a href="/blogpost/tags/devops/" style="font-size: 14px; color: #999">devops</a> <a href="/blogpost/tags/event-loop/" style="font-size: 14px; color: #999">event loop</a> <a href="/blogpost/tags/excel/" style="font-size: 14px; color: #999">excel</a> <a href="/blogpost/tags/for循环/" style="font-size: 14px; color: #999">for循环</a> <a href="/blogpost/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/blogpost/tags/http/" style="font-size: 14px; color: #999">http</a> <a href="/blogpost/tags/javascript/" style="font-size: 18px; color: #7e7e7e">javascript</a> <a href="/blogpost/tags/less/" style="font-size: 14px; color: #999">less</a> <a href="/blogpost/tags/react/" style="font-size: 16px; color: #8b8b8b">react</a> <a href="/blogpost/tags/tcp/" style="font-size: 14px; color: #999">tcp</a> <a href="/blogpost/tags/vscode/" style="font-size: 16px; color: #8b8b8b">vscode</a> <a href="/blogpost/tags/vue/" style="font-size: 24px; color: #555">vue</a> <a href="/blogpost/tags/webpack/" style="font-size: 16px; color: #8b8b8b">webpack</a> <a href="/blogpost/tags/前端/" style="font-size: 22px; color: #636363">前端</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 20px; color: #707070">前端工程化</a> <a href="/blogpost/tags/开发工具/" style="font-size: 16px; color: #8b8b8b">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/数据可视化/" style="font-size: 18px; color: #7e7e7e">数据可视化</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/浏览器运行原理/" style="font-size: 14px; color: #999">浏览器运行原理</a> <a href="/blogpost/tags/面试题/" style="font-size: 22px; color: #636363">面试题</a>
+      <a href="/blogpost/tags/JS运行原理/" style="font-size: 17.33px; color: #828282">JS运行原理</a> <a href="/blogpost/tags/V8引擎/" style="font-size: 14px; color: #999">V8引擎</a> <a href="/blogpost/tags/create-react-app/" style="font-size: 15.67px; color: #8e8e8e">create-react-app</a> <a href="/blogpost/tags/devops/" style="font-size: 14px; color: #999">devops</a> <a href="/blogpost/tags/event-loop/" style="font-size: 14px; color: #999">event loop</a> <a href="/blogpost/tags/excel/" style="font-size: 14px; color: #999">excel</a> <a href="/blogpost/tags/for循环/" style="font-size: 14px; color: #999">for循环</a> <a href="/blogpost/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/blogpost/tags/http/" style="font-size: 14px; color: #999">http</a> <a href="/blogpost/tags/javascript/" style="font-size: 17.33px; color: #828282">javascript</a> <a href="/blogpost/tags/less/" style="font-size: 14px; color: #999">less</a> <a href="/blogpost/tags/react/" style="font-size: 15.67px; color: #8e8e8e">react</a> <a href="/blogpost/tags/tcp/" style="font-size: 14px; color: #999">tcp</a> <a href="/blogpost/tags/vscode/" style="font-size: 15.67px; color: #8e8e8e">vscode</a> <a href="/blogpost/tags/vue/" style="font-size: 24px; color: #555">vue</a> <a href="/blogpost/tags/webpack/" style="font-size: 15.67px; color: #8e8e8e">webpack</a> <a href="/blogpost/tags/前端/" style="font-size: 22.33px; color: #606060">前端</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 19px; color: #777">前端工程化</a> <a href="/blogpost/tags/可视化定制/" style="font-size: 14px; color: #999">可视化定制</a> <a href="/blogpost/tags/开发工具/" style="font-size: 15.67px; color: #8e8e8e">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/数据可视化/" style="font-size: 19px; color: #777">数据可视化</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/浏览器运行原理/" style="font-size: 14px; color: #999">浏览器运行原理</a> <a href="/blogpost/tags/面试题/" style="font-size: 20.67px; color: #6c6c6c">面试题</a>
     </div>
   </section>
 
@@ -1842,7 +1842,7 @@
     
       <span>
         <b class="fas fa-database"></b>
-        本站字数：<span class="post-count">58.1k</span>
+        本站字数：<span class="post-count">58.8k</span>
       </span>
     
     <!-- 网站运行时间 -->
@@ -1947,14 +1947,14 @@
       $(function(){
         if ('.cover') {
           $('.cover').backstretch(
-          ["https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gb3.jpg", "https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/jxjy.jpg", "https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gd.jpg"],
+          ["https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gb3.jpg"],
           {
             duration: "60000",
             fade: "1000"
           });
         } else {
           $.backstretch(
-          ["https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gb3.jpg", "https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/jxjy.jpg", "https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gd.jpg"],
+          ["https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gb3.jpg"],
           {
             duration: "60000",
             fade: "1000"

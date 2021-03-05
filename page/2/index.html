@@ -266,6 +266,137 @@
       
         
   <h2 class="title">
+    <a href="/posts/ef7302f6.html">
+      js 优化for循环-Duff装置
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://yangyfeng.github.io" rel="nofollow">
+      
+        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
+      
+      <p>漫道求索</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-12-24</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/blogpost/categories/深入前端/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>深入前端</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+        
+          <!-- 文章字体个数 -->
+          <div class="new-meta-item size">
+            <a class="notlink">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+              <p>973字</p>
+            </a>
+          </div>
+          <!-- 阅读时间 -->
+          <div class="new-meta-item read-time">
+            <a class="notlink">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <p>4分</p>
+            </a>
+          </div>
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>循环是编程中常见的结构，在javaScript程序中同样随处可见。当我们要处理的数据集很大时，for循环的优化就显得格外重要了。 </p>
+<p> 如下是一个常见的for循环： </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; values.length; i++) &#123;</span><br><span class="line">     <span class="built_in">console</span>.log(values[i])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 这段代码中每循环一次都要计算一次values的长度，所以我们可以将循环由i递增改为i递减，在这个过程中，将终止条件values.l ength的O(n)调用简化成了O(1)调用，初次优化的代码如下： </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = values.length <span class="number">-1</span>; i &gt;= <span class="number">0</span>; i--)&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(values[i])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 我们还可以将循环改为后测试循环，如下： </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = values.length - <span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span> (i &gt; <span class="number">-1</span>) &#123;</span><br><span class="line">  <span class="keyword">do</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(values[i]);</span><br><span class="line">  &#125;<span class="keyword">while</span>(--i &gt;= <span class="number">0</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 以上的代码主要是将终止条件和自减操作符组合成了单个语句，不过使用后测试循环必须要保证要处理的值必须有一个。空数组会导致多余的一次循环。 </p>
+<p> 以上的优化都是基于终止条件和自减操作，循环的次数依然没有变化，如果我们能减少循环的次数，代码运行速度是不是会更快呢。接下来我们介绍下一种叫Duff装置的技术。Duff装置的基本概念是通过计算迭代的次数是否为8的倍数将一个循环展开为一系列语句。请看以下代码： </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> iterations = <span class="built_in">Math</span>.ceil(values.length / <span class="number">8</span>);</span><br><span class="line"><span class="keyword">var</span> startAt = values.length % <span class="number">8</span>;</span><br><span class="line"><span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">  <span class="keyword">switch</span>(startAt)&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">0</span>: <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">7</span>: <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">6</span>: <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">5</span>: <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span>: <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>: <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>: <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>: <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">  &#125;</span><br><span class="line">  startAt = <span class="number">0</span>;</span><br><span class="line">&#125;<span class="keyword">while</span>(--iterations &gt; <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<p> 我们假设循环次数是10次，在普通的for循环中，会进入循环体10次，每一次打印对应的值。而在以上的代码中，我们计算出iterations是2，startAt是2，第一次进入switch语句的时候，会执行两次console语句，startAt重置为0，iterations自减为1，第二次进入switch语句时，就,会执行8次console语句， 然后退出循环。以上只执行了两次循环，打印的次数依然是10次，我们减少了循环的次数和处理终止条件的额外开销，在数据量很大的时候，可以使代码运行的更快。<br>基于以上代码，Andrew B.King提出了一个更快的Duff装置技术，将do-while循环分成两个单独的循环。代码如下： </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> iterations = <span class="built_in">Math</span>.floor(values.length / <span class="number">8</span>);</span><br><span class="line"><span class="keyword">var</span> leftover = values.length % <span class="number">8</span>;</span><br><span class="line"><span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">if</span>(leftover &gt; <span class="number">0</span>)&#123;</span><br><span class="line">  <span class="keyword">do</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">  &#125;<span class="keyword">while</span>(--leftover &gt; <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">  <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">  <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">  <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">  <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">  <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">  <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">  <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">&#125;<span class="keyword">while</span>(--iterations &gt; <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<p> 以上的代码没有switch语句，每次进入第二个do-while循环时，执行8次console即可，这个方法比几乎比原始的Duff装置实现快上40%。针对大数据集使用Duff装置技术可以节省很多时间，但对于小数据集，额外的开销则可能得不偿失。<br>我们可以将duff装置技术封装成一个类似于forEach的方法，代码如下： </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.prototype.duffForEach = <span class="function"><span class="keyword">function</span> (<span class="params">fn</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> len = <span class="keyword">this</span>.length;</span><br><span class="line">  <span class="keyword">var</span> num = <span class="built_in">Math</span>.floor(len / <span class="number">8</span>);</span><br><span class="line">  <span class="keyword">var</span> leftover = len % <span class="number">8</span>;</span><br><span class="line">  <span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span> (leftover &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">      fn(<span class="keyword">this</span>[i], i++);</span><br><span class="line">    &#125; <span class="keyword">while</span> (--leftover &gt; <span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.length &lt; <span class="number">8</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">do</span> &#123;</span><br><span class="line">    fn(<span class="keyword">this</span>[i], i++);</span><br><span class="line">    fn(<span class="keyword">this</span>[i], i++);</span><br><span class="line">    fn(<span class="keyword">this</span>[i], i++);</span><br><span class="line">    fn(<span class="keyword">this</span>[i], i++);</span><br><span class="line">    fn(<span class="keyword">this</span>[i], i++);</span><br><span class="line">    fn(<span class="keyword">this</span>[i], i++);</span><br><span class="line">    fn(<span class="keyword">this</span>[i], i++);</span><br><span class="line">    fn(<span class="keyword">this</span>[i], i++);</span><br><span class="line">  &#125; <span class="keyword">while</span> (--num &gt; <span class="number">0</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p> 我们可以测试一下： </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">arr.duffForEach(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(item, index)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p> 可以看到，结果不出意料是正常的 </p>
+<p><strong><a href="https://segmentfault.com/a/1190000023524594" target="_blank" rel="noopener">原文地址</a></strong></p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/blogpost/tags/for循环/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>for循环</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
     <a href="/posts/81adf3b6.html">
       javascript是如何被运行的
     </a>
@@ -636,6 +767,184 @@
           <a href="/blogpost/tags/tcp/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>tcp</a>
         
           <a href="/blogpost/tags/http/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>http</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/posts/cf2c43d.html">
+      V8引擎是如何运行JS
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://yangyfeng.github.io" rel="nofollow">
+      
+        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
+      
+      <p>漫道求索</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-12-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/blogpost/categories/深入前端/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>深入前端</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+        
+          <!-- 文章字体个数 -->
+          <div class="new-meta-item size">
+            <a class="notlink">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+              <p>713字</p>
+            </a>
+          </div>
+          <!-- 阅读时间 -->
+          <div class="new-meta-item read-time">
+            <a class="notlink">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <p>2分</p>
+            </a>
+          </div>
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h2 id="什么是V8引擎"><a href="#什么是V8引擎" class="headerlink" title="什么是V8引擎"></a>什么是V8引擎</h2><p>一个接受JavaScript代码，编译代码然后执行的C++ 程序，编译后的代码可以在多种操作系统多种处理器上运行。</p>
+<p><strong>介绍</strong></p>
+<p>哪些程序用到V8</p>
+<ul>
+<li>Chrome浏览器的JS引擎是V8</li>
+<li>Nodejs的运行时环境是V8</li>
+<li>electron的底层引擎是V8 跨平台桌面应用开发工具</li>
+</ul>
+<p>blink是渲染引擎，V8是JS引擎</p>
+<p>访问Dom的接口是由Blink提供的</p>
+<p><strong>功能</strong></p>
+<p>接收JavaScript代码，编译代码后执行C++程序，编译后的代码可以在多种操作系统多种处理器上运行。编译和执行JS代码、处理调用栈、内存分配、垃圾回收。</p>
+<ol>
+<li>编译和执行JS代码</li>
+<li>处理调用栈</li>
+<li>内存分配</li>
+<li>垃圾回收</li>
+</ol>
+<p><strong>V8的js编译和执行</strong></p>
+<ul>
+<li>解析器  parser  js –&gt; 解析成功抽象语法树AST</li>
+<li>解释器  interpreter   AST –&gt; 字节码bytecode，也有直接执行字节码的能力</li>
+<li>编译器  compiler  bytecode –&gt; 更高效的机器码</li>
+</ul>
+<p>V8版本5.9之前没有解释器，但是有两个编译器</p>
+<p><strong>5.9版本的V8</strong></p>
+<ol>
+<li>parser  解释器生成抽象语法树AST</li>
+<li>compiler  编译器Full-codegen  基准编译器  直接生成机器码</li>
+<li>运行一段时间后，由分析器线程优化js代码</li>
+<li>compiler  编译器CrankShaft   优化编译器   重新生成AST提升运行效率</li>
+</ol>
+<p>这样设计的缺点</p>
+<ol>
+<li>机器码会占用大量的内存</li>
+<li>缺少中间层机器码，无法实现一些优化策略</li>
+<li>无法很好的支持和优化JS的新语特性，无法拥抱未来</li>
+</ol>
+<h2 id="新版本的V8"><a href="#新版本的V8" class="headerlink" title="新版本的V8"></a>新版本的V8</h2><p><a href="https://imgchr.com/i/rrlwNT" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rrlwNT.md.png" alt="rrlwNT.md.png"></a></p>
+<ol>
+<li>parser  解析器  生成AST抽象语法树</li>
+<li>interpreter   解释器   Ignition   生成byteCode字节码  并直接执行</li>
+<li>清除AST 释放内存空间</li>
+<li>得到25% - 50%的等效机器代码大小</li>
+<li>compiler  运行过程中，解释器收集优化信息发送给编译器TurboFan</li>
+<li>重新生成机器码</li>
+<li>有些热点函数变更会由优化后的机器码还原成字节码 也就是deoptimization  回退字节码操作执行</li>
+</ol>
+<p>优化点：</p>
+<ol>
+<li>值声明未调用，不会被解析生成AST</li>
+<li>函数只被调用一次，bytcode直接被解释执行，不会进入到编译优化阶段</li>
+<li>函数被调用多次，Igniton会收集函数类型信息，可能会被标记为热点函数，可能被编译成优化后的机器代码</li>
+</ol>
+<p>好处：</p>
+<ol>
+<li>由于一开始不需要直接编译成机器码，生成了中间层的字节码，从而节约了时间</li>
+<li>优化编译阶段，不需要从源码重新解析,直接通过字节码进行优化，也可以deoptimization回退操作</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">x,y</span>)</span>&#123;<span class="keyword">return</span> x + y&#125;;</span><br><span class="line">sum(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">sum(<span class="number">3</span>,<span class="number">4</span>);</span><br><span class="line">sum(<span class="number">5</span>,<span class="number">6</span>);</span><br><span class="line">sum(<span class="string">"7"</span>,<span class="string">"8"</span>);<span class="comment">//会回退字节码操作执行</span></span><br></pre></td></tr></table></figure>
+<p><strong><a href="https://www.bilibili.com/video/BV1zV411z7RX" target="_blank" rel="noopener">原文地址</a></strong></p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/blogpost/tags/javascript/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>javascript</a>
+        
+          <a href="/blogpost/tags/JS运行原理/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>JS运行原理</a>
+        
+          <a href="/blogpost/tags/V8引擎/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>V8引擎</a>
         
       </div>
     
@@ -1389,273 +1698,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/posts/c00659d0.html">
-      深入前端模块化
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    <a href="https://yangyfeng.github.io" rel="nofollow">
-      
-        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
-      
-      <p>漫道求索</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-12-16</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blogpost/categories/前端/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>前端</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-        
-          <!-- 文章字体个数 -->
-          <div class="new-meta-item size">
-            <a class="notlink">
-              <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>2.8k字</p>
-            </a>
-          </div>
-          <!-- 阅读时间 -->
-          <div class="new-meta-item read-time">
-            <a class="notlink">
-              <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>11分</p>
-            </a>
-          </div>
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>什么是前端的模块化？理解的不太透彻。</p>
-<p>平常一直用的也只有ES6模块化，对于其他几种模块化规范用的也少，理解不够深，但是经常会见到一些面试题是问这几种模块化规范的区别，所以这次做一个整理总结</p>
-<h1 id="一、对于模块化的理解"><a href="#一、对于模块化的理解" class="headerlink" title="一、对于模块化的理解"></a>一、对于模块化的理解</h1><h2 id="1、什么是模块化？"><a href="#1、什么是模块化？" class="headerlink" title="1、什么是模块化？"></a>1、什么是模块化？</h2><p>模块化开发是一种管理方式，是一种生产方式，一种解决问题的方案，一个模块就是实现特定功能的文件，有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块，但是模块开发需要遵循一定的规范，否则就都乱套了，因此，才有了后来大家熟悉的AMD规范，CMD规范，以及ES6自带的模块化规范</p>
-<h2 id="2、模块化带来的好处？"><a href="#2、模块化带来的好处？" class="headerlink" title="2、模块化带来的好处？"></a>2、模块化带来的好处？</h2><ul>
-<li>解决命名冲突</li>
-<li>提供复用性</li>
-<li>提高代码可维护性</li>
-<li>灵活架构，焦点分离，方便模块间组合、分解</li>
-<li>多人协作互不干扰</li>
-</ul>
-<h2 id="3、模块化规范的发展进程"><a href="#3、模块化规范的发展进程" class="headerlink" title="3、模块化规范的发展进程"></a>3、模块化规范的发展进程</h2><ul>
-<li><strong>原始写法（全局function）</strong></li>
-</ul>
-<p>模块就是实现特定**功能的一组方法，只要把不同的函数（以及记录状态的变量）简单的放在一起，就算是一个模块。</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">m1</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">m2</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><code>这样写上面的函数 m1() 和 m2() ，组成了一个模块，在使用的时候直接调用就可以了。
-但是带来的问题也很明显：&quot;污染&quot;了全局变量 ，无法保证不与其他模块发生变量名冲突，而且模块成员之间看不出直接关系</code></p>
-<ul>
-<li><strong>namespace写法（简单对象）</strong></li>
-</ul>
-<p>为了解决上面写法带来的缺点，可以吧模块写成一个对象，所有的模块成员都放到这个对象里面，这样减少了全局变量，减少命名冲突</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> myModule = <span class="keyword">new</span> <span class="built_in">Object</span>(&#123;</span><br><span class="line">  count: <span class="number">0</span>,</span><br><span class="line">  m1: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'m1:'</span> + <span class="keyword">this</span>.count);</span><br><span class="line">    </span><br><span class="line">  &#125;,</span><br><span class="line">  m2: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'m2:'</span> + <span class="keyword">this</span>.count)</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用</span></span><br><span class="line">myModule.m1() <span class="comment">// m1:0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 改变模块内部状态</span></span><br><span class="line">myModule.count = <span class="number">5</span>;</span><br><span class="line">myModule.m1() <span class="comment">// m1:5</span></span><br></pre></td></tr></table></figure>
-<p><code>上面的函数 m1 和 m2 ，都封装在myModule对象里。使用的时候，就是调用这个对象的属性。但是，这样的写法会暴露所有模块成员，内部状态可以被外部改写。比如，外部代码可以直接改变内部计数器的值。</code></p>
-<ul>
-<li><strong>立即执行函数写法（匿名函数自执行 ，闭包）</strong></li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> myModule = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> m1 = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'m1:'</span> + count)</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">let</span> m2 = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'m2:'</span> + count)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> &#123; m1, m2 &#125;;</span><br><span class="line">&#125;)()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这样写在外面就无法读取内部的 count 变量</span></span><br><span class="line"><span class="built_in">console</span>.log(myModule.count); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>立即执行函数增强(引入依赖)</strong></li>
-</ul>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> myModule = (<span class="function"><span class="keyword">function</span> <span class="params">($)</span> </span>&#123;</span><br><span class="line">  <span class="comment">// 这里面就可以使用JQuery</span></span><br><span class="line">&#125;)(JQuery)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这样做除了保证模块的独立性，还使得模块之间的依赖关系变得明显</span></span><br></pre></td></tr></table></figure>
-      
-        <div class="readmore">
-          <a href="/posts/c00659d0.html" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blogpost/tags/前端工程化/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>前端工程化</a>
-        
-          <a href="/blogpost/tags/模块化/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>模块化</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/posts/fbba48cc.html">
-      为什么前端需要学习node
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    <a href="https://yangyfeng.github.io" rel="nofollow">
-      
-        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
-      
-      <p>漫道求索</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-12-15</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blogpost/categories/Node/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>Node</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-        
-          <!-- 文章字体个数 -->
-          <div class="new-meta-item size">
-            <a class="notlink">
-              <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>78字</p>
-            </a>
-          </div>
-          <!-- 阅读时间 -->
-          <div class="new-meta-item read-time">
-            <a class="notlink">
-              <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>1分</p>
-            </a>
-          </div>
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <ul>
-<li><p>理解解决跨域、token鉴权、Rsetful风格、XSS、CSRF等问题，学习后端的思维。（与后端有效沟通）</p>
-</li>
-<li><p>如何只用js语言如何开发一个全栈的应用（快速开发全栈应用）</p>
-</li>
-<li><p>学习全栈和架构思维的有效途径（践行工程化思想）</p>
-</li>
-</ul>
-
-      
-    </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
     
   </section>
   
@@ -1896,7 +1938,7 @@
         
           <li><a class="flat-box" title="/blogpost/categories/Node/" href="/blogpost/categories/Node/"><div class='name'>Node</div><div class='badge'>(2)</div></a></li>
         
-          <li><a class="flat-box" title="/blogpost/categories/个人项目/" href="/blogpost/categories/个人项目/"><div class='name'>个人项目</div><div class='badge'>(5)</div></a></li>
+          <li><a class="flat-box" title="/blogpost/categories/个人项目/" href="/blogpost/categories/个人项目/"><div class='name'>个人项目</div><div class='badge'>(7)</div></a></li>
         
           <li><a class="flat-box" title="/blogpost/categories/前端/" href="/blogpost/categories/前端/"><div class='name'>前端</div><div class='badge'>(20)</div></a></li>
         
@@ -1935,7 +1977,7 @@
 </header>
 
     <div class='content material'>
-      <a href="/blogpost/tags/JS运行原理/" style="font-size: 18px; color: #7e7e7e">JS运行原理</a> <a href="/blogpost/tags/V8引擎/" style="font-size: 14px; color: #999">V8引擎</a> <a href="/blogpost/tags/create-react-app/" style="font-size: 16px; color: #8b8b8b">create-react-app</a> <a href="/blogpost/tags/devops/" style="font-size: 14px; color: #999">devops</a> <a href="/blogpost/tags/event-loop/" style="font-size: 14px; color: #999">event loop</a> <a href="/blogpost/tags/excel/" style="font-size: 14px; color: #999">excel</a> <a href="/blogpost/tags/for循环/" style="font-size: 14px; color: #999">for循环</a> <a href="/blogpost/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/blogpost/tags/http/" style="font-size: 14px; color: #999">http</a> <a href="/blogpost/tags/javascript/" style="font-size: 18px; color: #7e7e7e">javascript</a> <a href="/blogpost/tags/less/" style="font-size: 14px; color: #999">less</a> <a href="/blogpost/tags/react/" style="font-size: 16px; color: #8b8b8b">react</a> <a href="/blogpost/tags/tcp/" style="font-size: 14px; color: #999">tcp</a> <a href="/blogpost/tags/vscode/" style="font-size: 16px; color: #8b8b8b">vscode</a> <a href="/blogpost/tags/vue/" style="font-size: 24px; color: #555">vue</a> <a href="/blogpost/tags/webpack/" style="font-size: 16px; color: #8b8b8b">webpack</a> <a href="/blogpost/tags/前端/" style="font-size: 22px; color: #636363">前端</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 20px; color: #707070">前端工程化</a> <a href="/blogpost/tags/开发工具/" style="font-size: 16px; color: #8b8b8b">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/数据可视化/" style="font-size: 18px; color: #7e7e7e">数据可视化</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/浏览器运行原理/" style="font-size: 14px; color: #999">浏览器运行原理</a> <a href="/blogpost/tags/面试题/" style="font-size: 22px; color: #636363">面试题</a>
+      <a href="/blogpost/tags/JS运行原理/" style="font-size: 17.33px; color: #828282">JS运行原理</a> <a href="/blogpost/tags/V8引擎/" style="font-size: 14px; color: #999">V8引擎</a> <a href="/blogpost/tags/create-react-app/" style="font-size: 15.67px; color: #8e8e8e">create-react-app</a> <a href="/blogpost/tags/devops/" style="font-size: 14px; color: #999">devops</a> <a href="/blogpost/tags/event-loop/" style="font-size: 14px; color: #999">event loop</a> <a href="/blogpost/tags/excel/" style="font-size: 14px; color: #999">excel</a> <a href="/blogpost/tags/for循环/" style="font-size: 14px; color: #999">for循环</a> <a href="/blogpost/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/blogpost/tags/http/" style="font-size: 14px; color: #999">http</a> <a href="/blogpost/tags/javascript/" style="font-size: 17.33px; color: #828282">javascript</a> <a href="/blogpost/tags/less/" style="font-size: 14px; color: #999">less</a> <a href="/blogpost/tags/react/" style="font-size: 15.67px; color: #8e8e8e">react</a> <a href="/blogpost/tags/tcp/" style="font-size: 14px; color: #999">tcp</a> <a href="/blogpost/tags/vscode/" style="font-size: 15.67px; color: #8e8e8e">vscode</a> <a href="/blogpost/tags/vue/" style="font-size: 24px; color: #555">vue</a> <a href="/blogpost/tags/webpack/" style="font-size: 15.67px; color: #8e8e8e">webpack</a> <a href="/blogpost/tags/前端/" style="font-size: 22.33px; color: #606060">前端</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 19px; color: #777">前端工程化</a> <a href="/blogpost/tags/可视化定制/" style="font-size: 14px; color: #999">可视化定制</a> <a href="/blogpost/tags/开发工具/" style="font-size: 15.67px; color: #8e8e8e">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/数据可视化/" style="font-size: 19px; color: #777">数据可视化</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/浏览器运行原理/" style="font-size: 14px; color: #999">浏览器运行原理</a> <a href="/blogpost/tags/面试题/" style="font-size: 20.67px; color: #6c6c6c">面试题</a>
     </div>
   </section>
 
@@ -2048,7 +2090,7 @@
     
       <span>
         <b class="fas fa-database"></b>
-        本站字数：<span class="post-count">58.1k</span>
+        本站字数：<span class="post-count">58.8k</span>
       </span>
     
     <!-- 网站运行时间 -->
@@ -2153,14 +2195,14 @@
       $(function(){
         if ('.cover') {
           $('.cover').backstretch(
-          ["https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gb3.jpg", "https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/jxjy.jpg", "https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gd.jpg"],
+          ["https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gb3.jpg"],
           {
             duration: "60000",
             fade: "1000"
           });
         } else {
           $.backstretch(
-          ["https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gb3.jpg", "https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/jxjy.jpg", "https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gd.jpg"],
+          ["https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/gb3.jpg"],
           {
             duration: "60000",
             fade: "1000"

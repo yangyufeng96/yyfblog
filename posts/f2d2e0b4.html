@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>互联网是如何运作的 | 峰享会</title>
+  <title>应急管理中心 刑侦案件地理信息可视化展示系统 | 峰享会</title>
   
   <meta name="keywords" content="前端开发,科技,数据可视化,移动开发,小程序,客户端">
   
@@ -352,8 +352,8 @@
         
   
     <h1 class="title">
-      <a href="/posts/c35109d5.html">
-        互联网是如何运作的
+      <a href="/posts/f2d2e0b4.html">
+        应急管理中心 刑侦案件地理信息可视化展示系统
       </a>
     </h1>
   
@@ -382,7 +382,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-12-22</p>
+    <p>2021-03-05</p>
   </a>
 </div>
 
@@ -392,9 +392,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/blogpost/categories/深入前端/' rel="nofollow">
+    <a href='/blogpost/categories/个人项目/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>深入前端</p>
+      <p>个人项目</p>
     </a>
   </div>
 
@@ -429,14 +429,14 @@
           <div class="new-meta-item size">
             <a class="notlink">
               <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>668字</p>
+              <p>519字</p>
             </a>
           </div>
           <!-- 阅读时间 -->
           <div class="new-meta-item read-time">
             <a class="notlink">
               <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>2分</p>
+              <p>1分</p>
             </a>
           </div>
         
@@ -450,44 +450,27 @@
 
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
-          <p>互联网所有的传输都通过RCP/IP协议族来传输，TCP/IP是<strong>面向连接</strong>的<strong>可靠</strong>字节流服务协议</p>
-<h2 id="什么是协议"><a href="#什么是协议" class="headerlink" title="什么是协议"></a>什么是协议</h2><p>协议是一组<strong>规则</strong>，用于指定计算机应该如何通过网络来交互通信</p>
-<h2 id="TCP-IP协议族"><a href="#TCP-IP协议族" class="headerlink" title="TCP/IP协议族"></a>TCP/IP协议族</h2><p><strong>有四层</strong></p>
-<ul>
-<li>应用层：提供特定于应用程序的协议  HTTP   FTP   IMAP(邮件)</li>
-<li>网络控制层： 发送数据包到计算机上使用特定的端口号的应用程序</li>
-<li>网络层： 使用IP地址将数据包发送到特定的计算</li>
-<li>链路层：  将二进制数据包与网络信号相互之间转换</li>
-</ul>
-<p><strong>TCP的可靠</strong></p>
-<p>tcp在建立连接会进行三次握手，每个收到的数据包都会向发送方发送ack确认，已确保发送成功</p>
-<p><strong>IP的传输</strong></p>
-<p>IP是不可靠的无连接协议，它并不关心数据包是否到达目的地，也不关系连接和端口号，目的是连接到目标IP</p>
-<p><a href="https://imgchr.com/i/rDwiod" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rDwiod.png" alt="rDwiod.png"></a></p>
-<p><strong>TCP传输的质量和顺序</strong></p>
-<p>当数据包过大，在网络层会进行分包，分包后传输的链路不一样，到达的时间不一样，TCP会根据数据包上携带序列号来进行排序重组，如果发送方在一个特定时间内（也就是重试时间）没有接受到接收方的ack确认，会再次重新发送</p>
-<p><strong>IP和IP地址的区别</strong></p>
-<p>Ip是一种协议  有两种标准  IPv4 2^32次方和IPv6  2^128</p>
-<p>IP地址是一串数字192.0.0.1</p>
-<p><a href="https://imgchr.com/i/rDaLgf" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rDaLgf.png" alt="rDaLgf.png"></a></p>
-<p><a href="https://imgchr.com/i/rDajKS" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rDajKS.png" alt="rDajKS.png"></a></p>
-<a id="more"></a>
-<h2 id="网络传输"><a href="#网络传输" class="headerlink" title="网络传输"></a>网络传输</h2><ol>
-<li>个人电脑</li>
-<li>猫</li>
-<li>local ISP   互联网服务提供商</li>
-<li>regional ISP   经过多个主干网络</li>
-<li>NSP   网络服务提供商  大型网络  卖带宽给ISP</li>
-<li>NAP   每个NSP连接到至少三个网络访问点</li>
-<li>ISP  NSP 所有网络提供都携带路由器，每个路由有当前子网络ip的路由表，当底层向上层发送数据时候，找不到会依次向上找，可能由一个主干网络跳到另外一个主干网络。</li>
-</ol>
-<p><strong>个人客户端访问哔哩哔哩服务器的过程</strong></p>
-<p><a href="https://imgchr.com/i/rDwRmD" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rDwRmD.png" alt="rDwRmD.png"></a></p>
-<h2 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h2><p>路由器服务检查路由表上是否有目的地的IP地址，</p>
-<p>如果有直接发送到对应的网络，否则向上发送数据，在更高的层级寻找对一个拥有该IP的路由器</p>
-<p>直到找到对应的网络的IP地址</p>
-<h2 id="DNS服务"><a href="#DNS服务" class="headerlink" title="DNS服务"></a>DNS服务</h2><p>存在意义是IP别名，不让公司丢客户，也容易记，DNS是一个分布式数据库，存储了域名和IP的对应关系</p>
-<p><strong><a href="https://www.bilibili.com/video/BV1Rz4y197Jd/?spm_id_from=333.788.recommend_more_video.0" target="_blank" rel="noopener">原文地址</a></strong></p>
+          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>刑侦案件地理信息可视化展示系。为国家互联网应急协调中心业务专家提供前端业务数据和业务流程的实时性展示，以满足数据建模和业务建模之后的业务分析，实现有效的态势感知、实时预警告警，追溯分析后展示等能力。综合了各类特点，将复杂而凌乱的数据更加直观的展示在屏幕上，做到“精准打击”，“一目了然”。</p>
+<p><strong>数据价值展示</strong>  以数据为中心，过滤和分析将数据的价值真实的展示出来</p>
+<p><strong>视觉美观度</strong>  保障页面美观程度与展示效果符合大众化审美与流行元素</p>
+<p><strong>业务核心价值</strong> 数据指标满足核心业务，真正的为业务设计，业务服务</p>
+<p><strong>展示层次化</strong> 呈现信息要有整体的层次，符合可视化视域，把最直观的内容第一时间展现给使用者</p>
+<h2 id="业务"><a href="#业务" class="headerlink" title="业务"></a>业务</h2><p>业务包含如下：</p>
+<p><strong>地理信息分布分析</strong>：对主要业务在国家、省、城市的相关态势分布情况。</p>
+<p><strong>设备安全隐患</strong>：设备安全隐患的分析，是路由器设备发现和漏洞挖掘验证的业务呈现。</p>
+<p><strong>安全性影响范围</strong>：包括地理范围，案件范围，人员范围、设备分布等多种业务的汇总呈现。</p>
+<p><strong>案件信息</strong>：包括案件类型分析和进展分析。</p>
+<p><strong>案件预警</strong>：对预警情况进行分析。</p>
+<p><strong>人员分析</strong>：分析嫌疑人，受害人情况。</p>
+<p><strong>涉案金额分析</strong>：案件类型划分涉案金额等内容。</p>
+<p><strong>时间维度分析</strong>：按不同的时间点分析不同的数据，如“近六个月案发量环比增长”，年度，季度，月份，选定时间段等内容。</p>
+<p><strong>关联分析</strong>：包括关系图谱在内的各种，多维度分析内容。</p>
+<p><a href="https://imgtu.com/i/6ejTQe" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/05/6ejTQe.md.png" alt="6ejTQe.md.png"></a></p>
+<p><a href="https://imgtu.com/i/6eOzAP" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/05/6eOzAP.md.jpg" alt="6eOzAP.md.jpg"></a></p>
+<h2 id="功能详解"><a href="#功能详解" class="headerlink" title="功能详解"></a>功能详解</h2><p><strong>GIS地图展示案件关系</strong></p>
+<p><a href="https://imgtu.com/i/6eXb5V" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/05/6eXb5V.md.jpg" alt="6eXb5V.md.jpg"></a><br><a href="https://imgtu.com/i/6eXLCT" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/05/6eXLCT.md.jpg" alt="6eXLCT.md.jpg"></a><br><a href="https://imgtu.com/i/6eX7Eq" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/05/6eX7Eq.md.png" alt="6eX7Eq.md.png"></a></p>
+<p><strong>案件数据统计与分析</strong></p>
+<p><a href="https://imgtu.com/i/6ejYrj" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/05/6ejYrj.md.jpg" alt="6ejYrj.md.jpg"></a><br><a href="https://imgtu.com/i/6ejtqs" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/05/6ejtqs.md.jpg" alt="6ejtqs.md.jpg"></a></p>
 
         </div>
         
@@ -499,10 +482,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-22T17:32:31+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-05T15:10:53+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2020年12月22日</p>
+    <p>最后更新于 2021年3月5日</p>
   </a>
 </div>
 
@@ -511,7 +494,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/tcp/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>tcp</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/http/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>http</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/vue/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>vue</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/前端/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>前端</p></a></div>
 
 
         
@@ -524,27 +507,7 @@
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://yangyfeng.github.io/posts/c35109d5.html&title=互联网是如何运作的 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=互联网所有的传输都通过RCP/IP协议族来传输，TCP/IP是面向连接的可靠字节流服务协议
-什么是协议协议是一组规则，用于指定计算机应该如何通过网络来交互通信
-TCP/IP协议族有四层
-
-应用层：提供特定于应用程序的协议  HTTP   FTP   IMAP(邮件)
-网络控制层： 发送数据包到计算机上使用特定的端口号的应用程序
-网络层： 使用IP地址将数据包发送到特定的计算
-链路层：  将二进制数据包与网络信号相互之间转换
-
-TCP的可靠
-tcp在建立连接会进行三次握手，每个收到的数据包都会向发送方发送ack确认，已确保发送成功
-IP的传输
-IP是不可靠的无连接协议，它并不关心数据包是否到达目的地，也不关系连接和端口号，目的是连接到目标IP
-
-TCP传输的质量和顺序
-当数据包过大，在网络层会进行分包，分包后传输的链路不一样，到达的时间不一样，TCP会根据数据包上携带序列号来进行排序重组，如果发送方在一个特定时间内（也就是重试时间）没有接受到接收方的ack确认，会再次重新发送
-IP和IP地址的区别
-Ip是一种协议  有两种标准  IPv4 2^32次方和IPv6  2^128
-IP地址是一串数字192.0.0.1
-
-"
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://yangyfeng.github.io/posts/f2d2e0b4.html&title=应急管理中心 刑侦案件地理信息可视化展示系统 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary="
           
           >
           
@@ -556,27 +519,7 @@ IP地址是一串数字192.0.0.1
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yangyfeng.github.io/posts/c35109d5.html&title=互联网是如何运作的 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=互联网所有的传输都通过RCP/IP协议族来传输，TCP/IP是面向连接的可靠字节流服务协议
-什么是协议协议是一组规则，用于指定计算机应该如何通过网络来交互通信
-TCP/IP协议族有四层
-
-应用层：提供特定于应用程序的协议  HTTP   FTP   IMAP(邮件)
-网络控制层： 发送数据包到计算机上使用特定的端口号的应用程序
-网络层： 使用IP地址将数据包发送到特定的计算
-链路层：  将二进制数据包与网络信号相互之间转换
-
-TCP的可靠
-tcp在建立连接会进行三次握手，每个收到的数据包都会向发送方发送ack确认，已确保发送成功
-IP的传输
-IP是不可靠的无连接协议，它并不关心数据包是否到达目的地，也不关系连接和端口号，目的是连接到目标IP
-
-TCP传输的质量和顺序
-当数据包过大，在网络层会进行分包，分包后传输的链路不一样，到达的时间不一样，TCP会根据数据包上携带序列号来进行排序重组，如果发送方在一个特定时间内（也就是重试时间）没有接受到接收方的ack确认，会再次重新发送
-IP和IP地址的区别
-Ip是一种协议  有两种标准  IPv4 2^32次方和IPv6  2^128
-IP地址是一串数字192.0.0.1
-
-"
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yangyfeng.github.io/posts/f2d2e0b4.html&title=应急管理中心 刑侦案件地理信息可视化展示系统 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary="
           
           >
           
@@ -588,27 +531,7 @@ IP地址是一串数字192.0.0.1
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://yangyfeng.github.io/posts/c35109d5.html&title=互联网是如何运作的 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=互联网所有的传输都通过RCP/IP协议族来传输，TCP/IP是面向连接的可靠字节流服务协议
-什么是协议协议是一组规则，用于指定计算机应该如何通过网络来交互通信
-TCP/IP协议族有四层
-
-应用层：提供特定于应用程序的协议  HTTP   FTP   IMAP(邮件)
-网络控制层： 发送数据包到计算机上使用特定的端口号的应用程序
-网络层： 使用IP地址将数据包发送到特定的计算
-链路层：  将二进制数据包与网络信号相互之间转换
-
-TCP的可靠
-tcp在建立连接会进行三次握手，每个收到的数据包都会向发送方发送ack确认，已确保发送成功
-IP的传输
-IP是不可靠的无连接协议，它并不关心数据包是否到达目的地，也不关系连接和端口号，目的是连接到目标IP
-
-TCP传输的质量和顺序
-当数据包过大，在网络层会进行分包，分包后传输的链路不一样，到达的时间不一样，TCP会根据数据包上携带序列号来进行排序重组，如果发送方在一个特定时间内（也就是重试时间）没有接受到接收方的ack确认，会再次重新发送
-IP和IP地址的区别
-Ip是一种协议  有两种标准  IPv4 2^32次方和IPv6  2^128
-IP地址是一串数字192.0.0.1
-
-"
+          href="http://service.weibo.com/share/share.php?url=https://yangyfeng.github.io/posts/f2d2e0b4.html&title=应急管理中心 刑侦案件地理信息可视化展示系统 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary="
           
           >
           
@@ -618,7 +541,7 @@ IP地址是一串数字192.0.0.1
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIUlEQVR42u3a0W7DMAgF0P7/T2+vk7olF3AnxT55mqos8XElioHXK76+WtfP/71+8vtbXp+4MDAwHsvIl/L+gut7qs+5vv+vezAwMM5hJKGwGiiT118H6GRtGBgYGEl61wu4VRIGBgZGzrhJ0WJknlxiYGBgVEtmCWBVOviRszgGBsYDGXm4/P+/P9LfwMDAeBSj15LsBc3e0TdaFQYGxtaMXiktR/Y+6ZX2MDAwdmXkAxbXL1i16OamYGBgbM2oNiwnpa5kIxaU/DAwMDZlVA+reSl/FaZZdMPAwNiC0RtuyAPifCOut/WXQywGBsZ2jPlgRPVQmuOraSsGBsaujEI4G6RxvYJdgY2BgbE1ozf4lfDyIlqOiQ7DGBgYWzN6D5ocffPtqP4YYGBg7MToNQ6rDche2heNVmBgYBzA6BXdVjUAJvfcHGIxMDC2Y1QPpdXSW35wjfoYfz0TAwPjAEZvtKt6z6QhekPFwMA4jLGqAVkl5W2Am9wWAwNjU0aVlDcA8kLbaIwMAwPjAMb8qiZ/OaDQfcXAwDiAMU/R1jYvC2koBgbGpoxeSO2VySahtvA9YGBgbMfIr0KKVkxAJ03N8kowMDAey8iPptWkrTwwMdkyDAyMAxjVwFctt+XDZ83Qj4GBgTEYkugV2grNSwwMDIzBy3rLag5zYGBgHMDIE748EFfTxOpAGAYGxjmMXi2rOhC2arBs1NTEwMB4HuMbQvxqmDESXP4AAAAASUVORK5CYII='>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJUlEQVR42u3a0W7DMAgF0P7/T3evk7q6F0gnxT55qros9skkBobHI76erev3766f/LrK4xsXBgbGbRn5Vl4XWN9Tfc76/nf3YGBgnMNIQuF8c+t71ut+2DMGBgZGcdPJN1USBgYGRpWRFKjrLeahHAMDA6N6ZPahmBwH1q/X4hgYGDdk5OHy/z9/pb+BgYFxK0avJdkLmnnKWN4VBgbG1ow8wPWQvW+q+8HAwDiHMRl0uGrTk+djYGDszeg1KaulZn48l6eeH7ocGBgYmzKqgxGFBeKfVtNEDAyMExjV5Cxvc1afWX0Rb2txDAyMrRnVQa5eepe3EPJBMQwMjF0ZeZla3VC19M1TwD9WxMDA2JqRA/JqsddaSF5EVAxjYGBszegFvt7xWXKUNmpLYGBgbMdYL9BrbebIPLksv1cMDIwtGPPj+OQ9VTdaHg7DwMA4hlGNZnlQnqSP0WgIBgbGMYzeoVgyTDZvJxT6GxgYGNsxJodc1QRu/oRmWYuBgbEFo9e2nHQhJsNhb+/EwMA4gJGPR1yV/OXhuNx9xcDA2JSRj399O+Dmx38YGBgnMJ7FazS2NQi1hb8DBgbGdoz86oXRfPhsUjBjYGCcwMgL1+qbKAxMDAI3BgbGOYw88FUbk/mY1yj0Y2BgYCw/9wrdZPU8TcTAwMBI7rlqW0lwv+z/BgYGxq0Y1QGLyeDFVUdyGBgY5zB6Z1nVtC9vkVYLZgwMjK0ZP6mvQc+lH42hAAAAAElFTkSuQmCC'>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
         
@@ -626,7 +549,7 @@ IP地址是一串数字192.0.0.1
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIUlEQVR42u3a0W7DMAgF0P7/T2+vk7olF3AnxT55mqos8XElioHXK76+WtfP/71+8vtbXp+4MDAwHsvIl/L+gut7qs+5vv+vezAwMM5hJKGwGiiT118H6GRtGBgYGEl61wu4VRIGBgZGzrhJ0WJknlxiYGBgVEtmCWBVOviRszgGBsYDGXm4/P+/P9LfwMDAeBSj15LsBc3e0TdaFQYGxtaMXiktR/Y+6ZX2MDAwdmXkAxbXL1i16OamYGBgbM2oNiwnpa5kIxaU/DAwMDZlVA+reSl/FaZZdMPAwNiC0RtuyAPifCOut/WXQywGBsZ2jPlgRPVQmuOraSsGBsaujEI4G6RxvYJdgY2BgbE1ozf4lfDyIlqOiQ7DGBgYWzN6D5ocffPtqP4YYGBg7MToNQ6rDche2heNVmBgYBzA6BXdVjUAJvfcHGIxMDC2Y1QPpdXSW35wjfoYfz0TAwPjAEZvtKt6z6QhekPFwMA4jLGqAVkl5W2Am9wWAwNjU0aVlDcA8kLbaIwMAwPjAMb8qiZ/OaDQfcXAwDiAMU/R1jYvC2koBgbGpoxeSO2VySahtvA9YGBgbMfIr0KKVkxAJ03N8kowMDAey8iPptWkrTwwMdkyDAyMAxjVwFctt+XDZ83Qj4GBgTEYkugV2grNSwwMDIzBy3rLag5zYGBgHMDIE748EFfTxOpAGAYGxjmMXi2rOhC2arBs1NTEwMB4HuMbQvxqmDESXP4AAAAASUVORK5CYII='>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJUlEQVR42u3a0W7DMAgF0P7/T3evk7q6F0gnxT55qros9skkBobHI76erev3766f/LrK4xsXBgbGbRn5Vl4XWN9Tfc76/nf3YGBgnMNIQuF8c+t71ut+2DMGBgZGcdPJN1USBgYGRpWRFKjrLeahHAMDA6N6ZPahmBwH1q/X4hgYGDdk5OHy/z9/pb+BgYFxK0avJdkLmnnKWN4VBgbG1ow8wPWQvW+q+8HAwDiHMRl0uGrTk+djYGDszeg1KaulZn48l6eeH7ocGBgYmzKqgxGFBeKfVtNEDAyMExjV5Cxvc1afWX0Rb2txDAyMrRnVQa5eepe3EPJBMQwMjF0ZeZla3VC19M1TwD9WxMDA2JqRA/JqsddaSF5EVAxjYGBszegFvt7xWXKUNmpLYGBgbMdYL9BrbebIPLksv1cMDIwtGPPj+OQ9VTdaHg7DwMA4hlGNZnlQnqSP0WgIBgbGMYzeoVgyTDZvJxT6GxgYGNsxJodc1QRu/oRmWYuBgbEFo9e2nHQhJsNhb+/EwMA4gJGPR1yV/OXhuNx9xcDA2JSRj399O+Dmx38YGBgnMJ7FazS2NQi1hb8DBgbGdoz86oXRfPhsUjBjYGCcwMgL1+qbKAxMDAI3BgbGOYw88FUbk/mY1yj0Y2BgYCw/9wrdZPU8TcTAwMBI7rlqW0lwv+z/BgYGxq0Y1QGLyeDFVUdyGBgY5zB6Z1nVtC9vkVYLZgwMjK0ZP6mvQc+lH42hAAAAAElFTkSuQmCC'>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
         
@@ -648,40 +571,21 @@ IP地址是一串数字192.0.0.1
         
             <div class="prev-next">
                 
-                    <section class="prev">
-                        <span class="art-item-left">
-                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
-                            <h4>
-                                <a href="/posts/62b88241.html" rel="prev" title="js的事件循环是什么">
-                                  
-                                      js的事件循环是什么
-                                  
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/blogpost/tags/event-loop/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>event loop</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
-                
                 
                     <section class="next">
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/posts/cf2c43d.html" rel="prev" title="V8引擎是如何运行JS">
+                                <a href="/posts/aab0fbb9.html" rel="prev" title="网络安全监控">
                                     
-                                        V8引擎是如何运行JS
+                                        网络安全监控
                                     
                                 </a>
                             </h4>
                             
                                 
                                 <h6 class="tags">
-                                    <a class="tag" href="/blogpost/tags/javascript/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>javascript</a> <a class="tag" href="/blogpost/tags/JS运行原理/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>JS运行原理</a> <a class="tag" href="/blogpost/tags/V8引擎/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>V8引擎</a>
+                                    <a class="tag" href="/blogpost/tags/vue/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>vue</a> <a class="tag" href="/blogpost/tags/前端/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>前端</a> <a class="tag" href="/blogpost/tags/数据可视化/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>数据可视化</a> <a class="tag" href="/blogpost/tags/可视化定制/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>可视化定制</a>
                                 </h6>
                             
                         </span>
@@ -712,7 +616,7 @@ IP地址是一串数字192.0.0.1
 
   <script>
     window.subData = {
-      title: '互联网是如何运作的',
+      title: '应急管理中心 刑侦案件地理信息可视化展示系统',
       tools: true
     }
   </script>
@@ -822,7 +726,7 @@ IP地址是一串数字192.0.0.1
 </header>
 
     <div class='content material'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是协议"><span class="toc-text">什么是协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP-IP协议族"><span class="toc-text">TCP/IP协议族</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络传输"><span class="toc-text">网络传输</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#路由器"><span class="toc-text">路由器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DNS服务"><span class="toc-text">DNS服务</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#介绍"><span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#业务"><span class="toc-text">业务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#功能详解"><span class="toc-text">功能详解</span></a></li></ol>
     </div>
   </section>
 
@@ -1012,7 +916,7 @@ IP地址是一串数字192.0.0.1
 </header>
 
     <div class="content material">
-      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\cf2c43d.html" title="V8引擎是如何运行JS" rel="bookmark">V8引擎是如何运行JS</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\81adf3b6.html" title="javascript是如何被运行的" rel="bookmark">javascript是如何被运行的</a></h3></div></li></ul>
+      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\b1fde4c6.html" title="QTV2直播商城" rel="bookmark">QTV2直播商城</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\763ea06e.html" title="华北电力控制系统" rel="bookmark">华北电力控制系统</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\d02d7caa.html" title="国珍知识库管理系统" rel="bookmark">国珍知识库管理系统</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\5f998618.html" title="大数据可视化系统" rel="bookmark">大数据可视化系统</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\fa28e10b.html" title="风力发电SCADA" rel="bookmark">风力发电SCADA</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\aab0fbb9.html" title="网络安全监控" rel="bookmark">网络安全监控</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\8136685c.html" title="less在vue中的使用" rel="bookmark">less在vue中的使用</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\4de2b0c3.html" title="vue.config.js配置" rel="bookmark">vue.config.js配置</a></h3></div></li></ul>
     </div>
   </section>
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>互联网是如何运作的 | 峰享会</title>
+  <title>QTV2直播商城 | 峰享会</title>
   
   <meta name="keywords" content="前端开发,科技,数据可视化,移动开发,小程序,客户端">
   
@@ -352,8 +352,8 @@
         
   
     <h1 class="title">
-      <a href="/posts/c35109d5.html">
-        互联网是如何运作的
+      <a href="/posts/b1fde4c6.html">
+        QTV2直播商城
       </a>
     </h1>
   
@@ -382,7 +382,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-12-22</p>
+    <p>2021-03-04</p>
   </a>
 </div>
 
@@ -392,9 +392,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/blogpost/categories/深入前端/' rel="nofollow">
+    <a href='/blogpost/categories/个人项目/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>深入前端</p>
+      <p>个人项目</p>
     </a>
   </div>
 
@@ -429,14 +429,14 @@
           <div class="new-meta-item size">
             <a class="notlink">
               <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>668字</p>
+              <p>583字</p>
             </a>
           </div>
           <!-- 阅读时间 -->
           <div class="new-meta-item read-time">
             <a class="notlink">
               <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>2分</p>
+              <p>1分</p>
             </a>
           </div>
         
@@ -450,44 +450,38 @@
 
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
-          <p>互联网所有的传输都通过RCP/IP协议族来传输，TCP/IP是<strong>面向连接</strong>的<strong>可靠</strong>字节流服务协议</p>
-<h2 id="什么是协议"><a href="#什么是协议" class="headerlink" title="什么是协议"></a>什么是协议</h2><p>协议是一组<strong>规则</strong>，用于指定计算机应该如何通过网络来交互通信</p>
-<h2 id="TCP-IP协议族"><a href="#TCP-IP协议族" class="headerlink" title="TCP/IP协议族"></a>TCP/IP协议族</h2><p><strong>有四层</strong></p>
-<ul>
-<li>应用层：提供特定于应用程序的协议  HTTP   FTP   IMAP(邮件)</li>
-<li>网络控制层： 发送数据包到计算机上使用特定的端口号的应用程序</li>
-<li>网络层： 使用IP地址将数据包发送到特定的计算</li>
-<li>链路层：  将二进制数据包与网络信号相互之间转换</li>
-</ul>
-<p><strong>TCP的可靠</strong></p>
-<p>tcp在建立连接会进行三次握手，每个收到的数据包都会向发送方发送ack确认，已确保发送成功</p>
-<p><strong>IP的传输</strong></p>
-<p>IP是不可靠的无连接协议，它并不关心数据包是否到达目的地，也不关系连接和端口号，目的是连接到目标IP</p>
-<p><a href="https://imgchr.com/i/rDwiod" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rDwiod.png" alt="rDwiod.png"></a></p>
-<p><strong>TCP传输的质量和顺序</strong></p>
-<p>当数据包过大，在网络层会进行分包，分包后传输的链路不一样，到达的时间不一样，TCP会根据数据包上携带序列号来进行排序重组，如果发送方在一个特定时间内（也就是重试时间）没有接受到接收方的ack确认，会再次重新发送</p>
-<p><strong>IP和IP地址的区别</strong></p>
-<p>Ip是一种协议  有两种标准  IPv4 2^32次方和IPv6  2^128</p>
-<p>IP地址是一串数字192.0.0.1</p>
-<p><a href="https://imgchr.com/i/rDaLgf" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rDaLgf.png" alt="rDaLgf.png"></a></p>
-<p><a href="https://imgchr.com/i/rDajKS" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rDajKS.png" alt="rDajKS.png"></a></p>
+          <h2 id="项目描述"><a href="#项目描述" class="headerlink" title="项目描述"></a>项目描述</h2><p>QTV-2直播生活供货商入驻系统，运行在微信公众号， 集资讯短视频，电商直播，购物商城为一体的青岛广电生活服务平台 。 其功能主要有直播打赏，直播抽奖，会员制，商品分享，弹幕评论等。微信搜索“QTV蛤蜊帮”，即可进入。 </p>
+<h2 id="系统结构说明"><a href="#系统结构说明" class="headerlink" title="系统结构说明"></a>系统结构说明</h2><p><strong>核心模型</strong></p>
+<p><a href="https://imgtu.com/i/6VwFh9" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6VwFh9.md.png" alt="6VwFh9.md.png"></a></p>
+<p><strong>业务架构</strong></p>
+<p><a href="https://imgtu.com/i/6ehCSx" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/05/6ehCSx.md.png" alt="6ehCSx.md.png"></a><br><a href="https://imgtu.com/i/6ehpf1" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/05/6ehpf1.md.png" alt="6ehpf1.md.png"></a></p>
+<h2 id="业务介绍"><a href="#业务介绍" class="headerlink" title="业务介绍"></a>业务介绍</h2><p><strong>产品分类</strong></p>
+<p>推荐、大牌MALL（商超大牌）、扶农助农、工厂清仓、母婴亲子、美食美味、珠光宝气、潮搭攻略、乐家生活、美妆心得等</p>
+<p><a href="https://imgtu.com/i/6V0Nx1" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6V0Nx1.md.png" alt="6V0Nx1.md.png"></a></p>
 <a id="more"></a>
-<h2 id="网络传输"><a href="#网络传输" class="headerlink" title="网络传输"></a>网络传输</h2><ol>
-<li>个人电脑</li>
-<li>猫</li>
-<li>local ISP   互联网服务提供商</li>
-<li>regional ISP   经过多个主干网络</li>
-<li>NSP   网络服务提供商  大型网络  卖带宽给ISP</li>
-<li>NAP   每个NSP连接到至少三个网络访问点</li>
-<li>ISP  NSP 所有网络提供都携带路由器，每个路由有当前子网络ip的路由表，当底层向上层发送数据时候，找不到会依次向上找，可能由一个主干网络跳到另外一个主干网络。</li>
-</ol>
-<p><strong>个人客户端访问哔哩哔哩服务器的过程</strong></p>
-<p><a href="https://imgchr.com/i/rDwRmD" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rDwRmD.png" alt="rDwRmD.png"></a></p>
-<h2 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h2><p>路由器服务检查路由表上是否有目的地的IP地址，</p>
-<p>如果有直接发送到对应的网络，否则向上发送数据，在更高的层级寻找对一个拥有该IP的路由器</p>
-<p>直到找到对应的网络的IP地址</p>
-<h2 id="DNS服务"><a href="#DNS服务" class="headerlink" title="DNS服务"></a>DNS服务</h2><p>存在意义是IP别名，不让公司丢客户，也容易记，DNS是一个分布式数据库，存储了域名和IP的对应关系</p>
-<p><strong><a href="https://www.bilibili.com/video/BV1Rz4y197Jd/?spm_id_from=333.788.recommend_more_video.0" target="_blank" rel="noopener">原文地址</a></strong></p>
+<p><strong>视频广场</strong></p>
+<p>可以在这里看直播卖货，也能看录播的商品介绍视频。<br><a href="https://imgtu.com/i/6V0YG9" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6V0YG9.png" alt="6V0YG9.png"></a><br><a href="https://imgtu.com/i/6V0t2R" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6V0t2R.png" alt="6V0t2R.png"></a><br><a href="https://imgtu.com/i/6V0JPJ" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6V0JPJ.png" alt="6V0JPJ.png"></a><br><a href="https://imgtu.com/i/6V0854" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6V0854.png" alt="6V0854.png"></a></p>
+<p><strong>会员管理</strong></p>
+<p>微信获取用户信息（微信头像 通讯录 地理位置 会员名  电话  当前登录地  常活动地  收货地址  普通用户  分销用户  等级  性别  购买喜好）。</p>
+<p>会员等级有用户购买的商品累计金额来核算。</p>
+<p><strong>商品管理</strong></p>
+<p>用户可以在后台添加自己的商品（商品封面  标题  价格  商家 ），在前台购买用户还可以看到，今日销量  昨日销量  总销量  总销售额  上架时间。</p>
+<p>当然商户也可以在后台下架商品，设置满减和折扣优惠，限购数量，下架商品，购买方式包括自提（线下实体流量导入）送货到家等。</p>
+<p><a href="https://imgtu.com/i/6VDu7T" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6VDu7T.png" alt="6VDu7T.png"></a></p>
+<p><strong>直播录播管理</strong></p>
+<p>录播：在后台商户可以手动上传商品，并关联商品中的商品，再审核或禁播。权重规则， 按照销量+上新+评价确定展示的优先顺序。</p>
+<p>直播：商户可以预约一次直播，甚至可以在直播中开启抽奖活动。</p>
+<p><strong>商户管理</strong></p>
+<p>在后台需要审核商户。</p>
+<p>入住审核：</p>
+<p>供货商（工厂）/门店（实体）入住审核（基本公司信息+行业特殊证件）</p>
+<p>渠道商入住审核（基本公司信息+会员数量截图）</p>
+<p>特殊权限：</p>
+<p>开启购买跳转到他们的自建购物网站。</p>
+<p><strong>商户营销</strong></p>
+<p>商户可以开启一些营销活动来吸收流量。</p>
+<p>例如，投票（特殊要求-萌宝视频pk投票—转化用户数与活跃度） 拼团 限时购等。</p>
+<p><a href="https://imgtu.com/i/6VrAUO" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/04/6VrAUO.png" alt="6VrAUO.png"></a></p>
 
         </div>
         
@@ -499,10 +493,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-22T17:32:31+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-05T14:20:52+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>最后更新于 2020年12月22日</p>
+    <p>最后更新于 2021年3月5日</p>
   </a>
 </div>
 
@@ -511,7 +505,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/tcp/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>tcp</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/http/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>http</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/vue/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>vue</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/前端/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>前端</p></a></div>
 
 
         
@@ -524,26 +518,13 @@
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://yangyfeng.github.io/posts/c35109d5.html&title=互联网是如何运作的 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=互联网所有的传输都通过RCP/IP协议族来传输，TCP/IP是面向连接的可靠字节流服务协议
-什么是协议协议是一组规则，用于指定计算机应该如何通过网络来交互通信
-TCP/IP协议族有四层
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://yangyfeng.github.io/posts/b1fde4c6.html&title=QTV2直播商城 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=项目描述QTV-2直播生活供货商入驻系统，运行在微信公众号， 集资讯短视频，电商直播，购物商城为一体的青岛广电生活服务平台 。 其功能主要有直播打赏，直播抽奖，会员制，商品分享，弹幕评论等。微信搜索“QTV蛤蜊帮”，即可进入。 
+系统结构说明核心模型
 
-应用层：提供特定于应用程序的协议  HTTP   FTP   IMAP(邮件)
-网络控制层： 发送数据包到计算机上使用特定的端口号的应用程序
-网络层： 使用IP地址将数据包发送到特定的计算
-链路层：  将二进制数据包与网络信号相互之间转换
+业务架构
 
-TCP的可靠
-tcp在建立连接会进行三次握手，每个收到的数据包都会向发送方发送ack确认，已确保发送成功
-IP的传输
-IP是不可靠的无连接协议，它并不关心数据包是否到达目的地，也不关系连接和端口号，目的是连接到目标IP
-
-TCP传输的质量和顺序
-当数据包过大，在网络层会进行分包，分包后传输的链路不一样，到达的时间不一样，TCP会根据数据包上携带序列号来进行排序重组，如果发送方在一个特定时间内（也就是重试时间）没有接受到接收方的ack确认，会再次重新发送
-IP和IP地址的区别
-Ip是一种协议  有两种标准  IPv4 2^32次方和IPv6  2^128
-IP地址是一串数字192.0.0.1
-
+业务介绍产品分类
+推荐、大牌MALL（商超大牌）、扶农助农、工厂清仓、母婴亲子、美食美味、珠光宝气、潮搭攻略、乐家生活、美妆心得等
 "
           
           >
@@ -556,26 +537,13 @@ IP地址是一串数字192.0.0.1
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yangyfeng.github.io/posts/c35109d5.html&title=互联网是如何运作的 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=互联网所有的传输都通过RCP/IP协议族来传输，TCP/IP是面向连接的可靠字节流服务协议
-什么是协议协议是一组规则，用于指定计算机应该如何通过网络来交互通信
-TCP/IP协议族有四层
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yangyfeng.github.io/posts/b1fde4c6.html&title=QTV2直播商城 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=项目描述QTV-2直播生活供货商入驻系统，运行在微信公众号， 集资讯短视频，电商直播，购物商城为一体的青岛广电生活服务平台 。 其功能主要有直播打赏，直播抽奖，会员制，商品分享，弹幕评论等。微信搜索“QTV蛤蜊帮”，即可进入。 
+系统结构说明核心模型
 
-应用层：提供特定于应用程序的协议  HTTP   FTP   IMAP(邮件)
-网络控制层： 发送数据包到计算机上使用特定的端口号的应用程序
-网络层： 使用IP地址将数据包发送到特定的计算
-链路层：  将二进制数据包与网络信号相互之间转换
+业务架构
 
-TCP的可靠
-tcp在建立连接会进行三次握手，每个收到的数据包都会向发送方发送ack确认，已确保发送成功
-IP的传输
-IP是不可靠的无连接协议，它并不关心数据包是否到达目的地，也不关系连接和端口号，目的是连接到目标IP
-
-TCP传输的质量和顺序
-当数据包过大，在网络层会进行分包，分包后传输的链路不一样，到达的时间不一样，TCP会根据数据包上携带序列号来进行排序重组，如果发送方在一个特定时间内（也就是重试时间）没有接受到接收方的ack确认，会再次重新发送
-IP和IP地址的区别
-Ip是一种协议  有两种标准  IPv4 2^32次方和IPv6  2^128
-IP地址是一串数字192.0.0.1
-
+业务介绍产品分类
+推荐、大牌MALL（商超大牌）、扶农助农、工厂清仓、母婴亲子、美食美味、珠光宝气、潮搭攻略、乐家生活、美妆心得等
 "
           
           >
@@ -588,26 +556,13 @@ IP地址是一串数字192.0.0.1
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://yangyfeng.github.io/posts/c35109d5.html&title=互联网是如何运作的 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=互联网所有的传输都通过RCP/IP协议族来传输，TCP/IP是面向连接的可靠字节流服务协议
-什么是协议协议是一组规则，用于指定计算机应该如何通过网络来交互通信
-TCP/IP协议族有四层
+          href="http://service.weibo.com/share/share.php?url=https://yangyfeng.github.io/posts/b1fde4c6.html&title=QTV2直播商城 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary=项目描述QTV-2直播生活供货商入驻系统，运行在微信公众号， 集资讯短视频，电商直播，购物商城为一体的青岛广电生活服务平台 。 其功能主要有直播打赏，直播抽奖，会员制，商品分享，弹幕评论等。微信搜索“QTV蛤蜊帮”，即可进入。 
+系统结构说明核心模型
 
-应用层：提供特定于应用程序的协议  HTTP   FTP   IMAP(邮件)
-网络控制层： 发送数据包到计算机上使用特定的端口号的应用程序
-网络层： 使用IP地址将数据包发送到特定的计算
-链路层：  将二进制数据包与网络信号相互之间转换
+业务架构
 
-TCP的可靠
-tcp在建立连接会进行三次握手，每个收到的数据包都会向发送方发送ack确认，已确保发送成功
-IP的传输
-IP是不可靠的无连接协议，它并不关心数据包是否到达目的地，也不关系连接和端口号，目的是连接到目标IP
-
-TCP传输的质量和顺序
-当数据包过大，在网络层会进行分包，分包后传输的链路不一样，到达的时间不一样，TCP会根据数据包上携带序列号来进行排序重组，如果发送方在一个特定时间内（也就是重试时间）没有接受到接收方的ack确认，会再次重新发送
-IP和IP地址的区别
-Ip是一种协议  有两种标准  IPv4 2^32次方和IPv6  2^128
-IP地址是一串数字192.0.0.1
-
+业务介绍产品分类
+推荐、大牌MALL（商超大牌）、扶农助农、工厂清仓、母婴亲子、美食美味、珠光宝气、潮搭攻略、乐家生活、美妆心得等
 "
           
           >
@@ -618,7 +573,7 @@ IP地址是一串数字192.0.0.1
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIUlEQVR42u3a0W7DMAgF0P7/T2+vk7olF3AnxT55mqos8XElioHXK76+WtfP/71+8vtbXp+4MDAwHsvIl/L+gut7qs+5vv+vezAwMM5hJKGwGiiT118H6GRtGBgYGEl61wu4VRIGBgZGzrhJ0WJknlxiYGBgVEtmCWBVOviRszgGBsYDGXm4/P+/P9LfwMDAeBSj15LsBc3e0TdaFQYGxtaMXiktR/Y+6ZX2MDAwdmXkAxbXL1i16OamYGBgbM2oNiwnpa5kIxaU/DAwMDZlVA+reSl/FaZZdMPAwNiC0RtuyAPifCOut/WXQywGBsZ2jPlgRPVQmuOraSsGBsaujEI4G6RxvYJdgY2BgbE1ozf4lfDyIlqOiQ7DGBgYWzN6D5ocffPtqP4YYGBg7MToNQ6rDche2heNVmBgYBzA6BXdVjUAJvfcHGIxMDC2Y1QPpdXSW35wjfoYfz0TAwPjAEZvtKt6z6QhekPFwMA4jLGqAVkl5W2Am9wWAwNjU0aVlDcA8kLbaIwMAwPjAMb8qiZ/OaDQfcXAwDiAMU/R1jYvC2koBgbGpoxeSO2VySahtvA9YGBgbMfIr0KKVkxAJ03N8kowMDAey8iPptWkrTwwMdkyDAyMAxjVwFctt+XDZ83Qj4GBgTEYkugV2grNSwwMDIzBy3rLag5zYGBgHMDIE748EFfTxOpAGAYGxjmMXi2rOhC2arBs1NTEwMB4HuMbQvxqmDESXP4AAAAASUVORK5CYII='>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJklEQVR42u3aQW6DQAwFUO5/6XRbqYF82yUSM49V1QTwy8Ly2D6O+Hq1rt/3Xj/571uOOy4MDIzHMvJQrkO8vus60Py9p1QMDIwNGEkqPPt+Hlxyb5KsMTAwMCaMPOFWSRgYGBg9Rn7gvA4dAwMDI2HkLbNqwTcpB285i2NgYDyQkafL7/99y3wDAwPjUYzeSLJa0iUjzDzJvokKAwNjaUae4CbI6n+q8WBgYOzDmCw6/FfQk+djYGCsyshHj9WEmA8GctLppxgYGJsxqitfyYG2iin/ZBgYGNsw8sFAXlbe/UO8SbgYGBjLMeYhVk+R1RFCviiGgYGxKqO37FXo5F2nyODeaC0DAwNjacY3i7weptz4w8DA2IaRvyBJtXlCz0kf6lwMDIyFGElCzMPtpdfqz3FUX4+BgfFwRv7QvPWWH0HzhF44NmNgYCzH6B1Ke4Vjr3yM8ioGBsY2jEL5NViJmJeDp/MNDAyMRRlJmqs2xSakUUmKgYGxAWMyW6iWd/Om3mnCxcDAWJqRjxsTUt6Sqy5qlEcCGBgYCzF6jbDeZkdvwPDhmxgYGIsyXsVrUj72DrcRFQMDY2lGbwyQjyTnT0iSOwYGxg6M3hprdSEsH4I2B6sYGBgbMAprDYMD8GQU+gGJgYGBER8y82bcZGAZLVtgYGBszJik5iSsamsPAwNjH8ZkweI60LxMrLbkMDAw9mH0elnVsq86Is2HnRgYGEszfgDbApNhjjV0MwAAAABJRU5ErkJggg=='>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
         
@@ -626,7 +581,7 @@ IP地址是一串数字192.0.0.1
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIUlEQVR42u3a0W7DMAgF0P7/T2+vk7olF3AnxT55mqos8XElioHXK76+WtfP/71+8vtbXp+4MDAwHsvIl/L+gut7qs+5vv+vezAwMM5hJKGwGiiT118H6GRtGBgYGEl61wu4VRIGBgZGzrhJ0WJknlxiYGBgVEtmCWBVOviRszgGBsYDGXm4/P+/P9LfwMDAeBSj15LsBc3e0TdaFQYGxtaMXiktR/Y+6ZX2MDAwdmXkAxbXL1i16OamYGBgbM2oNiwnpa5kIxaU/DAwMDZlVA+reSl/FaZZdMPAwNiC0RtuyAPifCOut/WXQywGBsZ2jPlgRPVQmuOraSsGBsaujEI4G6RxvYJdgY2BgbE1ozf4lfDyIlqOiQ7DGBgYWzN6D5ocffPtqP4YYGBg7MToNQ6rDche2heNVmBgYBzA6BXdVjUAJvfcHGIxMDC2Y1QPpdXSW35wjfoYfz0TAwPjAEZvtKt6z6QhekPFwMA4jLGqAVkl5W2Am9wWAwNjU0aVlDcA8kLbaIwMAwPjAMb8qiZ/OaDQfcXAwDiAMU/R1jYvC2koBgbGpoxeSO2VySahtvA9YGBgbMfIr0KKVkxAJ03N8kowMDAey8iPptWkrTwwMdkyDAyMAxjVwFctt+XDZ83Qj4GBgTEYkugV2grNSwwMDIzBy3rLag5zYGBgHMDIE748EFfTxOpAGAYGxjmMXi2rOhC2arBs1NTEwMB4HuMbQvxqmDESXP4AAAAASUVORK5CYII='>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJklEQVR42u3aQW6DQAwFUO5/6XRbqYF82yUSM49V1QTwy8Ly2D6O+Hq1rt/3Xj/571uOOy4MDIzHMvJQrkO8vus60Py9p1QMDIwNGEkqPPt+Hlxyb5KsMTAwMCaMPOFWSRgYGBg9Rn7gvA4dAwMDI2HkLbNqwTcpB285i2NgYDyQkafL7/99y3wDAwPjUYzeSLJa0iUjzDzJvokKAwNjaUae4CbI6n+q8WBgYOzDmCw6/FfQk+djYGCsyshHj9WEmA8GctLppxgYGJsxqitfyYG2iin/ZBgYGNsw8sFAXlbe/UO8SbgYGBjLMeYhVk+R1RFCviiGgYGxKqO37FXo5F2nyODeaC0DAwNjacY3i7weptz4w8DA2IaRvyBJtXlCz0kf6lwMDIyFGElCzMPtpdfqz3FUX4+BgfFwRv7QvPWWH0HzhF44NmNgYCzH6B1Ke4Vjr3yM8ioGBsY2jEL5NViJmJeDp/MNDAyMRRlJmqs2xSakUUmKgYGxAWMyW6iWd/Om3mnCxcDAWJqRjxsTUt6Sqy5qlEcCGBgYCzF6jbDeZkdvwPDhmxgYGIsyXsVrUj72DrcRFQMDY2lGbwyQjyTnT0iSOwYGxg6M3hprdSEsH4I2B6sYGBgbMAprDYMD8GQU+gGJgYGBER8y82bcZGAZLVtgYGBszJik5iSsamsPAwNjH8ZkweI60LxMrLbkMDAw9mH0elnVsq86Is2HnRgYGEszfgDbApNhjjV0MwAAAABJRU5ErkJggg=='>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
         
@@ -652,16 +607,16 @@ IP地址是一串数字192.0.0.1
                         <span class="art-item-left">
                             <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
                             <h4>
-                                <a href="/posts/62b88241.html" rel="prev" title="js的事件循环是什么">
+                                <a href="/posts/aab0fbb9.html" rel="prev" title="网络安全监控">
                                   
-                                      js的事件循环是什么
+                                      网络安全监控
                                   
                                 </a>
                             </h4>
                             
                                 
                                 <h6 class="tags">
-                                    <a class="tag" href="/blogpost/tags/event-loop/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>event loop</a>
+                                    <a class="tag" href="/blogpost/tags/vue/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>vue</a> <a class="tag" href="/blogpost/tags/前端/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>前端</a> <a class="tag" href="/blogpost/tags/数据可视化/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>数据可视化</a> <a class="tag" href="/blogpost/tags/可视化定制/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>可视化定制</a>
                                 </h6>
                             
                         </span>
@@ -672,16 +627,16 @@ IP地址是一串数字192.0.0.1
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/posts/cf2c43d.html" rel="prev" title="V8引擎是如何运行JS">
+                                <a href="/posts/763ea06e.html" rel="prev" title="华北电力控制系统">
                                     
-                                        V8引擎是如何运行JS
+                                        华北电力控制系统
                                     
                                 </a>
                             </h4>
                             
                                 
                                 <h6 class="tags">
-                                    <a class="tag" href="/blogpost/tags/javascript/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>javascript</a> <a class="tag" href="/blogpost/tags/JS运行原理/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>JS运行原理</a> <a class="tag" href="/blogpost/tags/V8引擎/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>V8引擎</a>
+                                    <a class="tag" href="/blogpost/tags/vue/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>vue</a> <a class="tag" href="/blogpost/tags/前端/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>前端</a> <a class="tag" href="/blogpost/tags/数据可视化/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>数据可视化</a>
                                 </h6>
                             
                         </span>
@@ -712,7 +667,7 @@ IP地址是一串数字192.0.0.1
 
   <script>
     window.subData = {
-      title: '互联网是如何运作的',
+      title: 'QTV2直播商城',
       tools: true
     }
   </script>
@@ -822,7 +777,7 @@ IP地址是一串数字192.0.0.1
 </header>
 
     <div class='content material'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是协议"><span class="toc-text">什么是协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP-IP协议族"><span class="toc-text">TCP/IP协议族</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络传输"><span class="toc-text">网络传输</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#路由器"><span class="toc-text">路由器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DNS服务"><span class="toc-text">DNS服务</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#项目描述"><span class="toc-text">项目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统结构说明"><span class="toc-text">系统结构说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#业务介绍"><span class="toc-text">业务介绍</span></a></li></ol>
     </div>
   </section>
 
@@ -1012,7 +967,7 @@ IP地址是一串数字192.0.0.1
 </header>
 
     <div class="content material">
-      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\cf2c43d.html" title="V8引擎是如何运行JS" rel="bookmark">V8引擎是如何运行JS</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\81adf3b6.html" title="javascript是如何被运行的" rel="bookmark">javascript是如何被运行的</a></h3></div></li></ul>
+      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\763ea06e.html" title="华北电力控制系统" rel="bookmark">华北电力控制系统</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\d02d7caa.html" title="国珍知识库管理系统" rel="bookmark">国珍知识库管理系统</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\5f998618.html" title="大数据可视化系统" rel="bookmark">大数据可视化系统</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\f2d2e0b4.html" title="应急管理中心 刑侦案件地理信息可视化展示系统" rel="bookmark">应急管理中心 刑侦案件地理信息可视化展示系统</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\fa28e10b.html" title="风力发电SCADA" rel="bookmark">风力发电SCADA</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\aab0fbb9.html" title="网络安全监控" rel="bookmark">网络安全监控</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\8136685c.html" title="less在vue中的使用" rel="bookmark">less在vue中的使用</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\4de2b0c3.html" title="vue.config.js配置" rel="bookmark">vue.config.js配置</a></h3></div></li></ul>
     </div>
   </section>
 
