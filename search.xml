@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>可视化定制开发</title>
+      <link href="//posts/aab0fbb9.html"/>
+      <url>//posts/aab0fbb9.html</url>
+      
+        <content type="html"><![CDATA[<p><strong>定制开发</strong></p><p>用户业务需求为基础，设计出客户满意的方案，前端根据设计图1:1完成开发。</p><p>包括各类图表展示元素，地理位置信息展示单元（Gis、矢量、3d地球等），交互效果（酷炫动画，用户交互，展示效果等），实数数据监控，告警反馈，控制等。</p><p>交互给客户就是一套完整的可运行的程序，数据接口我们可以开发或者直接对接客户提供的数据接口。</p><h4 id="慧盾网络监控"><a href="#慧盾网络监控" class="headerlink" title="慧盾网络监控"></a>慧盾网络监控</h4><p>设备网络监控，数据安全。</p><p><strong>视频安全指挥中心</strong></p><p><a href="https://imgtu.com/i/6ezRds" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/05/6ezRds.md.png" alt="6ezRds.md.png"></a></p><p><strong>全局安全监测</strong></p><p><a href="https://imgtu.com/i/6ezIzT" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/05/6ezIzT.md.png" alt="6ezIzT.md.png"></a></p><h3 id="东胜电厂"><a href="#东胜电厂" class="headerlink" title="东胜电厂"></a>东胜电厂</h3><p><a href="https://imgtu.com/i/6uBkEq" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/06/6uBkEq.md.jpg" alt="6uBkEq.md.jpg"></a></p><h3 id="中国石化安徽石油可视化智慧调度平台"><a href="#中国石化安徽石油可视化智慧调度平台" class="headerlink" title="中国石化安徽石油可视化智慧调度平台"></a>中国石化安徽石油可视化智慧调度平台</h3><p><a href="https://imgtu.com/i/6uIcWQ" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/06/6uIcWQ.md.jpg" alt="6uIcWQ.md.jpg"></a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 个人项目 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 数据可视化 </tag>
+            
+            <tag> Vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>应急管理中心 刑侦案件地理信息可视化展示系统</title>
       <link href="//posts/f2d2e0b4.html"/>
       <url>//posts/f2d2e0b4.html</url>
@@ -23,37 +52,6 @@
             <tag> vue </tag>
             
             <tag> 前端 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>网络安全监控</title>
-      <link href="//posts/aab0fbb9.html"/>
-      <url>//posts/aab0fbb9.html</url>
-      
-        <content type="html"><![CDATA[<h4 id="慧盾网络安全监控"><a href="#慧盾网络安全监控" class="headerlink" title="慧盾网络安全监控"></a>慧盾网络安全监控</h4><p>有可视化专业定制，对接实时数据和静态文件导入展示</p><p><strong>视频安全指挥中心</strong></p><p><a href="https://imgtu.com/i/6ezRds" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/05/6ezRds.md.png" alt="6ezRds.md.png"></a></p><p><strong>全局安全监测</strong></p><p><a href="https://imgtu.com/i/6ezIzT" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2021/03/05/6ezIzT.md.png" alt="6ezIzT.md.png"></a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 个人项目 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> vue </tag>
-            
-            <tag> 前端 </tag>
-            
-            <tag> 数据可视化 </tag>
-            
-            <tag> 可视化定制 </tag>
             
         </tags>
       
@@ -320,6 +318,31 @@
     
     
     <entry>
+      <title>js的事件循环是什么</title>
+      <link href="//posts/62b88241.html"/>
+      <url>//posts/62b88241.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="事件循环的机制"><a href="#事件循环的机制" class="headerlink" title="事件循环的机制"></a>事件循环的机制</h2><p><strong>概念</strong></p><p>宏任务：script(整个代码)、setTimeout、setInterval、setImmediate、I/O、UI rendering</p><p>微任务：promise、Object.observe、MutationObserve</p><p>任务的优先级：process.nextTick &gt; promise.then &gt; setTimeout &gt; setImmediate</p><p><a href="https://mp.weixin.qq.com/s/7k4skVdCIhTsTdEFmXyYLg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/7k4skVdCIhTsTdEFmXyYLg</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深入前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> event loop </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>javascript是如何被运行的</title>
       <link href="//posts/81adf3b6.html"/>
       <url>//posts/81adf3b6.html</url>
@@ -347,36 +370,11 @@
     
     
     <entry>
-      <title>js的事件循环是什么</title>
-      <link href="//posts/62b88241.html"/>
-      <url>//posts/62b88241.html</url>
+      <title>互联网是如何运作的</title>
+      <link href="//posts/c35109d5.html"/>
+      <url>//posts/c35109d5.html</url>
       
-        <content type="html"><![CDATA[<h2 id="事件循环的机制"><a href="#事件循环的机制" class="headerlink" title="事件循环的机制"></a>事件循环的机制</h2><p><strong>概念</strong></p><p>宏任务：script(整个代码)、setTimeout、setInterval、setImmediate、I/O、UI rendering</p><p>微任务：promise、Object.observe、MutationObserve</p><p>任务的优先级：process.nextTick &gt; promise.then &gt; setTimeout &gt; setImmediate</p><p><a href="https://mp.weixin.qq.com/s/7k4skVdCIhTsTdEFmXyYLg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/7k4skVdCIhTsTdEFmXyYLg</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 深入前端 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> event loop </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>什么是JS调用栈</title>
-      <link href="//posts/9926a09c.html"/>
-      <url>//posts/9926a09c.html</url>
-      
-        <content type="html"><![CDATA[<p><strong>概念</strong></p><p>栈：先进后出，进栈，出栈，与堆栈不同</p><p>队列：先进先出</p><p>调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用了哪个函数</p><p><strong>例子</strong></p><p>调用栈，调用函数执行才回入栈</p><ol><li><p>push  average()</p></li><li><p>push  sum()</p></li><li><p>shift  sum()</p></li><li><p>shift  average()</p></li><li><p>push  console.log()</p></li><li><p>shift  console.log()</p></li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">average</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">const</span> aver = sum(a, b) / <span class="number">2</span>;</span><br><span class="line"> <span class="keyword">return</span> aver;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> num = average(<span class="number">3</span>, <span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(num);</span><br></pre></td></tr></table></figure><p><strong>tips</strong></p><p>用栈持持续被调用，会导致内存溢出</p><p>原因是因为，JS主线程被占用会造成堵塞：事件循环，异步回调(宏任务，微任务，面试必问哦)</p>]]></content>
+        <content type="html"><![CDATA[<p>互联网所有的传输都通过RCP/IP协议族来传输，TCP/IP是<strong>面向连接</strong>的<strong>可靠</strong>字节流服务协议</p><h2 id="什么是协议"><a href="#什么是协议" class="headerlink" title="什么是协议"></a>什么是协议</h2><p>协议是一组<strong>规则</strong>，用于指定计算机应该如何通过网络来交互通信</p><h2 id="TCP-IP协议族"><a href="#TCP-IP协议族" class="headerlink" title="TCP/IP协议族"></a>TCP/IP协议族</h2><p><strong>有四层</strong></p><ul><li>应用层：提供特定于应用程序的协议  HTTP   FTP   IMAP(邮件)</li><li>网络控制层： 发送数据包到计算机上使用特定的端口号的应用程序</li><li>网络层： 使用IP地址将数据包发送到特定的计算</li><li>链路层：  将二进制数据包与网络信号相互之间转换</li></ul><p><strong>TCP的可靠</strong></p><p>tcp在建立连接会进行三次握手，每个收到的数据包都会向发送方发送ack确认，已确保发送成功</p><p><strong>IP的传输</strong></p><p>IP是不可靠的无连接协议，它并不关心数据包是否到达目的地，也不关系连接和端口号，目的是连接到目标IP</p><p><a href="https://imgchr.com/i/rDwiod" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rDwiod.png" alt="rDwiod.png"></a></p><p><strong>TCP传输的质量和顺序</strong></p><p>当数据包过大，在网络层会进行分包，分包后传输的链路不一样，到达的时间不一样，TCP会根据数据包上携带序列号来进行排序重组，如果发送方在一个特定时间内（也就是重试时间）没有接受到接收方的ack确认，会再次重新发送</p><p><strong>IP和IP地址的区别</strong></p><p>Ip是一种协议  有两种标准  IPv4 2^32次方和IPv6  2^128</p><p>IP地址是一串数字192.0.0.1</p><p><a href="https://imgchr.com/i/rDaLgf" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rDaLgf.png" alt="rDaLgf.png"></a></p><p><a href="https://imgchr.com/i/rDajKS" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rDajKS.png" alt="rDajKS.png"></a></p><a id="more"></a><h2 id="网络传输"><a href="#网络传输" class="headerlink" title="网络传输"></a>网络传输</h2><ol><li>个人电脑</li><li>猫</li><li>local ISP   互联网服务提供商</li><li>regional ISP   经过多个主干网络</li><li>NSP   网络服务提供商  大型网络  卖带宽给ISP</li><li>NAP   每个NSP连接到至少三个网络访问点</li><li>ISP  NSP 所有网络提供都携带路由器，每个路由有当前子网络ip的路由表，当底层向上层发送数据时候，找不到会依次向上找，可能由一个主干网络跳到另外一个主干网络。</li></ol><p><strong>个人客户端访问哔哩哔哩服务器的过程</strong></p><p><a href="https://imgchr.com/i/rDwRmD" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rDwRmD.png" alt="rDwRmD.png"></a></p><h2 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h2><p>路由器服务检查路由表上是否有目的地的IP地址，</p><p>如果有直接发送到对应的网络，否则向上发送数据，在更高的层级寻找对一个拥有该IP的路由器</p><p>直到找到对应的网络的IP地址</p><h2 id="DNS服务"><a href="#DNS服务" class="headerlink" title="DNS服务"></a>DNS服务</h2><p>存在意义是IP别名，不让公司丢客户，也容易记，DNS是一个分布式数据库，存储了域名和IP的对应关系</p><p><strong><a href="https://www.bilibili.com/video/BV1Rz4y197Jd/?spm_id_from=333.788.recommend_more_video.0" target="_blank" rel="noopener">原文地址</a></strong></p>]]></content>
       
       
       <categories>
@@ -388,7 +386,9 @@
       
         <tags>
             
-            <tag> JS运行原理 </tag>
+            <tag> tcp </tag>
+            
+            <tag> http </tag>
             
         </tags>
       
@@ -422,11 +422,11 @@
     
     
     <entry>
-      <title>互联网是如何运作的</title>
-      <link href="//posts/c35109d5.html"/>
-      <url>//posts/c35109d5.html</url>
+      <title>什么是JS调用栈</title>
+      <link href="//posts/9926a09c.html"/>
+      <url>//posts/9926a09c.html</url>
       
-        <content type="html"><![CDATA[<p>互联网所有的传输都通过RCP/IP协议族来传输，TCP/IP是<strong>面向连接</strong>的<strong>可靠</strong>字节流服务协议</p><h2 id="什么是协议"><a href="#什么是协议" class="headerlink" title="什么是协议"></a>什么是协议</h2><p>协议是一组<strong>规则</strong>，用于指定计算机应该如何通过网络来交互通信</p><h2 id="TCP-IP协议族"><a href="#TCP-IP协议族" class="headerlink" title="TCP/IP协议族"></a>TCP/IP协议族</h2><p><strong>有四层</strong></p><ul><li>应用层：提供特定于应用程序的协议  HTTP   FTP   IMAP(邮件)</li><li>网络控制层： 发送数据包到计算机上使用特定的端口号的应用程序</li><li>网络层： 使用IP地址将数据包发送到特定的计算</li><li>链路层：  将二进制数据包与网络信号相互之间转换</li></ul><p><strong>TCP的可靠</strong></p><p>tcp在建立连接会进行三次握手，每个收到的数据包都会向发送方发送ack确认，已确保发送成功</p><p><strong>IP的传输</strong></p><p>IP是不可靠的无连接协议，它并不关心数据包是否到达目的地，也不关系连接和端口号，目的是连接到目标IP</p><p><a href="https://imgchr.com/i/rDwiod" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rDwiod.png" alt="rDwiod.png"></a></p><p><strong>TCP传输的质量和顺序</strong></p><p>当数据包过大，在网络层会进行分包，分包后传输的链路不一样，到达的时间不一样，TCP会根据数据包上携带序列号来进行排序重组，如果发送方在一个特定时间内（也就是重试时间）没有接受到接收方的ack确认，会再次重新发送</p><p><strong>IP和IP地址的区别</strong></p><p>Ip是一种协议  有两种标准  IPv4 2^32次方和IPv6  2^128</p><p>IP地址是一串数字192.0.0.1</p><p><a href="https://imgchr.com/i/rDaLgf" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rDaLgf.png" alt="rDaLgf.png"></a></p><p><a href="https://imgchr.com/i/rDajKS" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rDajKS.png" alt="rDajKS.png"></a></p><a id="more"></a><h2 id="网络传输"><a href="#网络传输" class="headerlink" title="网络传输"></a>网络传输</h2><ol><li>个人电脑</li><li>猫</li><li>local ISP   互联网服务提供商</li><li>regional ISP   经过多个主干网络</li><li>NSP   网络服务提供商  大型网络  卖带宽给ISP</li><li>NAP   每个NSP连接到至少三个网络访问点</li><li>ISP  NSP 所有网络提供都携带路由器，每个路由有当前子网络ip的路由表，当底层向上层发送数据时候，找不到会依次向上找，可能由一个主干网络跳到另外一个主干网络。</li></ol><p><strong>个人客户端访问哔哩哔哩服务器的过程</strong></p><p><a href="https://imgchr.com/i/rDwRmD" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/yangyfeng/yangyfeng.github.io@gh-pages/assets_blog/img/loading.gif" data-original="https://s3.ax1x.com/2020/12/22/rDwRmD.png" alt="rDwRmD.png"></a></p><h2 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h2><p>路由器服务检查路由表上是否有目的地的IP地址，</p><p>如果有直接发送到对应的网络，否则向上发送数据，在更高的层级寻找对一个拥有该IP的路由器</p><p>直到找到对应的网络的IP地址</p><h2 id="DNS服务"><a href="#DNS服务" class="headerlink" title="DNS服务"></a>DNS服务</h2><p>存在意义是IP别名，不让公司丢客户，也容易记，DNS是一个分布式数据库，存储了域名和IP的对应关系</p><p><strong><a href="https://www.bilibili.com/video/BV1Rz4y197Jd/?spm_id_from=333.788.recommend_more_video.0" target="_blank" rel="noopener">原文地址</a></strong></p>]]></content>
+        <content type="html"><![CDATA[<p><strong>概念</strong></p><p>栈：先进后出，进栈，出栈，与堆栈不同</p><p>队列：先进先出</p><p>调用栈是JS引擎追踪函数执行流程的一种机制，当执行环境中调用了多个函数时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体又调用了哪个函数</p><p><strong>例子</strong></p><p>调用栈，调用函数执行才回入栈</p><ol><li><p>push  average()</p></li><li><p>push  sum()</p></li><li><p>shift  sum()</p></li><li><p>shift  average()</p></li><li><p>push  console.log()</p></li><li><p>shift  console.log()</p></li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">average</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">const</span> aver = sum(a, b) / <span class="number">2</span>;</span><br><span class="line"> <span class="keyword">return</span> aver;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> num = average(<span class="number">3</span>, <span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(num);</span><br></pre></td></tr></table></figure><p><strong>tips</strong></p><p>用栈持持续被调用，会导致内存溢出</p><p>原因是因为，JS主线程被占用会造成堵塞：事件循环，异步回调(宏任务，微任务，面试必问哦)</p>]]></content>
       
       
       <categories>
@@ -438,9 +438,7 @@
       
         <tags>
             
-            <tag> tcp </tag>
-            
-            <tag> http </tag>
+            <tag> JS运行原理 </tag>
             
         </tags>
       
