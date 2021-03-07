@@ -2,7 +2,7 @@
 type: blog
 title: 深入webpack
 tags:
-  - webpack
+  - Webpack
   - 前端工程化
 categories:
   - 前端

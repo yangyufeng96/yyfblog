@@ -1,4 +1,4 @@
-## yangyfeng.github.io
+## 项目构建
 
 ### 1、在命令行上创建一个新的存储库
 
@@ -55,3 +55,15 @@ https://github.com/mygitname/mywebsite/tree/master/static/css/style.css
 用户：yangyufeng.web@foxmail.com
 ```
 
+## 文章分类
+
+- 个人项目
+- 前端
+- 后端
+- 深入前端
+- 博客文档
+- 开发工具
+
+## 标签
+
+专业名词用驼峰命名法 Es6 不是 es6

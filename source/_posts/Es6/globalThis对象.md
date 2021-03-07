@@ -2,6 +2,8 @@
 type: blog
 title: globalThis对象
 categories:
+  - 前端
+tags:
   - Es6
 abbrlink: 180dd8a3
 date: 2021-01-08 00:00:00

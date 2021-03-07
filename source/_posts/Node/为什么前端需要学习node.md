@@ -2,6 +2,8 @@
 type: blog
 title: 为什么前端需要学习node
 categories:
+  - 后端
+tags:
   - Node
 abbrlink: fbba48cc
 date: 2020-12-15 00:00:00

@@ -3,8 +3,8 @@ title: webpack依赖加载cdn配置
 type: blog
 layout: post
 tags:
-  - vue
-  - webpack
+  - Vue
+  - Webpack
 categories:
   - 前端
 abbrlink: f8a3109a

@@ -5,7 +5,7 @@ title: vue3的新特性
 categories: 
   - 前端
 tags: 
-  - vue
+  - Vue
 abbrlink: 86248f8a
 date: 2020-12-08 00:00:00
 ---

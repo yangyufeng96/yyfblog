@@ -5,7 +5,7 @@ categories:
   - 前端
 tags:
   - 面试题
-  - vue
+  - Vue
 abbrlink: e210f74f
 date: 2020-12-21 00:00:00
 ---

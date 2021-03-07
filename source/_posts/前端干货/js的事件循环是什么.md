@@ -4,7 +4,7 @@ title: js的事件循环是什么
 categories:
   - 深入前端
 tags:
-  - event loop
+  - EventLoop
 abbrlink: 62b88241
 date: 2020-12-22 00:00:00
 ---

@@ -3,7 +3,7 @@ type: blog
 layout: post
 title: vue轮子工厂
 tags: 
-  - vue
+  - Vue
 categories: 
   - 前端
 abbrlink: da177769

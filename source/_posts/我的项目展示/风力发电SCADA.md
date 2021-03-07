@@ -6,7 +6,7 @@ categories:
 tags:
   - 前端
   - 数据可视化
-  - vue
+  - Vue
 abbrlink: fa28e10b
 date: 2021-02-23 00:00:00
 ---

@@ -1,11 +1,11 @@
 ---
 type: blog
-title: devops是什么
+title: Devops是什么
 categories:
   - 开发工具
 tags:
   - 开发工具
-  - devops
+  - Devops
 abbrlink: cfdabafc
 date: 2020-9-9 17:33:00
 ---

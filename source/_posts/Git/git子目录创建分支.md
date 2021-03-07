@@ -1,8 +1,10 @@
 ---
 type: blog
 title: git子目录创建分支
-categories: 
+tags: 
   - Git
+categories: 
+  - 开发工具
 abbrlink: 2bdc4097
 date: 2019-07-13 14:01:41
 ---

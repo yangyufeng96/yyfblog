@@ -2,6 +2,8 @@
 type: blog
 title: Babel转码器
 categories:
+  - 前端
+tags:
   - Es6
 date: 2021-01-08
 abbrlink: 390a51fc

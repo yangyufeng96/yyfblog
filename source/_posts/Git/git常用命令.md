@@ -2,9 +2,10 @@
 type: blog
 title: git常用命令
 layout: post
-tags: git
-categories: 
+tags: 
   - Git
+categories: 
+  - 开发工具
 abbrlink: 423abe9e
 date: 2019-07-13 13:48:01
 ---

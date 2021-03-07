@@ -4,7 +4,7 @@ title: V8引擎是如何运行JS
 categories:
   - 深入前端
 tags:
-  - javascript
+  - Javascript
   - JS运行原理
   - V8引擎
 abbrlink: cf2c43d

@@ -4,7 +4,7 @@ title: js 优化for循环-Duff装置
 categories:
   - 深入前端
 tags:
-  - for循环
+  - 代码优化
 abbrlink: ef7302f6
 date: 2020-12-24 00:00:00
 ---

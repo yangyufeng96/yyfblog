@@ -5,7 +5,7 @@ categories:
   - 个人项目
 tags:
   - 前端
-  - vue
+  - Vue
 abbrlink: b1fde4c6
 date: 2021-03-04 00:00:00
 ---

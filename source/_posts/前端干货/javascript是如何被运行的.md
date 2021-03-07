@@ -4,7 +4,7 @@ title: javascript是如何被运行的
 categories:
   - 深入前端
 tags:
-  - javascript
+  - Javascript
   - JS运行原理
 abbrlink: 81adf3b6
 date: 2020-12-22 00:00:00

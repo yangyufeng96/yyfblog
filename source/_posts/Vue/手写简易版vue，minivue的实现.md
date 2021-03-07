@@ -5,7 +5,7 @@ title: 手写简易版vue，minivue的实现
 categories: 
 	- 前端
 tags: 
-	- vue
+	- Vue
 abbrlink: d3643a0f
 date: 2020-12-08 00:00:00
 ---

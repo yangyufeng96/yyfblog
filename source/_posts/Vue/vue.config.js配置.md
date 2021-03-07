@@ -5,7 +5,7 @@ title: vue.config.js配置
 categories: 
   - 前端
 tags: 
-  - vue
+  - Vue
 abbrlink: 4de2b0c3
 date: 2019-07-13 13:41:06
 ---

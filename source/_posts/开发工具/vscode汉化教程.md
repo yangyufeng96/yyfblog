@@ -4,7 +4,7 @@ title: vscode汉化教程
 categories: 
   - 开发工具
 tags:
-  - vscode
+  - VsCode
 abbrlink: e8b3e153
 date: 2020-9-7 18:55:00
 ---

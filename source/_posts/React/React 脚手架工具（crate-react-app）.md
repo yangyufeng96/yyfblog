@@ -4,8 +4,8 @@ title: React 脚手架工具（create-react-app）
 categories:
   - 前端
 tags:
-  - create-react-app
-  - react
+  - Create-React-App
+  - React
 abbrlink: a2043eea
 date: 2020-9-9 17:55:00
 ---
