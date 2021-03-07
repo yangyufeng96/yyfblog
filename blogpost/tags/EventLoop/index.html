@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Tag: for循环 | 峰享会</title>
+  <title>Tag: EventLoop | 峰享会</title>
   
   <meta name="keywords" content="前端开发,科技,数据可视化,移动开发,小程序,客户端">
   
@@ -364,8 +364,8 @@
       
         
   <h2 class="title">
-    <a href="/posts/ef7302f6.html">
-      js 优化for循环-Duff装置
+    <a href="/posts/62b88241.html">
+      js的事件循环是什么
     </a>
   </h2>
 
@@ -393,7 +393,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-12-24</p>
+    <p>2020-12-22</p>
   </a>
 </div>
 
@@ -427,14 +427,14 @@
           <div class="new-meta-item size">
             <a class="notlink">
               <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>973字</p>
+              <p>53字</p>
             </a>
           </div>
           <!-- 阅读时间 -->
           <div class="new-meta-item read-time">
             <a class="notlink">
               <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>4分</p>
+              <p>1分</p>
             </a>
           </div>
         
@@ -448,31 +448,18 @@
 
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">
-      <p>循环是编程中常见的结构，在javaScript程序中同样随处可见。当我们要处理的数据集很大时，for循环的优化就显得格外重要了。 </p>
-<p> 如下是一个常见的for循环： </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; values.length; i++) &#123;</span><br><span class="line">     <span class="built_in">console</span>.log(values[i])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> 这段代码中每循环一次都要计算一次values的长度，所以我们可以将循环由i递增改为i递减，在这个过程中，将终止条件values.l ength的O(n)调用简化成了O(1)调用，初次优化的代码如下： </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = values.length <span class="number">-1</span>; i &gt;= <span class="number">0</span>; i--)&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(values[i])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> 我们还可以将循环改为后测试循环，如下： </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = values.length - <span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span> (i &gt; <span class="number">-1</span>) &#123;</span><br><span class="line">  <span class="keyword">do</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(values[i]);</span><br><span class="line">  &#125;<span class="keyword">while</span>(--i &gt;= <span class="number">0</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> 以上的代码主要是将终止条件和自减操作符组合成了单个语句，不过使用后测试循环必须要保证要处理的值必须有一个。空数组会导致多余的一次循环。 </p>
-<p> 以上的优化都是基于终止条件和自减操作，循环的次数依然没有变化，如果我们能减少循环的次数，代码运行速度是不是会更快呢。接下来我们介绍下一种叫Duff装置的技术。Duff装置的基本概念是通过计算迭代的次数是否为8的倍数将一个循环展开为一系列语句。请看以下代码： </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> iterations = <span class="built_in">Math</span>.ceil(values.length / <span class="number">8</span>);</span><br><span class="line"><span class="keyword">var</span> startAt = values.length % <span class="number">8</span>;</span><br><span class="line"><span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">  <span class="keyword">switch</span>(startAt)&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">0</span>: <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">7</span>: <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">6</span>: <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">5</span>: <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span>: <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>: <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>: <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>: <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">  &#125;</span><br><span class="line">  startAt = <span class="number">0</span>;</span><br><span class="line">&#125;<span class="keyword">while</span>(--iterations &gt; <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-<p> 我们假设循环次数是10次，在普通的for循环中，会进入循环体10次，每一次打印对应的值。而在以上的代码中，我们计算出iterations是2，startAt是2，第一次进入switch语句的时候，会执行两次console语句，startAt重置为0，iterations自减为1，第二次进入switch语句时，就,会执行8次console语句， 然后退出循环。以上只执行了两次循环，打印的次数依然是10次，我们减少了循环的次数和处理终止条件的额外开销，在数据量很大的时候，可以使代码运行的更快。<br>基于以上代码，Andrew B.King提出了一个更快的Duff装置技术，将do-while循环分成两个单独的循环。代码如下： </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> iterations = <span class="built_in">Math</span>.floor(values.length / <span class="number">8</span>);</span><br><span class="line"><span class="keyword">var</span> leftover = values.length % <span class="number">8</span>;</span><br><span class="line"><span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">if</span>(leftover &gt; <span class="number">0</span>)&#123;</span><br><span class="line">  <span class="keyword">do</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">  &#125;<span class="keyword">while</span>(--leftover &gt; <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">  <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">  <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">  <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">  <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">  <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">  <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">  <span class="built_in">console</span>.log(values[i++]);</span><br><span class="line">&#125;<span class="keyword">while</span>(--iterations &gt; <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-<p> 以上的代码没有switch语句，每次进入第二个do-while循环时，执行8次console即可，这个方法比几乎比原始的Duff装置实现快上40%。针对大数据集使用Duff装置技术可以节省很多时间，但对于小数据集，额外的开销则可能得不偿失。<br>我们可以将duff装置技术封装成一个类似于forEach的方法，代码如下： </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.prototype.duffForEach = <span class="function"><span class="keyword">function</span> (<span class="params">fn</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> len = <span class="keyword">this</span>.length;</span><br><span class="line">  <span class="keyword">var</span> num = <span class="built_in">Math</span>.floor(len / <span class="number">8</span>);</span><br><span class="line">  <span class="keyword">var</span> leftover = len % <span class="number">8</span>;</span><br><span class="line">  <span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span> (leftover &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">      fn(<span class="keyword">this</span>[i], i++);</span><br><span class="line">    &#125; <span class="keyword">while</span> (--leftover &gt; <span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.length &lt; <span class="number">8</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">do</span> &#123;</span><br><span class="line">    fn(<span class="keyword">this</span>[i], i++);</span><br><span class="line">    fn(<span class="keyword">this</span>[i], i++);</span><br><span class="line">    fn(<span class="keyword">this</span>[i], i++);</span><br><span class="line">    fn(<span class="keyword">this</span>[i], i++);</span><br><span class="line">    fn(<span class="keyword">this</span>[i], i++);</span><br><span class="line">    fn(<span class="keyword">this</span>[i], i++);</span><br><span class="line">    fn(<span class="keyword">this</span>[i], i++);</span><br><span class="line">    fn(<span class="keyword">this</span>[i], i++);</span><br><span class="line">  &#125; <span class="keyword">while</span> (--num &gt; <span class="number">0</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p> 我们可以测试一下： </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">arr.duffForEach(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(item, index)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p> 可以看到，结果不出意料是正常的 </p>
-<p><strong><a href="https://segmentfault.com/a/1190000023524594" target="_blank" rel="noopener">原文地址</a></strong></p>
+      <h2 id="事件循环的机制"><a href="#事件循环的机制" class="headerlink" title="事件循环的机制"></a>事件循环的机制</h2><p><strong>概念</strong></p>
+<p>宏任务：script(整个代码)、setTimeout、setInterval、setImmediate、I/O、UI rendering</p>
+<p>微任务：promise、Object.observe、MutationObserve</p>
+<p>任务的优先级：process.nextTick &gt; promise.then &gt; setTimeout &gt; setImmediate</p>
+<p><a href="https://mp.weixin.qq.com/s/7k4skVdCIhTsTdEFmXyYLg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/7k4skVdCIhTsTdEFmXyYLg</a></p>
 
       
     </div>
     
       <div class="full-width auto-padding tags">
         
-          <a href="/blogpost/tags/for循环/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>for循环</a>
+          <a href="/blogpost/tags/EventLoop/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>EventLoop</a>
         
       </div>
     
@@ -690,23 +677,15 @@
     <div class='content material'>
       <ul class="entry">
         
-          <li><a class="flat-box" title="/blogpost/categories/Es6/" href="/blogpost/categories/Es6/"><div class='name'>Es6</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box" title="/blogpost/categories/Git/" href="/blogpost/categories/Git/"><div class='name'>Git</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box" title="/blogpost/categories/GoLang/" href="/blogpost/categories/GoLang/"><div class='name'>GoLang</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/blogpost/categories/Http/" href="/blogpost/categories/Http/"><div class='name'>Http</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box" title="/blogpost/categories/Node/" href="/blogpost/categories/Node/"><div class='name'>Node</div><div class='badge'>(2)</div></a></li>
-        
           <li><a class="flat-box" title="/blogpost/categories/个人项目/" href="/blogpost/categories/个人项目/"><div class='name'>个人项目</div><div class='badge'>(7)</div></a></li>
         
-          <li><a class="flat-box" title="/blogpost/categories/前端/" href="/blogpost/categories/前端/"><div class='name'>前端</div><div class='badge'>(20)</div></a></li>
+          <li><a class="flat-box" title="/blogpost/categories/前端/" href="/blogpost/categories/前端/"><div class='name'>前端</div><div class='badge'>(26)</div></a></li>
         
           <li><a class="flat-box" title="/blogpost/categories/博客文档/" href="/blogpost/categories/博客文档/"><div class='name'>博客文档</div><div class='badge'>(2)</div></a></li>
         
-          <li><a class="flat-box" title="/blogpost/categories/开发工具/" href="/blogpost/categories/开发工具/"><div class='name'>开发工具</div><div class='badge'>(4)</div></a></li>
+          <li><a class="flat-box" title="/blogpost/categories/后端/" href="/blogpost/categories/后端/"><div class='name'>后端</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box" title="/blogpost/categories/开发工具/" href="/blogpost/categories/开发工具/"><div class='name'>开发工具</div><div class='badge'>(6)</div></a></li>
         
           <li><a class="flat-box" title="/blogpost/categories/深入前端/" href="/blogpost/categories/深入前端/"><div class='name'>深入前端</div><div class='badge'>(8)</div></a></li>
         
@@ -739,7 +718,7 @@
 </header>
 
     <div class='content material'>
-      <a href="/blogpost/tags/JS运行原理/" style="font-size: 17.33px; color: #828282">JS运行原理</a> <a href="/blogpost/tags/V8引擎/" style="font-size: 14px; color: #999">V8引擎</a> <a href="/blogpost/tags/Vue/" style="font-size: 14px; color: #999">Vue</a> <a href="/blogpost/tags/create-react-app/" style="font-size: 15.67px; color: #8e8e8e">create-react-app</a> <a href="/blogpost/tags/devops/" style="font-size: 14px; color: #999">devops</a> <a href="/blogpost/tags/event-loop/" style="font-size: 14px; color: #999">event loop</a> <a href="/blogpost/tags/excel/" style="font-size: 14px; color: #999">excel</a> <a href="/blogpost/tags/for循环/" style="font-size: 14px; color: #999">for循环</a> <a href="/blogpost/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/blogpost/tags/http/" style="font-size: 14px; color: #999">http</a> <a href="/blogpost/tags/javascript/" style="font-size: 17.33px; color: #828282">javascript</a> <a href="/blogpost/tags/less/" style="font-size: 14px; color: #999">less</a> <a href="/blogpost/tags/react/" style="font-size: 15.67px; color: #8e8e8e">react</a> <a href="/blogpost/tags/tcp/" style="font-size: 14px; color: #999">tcp</a> <a href="/blogpost/tags/vscode/" style="font-size: 15.67px; color: #8e8e8e">vscode</a> <a href="/blogpost/tags/vue/" style="font-size: 24px; color: #555">vue</a> <a href="/blogpost/tags/webpack/" style="font-size: 15.67px; color: #8e8e8e">webpack</a> <a href="/blogpost/tags/前端/" style="font-size: 22.33px; color: #606060">前端</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 19px; color: #777">前端工程化</a> <a href="/blogpost/tags/开发工具/" style="font-size: 15.67px; color: #8e8e8e">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/数据可视化/" style="font-size: 19px; color: #777">数据可视化</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/浏览器运行原理/" style="font-size: 14px; color: #999">浏览器运行原理</a> <a href="/blogpost/tags/面试题/" style="font-size: 20.67px; color: #6c6c6c">面试题</a>
+      <a href="/blogpost/tags/Create-React-App/" style="font-size: 16px; color: #8b8b8b">Create-React-App</a> <a href="/blogpost/tags/Devops/" style="font-size: 14px; color: #999">Devops</a> <a href="/blogpost/tags/Es6/" style="font-size: 16px; color: #8b8b8b">Es6</a> <a href="/blogpost/tags/EventLoop/" style="font-size: 14px; color: #999">EventLoop</a> <a href="/blogpost/tags/Excel/" style="font-size: 14px; color: #999">Excel</a> <a href="/blogpost/tags/Git/" style="font-size: 16px; color: #8b8b8b">Git</a> <a href="/blogpost/tags/GoLang/" style="font-size: 14px; color: #999">GoLang</a> <a href="/blogpost/tags/Http/" style="font-size: 18px; color: #7e7e7e">Http</a> <a href="/blogpost/tags/JS运行原理/" style="font-size: 18px; color: #7e7e7e">JS运行原理</a> <a href="/blogpost/tags/Javascript/" style="font-size: 18px; color: #7e7e7e">Javascript</a> <a href="/blogpost/tags/Less/" style="font-size: 14px; color: #999">Less</a> <a href="/blogpost/tags/Node/" style="font-size: 16px; color: #8b8b8b">Node</a> <a href="/blogpost/tags/React/" style="font-size: 18px; color: #7e7e7e">React</a> <a href="/blogpost/tags/V8引擎/" style="font-size: 14px; color: #999">V8引擎</a> <a href="/blogpost/tags/VsCode/" style="font-size: 16px; color: #8b8b8b">VsCode</a> <a href="/blogpost/tags/Vue/" style="font-size: 24px; color: #555">Vue</a> <a href="/blogpost/tags/Webpack/" style="font-size: 16px; color: #8b8b8b">Webpack</a> <a href="/blogpost/tags/代码优化/" style="font-size: 14px; color: #999">代码优化</a> <a href="/blogpost/tags/前端/" style="font-size: 22px; color: #636363">前端</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 20px; color: #707070">前端工程化</a> <a href="/blogpost/tags/开发工具/" style="font-size: 16px; color: #8b8b8b">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/数据可视化/" style="font-size: 20px; color: #707070">数据可视化</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/浏览器运行原理/" style="font-size: 14px; color: #999">浏览器运行原理</a> <a href="/blogpost/tags/面试题/" style="font-size: 22px; color: #636363">面试题</a>
     </div>
   </section>
 
@@ -852,7 +831,7 @@
     
       <span>
         <b class="fas fa-database"></b>
-        本站字数：<span class="post-count">58.9k</span>
+        本站字数：<span class="post-count">67.5k</span>
       </span>
     
     <!-- 网站运行时间 -->
@@ -1420,5 +1399,5 @@
     gl_FragColor.a = 1.0;
     }
   </script>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":100,"height":200},"mobile":{"show":false,"scale":0.7},"log":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+<script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":100,"height":200},"mobile":{"show":false,"scale":0.7},"log":false});</script></body>
 </html>

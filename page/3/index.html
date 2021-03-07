@@ -266,6 +266,185 @@
       
         
   <h2 class="title">
+    <a href="/posts/63fad71d.html">
+      面试题集锦（2）
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://yangyfeng.github.io" rel="nofollow">
+      
+        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
+      
+      <p>漫道求索</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-12-17</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/blogpost/categories/前端/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>前端</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+        
+          <!-- 文章字体个数 -->
+          <div class="new-meta-item size">
+            <a class="notlink">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+              <p>814字</p>
+            </a>
+          </div>
+          <!-- 阅读时间 -->
+          <div class="new-meta-item read-time">
+            <a class="notlink">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <p>3分</p>
+            </a>
+          </div>
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h2 id="web安全攻击手段有哪些？以及如何防范"><a href="#web安全攻击手段有哪些？以及如何防范" class="headerlink" title="web安全攻击手段有哪些？以及如何防范"></a>web安全攻击手段有哪些？以及如何防范</h2><p>常见的有xss, csrf, sql注入</p>
+<p><strong>xss(cross site scripting) 跨站脚本攻击</strong></p>
+<p>定义: 指攻击者在网页嵌入脚本，用户浏览网页触发恶意脚本执行</p>
+<p>XSS攻击分为3类：存储型（持久型）、反射型（非持久型）、基于DOM</p>
+<p>如何防范:</p>
+<p>设置HttpOnly以避免cookie劫持的危险<br>过滤，对诸如<code>&lt;script&gt;、&lt;img&gt;、&lt;a&gt;</code>等标签进行过滤<br>编码，像一些常见的符号，如&lt;&gt;在输入的时候要对其进行转换编码<br>限制，对于一些可以预期的输入可以通过限制长度强制截断来进行防御</p>
+<p><strong>csrf(cross site request forgery) 跨站请求伪造</strong></p>
+<p>定义: 是一种劫持受信任用户向服务器发送非预期请求的攻击方式</p>
+<p>如何防范:</p>
+<p>验证 HTTP Referer 字段<br>请求地址中添加 token 并验证<br>HTTP 头中自定义属性并验证</p>
+<p><strong>sql注入(SQL injection)</strong></p>
+<p>定义: 在未授权情况下，非法访问数据库信息</p>
+<p>如何防范:</p>
+<p>杜绝用户提交的参数入库并且执行<br>在代码层，不准出现sql语句<br>在web输入参数处，对所有的参数做sql转义<br>上线测试，需要使用sql自动注入工具进行所有的页面sql注入测试</p>
+<h2 id="前端优化手段有哪些？"><a href="#前端优化手段有哪些？" class="headerlink" title="前端优化手段有哪些？"></a>前端优化手段有哪些？</h2><ul>
+<li>静态资源合并压缩(js,css, images)<ul>
+<li>请求数量优化</li>
+</ul>
+</li>
+<li>Gzip压缩<ul>
+<li>带宽优化</li>
+</ul>
+</li>
+<li>CDN<ul>
+<li>就近节点，减少DNS查找</li>
+</ul>
+</li>
+<li>按需加载</li>
+<li>lazyload<ul>
+<li>减少请求</li>
+</ul>
+</li>
+<li>骨架屏<ul>
+<li>优化白屏</li>
+</ul>
+</li>
+<li>web缓存<ul>
+<li>缓存ajax数据</li>
+</ul>
+</li>
+<li>减少重绘和重排<ul>
+<li>批量更新ＤＯＭ样式</li>
+</ul>
+</li>
+<li>页面结构<ul>
+<li>将样式表放在顶部，将脚本放在底部，尽早刷新文档的输出</li>
+</ul>
+</li>
+</ul>
+<h2 id="如何理解es6中的Decorator（装饰器）？"><a href="#如何理解es6中的Decorator（装饰器）？" class="headerlink" title="如何理解es6中的Decorator（装饰器）？"></a>如何理解es6中的Decorator（装饰器）？</h2><p><strong>定义</strong></p>
+<p>Decorator是ES7中的提案，概念借鉴于python， 它作用于一个目标类为其添加属性于方法</p>
+<p>我们用一个比喻来理解Decorator, 把孙悟空看成是一个类，那么棒子就是装饰器为其装备的武器</p>
+<p> 代码理解: </p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">@stick</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Monkey</span> </span>&#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">stick</span><span class="params">(target)</span> </span>&#123;<span class="comment">// 第一个参数就是目标类的本身</span></span><br><span class="line">  target.ATK = <span class="number">100000</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Monkey.ATK<span class="comment">// 为悟空装备了棒子，攻击力提高了100000</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果一个参数不够用，可以在装饰器外层再包一层</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">stick</span><span class="params">(atk)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="params">(targt)</span> </span>&#123;</span><br><span class="line">    target.ATK = atk</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@stick(<span class="number">200000</span>)<span class="comment">// 这样我们就为悟空增加了200000攻击力</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Monkey</span> </span>&#123; &#125;</span><br></pre></td></tr></table></figure>
+<p> Decorator 不仅能修饰类，也能修饰类的方法 </p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Monkey</span> </span>&#123;</span><br><span class="line">  <span class="meta">@setName</span></span><br><span class="line">  name() &#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">'孙悟空'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> Decorator 只能修饰类及类的方法,不能修饰于函数,因为存在函数提升 </p>
+<p><strong>Mixin</strong></p>
+<p> 在修饰器基础上，我们可以实现mixin(混入),意思在一个对象中混入另一个对象的方法 </p>
+<p> 代码示例: </p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">export <span class="function"><span class="keyword">function</span> <span class="title">mixins</span><span class="params">(<span class="rest_arg">...list</span>)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="params">(target)</span> </span>&#123;</span><br><span class="line">    Object.assign(target.prototype, ...list)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> skill = &#123;</span><br><span class="line">  shapeshifting() &#123;</span><br><span class="line">    console.log(<span class="string">'72变'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@mixins(skill)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Monkey</span> </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Object.assign(Monkey.prototype, skill)</span><br><span class="line"><span class="keyword">const</span> swk = <span class="keyword">new</span> Monkey()</span><br><span class="line">swk.shapeshifting() <span class="comment">// 72变</span></span><br></pre></td></tr></table></figure>
+<p><strong>使用Decorator的好处</strong></p>
+<ul>
+<li>扩展功能，相对于继承增加了更多的灵活性</li>
+<li>代码可读性更高，装饰器正确命名相当于注释</li>
+</ul>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/blogpost/tags/面试题/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>面试题</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
     <a href="/posts/a441c8bd.html">
       深入webpack
     </a>
@@ -364,9 +543,161 @@
     
       <div class="full-width auto-padding tags">
         
-          <a href="/blogpost/tags/webpack/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>webpack</a>
+          <a href="/blogpost/tags/Webpack/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>Webpack</a>
         
           <a href="/blogpost/tags/前端工程化/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>前端工程化</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/posts/c00659d0.html">
+      深入前端模块化
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="https://yangyfeng.github.io" rel="nofollow">
+      
+        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
+      
+      <p>漫道求索</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-12-16</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/blogpost/categories/前端/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>前端</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+        
+          <!-- 文章字体个数 -->
+          <div class="new-meta-item size">
+            <a class="notlink">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+              <p>2.8k字</p>
+            </a>
+          </div>
+          <!-- 阅读时间 -->
+          <div class="new-meta-item read-time">
+            <a class="notlink">
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+              <p>11分</p>
+            </a>
+          </div>
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>什么是前端的模块化？理解的不太透彻。</p>
+<p>平常一直用的也只有ES6模块化，对于其他几种模块化规范用的也少，理解不够深，但是经常会见到一些面试题是问这几种模块化规范的区别，所以这次做一个整理总结</p>
+<h1 id="一、对于模块化的理解"><a href="#一、对于模块化的理解" class="headerlink" title="一、对于模块化的理解"></a>一、对于模块化的理解</h1><h2 id="1、什么是模块化？"><a href="#1、什么是模块化？" class="headerlink" title="1、什么是模块化？"></a>1、什么是模块化？</h2><p>模块化开发是一种管理方式，是一种生产方式，一种解决问题的方案，一个模块就是实现特定功能的文件，有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块，但是模块开发需要遵循一定的规范，否则就都乱套了，因此，才有了后来大家熟悉的AMD规范，CMD规范，以及ES6自带的模块化规范</p>
+<h2 id="2、模块化带来的好处？"><a href="#2、模块化带来的好处？" class="headerlink" title="2、模块化带来的好处？"></a>2、模块化带来的好处？</h2><ul>
+<li>解决命名冲突</li>
+<li>提供复用性</li>
+<li>提高代码可维护性</li>
+<li>灵活架构，焦点分离，方便模块间组合、分解</li>
+<li>多人协作互不干扰</li>
+</ul>
+<h2 id="3、模块化规范的发展进程"><a href="#3、模块化规范的发展进程" class="headerlink" title="3、模块化规范的发展进程"></a>3、模块化规范的发展进程</h2><ul>
+<li><strong>原始写法（全局function）</strong></li>
+</ul>
+<p>模块就是实现特定**功能的一组方法，只要把不同的函数（以及记录状态的变量）简单的放在一起，就算是一个模块。</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">m1</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">m2</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>这样写上面的函数 m1() 和 m2() ，组成了一个模块，在使用的时候直接调用就可以了。
+但是带来的问题也很明显：&quot;污染&quot;了全局变量 ，无法保证不与其他模块发生变量名冲突，而且模块成员之间看不出直接关系</code></p>
+<ul>
+<li><strong>namespace写法（简单对象）</strong></li>
+</ul>
+<p>为了解决上面写法带来的缺点，可以吧模块写成一个对象，所有的模块成员都放到这个对象里面，这样减少了全局变量，减少命名冲突</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> myModule = <span class="keyword">new</span> <span class="built_in">Object</span>(&#123;</span><br><span class="line">  count: <span class="number">0</span>,</span><br><span class="line">  m1: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'m1:'</span> + <span class="keyword">this</span>.count);</span><br><span class="line">    </span><br><span class="line">  &#125;,</span><br><span class="line">  m2: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'m2:'</span> + <span class="keyword">this</span>.count)</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用</span></span><br><span class="line">myModule.m1() <span class="comment">// m1:0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 改变模块内部状态</span></span><br><span class="line">myModule.count = <span class="number">5</span>;</span><br><span class="line">myModule.m1() <span class="comment">// m1:5</span></span><br></pre></td></tr></table></figure>
+<p><code>上面的函数 m1 和 m2 ，都封装在myModule对象里。使用的时候，就是调用这个对象的属性。但是，这样的写法会暴露所有模块成员，内部状态可以被外部改写。比如，外部代码可以直接改变内部计数器的值。</code></p>
+<ul>
+<li><strong>立即执行函数写法（匿名函数自执行 ，闭包）</strong></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> myModule = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> m1 = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'m1:'</span> + count)</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">let</span> m2 = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'m2:'</span> + count)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> &#123; m1, m2 &#125;;</span><br><span class="line">&#125;)()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这样写在外面就无法读取内部的 count 变量</span></span><br><span class="line"><span class="built_in">console</span>.log(myModule.count); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>立即执行函数增强(引入依赖)</strong></li>
+</ul>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> myModule = (<span class="function"><span class="keyword">function</span> <span class="params">($)</span> </span>&#123;</span><br><span class="line">  <span class="comment">// 这里面就可以使用JQuery</span></span><br><span class="line">&#125;)(JQuery)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这样做除了保证模块的独立性，还使得模块之间的依赖关系变得明显</span></span><br></pre></td></tr></table></figure>
+      
+        <div class="readmore">
+          <a href="/posts/c00659d0.html" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/blogpost/tags/前端工程化/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>前端工程化</a>
+        
+          <a href="/blogpost/tags/模块化/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>模块化</a>
         
       </div>
     
@@ -428,9 +759,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/blogpost/categories/Node/' rel="nofollow">
+    <a href='/blogpost/categories/后端/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>Node</p>
+      <p>后端</p>
     </a>
   </div>
 
@@ -484,6 +815,12 @@
 
       
     </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/blogpost/tags/Node/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>Node</a>
+        
+      </div>
     
   </section>
 </article>
@@ -638,7 +975,7 @@
     
       <div class="full-width auto-padding tags">
         
-          <a href="/blogpost/tags/vue/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>vue</a>
+          <a href="/blogpost/tags/Vue/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>Vue</a>
         
           <a href="/blogpost/tags/面试题/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>面试题</a>
         
@@ -776,7 +1113,7 @@
     
       <div class="full-width auto-padding tags">
         
-          <a href="/blogpost/tags/vue/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>vue</a>
+          <a href="/blogpost/tags/Vue/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>Vue</a>
         
       </div>
     
@@ -914,7 +1251,7 @@
     
       <div class="full-width auto-padding tags">
         
-          <a href="/blogpost/tags/vue/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>vue</a>
+          <a href="/blogpost/tags/Vue/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>Vue</a>
         
       </div>
     
@@ -1038,7 +1375,7 @@
     
       <div class="full-width auto-padding tags">
         
-          <a href="/blogpost/tags/excel/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>excel</a>
+          <a href="/blogpost/tags/Excel/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>Excel</a>
         
           <a href="/blogpost/tags/插件/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>插件</a>
         
@@ -1162,7 +1499,7 @@
     
       <div class="full-width auto-padding tags">
         
-          <a href="/blogpost/tags/vue/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>vue</a>
+          <a href="/blogpost/tags/Vue/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>Vue</a>
         
       </div>
     
@@ -1170,150 +1507,6 @@
 </article>
 
           </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/posts/138dbef8.html">
-      什么是PWA
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    <a href="https://yangyfeng.github.io" rel="nofollow">
-      
-        <img src="https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg">
-      
-      <p>漫道求索</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-11-18</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blogpost/categories/前端/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>前端</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-        
-          <!-- 文章字体个数 -->
-          <div class="new-meta-item size">
-            <a class="notlink">
-              <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>3.4k字</p>
-            </a>
-          </div>
-          <!-- 阅读时间 -->
-          <div class="new-meta-item read-time">
-            <a class="notlink">
-              <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>14分</p>
-            </a>
-          </div>
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h1 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h1><p>大家都知道Native app体验确实很好，下载到手机上之后入口也方便。它也有一些缺点:</p>
-<ul>
-<li>开发成本高(ios和安卓)</li>
-<li>软件上线需要审核</li>
-<li>版本更新需要将新版本上传到不同的应用商店</li>
-<li>想使用一个app就必须去下载才能使用，即使是偶尔需要使用一下下</li>
-</ul>
-<p>而web网页开发成本低，网站更新时上传最新的资源到服务器即可，用手机带的浏览器打开就可以使用。但是除了体验上比Native app还是差一些，还有一些明显的缺点</p>
-<ul>
-<li>手机桌面入口不够便捷，想要进入一个页面必须要记住它的url或者加入书签</li>
-<li>没网络就没响应，不具备离线能力</li>
-<li>不像APP一样能进行消息推送</li>
-</ul>
-<p>那么什么是PWA呢？</p>
-<h1 id="二、What’s-PWA"><a href="#二、What’s-PWA" class="headerlink" title="二、What’s PWA?"></a>二、What’s PWA?</h1><p>PWA全称Progressive Web App，即渐进式WEB应用。</p>
-<p>一个 PWA 应用首先是一个网页, 可以通过 Web 技术编写出一个网页应用. 随后添加上 App Manifest 和 Service Worker 来实现 PWA 的安装和离线等功能</p>
-<p>解决了哪些问题？</p>
-<ul>
-<li>可以添加至主屏幕，点击主屏幕图标可以实现启动动画以及隐藏地址栏</li>
-<li>实现离线缓存功能，即使用户手机没有网络，依然可以使用一些离线功能</li>
-<li>实现了消息推送</li>
-</ul>
-<p>它解决了上述提到的问题，这些特性将使得 Web 应用渐进式接近原生 App。</p>
-      
-        <div class="readmore">
-          <a href="/posts/138dbef8.html" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blogpost/tags/前端工程化/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>前端工程化</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
         
       
     
@@ -1331,7 +1524,7 @@
             </a>
           
           <p class="current">
-            3 / 5
+            3 / 6
           </p>
           
             <a class="next" rel="next" href="/page/4/">
@@ -1546,23 +1739,15 @@
     <div class='content material'>
       <ul class="entry">
         
-          <li><a class="flat-box" title="/blogpost/categories/Es6/" href="/blogpost/categories/Es6/"><div class='name'>Es6</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box" title="/blogpost/categories/Git/" href="/blogpost/categories/Git/"><div class='name'>Git</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box" title="/blogpost/categories/GoLang/" href="/blogpost/categories/GoLang/"><div class='name'>GoLang</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/blogpost/categories/Http/" href="/blogpost/categories/Http/"><div class='name'>Http</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box" title="/blogpost/categories/Node/" href="/blogpost/categories/Node/"><div class='name'>Node</div><div class='badge'>(2)</div></a></li>
-        
           <li><a class="flat-box" title="/blogpost/categories/个人项目/" href="/blogpost/categories/个人项目/"><div class='name'>个人项目</div><div class='badge'>(7)</div></a></li>
         
-          <li><a class="flat-box" title="/blogpost/categories/前端/" href="/blogpost/categories/前端/"><div class='name'>前端</div><div class='badge'>(20)</div></a></li>
+          <li><a class="flat-box" title="/blogpost/categories/前端/" href="/blogpost/categories/前端/"><div class='name'>前端</div><div class='badge'>(26)</div></a></li>
         
           <li><a class="flat-box" title="/blogpost/categories/博客文档/" href="/blogpost/categories/博客文档/"><div class='name'>博客文档</div><div class='badge'>(2)</div></a></li>
         
-          <li><a class="flat-box" title="/blogpost/categories/开发工具/" href="/blogpost/categories/开发工具/"><div class='name'>开发工具</div><div class='badge'>(4)</div></a></li>
+          <li><a class="flat-box" title="/blogpost/categories/后端/" href="/blogpost/categories/后端/"><div class='name'>后端</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box" title="/blogpost/categories/开发工具/" href="/blogpost/categories/开发工具/"><div class='name'>开发工具</div><div class='badge'>(6)</div></a></li>
         
           <li><a class="flat-box" title="/blogpost/categories/深入前端/" href="/blogpost/categories/深入前端/"><div class='name'>深入前端</div><div class='badge'>(8)</div></a></li>
         
@@ -1595,7 +1780,7 @@
 </header>
 
     <div class='content material'>
-      <a href="/blogpost/tags/JS运行原理/" style="font-size: 17.33px; color: #828282">JS运行原理</a> <a href="/blogpost/tags/V8引擎/" style="font-size: 14px; color: #999">V8引擎</a> <a href="/blogpost/tags/Vue/" style="font-size: 14px; color: #999">Vue</a> <a href="/blogpost/tags/create-react-app/" style="font-size: 15.67px; color: #8e8e8e">create-react-app</a> <a href="/blogpost/tags/devops/" style="font-size: 14px; color: #999">devops</a> <a href="/blogpost/tags/event-loop/" style="font-size: 14px; color: #999">event loop</a> <a href="/blogpost/tags/excel/" style="font-size: 14px; color: #999">excel</a> <a href="/blogpost/tags/for循环/" style="font-size: 14px; color: #999">for循环</a> <a href="/blogpost/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/blogpost/tags/http/" style="font-size: 14px; color: #999">http</a> <a href="/blogpost/tags/javascript/" style="font-size: 17.33px; color: #828282">javascript</a> <a href="/blogpost/tags/less/" style="font-size: 14px; color: #999">less</a> <a href="/blogpost/tags/react/" style="font-size: 15.67px; color: #8e8e8e">react</a> <a href="/blogpost/tags/tcp/" style="font-size: 14px; color: #999">tcp</a> <a href="/blogpost/tags/vscode/" style="font-size: 15.67px; color: #8e8e8e">vscode</a> <a href="/blogpost/tags/vue/" style="font-size: 24px; color: #555">vue</a> <a href="/blogpost/tags/webpack/" style="font-size: 15.67px; color: #8e8e8e">webpack</a> <a href="/blogpost/tags/前端/" style="font-size: 22.33px; color: #606060">前端</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 19px; color: #777">前端工程化</a> <a href="/blogpost/tags/开发工具/" style="font-size: 15.67px; color: #8e8e8e">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/数据可视化/" style="font-size: 19px; color: #777">数据可视化</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/浏览器运行原理/" style="font-size: 14px; color: #999">浏览器运行原理</a> <a href="/blogpost/tags/面试题/" style="font-size: 20.67px; color: #6c6c6c">面试题</a>
+      <a href="/blogpost/tags/Create-React-App/" style="font-size: 16px; color: #8b8b8b">Create-React-App</a> <a href="/blogpost/tags/Devops/" style="font-size: 14px; color: #999">Devops</a> <a href="/blogpost/tags/Es6/" style="font-size: 16px; color: #8b8b8b">Es6</a> <a href="/blogpost/tags/EventLoop/" style="font-size: 14px; color: #999">EventLoop</a> <a href="/blogpost/tags/Excel/" style="font-size: 14px; color: #999">Excel</a> <a href="/blogpost/tags/Git/" style="font-size: 16px; color: #8b8b8b">Git</a> <a href="/blogpost/tags/GoLang/" style="font-size: 14px; color: #999">GoLang</a> <a href="/blogpost/tags/Http/" style="font-size: 18px; color: #7e7e7e">Http</a> <a href="/blogpost/tags/JS运行原理/" style="font-size: 18px; color: #7e7e7e">JS运行原理</a> <a href="/blogpost/tags/Javascript/" style="font-size: 18px; color: #7e7e7e">Javascript</a> <a href="/blogpost/tags/Less/" style="font-size: 14px; color: #999">Less</a> <a href="/blogpost/tags/Node/" style="font-size: 16px; color: #8b8b8b">Node</a> <a href="/blogpost/tags/React/" style="font-size: 18px; color: #7e7e7e">React</a> <a href="/blogpost/tags/V8引擎/" style="font-size: 14px; color: #999">V8引擎</a> <a href="/blogpost/tags/VsCode/" style="font-size: 16px; color: #8b8b8b">VsCode</a> <a href="/blogpost/tags/Vue/" style="font-size: 24px; color: #555">Vue</a> <a href="/blogpost/tags/Webpack/" style="font-size: 16px; color: #8b8b8b">Webpack</a> <a href="/blogpost/tags/代码优化/" style="font-size: 14px; color: #999">代码优化</a> <a href="/blogpost/tags/前端/" style="font-size: 22px; color: #636363">前端</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 20px; color: #707070">前端工程化</a> <a href="/blogpost/tags/开发工具/" style="font-size: 16px; color: #8b8b8b">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/数据可视化/" style="font-size: 20px; color: #707070">数据可视化</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/浏览器运行原理/" style="font-size: 14px; color: #999">浏览器运行原理</a> <a href="/blogpost/tags/面试题/" style="font-size: 22px; color: #636363">面试题</a>
     </div>
   </section>
 
@@ -1708,7 +1893,7 @@
     
       <span>
         <b class="fas fa-database"></b>
-        本站字数：<span class="post-count">58.9k</span>
+        本站字数：<span class="post-count">67.5k</span>
       </span>
     
     <!-- 网站运行时间 -->
@@ -2276,5 +2461,5 @@
     gl_FragColor.a = 1.0;
     }
   </script>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":100,"height":200},"mobile":{"show":false,"scale":0.7},"log":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+<script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":100,"height":200},"mobile":{"show":false,"scale":0.7},"log":false});</script></body>
 </html>

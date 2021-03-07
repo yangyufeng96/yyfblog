@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Tag: tcp | 峰享会</title>
+  <title>React知识点集合 | 峰享会</title>
   
   <meta name="keywords" content="前端开发,科技,数据可视化,移动开发,小程序,客户端">
   
@@ -57,7 +57,7 @@
   
   
   <div class="cover-wrapper">
-    <cover class='cover  half'>
+    <cover class='cover post half'>
       
         
   <h1 class='title'>漫道求索</h1>
@@ -336,25 +336,12 @@
 
   <div class="l_body">
     <div class='body-wrapper'>
-      
-<div class='l_main'>
+      <div class='l_main'>
   
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
+
   
+    <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+      
 
 
   <section class='meta'>
@@ -363,11 +350,13 @@
     <div class="meta" id="header-meta">
       
         
-  <h2 class="title">
-    <a href="/posts/c35109d5.html">
-      互联网是如何运作的
-    </a>
-  </h2>
+  
+    <h1 class="title">
+      <a href="/posts/13437c1d.html">
+        React知识点集合
+      </a>
+    </h1>
+  
 
 
       
@@ -393,7 +382,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-12-22</p>
+    <p>2021-03-07</p>
   </a>
 </div>
 
@@ -403,9 +392,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/blogpost/categories/深入前端/' rel="nofollow">
+    <a href='/blogpost/categories/前端/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>深入前端</p>
+      <p>前端</p>
     </a>
   </div>
 
@@ -414,6 +403,19 @@
         
           
             
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
+
 
           
         
@@ -427,14 +429,14 @@
           <div class="new-meta-item size">
             <a class="notlink">
               <i class="fas fa-edit" aria-hidden="true"></i>
-              <p>668字</p>
+              <p>4.3k字</p>
             </a>
           </div>
           <!-- 阅读时间 -->
           <div class="new-meta-item read-time">
             <a class="notlink">
               <i class="fas fa-desktop" aria-hidden="true"></i>
-              <p>2分</p>
+              <p>15分</p>
             </a>
           </div>
         
@@ -446,66 +448,518 @@
   </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>互联网所有的传输都通过RCP/IP协议族来传输，TCP/IP是<strong>面向连接</strong>的<strong>可靠</strong>字节流服务协议</p>
-<h2 id="什么是协议"><a href="#什么是协议" class="headerlink" title="什么是协议"></a>什么是协议</h2><p>协议是一组<strong>规则</strong>，用于指定计算机应该如何通过网络来交互通信</p>
-<h2 id="TCP-IP协议族"><a href="#TCP-IP协议族" class="headerlink" title="TCP/IP协议族"></a>TCP/IP协议族</h2><p><strong>有四层</strong></p>
-<ul>
-<li>应用层：提供特定于应用程序的协议  HTTP   FTP   IMAP(邮件)</li>
-<li>网络控制层： 发送数据包到计算机上使用特定的端口号的应用程序</li>
-<li>网络层： 使用IP地址将数据包发送到特定的计算</li>
-<li>链路层：  将二进制数据包与网络信号相互之间转换</li>
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          <h3 id="React"><a href="#React" class="headerlink" title="React"></a>React</h3><ul>
+<li>什么时候使用状态管理器？</li>
+<li>render函数中return如果没有使用()会有什么问题？</li>
+<li>componentWillUpdate可以直接修改state的值吗？</li>
+<li>说说你对React的渲染原理的理解</li>
+<li>什么渲染劫持？</li>
+<li>React Intl是什么原理？</li>
+<li>你有使用过React Intl吗？</li>
+<li>怎么实现React组件的国际化呢？</li>
+<li>说说Context有哪些属性？</li>
+<li>怎么使用Context开发组件？</li>
+<li>为什么React并不推荐我们优先考虑使用Context？</li>
+<li>除了实例的属性可以获取Context外哪些地方还能直接获取Context呢？</li>
+<li>childContextTypes是什么？它有什么用？</li>
+<li>contextType是什么？它有什么用？</li>
+<li>Consumer向上找不到Provider的时候怎么办？</li>
+<li>有使用过Consumer吗？</li>
+<li>在React怎么使用Context？</li>
+<li>React15和16别支持IE几以上？</li>
+<li>说说你对windowing的了解</li>
+<li>举例说明React的插槽有哪些运用场景？</li>
+<li>你有用过React的插槽(Portals)吗？怎么用？</li>
+<li>React的严格模式有什么用处？</li>
+<li>React如何进行代码拆分？拆分的原则是什么？</li>
+<li>React组件的构造函数有什么作用？</li>
+<li>React组件的构造函数是必须的吗？</li>
+<li>React中在哪捕获错误？</li>
+<li>React怎样引入svg的文件？</li>
+<li>说说你对Relay的理解</li>
+<li>在React中你有经常使用常量吗？</li>
+<li>为什么说React中的props是只读的？</li>
+<li>你有使用过formik库吗？说说它的优缺点</li>
+<li>你有用过哪些React的表单库吗？说说它们的优缺点</li>
+<li>如果组件的属性没有传值，那么它的默认值是什么？</li>
+<li>可以使用TypeScript写React应用吗？怎么操作？</li>
+<li><code>super()</code>和<code>super(props)</code>有什么区别？</li>
+<li>你有使用过loadable组件吗？它帮我们解决了什么问题？</li>
+<li>你有使用过suspense组件吗？它帮我们解决了什么问题？</li>
+<li>怎样动态导入组件？</li>
+<li>如何给非控组件设置默认的值？</li>
+<li>怎么在React中引入其它的UI库，例如Bootstrap</li>
+<li>怎样将事件传递给子组件？</li>
+<li>怎样使用Hooks获取服务端数据？</li>
+<li>使用Hooks要遵守哪些原则？</li>
+<li>render方法的原理你有了解吗？它返回的数据类型是什么？</li>
+<li>useEffect和useLayoutEffect有什么区别？</li>
+<li>在React项目中你用过哪些动画的包？</li>
+<li>React必须使用JSX吗？</li>
+<li>自定义组件时render是可选的吗？为什么？</li>
+<li>需要把keys设置为全局唯一吗？</li>
+<li>怎么定时更新一个组件？</li>
+<li>React根据不同的环境打包不同的域名？</li>
+<li>使用webpack打包React项目，怎么减小生成的js大小？</li>
+<li>在React中怎么使用async/await？</li>
+<li>你阅读了几遍React的源码？都有哪些收获？你是怎么阅读的？</li>
+<li>什么是React.forwardRef？它有什么作用？</li>
+<li>写个例子说明什么是JSX的内联条件渲染</li>
+<li>在React中怎么将参数传递给事件？</li>
+<li>React的事件和普通的HTML事件有什么不同？</li>
+<li>在React中怎么阻止事件的默认行为？</li>
+<li>你最喜欢React的哪一个特性（说一个就好）？</li>
+<li>在React中什么时候使用箭头函数更方便呢？</li>
+<li>你最不喜欢React的哪一个特性（说一个就好）？</li>
+<li>说说你对React的reconciliation（一致化算法）的理解</li>
+<li>使用PropTypes和Flow有什么区别？</li>
+<li>怎样有条件地渲染组件？</li>
+<li>在JSX中如何写注释？</li>
+<li>constructor和getInitialState有不同？</li>
+<li>写例子说明React如何在JSX中实现for循环</li>
+<li>为什么建议Fragment包裹元素？它的简写是什么？</li>
+<li>你有用过React.Fragment吗？说说它有什么用途？</li>
+<li>在React中你有遇到过安全问题吗？怎么解决？</li>
+<li>React中如何监听state的变化？</li>
+<li>React什么是有状态组件？</li>
+<li>React v15中怎么处理错误边界？</li>
+<li>React Fiber它的目的是解决什么问题？</li>
+<li>React为什么不要直接修改state？如果想修改怎么做？</li>
+<li>create-react-app有什么好处？</li>
+<li>装饰器(Decorator)在React中有什么应用？</li>
+<li>使用高阶组件(HOC)实现一个loading组件</li>
+<li>如何用React实现滚动动画？</li>
+<li>说出几点你认为的React最佳实践</li>
+<li>你是如何划分React组件的？</li>
+<li>举例说明如何在React创建一个事件</li>
+<li>如何更新组件的状态？</li>
+<li>怎样将多个组件嵌入到一个组件中？</li>
+<li>React的render中可以写{if else}这样的判断吗？</li>
+<li>React为什么要搞一个Hooks？</li>
+<li>React Hooks帮我们解决了哪些问题？</li>
+<li>使用React的memo和forwardRef包装的组件为什么提示children类型不对？</li>
+<li>有在项目中使用过Antd吗？说说它的好处</li>
+<li>在React中如果去除生产环境上的sourcemap？</li>
+<li>在React中怎么引用sass或less？</li>
+<li>组件卸载前，加在DOM元素的监听事件和定时器要不要手动清除？为什么？</li>
+<li>为什么标签里的for要写成htmlFor呢？</li>
+<li>状态管理器解决了什么问题？什么时候用状态管理器？</li>
+<li>状态管理器它精髓是什么？</li>
+<li>函数式组件有没有生命周期？为什么？</li>
+<li>在React中怎么引用第三方插件？比如说jQuery等</li>
+<li>React的触摸事件有哪几种？</li>
+<li>路由切换时同一组件无法重新渲染的有什么方法可以解决？</li>
+<li>React16新特性有哪些？</li>
+<li>你有用过哪些React的UI库？它们的优缺点分别是什么？</li>
+<li><code>单击</code>和<code>单击</code>有什么区别？</li>
+<li>在React中如何引入图片？哪种方式更好？</li>
+<li>在React中怎么使用字体图标？</li>
+<li>React的应用如何打包发布？它的步骤是什么？</li>
+<li>ES6的语法’…’在React中有哪些应用？</li>
+<li>如何封装一个React的全局公共组件？</li>
+<li>在React中组件的props改变时更新组件的有哪些方法？</li>
+<li>immutable的原理是什么？</li>
+<li>你对immutable有了解吗？它有什么作用？</li>
+<li>如何提高组件的渲染效率呢？</li>
+<li>在React中如何避免不必要的render？</li>
+<li>render在什么时候会被触发？</li>
+<li>写出React动态改变class切换组件样式</li>
+<li>React中怎么操作虚拟DOM的Class属性？</li>
+<li>为什么属性使用className而不是class呢？</li>
+<li>请说下react组件更新的机制是什么？</li>
+<li>怎么在JSX里属性可以被覆盖吗？覆盖的原则是什么？</li>
+<li>怎么在JSX里使用自定义属性？</li>
+<li>怎么防止HTML被转义？</li>
+<li>经常用React，你知道React的核心思想是什么吗？</li>
+<li>在React中我们怎么做静态类型检测？都有哪些方法可以做到？</li>
+<li>在React中组件的state和setState有什么区别？</li>
+<li>React怎样跳过重新渲染？</li>
+<li>React怎么判断什么时候重新渲染组件呢？</li>
+<li>什么是React的实例？函数式组件有没有实例？</li>
+<li>在React中如何判断点击元素属于哪一个组件？</li>
+<li>在React中组件和元素有什么区别？</li>
+<li>在React中声明组件时组件名的第一个字母必须是大写吗？为什么？</li>
+<li>举例说明什么是高阶组件(HOC)的反向继承？</li>
+<li>有用过React Devtools吗？说说它的优缺点分别是什么？</li>
+<li>举例说明什么是高阶组件(HOC)的属性代理？</li>
+<li>React的isMounted有什么作用？</li>
+<li>React组件命名推荐的方式是哪个？为什么不推荐使用displayName？</li>
+<li>React的displayName有什么作用？</li>
+<li>说说你对React的组件命名规范的理解</li>
+<li>说说你对React的项目结构的理解</li>
+<li>React16废弃了哪些生命周期？为什么？</li>
+<li>怎样在React中开启生产模式？</li>
+<li>React中getInitialState方法的作用是什么？</li>
+<li>React中你知道creatClass的原理吗？</li>
+<li>React中验证props的目的是什么？</li>
+<li>React中你有使用过getDefaultProps吗？它有什么作用？</li>
+<li>React中你有使用过propType吗？它有什么作用？</li>
+<li>React中怎么检验props？</li>
+<li>React.createClass和extends Component的区别有哪些？</li>
+<li>高阶组件(HOC)有哪些优点和缺点？</li>
+<li>给组件设置很多属性时不想一个个去设置有什么办法可以解决这问题呢？</li>
+<li>React16跟之前的版本生命周期有哪些变化？</li>
+<li>怎样实现React组件的记忆？原理是什么？</li>
+<li>创建React动画有哪些方式？</li>
+<li>为什么建议不要过渡使用Refs？</li>
+<li>在React使用高阶组件(HOC)有遇到过哪些问题？如何解决？</li>
+<li>在使用React过程中什么时候用高阶组件(HOC)？</li>
+<li>说说React diff的原理是什么？</li>
+<li>React怎么提高列表渲染的性能？</li>
+<li>使用ES6的class定义的组件不支持mixins了，那用什么可以替代呢？</li>
+<li>为何说虚拟DOM会提高性能？</li>
+<li>React的性能优化在哪个生命周期？它优化的原理是什么？</li>
+<li>你知道的React性能优化有哪些方法？</li>
+<li>举例说明在React中怎么使用样式？</li>
+<li>React有哪几种方法来处理表单输入？</li>
+<li>什么是浅层渲染？</li>
+<li>你有做过React的单元测试吗？如果有，用的是哪些工具？怎么做的？</li>
+<li>在React中什么是合成事件？有什么用？</li>
+<li>使用React写一个todo应用，说说你的思路</li>
+<li>React16的reconciliation和commit分别是什么？</li>
+<li>React的函数式组件有没有生命周期？</li>
+<li>useState和this.state的区别是什么？</li>
+<li>请说说什么是useImperativeHandle？</li>
+<li>请说说什么是useReducer？</li>
+<li>请说说什么是useRef？</li>
+<li>请说说什么是useEffect？</li>
+<li>举例说明useState</li>
+<li>请说说什么是useState？为什么要使用useState？</li>
+<li>请描述下你对React的新特性Hooks的理解？它有哪些应用场景？</li>
+<li>说说你对Error Boundaries的理解</li>
+<li>说说你对Fiber架构的理解</li>
+<li>说说你是怎么理解React的业务组件和技术组件的？</li>
+<li>为什么建议setState的第一个参数是callback而不是一个对象呢？</li>
+<li>展示组件和容器组件有什么区别？</li>
+<li>Mern和Yeoman脚手架有什么区别？</li>
+<li>你有在项目中使用过Yeoman脚手架吗？</li>
+<li>你有在项目中使用过Mern脚手架吗？</li>
+<li>shouldComponentUpdate方法是做什么的？</li>
+<li>怎样在React中使用innerHTML？</li>
+<li>你有写过React的中间件插件吗？</li>
+<li>React的中间件机制是怎么样的？这种机制有什么作用？</li>
+<li>React中你用过哪些第三方的中间件？</li>
+<li>不用脚手架，你会手动搭建React项目吗？</li>
+<li>请说说React中Portal是什么？</li>
+<li>React中修改prop引发的生命周期有哪几个？</li>
+<li>React多个setState调用的原理是什么？</li>
+<li>React中调用setState会更新的生命周期有哪几个？</li>
+<li>React中setState的第二个参数作用是什么呢？</li>
+<li>React中的setState是同步还是异步的呢？为什么state并不一定会同步更新？</li>
+<li>React中的setState批量更新的过程是什么？</li>
+<li>React中的setState执行机制是什么呢？</li>
+<li>在React中遍历的方法有哪些？它们有什么区别呢？</li>
+<li>请说说你对React的render方法的理解</li>
+<li>props.children.map和js的map有什么区别？为什么优先选择React的？</li>
+<li>有用过React的严格模式吗？</li>
+<li>React中的setState和replaceState的区别是什么？</li>
+<li>React中的setState缺点是什么呢？</li>
+<li>有用过React的Fragment吗？它的运用场景是什么？</li>
+<li>React组件间共享数据方法有哪些？</li>
+<li>React的状态提升是什么？使用场景有哪些？</li>
+<li>简单描述下你有做过哪些React项目？</li>
+<li>在构造函数中调用super(props)的目的是什么？</li>
+<li>你是如何学习React的？</li>
+<li>从旧版本的React升级到新版本的React有做过吗？有遇到过什么坑？</li>
+<li>你用过React版本有哪些？</li>
+<li>有用过React的服务端渲染吗？怎么做的？</li>
+<li>React的mixins有什么作用？适用于什么场景？</li>
+<li>React怎么拿到组件对应的DOM元素？</li>
+<li>请描述下事件在React中的处理方式是什么？</li>
+<li>JSX和HTML有什么区别？</li>
+<li>React的书写规范有哪些？</li>
+<li>create-react-app创建新运用怎么解决卡的问题？</li>
+<li>使用React的方式有哪几种？</li>
+<li>说说你对reader的context的理解</li>
+<li>同时引用这三个库React.js、React-dom.js和babel.js它们都有什么作用？</li>
+<li>你知道Virtual DOM的工作原理吗？</li>
+<li>你阅读过React的源码吗？简要说下它的执行流程</li>
+<li>React中怎样阻止组件渲染？</li>
+<li>React非兄弟组件如何通信？</li>
+<li>React兄弟组件如何通信？</li>
+<li>React非父子组件如何通信？</li>
+<li>React父子组件如何通信？</li>
+<li>React组件间的通信有哪些？</li>
+<li>类组件和函数式组件有什么区别？</li>
+<li>React自定义组件你写过吗？说说看都写过哪些？</li>
+<li>React组件的state和props两者有什么区别？</li>
+<li>React有几种构建组件的方式？可以写出来吗？</li>
+<li>React中遍历时为什么不用索引作为唯一的key值？</li>
+<li>React中的key有什么作用？</li>
+<li>React中除了在构造函数中绑定this,还有别的方式吗？</li>
+<li>在React中页面重新加载时怎样保留数据？</li>
+<li>请描述下React的事件机制</li>
+<li>怎样在React中创建一个事件？</li>
+<li>在React中无状态组件有什么运用场景？</li>
+<li>描述下在React中无状态组件和有状态组件的区别是什么？</li>
+<li>写一个React的高阶组件(HOC)并说明你对它的理解</li>
+<li>React中可以在render访问refs吗？为什么？</li>
+<li>React中refs的作用是什么？有哪些应用场景？</li>
+<li>请描述你对纯函数的理解？</li>
+<li>受控组件和非受控组件有什么区别？</li>
+<li>React中什么是非控组件？</li>
+<li>React中什么是受控组件？</li>
+<li>React中发起网络请求应该在哪个生命周期中进行？为什么？</li>
+<li>说说React的生命周期有哪些？</li>
+<li>说说你对“在React中，一切都是组件”的理解</li>
+<li>写React你是用es6还是es5的语法？有什么区别？</li>
+<li>浏览器为什么无法直接JSX？怎么解决呢？</li>
+<li>在使用React过程中你都踩过哪些坑？你是怎么填坑的？</li>
+<li>说说你喜欢React的原因是什么？它有什么优缺点？</li>
+<li>如何解决引用类型在pureComponent下修改值的时候，页面不渲染的问题？</li>
+<li>createElement与cloneElement两者有什么区别？</li>
+<li>解释下React中Element 和Component两者的区别是什么？</li>
+<li>解释下React中component和pureComponent两者的区别是什么？</li>
+<li>React的虚拟DOM和vue的虚拟DOM有什么区别？</li>
+<li>你觉得React上手快不快？它有哪些限制？</li>
+<li>说说你对声明式编程的理解？</li>
+<li>React与angular、vue有什么区别？</li>
+<li>React是哪个公司开发的？</li>
+<li>React是什么？它的主要特点是什么？</li>
+<li>简要描述下你知道的React工作原理是什么？</li>
+<li>在React中怎样改变组件状态，以及状态改变的过程是什么？</li>
+<li>在React中你是怎么进行状态管理的？</li>
+<li>React声明组件有哪几种方法，各有什么不同？</li>
 </ul>
-<p><strong>TCP的可靠</strong></p>
-<p>tcp在建立连接会进行三次握手，每个收到的数据包都会向发送方发送ack确认，已确保发送成功</p>
-<p><strong>IP的传输</strong></p>
-<p>IP是不可靠的无连接协议，它并不关心数据包是否到达目的地，也不关系连接和端口号，目的是连接到目标IP</p>
-<p><a href="https://imgchr.com/i/rDwiod" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/22/rDwiod.png" alt="rDwiod.png"></a></p>
-<p><strong>TCP传输的质量和顺序</strong></p>
-<p>当数据包过大，在网络层会进行分包，分包后传输的链路不一样，到达的时间不一样，TCP会根据数据包上携带序列号来进行排序重组，如果发送方在一个特定时间内（也就是重试时间）没有接受到接收方的ack确认，会再次重新发送</p>
-<p><strong>IP和IP地址的区别</strong></p>
-<p>Ip是一种协议  有两种标准  IPv4 2^32次方和IPv6  2^128</p>
-<p>IP地址是一串数字192.0.0.1</p>
-<p><a href="https://imgchr.com/i/rDaLgf" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/22/rDaLgf.png" alt="rDaLgf.png"></a></p>
-<p><a href="https://imgchr.com/i/rDajKS" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/22/rDajKS.png" alt="rDajKS.png"></a></p>
-      
-        <div class="readmore">
-          <a href="/posts/c35109d5.html" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
+<h3 id="ReactNative"><a href="#ReactNative" class="headerlink" title="ReactNative"></a>ReactNative</h3><ul>
+<li>如何在React Native中设置环境变量？</li>
+<li>请描述下Code Push的原理是什么？</li>
+<li>React Native怎样查看日记？</li>
+<li>React Native怎样测试？</li>
+<li>React Native怎样调试？</li>
+<li>React Native和React有什么区别？</li>
+<li>有做过React Native项目吗？</li>
+</ul>
+<h3 id="React-Router"><a href="#React-Router" class="headerlink" title="React-Router"></a>React-Router</h3><ul>
+<li>React-Router怎么获取历史对象？</li>
+<li>React-Router怎么获取URL的参数？</li>
+<li>在history模式中push和replace有什么区别？</li>
+<li>React-Router怎么设置重定向？</li>
+<li>React-Router 4中<code></code>组件有几种类型？</li>
+<li>React-Router 3和React-Router 4有什么变化？添加了什么好的特性？</li>
+<li>React-Router的实现原理是什么？</li>
+<li>React-Router 4的switch有什么用？</li>
+<li>React-Router的路由有几种模式？</li>
+<li>React-Router 4怎样在路由变化时重新渲染同一个组件？</li>
+<li>React-Router的<code>标签和</code>标签有什么区别？</li>
+<li>React的路由和普通路由有什么区别？</li>
+<li>请你说说React的路由的优缺点？</li>
+<li>请你说说React的路由是什么？</li>
+</ul>
+<h3 id="Redux-Mobox"><a href="#Redux-Mobox" class="headerlink" title="Redux/Mobox"></a>Redux/Mobox</h3><ul>
+<li>你有了解Rxjs是什么吗？它是做什么的？</li>
+<li>在Redux中怎么发起网络请求？</li>
+<li>Redux怎样重置状态？</li>
+<li>Redux怎样设置初始状态？</li>
+<li>Context api可以取代Redux吗？为什么？</li>
+<li>推荐在reducer中触发Action吗？为什么？</li>
+<li>Redux怎么添加新的中间件？</li>
+<li>redux-saga和redux-thunk有什么本质的区别？</li>
+<li>在React中你是怎么对异步方案进行选型的？</li>
+<li>你知道redux-saga的原理吗？</li>
+<li>你有使用过redux-saga中间件吗？它是干什么的？</li>
+<li>Redux中异步action和同步action最大的区别是什么？</li>
+<li>Redux和vuex有什么区别？</li>
+<li>Redux的中间件是什么？你有用过哪些Redux的中间件？</li>
+<li>说说Redux的实现流程</li>
+<li>Mobx的设计思想是什么？</li>
+<li>Redux由哪些组件构成？</li>
+<li>Mobx和Redux有什么区别？</li>
+<li>在React项目中你是如何选择Redux和Mobx的？说说你的理解</li>
+<li>你有在React中使用过Mobx吗？它的运用场景有哪些？</li>
+<li>Redux的thunk作用是什么？</li>
+<li>Redux的数据存储和本地储存有什么区别？</li>
+<li>在Redux中，什么是reducer？它有什么作用？</li>
+<li>举例说明怎么在Redux中定义action？</li>
+<li>在Redux中，什么是action？</li>
+<li>在Redux中，什么是store？</li>
+<li>为什么Redux能做到局部渲染呢？</li>
+<li>说说Redux的优缺点分别是什么？</li>
+<li>Redux和Flux的区别是什么？</li>
+<li>Redux它的三个原则是什么？</li>
+<li>什么是单一数据源？</li>
+<li>什么是Redux？说说你对Redux的理解？有哪些运用场景？</li>
+</ul>
+<h3 id="Flux"><a href="#Flux" class="headerlink" title="Flux"></a>Flux</h3><ul>
+<li>请说说点击按钮触发到状态更改，数据的流向？</li>
+<li>请描述下Flux的思想</li>
+<li>什么是Flux？说说你对Flux的理解？有哪些运用场景？</li>
+</ul>
+<h3 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h3><p><a href="https://www.cnblogs.com/dcyd/p/12989422.html" target="_blank" rel="noopener">https://www.cnblogs.com/dcyd/p/12989422.html</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/76909668" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/76909668</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/24856035" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/24856035</a></p>
+<p><a href="https://www.jianshu.com/p/84ce8d9f5391" target="_blank" rel="noopener">https://www.jianshu.com/p/84ce8d9f5391</a></p>
+<p><a href="https://www.cnblogs.com/zhuxinpeng-looking/p/11283015.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhuxinpeng-looking/p/11283015.html</a></p>
+<h3 id="更多题目"><a href="#更多题目" class="headerlink" title="更多题目"></a>更多题目</h3><p><a href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener">https://github.com/haizlin/fe-interview</a></p>
+
         </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <hr>
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-07T13:15:29+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>最后更新于 2021年3月7日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/React/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>React</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/blogpost/tags/面试题/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>面试题</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://yangyfeng.github.io/posts/13437c1d.html&title=React知识点集合 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yangyfeng.github.io/posts/13437c1d.html&title=React知识点集合 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://yangyfeng.github.io/posts/13437c1d.html&title=React知识点集合 | 峰享会&pics=https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKElEQVR42u3awY6DMAxFUf7/p+l2pGnT+2yohHNZjaqB5rB4teMcB77O0vX33vWT/3/LccclQ4aMxzL4UtZLXN+1Xij/3o9UGTJkbMAgUUiyjryg9b3ke2XIkCGDPI7HMflPQpIhQ4YMzliTaqEsQ4YMGYTBt8zIl11VDt7Si8uQIeOBDL7r/vu/b5lvyJAh41GM2kgyjeB0qy5elQwZMkYzai1oikw/KbbEMmTIGMo4G9cdiy4+X4YMGaMZne34tNVchykff3753ZAhQ8Y4Bh8JkCa2ttw4WNO6VYYMGSMY6eP4mLP2IshdbwJXhgwZQxkkr8iDeFjHdSsvSWXIkDGUweOsuAW2jsiLqjsZMmTMZqSHwNJH89FCGv1o2ClDhoxxjM5GGB8kEEytYJUhQ8ZsBj9IwYs/Hq/p6wimHDJkyBjEqG2E9YedJJrjtlmGDBmjGZ3WkY8804aZr02GDBlTGXy4yAvK2lCzVarKkCFjNIMfrUg3xVJwpzOVIUPGDox026sTl7xhjo9iyJAhY0tG+vkvS8y455YhQ8YIRnpU4r7AJWWiDBky9mGc4UXa3VprWntlMmTI2IHBL77E9OgYH2oWD1vIkCFjBIOHLA/ctH3tBLcMGTL2YfDg42UlH1XWDoS9CVwZMmTICI9ldEI5HXPKkCFDBo/L/rLIodXLfjdkyJDxKAYv7/iRiM5QIW6kZciQMZpR28vii+YLTccDMmTI2IDxAqLKIuB7nQZtAAAAAElFTkSuQmCC'>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+        
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKElEQVR42u3awY6DMAxFUf7/p+l2pGnT+2yohHNZjaqB5rB4teMcB77O0vX33vWT/3/LccclQ4aMxzL4UtZLXN+1Xij/3o9UGTJkbMAgUUiyjryg9b3ke2XIkCGDPI7HMflPQpIhQ4YMzliTaqEsQ4YMGYTBt8zIl11VDt7Si8uQIeOBDL7r/vu/b5lvyJAh41GM2kgyjeB0qy5elQwZMkYzai1oikw/KbbEMmTIGMo4G9cdiy4+X4YMGaMZne34tNVchykff3753ZAhQ8Y4Bh8JkCa2ttw4WNO6VYYMGSMY6eP4mLP2IshdbwJXhgwZQxkkr8iDeFjHdSsvSWXIkDGUweOsuAW2jsiLqjsZMmTMZqSHwNJH89FCGv1o2ClDhoxxjM5GGB8kEEytYJUhQ8ZsBj9IwYs/Hq/p6wimHDJkyBjEqG2E9YedJJrjtlmGDBmjGZ3WkY8804aZr02GDBlTGXy4yAvK2lCzVarKkCFjNIMfrUg3xVJwpzOVIUPGDox026sTl7xhjo9iyJAhY0tG+vkvS8y455YhQ8YIRnpU4r7AJWWiDBky9mGc4UXa3VprWntlMmTI2IHBL77E9OgYH2oWD1vIkCFjBIOHLA/ctH3tBLcMGTL2YfDg42UlH1XWDoS9CVwZMmTICI9ldEI5HXPKkCFDBo/L/rLIodXLfjdkyJDxKAYv7/iRiM5QIW6kZciQMZpR28vii+YLTccDMmTI2IDxAqLKIuB7nQZtAAAAAElFTkSuQmCC'>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
+        
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
       
     </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blogpost/tags/tcp/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>tcp</a>
-        
-          <a href="/blogpost/tags/http/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>http</a>
-        
-      </div>
-    
   </section>
-</article>
 
-          </div>
+
         
-      
-    
-  </section>
+        
+            <div class="prev-next">
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/posts/5b9a2dd2.html" rel="prev" title="Vue知识点集合">
+                                    
+                                        Vue知识点集合
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/blogpost/tags/Vue/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>Vue</a> <a class="tag" href="/blogpost/tags/面试题/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>面试题</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+      </section>
+    </article>
   
-    
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
 
   
 
 
-    
   
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'React知识点集合',
+      tools: true
+    }
+  </script>
+
+<!-- gittalk -->
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<div id="gitalk-container" style="margin: 0 5px;"></div>
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: 'c9d3bfe9137dc2038a1a',
+    clientSecret: '1ecb6999a152dad80e08c672ac5a779b92eb6ec0',
+    id: window.location.pathname,
+    repo: 'yangyfeng.github.io',
+    owner: 'yangyfeng',
+    admin: 'yangyfeng'
+  })
+  gitalk.render('gitalk-container')
+</script>
+
 </div>
 <aside class='l_side'>
   
@@ -584,6 +1038,20 @@
           
           
             
+  <section class='widget toc-wrapper'>
+    
+<header class='material'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  
+    <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class='content material'>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#React"><span class="toc-text">React</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ReactNative"><span class="toc-text">ReactNative</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#React-Router"><span class="toc-text">React-Router</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redux-Mobox"><span class="toc-text">Redux/Mobox</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Flux"><span class="toc-text">Flux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#面试题"><span class="toc-text">面试题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更多题目"><span class="toc-text">更多题目</span></a></li></ol>
+    </div>
+  </section>
+
 
           
         
@@ -701,23 +1169,15 @@
     <div class='content material'>
       <ul class="entry">
         
-          <li><a class="flat-box" title="/blogpost/categories/Es6/" href="/blogpost/categories/Es6/"><div class='name'>Es6</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box" title="/blogpost/categories/Git/" href="/blogpost/categories/Git/"><div class='name'>Git</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box" title="/blogpost/categories/GoLang/" href="/blogpost/categories/GoLang/"><div class='name'>GoLang</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/blogpost/categories/Http/" href="/blogpost/categories/Http/"><div class='name'>Http</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box" title="/blogpost/categories/Node/" href="/blogpost/categories/Node/"><div class='name'>Node</div><div class='badge'>(2)</div></a></li>
-        
           <li><a class="flat-box" title="/blogpost/categories/个人项目/" href="/blogpost/categories/个人项目/"><div class='name'>个人项目</div><div class='badge'>(7)</div></a></li>
         
-          <li><a class="flat-box" title="/blogpost/categories/前端/" href="/blogpost/categories/前端/"><div class='name'>前端</div><div class='badge'>(20)</div></a></li>
+          <li><a class="flat-box" title="/blogpost/categories/前端/" href="/blogpost/categories/前端/"><div class='name'>前端</div><div class='badge'>(26)</div></a></li>
         
           <li><a class="flat-box" title="/blogpost/categories/博客文档/" href="/blogpost/categories/博客文档/"><div class='name'>博客文档</div><div class='badge'>(2)</div></a></li>
         
-          <li><a class="flat-box" title="/blogpost/categories/开发工具/" href="/blogpost/categories/开发工具/"><div class='name'>开发工具</div><div class='badge'>(4)</div></a></li>
+          <li><a class="flat-box" title="/blogpost/categories/后端/" href="/blogpost/categories/后端/"><div class='name'>后端</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box" title="/blogpost/categories/开发工具/" href="/blogpost/categories/开发工具/"><div class='name'>开发工具</div><div class='badge'>(6)</div></a></li>
         
           <li><a class="flat-box" title="/blogpost/categories/深入前端/" href="/blogpost/categories/深入前端/"><div class='name'>深入前端</div><div class='badge'>(8)</div></a></li>
         
@@ -750,7 +1210,7 @@
 </header>
 
     <div class='content material'>
-      <a href="/blogpost/tags/JS运行原理/" style="font-size: 17.33px; color: #828282">JS运行原理</a> <a href="/blogpost/tags/V8引擎/" style="font-size: 14px; color: #999">V8引擎</a> <a href="/blogpost/tags/Vue/" style="font-size: 14px; color: #999">Vue</a> <a href="/blogpost/tags/create-react-app/" style="font-size: 15.67px; color: #8e8e8e">create-react-app</a> <a href="/blogpost/tags/devops/" style="font-size: 14px; color: #999">devops</a> <a href="/blogpost/tags/event-loop/" style="font-size: 14px; color: #999">event loop</a> <a href="/blogpost/tags/excel/" style="font-size: 14px; color: #999">excel</a> <a href="/blogpost/tags/for循环/" style="font-size: 14px; color: #999">for循环</a> <a href="/blogpost/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/blogpost/tags/http/" style="font-size: 14px; color: #999">http</a> <a href="/blogpost/tags/javascript/" style="font-size: 17.33px; color: #828282">javascript</a> <a href="/blogpost/tags/less/" style="font-size: 14px; color: #999">less</a> <a href="/blogpost/tags/react/" style="font-size: 15.67px; color: #8e8e8e">react</a> <a href="/blogpost/tags/tcp/" style="font-size: 14px; color: #999">tcp</a> <a href="/blogpost/tags/vscode/" style="font-size: 15.67px; color: #8e8e8e">vscode</a> <a href="/blogpost/tags/vue/" style="font-size: 24px; color: #555">vue</a> <a href="/blogpost/tags/webpack/" style="font-size: 15.67px; color: #8e8e8e">webpack</a> <a href="/blogpost/tags/前端/" style="font-size: 22.33px; color: #606060">前端</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 19px; color: #777">前端工程化</a> <a href="/blogpost/tags/开发工具/" style="font-size: 15.67px; color: #8e8e8e">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/数据可视化/" style="font-size: 19px; color: #777">数据可视化</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/浏览器运行原理/" style="font-size: 14px; color: #999">浏览器运行原理</a> <a href="/blogpost/tags/面试题/" style="font-size: 20.67px; color: #6c6c6c">面试题</a>
+      <a href="/blogpost/tags/Create-React-App/" style="font-size: 16px; color: #8b8b8b">Create-React-App</a> <a href="/blogpost/tags/Devops/" style="font-size: 14px; color: #999">Devops</a> <a href="/blogpost/tags/Es6/" style="font-size: 16px; color: #8b8b8b">Es6</a> <a href="/blogpost/tags/EventLoop/" style="font-size: 14px; color: #999">EventLoop</a> <a href="/blogpost/tags/Excel/" style="font-size: 14px; color: #999">Excel</a> <a href="/blogpost/tags/Git/" style="font-size: 16px; color: #8b8b8b">Git</a> <a href="/blogpost/tags/GoLang/" style="font-size: 14px; color: #999">GoLang</a> <a href="/blogpost/tags/Http/" style="font-size: 18px; color: #7e7e7e">Http</a> <a href="/blogpost/tags/JS运行原理/" style="font-size: 18px; color: #7e7e7e">JS运行原理</a> <a href="/blogpost/tags/Javascript/" style="font-size: 18px; color: #7e7e7e">Javascript</a> <a href="/blogpost/tags/Less/" style="font-size: 14px; color: #999">Less</a> <a href="/blogpost/tags/Node/" style="font-size: 16px; color: #8b8b8b">Node</a> <a href="/blogpost/tags/React/" style="font-size: 18px; color: #7e7e7e">React</a> <a href="/blogpost/tags/V8引擎/" style="font-size: 14px; color: #999">V8引擎</a> <a href="/blogpost/tags/VsCode/" style="font-size: 16px; color: #8b8b8b">VsCode</a> <a href="/blogpost/tags/Vue/" style="font-size: 24px; color: #555">Vue</a> <a href="/blogpost/tags/Webpack/" style="font-size: 16px; color: #8b8b8b">Webpack</a> <a href="/blogpost/tags/代码优化/" style="font-size: 14px; color: #999">代码优化</a> <a href="/blogpost/tags/前端/" style="font-size: 22px; color: #636363">前端</a> <a href="/blogpost/tags/前端工程化/" style="font-size: 20px; color: #707070">前端工程化</a> <a href="/blogpost/tags/开发工具/" style="font-size: 16px; color: #8b8b8b">开发工具</a> <a href="/blogpost/tags/性能优化/" style="font-size: 14px; color: #999">性能优化</a> <a href="/blogpost/tags/插件/" style="font-size: 14px; color: #999">插件</a> <a href="/blogpost/tags/数据可视化/" style="font-size: 20px; color: #707070">数据可视化</a> <a href="/blogpost/tags/模块化/" style="font-size: 14px; color: #999">模块化</a> <a href="/blogpost/tags/浏览器运行原理/" style="font-size: 14px; color: #999">浏览器运行原理</a> <a href="/blogpost/tags/面试题/" style="font-size: 22px; color: #636363">面试题</a>
     </div>
   </section>
 
@@ -762,6 +1222,18 @@
           
           
             
+  <section class='widget related_posts'>
+    
+<header class='material'>
+  <div><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;相关文章</div>
+  
+</header>
+
+    <div class="content material">
+      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\6a5e2f06.html" title="create-react-app(注意事项)" rel="bookmark">create-react-app(注意事项)</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\a2043eea.html" title="React 脚手架工具（create-react-app）" rel="bookmark">React 脚手架工具（create-react-app）</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\37eb3f8a.html" title="⼤⼚⾯试章法" rel="bookmark">⼤⼚⾯试章法</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\f0a558a1.html" title="vue面试题（1）" rel="bookmark">vue面试题（1）</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\714f78f3.html" title="面试题集锦（1）" rel="bookmark">面试题集锦（1）</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\5b9a2dd2.html" title="Vue知识点集合" rel="bookmark">Vue知识点集合</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\e210f74f.html" title="vue面试题（2）" rel="bookmark">vue面试题（2）</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\63fad71d.html" title="面试题集锦（2）" rel="bookmark">面试题集锦（2）</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\8136685c.html" title="less在vue中的使用" rel="bookmark">less在vue中的使用</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="\posts\390a51fc.html" title="Babel转码器" rel="bookmark">Babel转码器</a></h3></div></li></ul>
+    </div>
+  </section>
+
 
           
         
@@ -863,7 +1335,7 @@
     
       <span>
         <b class="fas fa-database"></b>
-        本站字数：<span class="post-count">58.9k</span>
+        本站字数：<span class="post-count">67.5k</span>
       </span>
     
     <!-- 网站运行时间 -->
@@ -1431,5 +1903,5 @@
     gl_FragColor.a = 1.0;
     }
   </script>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":100,"height":200},"mobile":{"show":false,"scale":0.7},"log":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+<script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":100,"height":200},"mobile":{"show":false,"scale":0.7},"log":false});</script></body>
 </html>
