@@ -20,6 +20,7 @@ date: 2021-03-07
 - React Intl是什么原理？
 - 你有使用过React Intl吗？
 - 怎么实现React组件的国际化呢？
+<!-- more -->
 - 说说Context有哪些属性？
 - 怎么使用Context开发组件？
 - 为什么React并不推荐我们优先考虑使用Context？

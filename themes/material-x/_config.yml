@@ -168,7 +168,7 @@ sidebar:
     body: '<span data-chakhsu data-chakhsu-text="每写一行代码，都是人类的一次进步">每写一行代码，都是人类的一次进步</span>'
     avatar: https://s2.ax1x.com/2019/07/12/Zhm4jf.jpg
     social: true
-  - widget: toc
+
   - widget: grid
     icon: fas fa-map-signs
     title: 站内导航
@@ -196,18 +196,22 @@ sidebar:
         icon: fas fa-info-circle
         url: about/
         rel: nofollow
+
   - widget: category
     more:
       icon: fas fa-expand-arrows-alt
       url: blogpost/categories/
       rel: nofollow
+
   - widget: tagcloud
     icon: fas fa-fire
     more:
       icon: fas fa-expand-arrows-alt
       url: blogpost/tags/
       rel: nofollow
+
   - widget: related_posts # 需要安装插件  npm i -S hexo-related-popular-posts
+
   - widget: music
     icon: fas fa-compact-disc
     title: 最近在听
